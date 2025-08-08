@@ -12,7 +12,7 @@ class HomeController extends Controller
         // This method can be used to return the homepage view
         return view('frontend.home');
     }
-    public function shoppage()
+    public function shop()
     {
         // This method can be used to return the homepage view
         return view('frontend.shop');
@@ -21,5 +21,10 @@ class HomeController extends Controller
     {
         // This method can be used to return the homepage view
         return view('frontend.product');
+    }
+    public function cart()
+    {
+        // This method can be used to return the homepage view
+        return view('frontend.cart');
     }
 }

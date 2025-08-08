@@ -1,4 +1,4 @@
-<div id="global-timer" class="global-timer js-MarketingBanner-container js-MarketingTool-closeableTarget">
+    {{-- <div id="global-timer" class="global-timer js-MarketingBanner-container js-MarketingTool-closeableTarget">
         <div class="global-timer__contents">
             <div class="global-timer__messages-wrapper">
                 <div class="global-timer__prev-button js-MarketingBanner-prevButton"></div>
@@ -3743,4 +3743,3752 @@
         </div>
         <label class="cmto-mask__mask" for="cmto-nav-drawer-toggle"></label>
         <div class="flash-messages js-Flash-flashes"></div>
+    </div> --}}
+
+<div id="global-timer" class="global-timer js-MarketingBanner-container js-MarketingTool-closeableTarget">
+    <div class="global-timer__contents">
+        <div class="global-timer__messages-wrapper">
+            <div class="global-timer__prev-button js-MarketingBanner-prevButton"></div>
+            <div class="global-timer__messages js-MarketingBanner-messagesOuterContainer">
+                <div class="global-timer__messages-container js-MarketingBanner-messagesContainer js-GlobalScroll-container" data-messages-count="4">
+                    <div class="global-timer__message js-MarketingBanner-message js-GlobalScroll-item">
+                        <div class="global-timer__message-contents">
+                            <p>Beat The Heat! <a href="#">Shop Summer Riding Gear</a></p>
+                        </div>
+                    </div>
+                    <div class="global-timer__message js-MarketingBanner-message js-GlobalScroll-item">
+                        <div class="global-timer__message-contents">
+                            <p>Clear Sight In Any Light | <a href="#">Shop Photochromic Helmets</a></p>
+                        </div>
+                    </div>
+                    <div class="global-timer__message js-MarketingBanner-message js-GlobalScroll-item">
+                        <div class="global-timer__message-contents">
+                            <p>Make Moto Memories, Take a Road Trip | <a href="#" id="isPasted">Shop The Collection</a></p>
+                        </div>
+                    </div>
+                    <div class="global-timer__message js-MarketingBanner-message js-GlobalScroll-item">
+                        <div class="global-timer__message-contents">
+                            <p><a href="#">Get $15 Cash, Free 2 Day Shipping &amp; More Perks With RPM*</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="global-timer__next-button js-MarketingBanner-nextButton"></div>
+        </div>
     </div>
+</div>
+<div class="cmto-nav js-CmtoNavigation ">
+    <div class="cmto-header js-Redline-header">
+        <div class="cmto-header-layout cmto-header-layout--header">
+            <div class="cmto-header-layout__left">
+                <label class="cmto-header__hamburger js-PreviewSearchService-navPanelButton" for="cmto-nav-drawer-toggle" data-qa="nav-drawer-toggle"></label>
+                <a class="cmto-header__logo" href="/"><img class="cmto-header__logo-img" height="50" src="{{ asset('images/setting/1754108727_logo.png') }}" width="200" height="70"></a>
+            </div>
+            <div class="cmto-header__utility cmto-header-utility cmto-header-layout__right js-CmtoNavigation-utility">
+                <div class="cmto-header-utility__item cmto-header-utility__item--rpm js-CmtoNavigation-utilityItem">
+                    <a class="cmto-header-utility__item--rpm-image" href="/rpm">
+                        <!-- <img class="cmto-header-utility__image" src="https://www.revzilla.com/images/sites/shared/rpm-nav-b17e7fb41e0e000fed15c746c2527ee7.svg?vsn=d"> -->
+                    </a>
+                </div>
+                <div class="cmto-header-utility__item cmto-header-utility__item--account cmto-header-utility__item--toggle-hybrid js-CmtoNavigation-utilityItem">
+                    <a class="cmto-header-utility__link open-login-modal-btn" data-js="" data-qa="" href="#">
+                        <img class="cmto-header-utility__icon" id="login-image" height="24" src="https://www.revzilla.com/images/redline/support/header/account_icon-895e762bda4d1b16a29085a786328ca5.svg?vsn=d" width="24">
+                    </a>
+                </div>
+                <div class="cmto-header-utility__item cmto-header-utility__item--cart js-CmtoNavigation-utilityItem">
+                    <a class="cmto-header-utility__link" data-qa="cart-link" href="/cart"><img class="cmto-header-utility__icon" height="24" src="https://www.revzilla.com/images/redline/support/header/cart_icon-72450537cc5567ae499c302162073e82.svg?vsn=d" width="24"><span class="cmto-header-utility__cart-quantity js-ProductForm-cartQty"
+                        style="display: none">0</span></a>
+                </div>
+            </div>
+            <div class="cmto-header__search cmto-header-layout__center">
+                <a id="show-modal-button" class="ui-button ui-button--large">
+                    <svg width="23px" height="20px" viewBox="0 0 23 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#fff">
+                        <title>F216DFA3-1CFF-4B9B-9A3E-BCB1D82A7E3E@1x</title>
+                        <g id="Symbols" stroke="none" stroke-width="1" fill-rule="evenodd">
+                            <g id="icon/tire-icon">
+                                <path d="M13.1890883,0 C18.5988605,0 23,4.48597403 23,9.99997711 C23,15.5139802 18.5989055,20 13.1890883,20 L13.1890883,20 L0.822026996,20 C0.410496896,20 0.0768614782,19.6599336 0.0768614782,19.240471 C0.0768614782,18.8210084 0.410496896,18.4809419 0.822026996,18.4809419 L0.822026996,18.4809419 L7.9967832,18.4809419 C7.45444034,18.1347399 6.94749599,17.7361108 6.48286813,17.291877 L6.48286813,17.291877 L3.06794545,17.291877 C2.65641534,17.291877 2.32277993,16.9518106 2.32277993,16.532348 C2.32277993,16.1128854 2.65641534,15.772819 3.06794545,15.772819 L3.06794545,15.772819 L5.18224254,15.772819 C4.04652548,14.1409854 3.3781316,12.1485724 3.3781316,10.0000229 C3.3781316,8.15353585 3.87227319,6.42266316 4.73198971,4.93657237 L4.73198971,4.93657237 L0.745165518,4.93657237 C0.333635417,4.93657237 0,4.59650593 0,4.17704334 C0,3.75758075 0.333635417,3.41746853 0.745165518,3.41742274 L0.745165518,3.41742274 L5.80998205,3.41742274 C6.4427079,2.68138288 7.17956285,2.04071914 7.9967832,1.51905805 L7.9967832,1.51905805 L4.12334204,1.51905805 C3.71181194,1.51905805 3.37817652,1.17899161 3.37817652,0.759529026 C3.37817652,0.340066438 3.71181194,0 4.12334204,0 L4.12334204,0 Z M13.1890883,3.79608834 C9.8329235,3.79608834 7.10247676,6.57916607 7.10247676,10.0000229 C7.10247676,12.0400552 8.0736896,13.8530713 9.56936635,14.9844894 C9.58311247,14.9962111 9.59672382,15.0081159 9.61145823,15.0190592 C9.62807935,15.0313761 9.64505985,15.0428689 9.66230989,15.0535832 C10.6580052,15.7775351 11.8755701,16.2039117 13.1890883,16.2039117 C14.5026065,16.2039117 15.7202163,15.7775351 16.7158666,15.0535832 C16.7330717,15.0428689 16.7500972,15.0313761 16.7667183,15.0190592 C16.7814976,15.0082075 16.795109,14.9963026 16.8088102,14.9844894 C18.3045318,13.8530713 19.2756998,12.040101 19.2756998,10.0000229 C19.2756998,6.57916607 16.545253,3.79608834 13.1890883,3.79608834 Z M14.5535675,13.2857143 L15.7166667,14.8260445 C15.1110977,15.1199228 14.4274219,15.2857143 13.7041667,15.2857143 C12.9809115,15.2857143 12.2972357,15.1198806 11.6916667,14.8260445 L11.6916667,14.8260445 L12.8547659,13.2857143 C13.1206447,13.3763071 13.4064666,13.4261162 13.7041667,13.4261162 C14.0019544,13.4261162 14.2876887,13.3763071 14.5535675,13.2857143 L14.5535675,13.2857143 Z M18.6729037,9.28571429 C18.7140052,9.51624916 18.7354167,9.75223588 18.7354167,9.99239164 C18.7354167,11.2748564 18.1272875,12.4385261 17.1439195,13.2857143 L17.1439195,13.2857143 L15.7166667,11.6128704 C16.1217633,11.1632999 16.3633149,10.6015773 16.3633149,9.99239164 C16.3633149,9.9699429 16.3619162,9.94772322 16.3612706,9.9253661 L16.3612706,9.9253661 Z M7.72917847,9.28571429 L10.0407704,9.92535145 C10.0401248,9.94770806 10.0388337,9.96992722 10.0388337,9.99237545 C10.0388337,10.6015472 10.280381,11.1633027 10.6854167,11.6128171 L10.6854167,11.6128171 L9.25818928,13.2857143 C8.27483876,12.4384997 7.66666667,11.2748567 7.66666667,9.99237545 C7.66666667,9.75222519 7.68807777,9.51624388 7.72917847,9.28571429 L7.72917847,9.28571429 Z M13.2010417,8.28571429 C14.0333223,8.28571429 14.7104167,8.95860309 14.7104167,9.78571429 C14.7104167,10.6128255 14.0333223,11.2857143 13.2010417,11.2857143 C12.368761,11.2857143 11.6916667,10.6128255 11.6916667,9.78571429 C11.6916667,8.95860309 12.368761,8.28571429 13.2010417,8.28571429 Z M14.7104167,5.28571429 C16.0258194,5.51966228 17.1355267,6.4265805 17.7291667,7.66947611 L17.7291667,7.66947611 L15.9836401,8.28571429 C15.6804607,7.80894426 15.2330669,7.44872881 14.7104167,7.27963638 L14.7104167,7.27963638 Z M11.6916667,5.28571429 L11.6916667,7.27963638 C11.1690164,7.44877296 10.7216633,7.80898841 10.4184026,8.28571429 L10.4184026,8.28571429 L8.67291667,7.66947611 C9.26659726,6.4265805 10.3763045,5.51970643 11.6916667,5.28571429 L11.6916667,5.28571429 Z"
+                                id="Combined-Shape"></path>
+                            </g>
+                        </g>
+                    </svg>
+                    <span class="cmto-header__search-sbv-text">Shop Your Ride</span>
+                </a>
+                <form action="/search" class="search-form js-PreviewSearchService-searchForm" data-form-name="Site Search" data-qa="search-form" method="get">
+                    <div class="ui-search-input__wrapper">
+                        <input aria-label="Search" autocomplete="off" class="js-PreviewSearchService-input ui-search-input ui-search-input--large ui-search-input--button-left" data-field-name="Query" name="query" placeholder="Search" required type="text">
+                        <button aria-label="Search" class="ui-search-input__button" data-qa="search-button" tabindex="-1"></button>
+                    </div>
+                    <button aria-label="Close" class="ui-search-input__button search-form__close-button js-PreviewSearchService-headerCloseButton" tabindex="-1"></button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="preview-search__overlay js-PreviewSearchService-overlay" aria-hidden data-rfk-search-url="https://revzilla.rfk.revzilla.com/api/search-rec/3" data-rfk-events-url="https://revzilla.rfk.revzilla.com/api/event/1" data-user-id="" data-asset-url="https://www.revzilla.com">
+        <div class="preview-search__container js-PreviewSearchService-container">
+            <div class="preview-search__inner-container">
+                <div class="preview-search__categories--container">
+                    <div class="preview-search__section-title js-PreviewSearchService-categoriesTitle" data-query-mode-title="Suggested Categories" data-trending-mode-title="Trending Categories">
+                    </div>
+                    <div class="preview-search__categories js-PreviewSearchService-categories"></div>
+                </div>
+                <div class="preview-search__keyphrases--container">
+                    <div class="preview-search__section-title">
+                        Search Suggestions
+                    </div>
+                    <div class="preview-search__keyphrases js-PreviewSearchService-keyphrases"></div>
+                </div>
+                <div class="preview-search__products">
+                    <div class="preview-search__products--section-title">
+                        <div class="preview-search__section-title js-PreviewSearchService-productsTitle" data-keywords-title="Top Products for" data-categories-title="Trending Now">
+                        </div>
+                        <a class="preview-search__products--view-all js-PreviewSearchService-plpLink">
+                        View All Results
+                     </a>
+                    </div>
+                    <div class="js-PreviewSearchService-products"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cmto-subheader">
+        <div class="cmto-header-layout">
+            <!-- NAV HELPER ~ SUBHEADER ~ 2025-07-18 19:27:13.101530Z -->
+            <div class="cmto-subheader__menu cmto-header-layout__center">
+                <ul class="cmto-subheader__top-link-container">
+                    <li class="cmto-subheader__top-link-li" data-child-count="#" data-nav-level="2" data-nav-section="Helmets" data-node-id="9120" onmouseover="if (!window.__cfRLUnblockHandlers) return false; setTimeout(() =&gt; $(window).trigger(&#39;LazyImgSrc.elementsChanged&#39;), 150)"
+                    data-cf-modified-136ba6a1ac3be6cd75fee6c3-="">
+                        <a class="cmto-subheader__top-link" data-nid="9120" href="/motorcycle-helmets">Helmets</a>
+                        <div class="cmto-subheader__menu-container" data-node-id="9120">
+                            <div class="subheader-menu">
+                                <div class="subheader-menu__panel">
+                                    <div class="subheader-menu__panel-content">
+                                        <div class="subheader-menu__title" data-nid="10270"><a class="subheader-menu__title-link-text" href="/motorcycle-helmets">Helmets</a><a class="subheader-menu__title-link-shop-all" data-qa="shop-all-motorcycle-helmets" href="/motorcycle-helmets?view_all=true">Shop All</a></div>
+                                        <div class="subheader-menu__columns">
+                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Full Face"><a class="subheader-menu__link" data-nid="9130" href="/full-face-motorcycle-helmets">Full Face</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Modular"><a class="subheader-menu__link" data-nid="9132" href="/modular-motorcycle-helmets">Modular</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Dual Sport"><a class="subheader-menu__link" data-nid="9128" href="/dual-sport-helmets">Dual Sport</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Open Face"><a class="subheader-menu__link" data-nid="9133" href="/open-face-helmets">Open Face</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Half"><a class="subheader-menu__link" data-nid="9131" href="/motorcycle-half-helmets">Half</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Dirt"><a class="subheader-menu__link" data-nid="9129" href="/dirt-bike-helmets">Dirt</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Bluetooth Included"><a class="subheader-menu__link" data-nid="17612" href="/bluetooth-integrated-helmets">Bluetooth
+                                             Included</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Carbon Fiber"><a class="subheader-menu__link" data-nid="9446" href="/carbon-fiber-motorcycle-helmets">Carbon Fiber</a>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Graphics"><a class="subheader-menu__link" data-nid="9437" href="/graphic-motorcycle-helmets">Graphics</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Internal Sun Visor"><a class="subheader-menu__link" data-nid="9450" href="/internal-sun-visor-motorcycle-helmets">Internal Sun
+                                             Visor</a></li>
+                                            </ul>
+                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Helmet Finder"><a class="subheader-menu__link" data-nid="27737" href="/helmets-motorcycle-helmets">Helmet Finder</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Bluetooth Communications"><a class="subheader-menu__link" data-nid="10421" href="/motorcycle-bluetooth-communications">Bluetooth
+                                             Communications</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Helmet Accessories">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="9135" href="/helmet-accessories">Helmet Accessories</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="9135" data-node-name="Helmet Accessories" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10270">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Helmet Accessories"><a class="subheader-menu__link" data-nid="9135" href="/helmet-accessories">Shop All Helmet Accessories</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Face Shields"><a class="subheader-menu__link" data-nid="9430" href="/face-shields-visors">Face Shields</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Goggles &amp; Sunglasses"><a class="subheader-menu__link" data-nid="26758" href="/helmet-l1-goggles-sunglasses">Goggles &amp; Sunglasses</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Cheek Pads &amp; Liners"><a class="subheader-menu__link" data-nid="26442" href="/helmet-cheek-pads-liners">Cheek Pads &amp; Liners</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Balaclavas &amp; Headwear"><a class="subheader-menu__link" data-nid="14769" href="/motorcycle-headwear">Balaclavas &amp; Headwear</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Cleaners &amp; Polish"><a class="subheader-menu__link" data-nid="9143" href="/helmet-care">Cleaners &amp; Polish</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Ear Plugs"><a class="subheader-menu__link" data-nid="9141" href="/motorcycle-ear-plugs">Ear Plugs</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Cheek Pads"><a class="subheader-menu__link" data-nid="9142" href="/motorcycle-cheek-pads">Cheek Pads</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Helmet Liners"><a class="subheader-menu__link" data-nid="9431" href="/helmet-liners">Helmet Liners</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="LS2 20% Off Select Models"><a class="subheader-menu__link" data-nid="28079" href="/helmets-ls2-closeouts">LS2 20% Off Select
+                                             Models</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="AGV Pista up to $769 Off"><a class="subheader-menu__link" data-nid="28080" href="/helmets-agv-helmet-sale">AGV Pista up to $769
+                                             Off</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Bell up to 40% Off"><a class="subheader-menu__link" data-nid="27785" href="/helmets-bell-helmets-closeouts">Bell up to 40%
+                                             Off</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Closeouts"><a class="subheader-menu__link" data-nid="9137" href="/closeout-motorcycle-helmets" style="font-weight: bold; color: var(--brand-color);">Closeouts</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Open Box"><a class="subheader-menu__link" data-nid="26764" href="/helmet-l1-open-box">Open Box</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="New Arrivals"><a class="subheader-menu__link" data-nid="14606" href="/new-motorcycle-helmet-releases">New Arrivals</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Best Sellers">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="26767" href="/helmet-l1-best-sellers">Best Sellers</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="26767" data-node-name="Best Sellers" data-node-node-type-atom="contentPage" data-node-parent-id="10270">
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="AGV K6 S"><a class="subheader-menu__link" data-nid="27736" href="/helmets-agv-k6-s-helmets">AGV K6 S</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Alpinestars Supertech R10"><a class="subheader-menu__link" data-nid="27285" href="/helmets-alpinestars-supertech-r10-helmets">Alpinestars
+                                                   Supertech R10</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Arai Regent-X"><a class="subheader-menu__link" data-nid="26769" href="/helmet-l1-arai-regent-x">Arai Regent-X</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Arai XD-5"><a class="subheader-menu__link" data-nid="27274" href="/helmets-arai-xd5-helmets">Arai XD-5</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="LS2 Advant X"><a class="subheader-menu__link" data-nid="27739" href="/helmets-ls2-advant-x-helmets">LS2 Advant
+                                                   X</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Schuberth C5"><a class="subheader-menu__link" data-nid="27740" href="/helmets-schuberth-c5-helmets">Schuberth
+                                                   C5</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Scorpion EXO-R430"><a class="subheader-menu__link" data-nid="28053" href="/helmets-scorpion-r430">Scorpion EXO-R430</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Sedici Strada 3"><a class="subheader-menu__link" data-nid="28052" href="/helmets-sedici-strada-3-helmets">Sedici
+                                                   Strada 3</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Best of 2025"><a class="subheader-menu__link" data-nid="26771" href="/helmet-l1-best-of-2025">Best of 2025</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Buying Guide"><a class="subheader-menu__link" data-nid="26772" href="/helmet-l1-buying-guide">Buying Guide</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="ECE vs Snell vs DOT"><a class="subheader-menu__link" data-nid="26773" href="/helmet-l1-safety-certifications">ECE vs Snell vs
+                                             DOT</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Understanding Rotational Impacts"><a class="subheader-menu__link" data-nid="26997" href="/helmets-rotational-impacts">Understanding Rotational Impacts</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cmto-subheader__top-link-li" data-child-count="2" data-nav-level="2" data-nav-section="Riding Gear" data-node-id="9121" onmouseover="if (!window.__cfRLUnblockHandlers) return false; setTimeout(() =&gt; $(window).trigger(&#39;LazyImgSrc.elementsChanged&#39;), 150)"
+                    data-cf-modified-136ba6a1ac3be6cd75fee6c3-="">
+                        <a class="cmto-subheader__top-link" data-nid="9121" href="/motorcycle-riding-gear">Riding Gear</a>
+                        <div class="cmto-subheader__menu-container" data-node-id="9121">
+                            <div class="subheader-menu">
+                                <div class="subheader-menu__panel subheader-menu__panel--split">
+                                    <div class="subheader-menu__panel-content">
+                                        <div class="subheader-menu__title" data-nid="10154"><a class="subheader-menu__title-link-text" href="/motorcycle-riding-gear">Riding
+                                       Gear</a><a class="subheader-menu__title-link-shop-all" href="/motorcycle-riding-gear?view_all=true">Shop All</a></div>
+                                        <div class="subheader-menu__columns">
+                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Jackets &amp; Vests">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="9461" href="/motorcycle-jackets-vests">Jackets &amp; Vests</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="9461" data-node-name="Jackets &amp; Vests" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10154">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Jackets &amp; Vests"><a class="subheader-menu__link" data-nid="9461" href="/motorcycle-jackets-vests">Shop All Jackets &amp; Vests</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Summer"><a class="subheader-menu__link" data-nid="9467" href="/summer-motorcycle-jackets">Summer</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="4 Season"><a class="subheader-menu__link" data-nid="9466" href="/4-season-motorcycle-jackets">4 Season</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Mesh"><a class="subheader-menu__link" data-nid="9462" href="/mesh-motorcycle-jackets">Mesh</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Textile"><a class="subheader-menu__link" data-nid="9463" href="/textile-motorcycle-jackets">Textile</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Leather"><a class="subheader-menu__link" data-nid="9464" href="/leather-motorcycle-jackets">Leather</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Waterproof"><a class="subheader-menu__link" data-nid="9465" href="/waterproof-motorcycle-jackets">Waterproof</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Riding Shirts"><a class="subheader-menu__link" data-nid="9918" href="/motorcycle-riding-shirts">Riding Shirts</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Vests"><a class="subheader-menu__link" data-nid="9469" href="/motorcycle-vests">Vests</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Heated"><a class="subheader-menu__link" data-nid="9502" href="/heated-motorcycle-jackets-vests">Heated</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Winter"><a class="subheader-menu__link" data-nid="9468" href="/winter-motorcycle-jackets">Winter</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Pants">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="9471" href="/motorcycle-pants">Pants</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="9471" data-node-name="Pants" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10154">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Pants"><a class="subheader-menu__link" data-nid="9471" href="/motorcycle-pants">Shop All Pants</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Summer"><a class="subheader-menu__link" data-nid="10077" href="/summer-motorcycle-pants">Summer</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="4 Season"><a class="subheader-menu__link" data-nid="10080" href="/all-weather-motorcycle-pants">4 Season</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Mesh Pants"><a class="subheader-menu__link" data-nid="14177" href="/mesh-motorcycle-pants">Mesh Pants</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Textile Pants"><a class="subheader-menu__link" data-nid="14178" href="/textile-motorcycle-pants">Textile Pants</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Leather Pants"><a class="subheader-menu__link" data-nid="14176" href="/leather-motorcycle-pants">Leather Pants</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Chaps"><a class="subheader-menu__link" data-nid="9476" href="/motorcycle-chaps">Chaps</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Overpants"><a class="subheader-menu__link" data-nid="9475" href="/motorcycle-overpants">Overpants</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Riding Pants"><a class="subheader-menu__link" data-nid="9472" href="/motorcycle-riding-pants">Riding Pants</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Riding Jeans"><a class="subheader-menu__link" data-nid="9473" href="/motorcycle-jeans">Riding Jeans</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Motocross Pants"><a class="subheader-menu__link" data-nid="10538" href="/motocross-pants">Motocross Pants</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Waterproof Pants"><a class="subheader-menu__link" data-nid="10079" href="/waterproof-motorcycle-pants">Waterproof Pants</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Heated"><a class="subheader-menu__link" data-nid="9503" href="/heated-motorcycle-pants">Heated</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Winter"><a class="subheader-menu__link" data-nid="10078" href="/winter-motorcycle-pants">Winter</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Boots">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="9478" href="/motorcycle-boots">Boots</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="9478" data-node-name="Boots" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10154">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Boots"><a class="subheader-menu__link" data-nid="9478" href="/motorcycle-boots">Shop All Boots</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Summer"><a class="subheader-menu__link" data-nid="14436" href="/summer-motorcycle-boots">Summer</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Waterproof"><a class="subheader-menu__link" data-nid="10433" href="/waterproof-motorcycle-boots-shoes">Waterproof</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Short Boots &amp; Shoes"><a class="subheader-menu__link" data-nid="9847" href="/short-motorcycle-boots-shoes">Short Boots &amp; Shoes</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Tall Boots"><a class="subheader-menu__link" data-nid="14359" href="/tall-motorcycle-boots">Tall Boots</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="ADV/Touring Boots"><a class="subheader-menu__link" data-nid="9481" href="/touring-motorcycle-boots">ADV/Touring
+                                                   Boots</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Dirt Bike Boots"><a class="subheader-menu__link" data-nid="9480" href="/dirt-bike-boots">Dirt Bike Boots</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="HD &amp; Cruiser Boots"><a class="subheader-menu__link" data-nid="9482" href="/harley-cruiser-boots">HD &amp; Cruiser Boots</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Track &amp; Race Boots"><a class="subheader-menu__link" data-nid="9479" href="/track-race-boots">Track &amp; Race Boots</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Socks"><a class="subheader-menu__link" data-nid="9483" href="/motorcycle-socks">Socks</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Insoles"><a class="subheader-menu__link" data-nid="14335" href="/motorcycle-boot-insoles">Insoles</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Heated Socks &amp; Insoles"><a class="subheader-menu__link" data-nid="9505" href="/heated-motorcycle-socks-insoles">Heated Socks &amp;
+                                                   Insoles</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Gloves">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="15524" href="/motorcycle-gloves">Gloves</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="15524" data-node-name="Gloves" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10154">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Gloves"><a class="subheader-menu__link" data-nid="15524" href="/motorcycle-gloves">Shop All Gloves</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Summer"><a class="subheader-menu__link" data-nid="9490" href="/summer-motorcycle-gloves">Summer</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Short Cuff"><a class="subheader-menu__link" data-nid="9487" href="/short-cuff-motorcycle-gloves">Short Cuff</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Gauntlet"><a class="subheader-menu__link" data-nid="9488" href="/gauntlet-motorcycle-gloves">Gauntlet</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Fingerless"><a class="subheader-menu__link" data-nid="14437" href="/fingerless-motorcycle-gloves">Fingerless</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Motocross"><a class="subheader-menu__link" data-nid="10537" href="/dirt-bike-gloves">Motocross</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Race"><a class="subheader-menu__link" data-nid="14304" href="/motorcycle-race-gloves">Race</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Waterproof"><a class="subheader-menu__link" data-nid="9489" href="/waterproof-motorcycle-gloves">Waterproof</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Heated"><a class="subheader-menu__link" data-nid="9504" href="/heated-motorcycle-gloves">Heated</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Winter"><a class="subheader-menu__link" data-nid="9491" href="/winter-motorcycle-gloves">Winter</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Race Suits">
+                                                    <a class="subheader-menu__link" data-nid="9507" href="/motorcycle-race-suits">Race Suits</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="9507" data-node-name="Race Suits" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10154">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Race Suits"><a class="subheader-menu__link" data-nid="9507" href="/motorcycle-race-suits">Shop All Race Suits</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="One Piece Race Suits"><a class="subheader-menu__link" data-nid="9508" href="/one-piece-motorcycle-race-suits">One Piece Race Suits</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Two Piece Race Suits"><a class="subheader-menu__link" data-nid="9509" href="/two-piece-motorcycle-race-suits">Two Piece Race Suits</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Undersuits"><a class="subheader-menu__link" data-nid="9510" href="/motorcycle-undersuits">Undersuits</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Knee Sliders"><a class="subheader-menu__link" data-nid="9511" href="/motorcycle-knee-sliders">Knee Sliders</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Helmets">
+                                                    <a class="subheader-menu__link" data-nid="9525" href="/motorcycle-helmets">Helmets</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="9525" data-node-name="Helmets" data-node-node-type-atom="departmentPage" data-node-parent-id="10154">
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Full Face"><a class="subheader-menu__link" data-nid="9528" href="/full-face-motorcycle-helmets">Full Face</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Modular"><a class="subheader-menu__link" data-nid="9530" href="/modular-motorcycle-helmets">Modular</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Dual Sport"><a class="subheader-menu__link" data-nid="9527" href="/dual-sport-helmets">Dual Sport</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Dirt"><a class="subheader-menu__link" data-nid="9526" href="/dirt-bike-helmets">Dirt</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Open Face &amp; 3/4"><a class="subheader-menu__link" data-nid="9531" href="/open-face-helmets">Open Face &amp; 3/4</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Half Helmets"><a class="subheader-menu__link" data-nid="9529" href="/motorcycle-half-helmets">Half Helmets</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Snowmobile"><a class="subheader-menu__link" data-nid="9532" href="/snowmobile-helmets">Snowmobile</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Helmet Accessories"><a class="subheader-menu__link" data-nid="9533" href="/helmet-accessories">Helmet Accessories</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Headwear"><a class="subheader-menu__link" data-nid="9534" href="/motorcycle-headwear">Headwear</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Airbags">
+                                                    <a class="subheader-menu__link" data-nid="9522" href="/motorcycle-air-bags">Airbags</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="9522" data-node-name="Airbags" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10154">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Airbags"><a class="subheader-menu__link" data-nid="9522" href="/motorcycle-air-bags">Shop All Airbags</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Airbag Sales"><a class="subheader-menu__link" data-nid="26793" href="/motorcycle-airbag-sales">Airbag Sales</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Protection">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="9516" href="/motorcycle-protection">Protection</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="9516" data-node-name="Protection" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10154">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Protection"><a class="subheader-menu__link" data-nid="9516" href="/motorcycle-protection">Shop All Protection</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Armored Shorts &amp; Pants"><a class="subheader-menu__link" data-nid="9517" href="/armored-motorcycle-shorts-pants">Armored Shorts &amp;
+                                                   Pants</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Armored Tops"><a class="subheader-menu__link" data-nid="9518" href="/armored-motorcycle-jackets-vests">Armored
+                                                   Tops</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Armored Vests"><a class="subheader-menu__link" data-nid="9519" href="/armored-motorcycle-vests">Armored Vests</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Back Protectors"><a class="subheader-menu__link" data-nid="9520" href="/motorcycle-back-protectors">Back
+                                                   Protectors</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Chest Protection"><a class="subheader-menu__link" data-nid="14305" href="/chest-protection">Chest Protection</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Elbow Guards"><a class="subheader-menu__link" data-nid="10445" href="/motorcycle-elbow-guards">Elbow Guards</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Kidney Belts"><a class="subheader-menu__link" data-nid="14337" href="/motorcycle-kidney-belts">Kidney Belts</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Knee Braces &amp; Guards"><a class="subheader-menu__link" data-nid="9523" href="/motorcycle-knee-braces-guards">Knee Braces &amp; Guards</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Knee Sliders"><a class="subheader-menu__link" data-nid="14425" href="/motorcycle-knee-sliders">Knee Sliders</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Neck Braces"><a class="subheader-menu__link" data-nid="10012" href="/motorcycle-neck-braces">Neck Braces</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Replacement Armor"><a class="subheader-menu__link" data-nid="9521" href="/replacement-motorcycle-armor">Replacement Armor</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Rain Gear">
+                                                    <a class="subheader-menu__link" data-nid="9493" href="/motorcycle-rain-gear">Rain Gear</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="9493" data-node-name="Rain Gear" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10154">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Rain Gear"><a class="subheader-menu__link" data-nid="9493" href="/motorcycle-rain-gear">Shop All Rain Gear</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Rain Jackets"><a class="subheader-menu__link" data-nid="9494" href="/motorcycle-rain-jackets">Rain Jackets</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Rain Pants"><a class="subheader-menu__link" data-nid="9495" href="/motorcycle-rain-pants">Rain Pants</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Rain Suits"><a class="subheader-menu__link" data-nid="9496" href="/motorcycle-rain-suits">Rain Suits</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Jerseys"><a class="subheader-menu__link" data-nid="9773" href="/motocross-jerseys">Jerseys</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Eyewear">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="9512" href="/motorcycle-eyewear">Eyewear</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="9512" data-node-name="Eyewear" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10154">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Eyewear"><a class="subheader-menu__link" data-nid="9512" href="/motorcycle-eyewear">Shop All Eyewear</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Sunglasses"><a class="subheader-menu__link" data-nid="9513" href="/motorcycle-sunglasses">Sunglasses</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Goggles"><a class="subheader-menu__link" data-nid="9514" href="/motorcycle-goggles">Goggles</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Goggle Accessories"><a class="subheader-menu__link" data-nid="9515" href="/motorcycle-goggle-accessories">Goggle Accessories</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Casual Clothing">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="9124" href="/casual-motorcycle-clothing">Casual Clothing</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="9124" data-node-name="Casual Clothing" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10154">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Casual Clothing"><a class="subheader-menu__link" data-nid="9124" href="/casual-motorcycle-clothing">Shop All Casual Clothing</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Hats"><a class="subheader-menu__link" data-nid="9594" href="/hats-headwear">Hats</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Jackets"><a class="subheader-menu__link" data-nid="9597" href="/casual-motorcycle-jackets">Jackets</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Shirts">
+                                                            <a class="subheader-menu__link" data-nid="14154" href="/casual-shirts">Shirts</a>
+                                                            <ul class="subheader-menu__list subheader-menu__list--5" data-node-id="14154" data-node-name="Shirts" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="9124">
+                                                                <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--4" data-nav-level="5" data-nav-section="Shirts"><a class="subheader-menu__link" data-nid="14154" href="/casual-shirts">Shop All Shirts</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--5 subheader-menu__item--mobile-only" data-nav-level="5" data-nav-section="Button Up Shirts"><a class="subheader-menu__link" data-nid="14361" href="/button-up-shirts">Button Up Shirts</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--5 subheader-menu__item--mobile-only" data-nav-level="5" data-nav-section="Sweatshirts"><a class="subheader-menu__link" data-nid="9598" href="/motorcycle-sweatshirts">Sweatshirts</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--5 subheader-menu__item--mobile-only" data-nav-level="5" data-nav-section="Tank Tops"><a class="subheader-menu__link" data-nid="9600" href="/motorcycle-tank-tops">Tank Tops</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--5 subheader-menu__item--mobile-only" data-nav-level="5" data-nav-section="T-Shirts"><a class="subheader-menu__link" data-nid="9599" href="/motorcycle-t-shirts">T-Shirts</a></li>
+                                                            </ul>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Shorts"><a class="subheader-menu__link" data-nid="9601" href="/motorcycle-shorts">Shorts</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Belts"><a class="subheader-menu__link" data-nid="9603" href="/motorcycle-belts">Belts</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Base &amp; Mid Layers"><a class="subheader-menu__link" data-nid="9497" href="/motorcycle-base-mid-layers">Base &amp; Mid
+                                             Layers</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Riding Suits"><a class="subheader-menu__link" data-nid="9524" href="/motorcycle-riding-suits">Riding Suits</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Heated Gear">
+                                                    <a class="subheader-menu__link" data-nid="9501" href="/heated-motorcycle-gear">Heated Gear</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="9501" data-node-name="Heated Gear" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10154">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Heated Gear"><a class="subheader-menu__link" data-nid="9501" href="/heated-motorcycle-gear">Shop All Heated Gear</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Heated Gear &amp; Accessories"><a class="subheader-menu__link" data-nid="26464" href="/heated-motorcycle-gear-accessories">Heated Gear &amp;
+                                                   Accessories</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Controllers &amp; Accessories"><a class="subheader-menu__link" data-nid="9506" href="/heated-motorcycle-controllers-accessories">Controllers &amp;
+                                                   Accessories</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Heated Gear Batteries"><a class="subheader-menu__link" data-nid="14440" href="/heated-gear-batteries">Heated Gear Batteries</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Headwear">
+                                                    <a class="subheader-menu__link" data-nid="9136" href="/motorcycle-headwear">Headwear</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="9136" data-node-name="Headwear" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10154">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Headwear"><a class="subheader-menu__link" data-nid="9136" href="/motorcycle-headwear">Shop All Headwear</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Balaclavas"><a class="subheader-menu__link" data-nid="9432" href="/motorcycle-balaclavas">Balaclavas</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Ear Plugs"><a class="subheader-menu__link" data-nid="9433" href="/motorcycle-ear-plugs">Ear Plugs</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Bandanas"><a class="subheader-menu__link" data-nid="9434" href="/motorcycle-bandanas">Bandanas</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Face Masks"><a class="subheader-menu__link" data-nid="9435" href="/motorcycle-face-masks">Face Masks</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Top Brands">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="27600" href="/top-brands-riding-gear">Top Brands</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="27600" data-node-name="Top Brands" data-node-node-type-atom="contentPage" data-node-parent-id="10154">
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Alpinestars"><a class="subheader-menu__link" data-nid="27601" href="/riding-gear-alpinestars">Alpinestars</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="REV&#39;IT!"><a class="subheader-menu__link" data-nid="27602" href="/riding-gear-revit">REV&#39;IT!</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Klim"><a class="subheader-menu__link" data-nid="27603" href="/riding-gear-klim">Klim</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Icon"><a class="subheader-menu__link" data-nid="27604" href="/riding-gear-icon">Icon</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Dainese"><a class="subheader-menu__link" data-nid="27605" href="/riding-gear-dainese">Dainese</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Sedici"><a class="subheader-menu__link" data-nid="27606" href="/riding-gear-sedici">Sedici</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="BILT"><a class="subheader-menu__link" data-nid="27607" href="/riding-gear-bilt">BILT</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Dainese up to 50% Off"><a class="subheader-menu__link" data-nid="28083" href="/riding-gear-dainese-closeouts">Dainese up to 50%
+                                             Off</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Bull-it Jeans up to 40% Off"><a class="subheader-menu__link" data-nid="28084" href="/riding-gear-bull-it-jeans-closeouts">Bull-it Jeans
+                                             up to 40% Off</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Roland Sands up to 60% Off"><a class="subheader-menu__link" data-nid="28085" href="/riding-gear-roland-sands-closeouts">Roland Sands up
+                                             to 60% Off</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Closeouts"><a class="subheader-menu__link" data-nid="14603" href="/closeout-riding-gear" style="font-weight: bold; color: var(--brand-color);">Closeouts</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Women&#39;s Gear"><a class="subheader-menu__link" data-nid="21177" href="/womens-motorcycle-riding-gear">Women&#39;s Gear</a>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Youth Gear"><a class="subheader-menu__link" data-nid="17542" href="/youth-riding-gear">Youth Gear</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="New Arrivals"><a class="subheader-menu__link" data-nid="23681" href="https://www.revzilla.com/new-motorcycle-gear">New
+                                             Arrivals</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="subheader-menu__panel subheader-menu__panel--split">
+                                    <div class="subheader-menu__title" data-nid="10155"><span class="subheader-menu__title-link-text subheader-menu__title-link-text--shop-by">Shop
+                                    By Riding Style</span></div>
+                                    <ul class="subheader-menu__list">
+                                        <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="ADV/Touring"><a class="subheader-menu__link" data-nid="14020" href="/adv-sport-touring-gear">ADV/Touring</a></li>
+                                        <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Dirt"><a class="subheader-menu__link" data-nid="14022" href="/dirt-bike-gear">Dirt</a></li>
+                                        <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Sport"><a class="subheader-menu__link" data-nid="14019" href="/sportbike-gear">Sport</a></li>
+                                        <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Cafe"><a class="subheader-menu__link" data-nid="14023" href="/cafe-motorcycle-riding-gear">Cafe</a></li>
+                                        <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="V-Twin"><a class="subheader-menu__link" data-nid="14021" href="/harley-riding-gear">V-Twin</a></li>
+                                        <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Snow"><a class="subheader-menu__link" data-nid="14024" href="/snowmobile-gear">Snow</a></li>
+                                        <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="E-Bike"><a class="subheader-menu__link" data-nid="23138" href="/ebikes-parts-gear-accessories">E-Bike</a></li>
+                                        <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="UTV"><a class="subheader-menu__link" data-nid="22370" href="/utv-atv-apparel-helmets">UTV</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cmto-subheader__top-link-li" data-child-count="1" data-nav-level="2" data-nav-section="Parts" data-node-id="19562" onmouseover="if (!window.__cfRLUnblockHandlers) return false; setTimeout(() =&gt; $(window).trigger(&#39;LazyImgSrc.elementsChanged&#39;), 150)"
+                    data-cf-modified-136ba6a1ac3be6cd75fee6c3-="">
+                        <a class="cmto-subheader__top-link" data-nid="19562" href="/all-parts">Parts</a>
+                        <div class="cmto-subheader__menu-container" data-node-id="19562">
+                            <div class="subheader-menu">
+                                <div class="segment-toggle__tabs ui-tabs__tabs-container">
+                                    <!-- <div class="segment-toggle__tabs-instructions ui-tabs__tabs-instructions">Filter by
+                                 Vehicle:</div> -->
+                                    <!-- <input checked
+                                 class="segment-toggle__tab-switch js-SegmentToggle-input ui-switch ui-switch--shop ui-tabs__tab-toggle"
+                                 data-segment-type="motorcycle" id="motorcycle_19563" name="tabs_19563"
+                                 type="radio"><label class="ui-tabs__tab-label"
+                                 for="motorcycle_19563"><span>Motorcycle</span></label>
+                              <div class="ui-tabs__tab-content" id="motorcycle_19563">
+                                 <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="19564"
+                                    data-node-name="Motorcycle" data-node-node-type-atom="navTab"
+                                    data-node-parent-id="19563">
+                                    <ul class="subheader-menu__list subheader-menu__list--5" data-node-id="9122"
+                                       data-node-name="Parts" data-node-node-type-atom="departmentPage"
+                                       data-node-parent-id="19564">
+                                       <div class="subheader-menu__panel">
+                                          <div class="subheader-menu__panel-content">
+                                             <div class="subheader-menu__title" data-nid="10156"><a
+                                                   class="subheader-menu__title-link-text"
+                                                   href="/motorcycle-parts">Parts</a><a
+                                                   class="subheader-menu__title-link-shop-all"
+                                                   href="/motorcycle-parts?view_all=true">Shop All</a></div>
+                                             <div class="subheader-menu__columns">
+                                                <ul class="subheader-menu__column subheader-menu__column--4">
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Shop OEM Parts">
+                                                      <a class="subheader-menu__link subheader-menu__link--collapsed"
+                                                         data-nid="28293" href="/parts-oem-motorcycle-parts">Shop OEM
+                                                         Parts</a>
+                                                      <ul class="subheader-menu__list subheader-menu__list--7"
+                                                         data-node-id="28293" data-node-name="Shop OEM Parts"
+                                                         data-node-node-type-atom="contentPage"
+                                                         data-node-parent-id="10156">
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Yamaha OEM Parts"><a
+                                                               class="subheader-menu__link" data-nid="16167"
+                                                               href="/oem-yamaha-motorcycle-parts">Yamaha OEM Parts</a>
+                                                         </li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Kawasaki OEM Parts"><a
+                                                               class="subheader-menu__link" data-nid="16165"
+                                                               href="/oem-kawasaki-motorcycle-parts">Kawasaki OEM
+                                                               Parts</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Suzuki OEM Parts"><a
+                                                               class="subheader-menu__link" data-nid="16166"
+                                                               href="/oem-suzuki-motorcycle-parts">Suzuki OEM Parts</a>
+                                                         </li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Honda OEM Parts"><a
+                                                               class="subheader-menu__link" data-nid="16476"
+                                                               href="/oem-honda-motorcycle-parts">Honda OEM Parts</a>
+                                                         </li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="BMW OEM Accessories"><a
+                                                               class="subheader-menu__link" data-nid="17080"
+                                                               href="/bmw">BMW OEM Accessories</a></li>
+                                                      </ul>
+                                                   </li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Air &amp; Fuel">
+                                                      <a class="subheader-menu__link subheader-menu__link--collapsed"
+                                                         data-nid="9158" href="/motorcycle-air-fuel">Air &amp; Fuel</a>
+                                                      <ul class="subheader-menu__list subheader-menu__list--7"
+                                                         data-node-id="9158" data-node-name="Air &amp; Fuel"
+                                                         data-node-node-type-atom="facetSetBrowse"
+                                                         data-node-parent-id="10156">
+                                                         <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6"
+                                                            data-nav-level="7" data-nav-section="Air &amp; Fuel"><a
+                                                               class="subheader-menu__link" data-nid="9158"
+                                                               href="/motorcycle-air-fuel">Shop All Air &amp; Fuel</a>
+                                                         </li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Air Cleaners"><a
+                                                               class="subheader-menu__link" data-nid="9159"
+                                                               href="/motorcycle-air-cleaners">Air Cleaners</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Air Filters"><a
+                                                               class="subheader-menu__link" data-nid="14885"
+                                                               href="/motorcycle-air-filters">Air Filters</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Carburetors"><a
+                                                               class="subheader-menu__link" data-nid="14237"
+                                                               href="/motorcycle-carburetors">Carburetors</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Fuel Management"><a
+                                                               class="subheader-menu__link" data-nid="9161"
+                                                               href="/motorcycle-fuel-management">Fuel Management</a>
+                                                         </li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Intake Manifolds"><a
+                                                               class="subheader-menu__link" data-nid="14238"
+                                                               href="/motorcycle-intake-manifolds">Intake Manifolds</a>
+                                                         </li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Reed Valves"><a
+                                                               class="subheader-menu__link" data-nid="14239"
+                                                               href="/motorcycle-reed-valves">Reed Valves</a></li>
+                                                      </ul>
+                                                   </li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Audio &amp; Speakers"><a
+                                                         class="subheader-menu__link" data-nid="9345"
+                                                         href="/motorcycle-audio">Audio &amp; Speakers</a></li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Batteries &amp; Electrical">
+                                                      <a class="subheader-menu__link" data-nid="9342"
+                                                         href="/motorcycle-batteries-electrical">Batteries &amp;
+                                                         Electrical</a></li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Bike Protection">
+                                                      <a class="subheader-menu__link subheader-menu__link--collapsed"
+                                                         data-nid="9346" href="/motorcycle-bike-protection">Bike
+                                                         Protection</a>
+                                                      <ul class="subheader-menu__list subheader-menu__list--7"
+                                                         data-node-id="9346" data-node-name="Bike Protection"
+                                                         data-node-node-type-atom="facetSetBrowse"
+                                                         data-node-parent-id="10156">
+                                                         <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6"
+                                                            data-nav-level="7" data-nav-section="Bike Protection"><a
+                                                               class="subheader-menu__link" data-nid="9346"
+                                                               href="/motorcycle-bike-protection">Shop All Bike
+                                                               Protection</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Crash Bars"><a
+                                                               class="subheader-menu__link" data-nid="9393"
+                                                               href="/motorcycle-crash-bars">Crash Bars</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Crash Bar Bags"><a
+                                                               class="subheader-menu__link" data-nid="23334"
+                                                               href="/motorcycle-crash-bar-bags">Crash Bar Bags</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Frame Sliders"><a
+                                                               class="subheader-menu__link" data-nid="9392"
+                                                               href="/motorcycle-frame-sliders">Frame Sliders</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Hand Guards"><a
+                                                               class="subheader-menu__link" data-nid="10410"
+                                                               href="/motorcycle-hand-guards">Hand Guards</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Tank Protectors"><a
+                                                               class="subheader-menu__link" data-nid="9394"
+                                                               href="/motorcycle-tank-protectors">Tank Protectors</a>
+                                                         </li>
+                                                      </ul>
+                                                   </li>
+                                                </ul>
+                                                <ul class="subheader-menu__column subheader-menu__column--4">
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Body, Fairing &amp; Fender">
+                                                      <a class="subheader-menu__link subheader-menu__link--collapsed"
+                                                         data-nid="9162" href="/motorcycle-body-parts">Body, Fairing
+                                                         &amp; Fender</a>
+                                                      <ul class="subheader-menu__list subheader-menu__list--7"
+                                                         data-node-id="9162" data-node-name="Body, Fairing &amp; Fender"
+                                                         data-node-node-type-atom="facetSetBrowse"
+                                                         data-node-parent-id="10156">
+                                                         <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6"
+                                                            data-nav-level="7"
+                                                            data-nav-section="Body, Fairing &amp; Fender"><a
+                                                               class="subheader-menu__link" data-nid="9162"
+                                                               href="/motorcycle-body-parts">Shop All Body, Fairing
+                                                               &amp; Fender</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7"
+                                                            data-nav-section="Fender Eliminator Kits"><a
+                                                               class="subheader-menu__link" data-nid="9163"
+                                                               href="/motorcycle-fender-eliminator-kits">Fender
+                                                               Eliminator Kits</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Graphics &amp; Decals">
+                                                            <a class="subheader-menu__link" data-nid="9166"
+                                                               href="/motorcycle-graphics-kits">Graphics &amp;
+                                                               Decals</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Plastics"><a
+                                                               class="subheader-menu__link" data-nid="9164"
+                                                               href="/motorcycle-plastics-kits">Plastics</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7"
+                                                            data-nav-section="Body, Fairing &amp; Fender"><a
+                                                               class="subheader-menu__link" data-nid="15608"
+                                                               href="/closeout-motorcycle-body-fairing-fender">Body,
+                                                               Fairing &amp; Fender</a></li>
+                                                      </ul>
+                                                   </li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Brakes">
+                                                      <a class="subheader-menu__link" data-nid="9344"
+                                                         href="/motorcycle-brakes">Brakes</a>
+                                                      <ul class="subheader-menu__list subheader-menu__list--7"
+                                                         data-node-id="9344" data-node-name="Brakes"
+                                                         data-node-node-type-atom="facetSetBrowse"
+                                                         data-node-parent-id="10156">
+                                                         <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6"
+                                                            data-nav-level="7" data-nav-section="Brakes"><a
+                                                               class="subheader-menu__link" data-nid="9344"
+                                                               href="/motorcycle-brakes">Shop All Brakes</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Brake Lines"><a
+                                                               class="subheader-menu__link" data-nid="9388"
+                                                               href="/motorcycle-brake-lines">Brake Lines</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Brake Pads"><a
+                                                               class="subheader-menu__link" data-nid="9389"
+                                                               href="/motorcycle-brake-pads">Brake Pads</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Brake Rotors"><a
+                                                               class="subheader-menu__link" data-nid="9390"
+                                                               href="/motorcycle-brake-rotors">Brake Rotors</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Brake Calipers"><a
+                                                               class="subheader-menu__link" data-nid="9391"
+                                                               href="/motorcycle-brake-calipers">Brake Calipers</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7"
+                                                            data-nav-section="Brake Master Cylinders"><a
+                                                               class="subheader-menu__link" data-nid="9997"
+                                                               href="/motorcycle-brake-master-cylinders">Brake Master
+                                                               Cylinders</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7"
+                                                            data-nav-section="Brake Hardware &amp; Covers"><a
+                                                               class="subheader-menu__link" data-nid="9998"
+                                                               href="/motorcycle-brake-hardware-covers">Brake Hardware
+                                                               &amp; Covers</a></li>
+                                                      </ul>
+                                                   </li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Dash &amp; Gauges">
+                                                      <a class="subheader-menu__link" data-nid="9336"
+                                                         href="/motorcycle-dash-gauges">Dash &amp; Gauges</a>
+                                                      <ul class="subheader-menu__list subheader-menu__list--7"
+                                                         data-node-id="9336" data-node-name="Dash &amp; Gauges"
+                                                         data-node-node-type-atom="facetSetBrowse"
+                                                         data-node-parent-id="10156">
+                                                         <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6"
+                                                            data-nav-level="7" data-nav-section="Dash &amp; Gauges"><a
+                                                               class="subheader-menu__link" data-nid="9336"
+                                                               href="/motorcycle-dash-gauges">Shop All Dash &amp;
+                                                               Gauges</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Dash"><a
+                                                               class="subheader-menu__link" data-nid="9368"
+                                                               href="/motorcycle-dash">Dash</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Gauges"><a
+                                                               class="subheader-menu__link" data-nid="9369"
+                                                               href="/motorcycle-gauges">Gauges</a></li>
+                                                      </ul>
+                                                   </li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Drive &amp; Transmission">
+                                                      <a class="subheader-menu__link subheader-menu__link--collapsed"
+                                                         data-nid="9332" href="/motorcycle-drive-transmission">Drive
+                                                         &amp; Transmission</a>
+                                                      <ul class="subheader-menu__list subheader-menu__list--7"
+                                                         data-node-id="9332" data-node-name="Drive &amp; Transmission"
+                                                         data-node-node-type-atom="facetSetBrowse"
+                                                         data-node-parent-id="10156">
+                                                         <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6"
+                                                            data-nav-level="7"
+                                                            data-nav-section="Drive &amp; Transmission"><a
+                                                               class="subheader-menu__link" data-nid="9332"
+                                                               href="/motorcycle-drive-transmission">Shop All Drive
+                                                               &amp; Transmission</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Chains"><a
+                                                               class="subheader-menu__link" data-nid="9349"
+                                                               href="/motorcycle-chains">Chains</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Clutch"><a
+                                                               class="subheader-menu__link" data-nid="9992"
+                                                               href="/motorcycle-clutch">Clutch</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Sprockets"><a
+                                                               class="subheader-menu__link" data-nid="9350"
+                                                               href="/motorcycle-sprockets">Sprockets</a></li>
+                                                      </ul>
+                                                   </li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Engine">
+                                                      <a class="subheader-menu__link subheader-menu__link--collapsed"
+                                                         data-nid="9341" href="/motorcycle-engine">Engine</a>
+                                                      <ul class="subheader-menu__list subheader-menu__list--7"
+                                                         data-node-id="9341" data-node-name="Engine"
+                                                         data-node-node-type-atom="facetSetBrowse"
+                                                         data-node-parent-id="10156">
+                                                         <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6"
+                                                            data-nav-level="7" data-nav-section="Engine"><a
+                                                               class="subheader-menu__link" data-nid="9341"
+                                                               href="/motorcycle-engine">Shop All Engine</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Big Bore Kits"><a
+                                                               class="subheader-menu__link" data-nid="14272"
+                                                               href="/motorcycle-big-bore-kits">Big Bore Kits</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Blockoff Plates"><a
+                                                               class="subheader-menu__link" data-nid="14270"
+                                                               href="/motorcycle-blockoff-plates">Blockoff Plates</a>
+                                                         </li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Camshafts"><a
+                                                               class="subheader-menu__link" data-nid="14271"
+                                                               href="/motorcycle-camshafts">Camshafts</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Cam Covers"><a
+                                                               class="subheader-menu__link" data-nid="14273"
+                                                               href="/motorcycle-cam-covers">Cam Covers</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Clutch Covers"><a
+                                                               class="subheader-menu__link" data-nid="14274"
+                                                               href="/motorcycle-clutch-covers">Clutch Covers</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Engine Accents"><a
+                                                               class="subheader-menu__link" data-nid="14269"
+                                                               href="/motorcycle-engine-accents">Engine Accents</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Engine Hardware"><a
+                                                               class="subheader-menu__link" data-nid="14275"
+                                                               href="/motorcycle-engine-hardware">Engine Hardware</a>
+                                                         </li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Engine Rebuild Kits"><a
+                                                               class="subheader-menu__link" data-nid="14268"
+                                                               href="/motorcycle-engine-rebuild-kits">Engine Rebuild
+                                                               Kits</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Gaskets"><a
+                                                               class="subheader-menu__link" data-nid="9381"
+                                                               href="/motorcycle-gaskets">Gaskets</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Radiators"><a
+                                                               class="subheader-menu__link" data-nid="14798"
+                                                               href="/radiators">Radiators</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Water Pumps"><a
+                                                               class="subheader-menu__link" data-nid="14277"
+                                                               href="/motorcycle-water-pumps">Water Pumps</a></li>
+                                                      </ul>
+                                                   </li>
+                                                </ul>
+                                                <ul class="subheader-menu__column subheader-menu__column--4">
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Exhaust">
+                                                      <a class="subheader-menu__link subheader-menu__link--collapsed"
+                                                         data-nid="9333" href="/motorcycle-exhaust">Exhaust</a>
+                                                      <ul class="subheader-menu__list subheader-menu__list--7"
+                                                         data-node-id="9333" data-node-name="Exhaust"
+                                                         data-node-node-type-atom="facetSetBrowse"
+                                                         data-node-parent-id="10156">
+                                                         <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6"
+                                                            data-nav-level="7" data-nav-section="Exhaust"><a
+                                                               class="subheader-menu__link" data-nid="9333"
+                                                               href="/motorcycle-exhaust">Shop All Exhaust</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Slip-On"><a
+                                                               class="subheader-menu__link" data-nid="9351"
+                                                               href="/motorcycle-slip-on-exhaust">Slip-On</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Full System"><a
+                                                               class="subheader-menu__link" data-nid="9352"
+                                                               href="/motorcycle-full-system-exhaust">Full System</a>
+                                                         </li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Headers"><a
+                                                               class="subheader-menu__link" data-nid="9353"
+                                                               href="/motorcycle-headers">Headers</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Exhaust Accessories">
+                                                            <a class="subheader-menu__link" data-nid="9354"
+                                                               href="/motorcycle-exhaust-accessories">Exhaust
+                                                               Accessories</a>
+                                                            <ul class="subheader-menu__list subheader-menu__list--8"
+                                                               data-node-id="9354" data-node-name="Exhaust Accessories"
+                                                               data-node-node-type-atom="facetSetBrowse"
+                                                               data-node-parent-id="9333">
+                                                               <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--7"
+                                                                  data-nav-level="8"
+                                                                  data-nav-section="Exhaust Accessories"><a
+                                                                     class="subheader-menu__link" data-nid="9354"
+                                                                     href="/motorcycle-exhaust-accessories">Shop All
+                                                                     Exhaust Accessories</a></li>
+                                                               <li class="subheader-menu__item subheader-menu__item--8 subheader-menu__item--mobile-only"
+                                                                  data-nav-level="8" data-nav-section="Exhaust Wrap"><a
+                                                                     class="subheader-menu__link" data-nid="22004"
+                                                                     href="/motorcycle-exhaust-tape">Exhaust Wrap</a>
+                                                               </li>
+                                                            </ul>
+                                                         </li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7"
+                                                            data-nav-section="Exhaust Baffles &amp; Inserts"><a
+                                                               class="subheader-menu__link" data-nid="14252"
+                                                               href="/motorcycle-exhaust-baffles-inserts">Exhaust
+                                                               Baffles &amp; Inserts</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Exhaust Gaskets"><a
+                                                               class="subheader-menu__link" data-nid="14253"
+                                                               href="/motorcycle-exhaust-gaskets">Exhaust Gaskets</a>
+                                                         </li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Exhaust Heat Shields">
+                                                            <a class="subheader-menu__link" data-nid="14254"
+                                                               href="/motorcycle-exhaust-heat-shields">Exhaust Heat
+                                                               Shields</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7"
+                                                            data-nav-section="Exhaust Tips &amp; Caps"><a
+                                                               class="subheader-menu__link" data-nid="14255"
+                                                               href="/motorcycle-exhaust-tips-caps">Exhaust Tips &amp;
+                                                               Caps</a></li>
+                                                      </ul>
+                                                   </li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Filters">
+                                                      <a class="subheader-menu__link subheader-menu__link--collapsed"
+                                                         data-nid="9160"
+                                                         href="/motorcycle-air-fuel-oil-filters">Filters</a>
+                                                      <ul class="subheader-menu__list subheader-menu__list--7"
+                                                         data-node-id="9160" data-node-name="Filters"
+                                                         data-node-node-type-atom="facetSetBrowse"
+                                                         data-node-parent-id="10156">
+                                                         <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6"
+                                                            data-nav-level="7" data-nav-section="Filters"><a
+                                                               class="subheader-menu__link" data-nid="9160"
+                                                               href="/motorcycle-air-fuel-oil-filters">Shop All
+                                                               Filters</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Air Filters"><a
+                                                               class="subheader-menu__link" data-nid="14884"
+                                                               href="/motorcycle-air-filters">Air Filters</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Oil Filters"><a
+                                                               class="subheader-menu__link" data-nid="9380"
+                                                               href="/motorcycle-oil-filters">Oil Filters</a></li>
+                                                      </ul>
+                                                   </li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Foot Controls">
+                                                      <a class="subheader-menu__link subheader-menu__link--collapsed"
+                                                         data-nid="9334" href="/motorcycle-foot-controls">Foot
+                                                         Controls</a>
+                                                      <ul class="subheader-menu__list subheader-menu__list--7"
+                                                         data-node-id="9334" data-node-name="Foot Controls"
+                                                         data-node-node-type-atom="facetSetBrowse"
+                                                         data-node-parent-id="10156">
+                                                         <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6"
+                                                            data-nav-level="7" data-nav-section="Foot Controls"><a
+                                                               class="subheader-menu__link" data-nid="9334"
+                                                               href="/motorcycle-foot-controls">Shop All Foot
+                                                               Controls</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Brake Pedals"><a
+                                                               class="subheader-menu__link" data-nid="9359"
+                                                               href="/motorcycle-brake-pedals">Brake Pedals</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Controls"><a
+                                                               class="subheader-menu__link" data-nid="9358"
+                                                               href="/motorcycle-mid-forward-controls">Controls</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Floorboards"><a
+                                                               class="subheader-menu__link" data-nid="9357"
+                                                               href="/motorcycle-floorboards">Floorboards</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7"
+                                                            data-nav-section="Floorboard Relocation Kits"><a
+                                                               class="subheader-menu__link" data-nid="21998"
+                                                               href="/motorcycle-floorboard-relocation-kits">Floorboard
+                                                               Relocation Kits</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Foot Pegs"><a
+                                                               class="subheader-menu__link" data-nid="9355"
+                                                               href="/motorcycle-foot-pegs">Foot Pegs</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Rearsets"><a
+                                                               class="subheader-menu__link" data-nid="9356"
+                                                               href="/motorcycle-rear-sets">Rearsets</a></li>
+                                                      </ul>
+                                                   </li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Gas &amp; Oil Tanks"><a
+                                                         class="subheader-menu__link" data-nid="9343"
+                                                         href="/motorcycle-gas-oil-tanks">Gas &amp; Oil Tanks</a></li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Handlebars &amp; Controls">
+                                                      <a class="subheader-menu__link subheader-menu__link--collapsed"
+                                                         data-nid="9335"
+                                                         href="/motorcycle-hand-controls-handlebars">Handlebars &amp;
+                                                         Controls</a>
+                                                      <ul class="subheader-menu__list subheader-menu__list--7"
+                                                         data-node-id="9335" data-node-name="Handlebars &amp; Controls"
+                                                         data-node-node-type-atom="facetSetBrowse"
+                                                         data-node-parent-id="10156">
+                                                         <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6"
+                                                            data-nav-level="7"
+                                                            data-nav-section="Handlebars &amp; Controls"><a
+                                                               class="subheader-menu__link" data-nid="9335"
+                                                               href="/motorcycle-hand-controls-handlebars">Shop All
+                                                               Handlebars &amp; Controls</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Clip-Ons"><a
+                                                               class="subheader-menu__link" data-nid="9360"
+                                                               href="/motorcycle-clip-ons">Clip-Ons</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Grips"><a
+                                                               class="subheader-menu__link" data-nid="9362"
+                                                               href="/motorcycle-grips">Grips</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Handlebars"><a
+                                                               class="subheader-menu__link" data-nid="9361"
+                                                               href="/motorcycle-handlebars">Handlebars</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Levers"><a
+                                                               class="subheader-menu__link" data-nid="9363"
+                                                               href="/motorcycle-levers">Levers</a></li>
+                                                      </ul>
+                                                   </li>
+                                                </ul>
+                                                <ul class="subheader-menu__column subheader-menu__column--4">
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Lighting"><a
+                                                         class="subheader-menu__link" data-nid="9339"
+                                                         href="/motorcycle-lighting">Lighting</a></li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Mirrors"><a
+                                                         class="subheader-menu__link" data-nid="9338"
+                                                         href="/motorcycle-mirrors">Mirrors</a></li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Seats &amp; Sissy Bars">
+                                                      <a class="subheader-menu__link" data-nid="9340"
+                                                         href="/motorcycle-seating">Seats &amp; Sissy Bars</a>
+                                                      <ul class="subheader-menu__list subheader-menu__list--7"
+                                                         data-node-id="9340" data-node-name="Seats &amp; Sissy Bars"
+                                                         data-node-node-type-atom="facetSetBrowse"
+                                                         data-node-parent-id="10156">
+                                                         <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6"
+                                                            data-nav-level="7"
+                                                            data-nav-section="Seats &amp; Sissy Bars"><a
+                                                               class="subheader-menu__link" data-nid="9340"
+                                                               href="/motorcycle-seating">Shop All Seats &amp; Sissy
+                                                               Bars</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Seats"><a
+                                                               class="subheader-menu__link" data-nid="9376"
+                                                               href="/motorcycle-seats">Seats</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Seat Covers"><a
+                                                               class="subheader-menu__link" data-nid="14266"
+                                                               href="/motorcycle-seat-covers">Seat Covers</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Seat Pads"><a
+                                                               class="subheader-menu__link" data-nid="9377"
+                                                               href="/motorcycle-seat-pads">Seat Pads</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Sissy Bars"><a
+                                                               class="subheader-menu__link" data-nid="9378"
+                                                               href="/motorcycle-sissy-bars">Sissy Bars</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Seat Accessories"><a
+                                                               class="subheader-menu__link" data-nid="9379"
+                                                               href="/motorcycle-seating-accessories">Seat
+                                                               Accessories</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Seat Hardware"><a
+                                                               class="subheader-menu__link" data-nid="14267"
+                                                               href="/motorcycle-seat-hardware">Seat Hardware</a></li>
+                                                      </ul>
+                                                   </li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Suspension &amp; Frame">
+                                                      <a class="subheader-menu__link" data-nid="9347"
+                                                         href="/motorcycle-suspension">Suspension &amp; Frame</a>
+                                                      <ul class="subheader-menu__list subheader-menu__list--7"
+                                                         data-node-id="9347" data-node-name="Suspension &amp; Frame"
+                                                         data-node-node-type-atom="facetSetBrowse"
+                                                         data-node-parent-id="10156">
+                                                         <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6"
+                                                            data-nav-level="7"
+                                                            data-nav-section="Suspension &amp; Frame"><a
+                                                               class="subheader-menu__link" data-nid="9347"
+                                                               href="/motorcycle-suspension">Shop All Suspension &amp;
+                                                               Frame</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only"
+                                                            data-nav-level="7" data-nav-section="Shocks"><a
+                                                               class="subheader-menu__link" data-nid="9398"
+                                                               href="/motorcycle-shock-absorbers">Shocks</a></li>
+                                                      </ul>
+                                                   </li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Tires"><a
+                                                         class="subheader-menu__link" data-nid="25477"
+                                                         href="https://www.revzilla.com/all-tires"
+                                                         target="_blank">Tires</a></li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Wheel &amp; Axle">
+                                                      <a class="subheader-menu__link subheader-menu__link--collapsed"
+                                                         data-nid="9387" href="/motorcycle-wheel-axle">Wheel &amp;
+                                                         Axle</a>
+                                                      <ul class="subheader-menu__list subheader-menu__list--7"
+                                                         data-node-id="9387" data-node-name="Wheel &amp; Axle"
+                                                         data-node-node-type-atom="facetSetBrowse"
+                                                         data-node-parent-id="10156">
+                                                         <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6"
+                                                            data-nav-level="7" data-nav-section="Wheel &amp; Axle"><a
+                                                               class="subheader-menu__link" data-nid="9387"
+                                                               href="/motorcycle-wheel-axle">Shop All Wheel &amp;
+                                                               Axle</a></li>
+                                                         <li class="subheader-menu__item subheader-menu__item--7"
+                                                            data-nav-level="7" data-nav-section="Wheel Bearings"><a
+                                                               class="subheader-menu__link" data-nid="23481"
+                                                               href="/wheel-bearings">Wheel Bearings</a></li>
+                                                      </ul>
+                                                   </li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6"
+                                                      data-nav-section="Windshields &amp; Windscreens"><a
+                                                         class="subheader-menu__link" data-nid="9337"
+                                                         href="/motorcycle-windshields-windscreens">Windshields &amp;
+                                                         Windscreens</a></li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="Closeouts"><a
+                                                         class="subheader-menu__link" data-nid="14604"
+                                                         href="/closeout-motorcycle-parts"
+                                                         style="font-weight: bold; color: var(--brand-color);">Closeouts</a>
+                                                   </li>
+                                                   <li class="subheader-menu__item subheader-menu__item--6"
+                                                      data-nav-level="6" data-nav-section="E-Bike"><a
+                                                         class="subheader-menu__link" data-nid="23142"
+                                                         href="/ebikes-parts-gear-accessories">E-Bike</a></li>
+                                                </ul>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </ul>
+                                 </ul>
+                              </div>
+                              <input
+                                 class="segment-toggle__tab-switch js-SegmentToggle-input ui-switch ui-switch--shop ui-tabs__tab-toggle"
+                                 data-segment-type="utv_atv" id="utv_atv_19563" name="tabs_19563" type="radio"><label
+                                 class="ui-tabs__tab-label" for="utv_atv_19563"><span>UTV/ATV</span></label> -->
+                                    <div class="ui-tabs__tab-content" id="utv_atv_19563">
+                                        <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="19565" data-node-name="UTV/ATV" data-node-node-type-atom="navTab" data-node-parent-id="19563">
+                                            <ul class="subheader-menu__list subheader-menu__list--5" data-node-id="19528" data-node-name="UTV / ATV Parts" data-node-node-type-atom="departmentPage" data-node-parent-id="19565">
+                                                <div class="subheader-menu__panel">
+                                                    <div class="subheader-menu__panel-content">
+                                                        <div class="subheader-menu__title" data-nid="19083"><a class="subheader-menu__title-link-text" href="/utv-atv-parts">UTV /
+                                                   ATV Parts</a><a class="subheader-menu__title-link-shop-all" href="/utv-atv-parts?view_all=true">Shop All</a></div>
+                                                        <div class="subheader-menu__columns">
+                                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Audio &amp; Speakers">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="19154" href="/utv-atv-audio">Audio &amp; Speakers</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="19154" data-node-name="Audio &amp; Speakers" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="19083">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Audio &amp; Speakers">
+                                                                            <a class="subheader-menu__link" data-nid="19154" href="/utv-atv-audio">Shop All Audio &amp; Speakers</a>
+                                                                        </li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Audio Kits"><a class="subheader-menu__link" data-nid="19156" href="/utv-atv-audio-kit">Audio Kits</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Sound Bars"><a class="subheader-menu__link" data-nid="19158" href="/utv-atv-sound-bars">Sound Bars</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Speaker Pods"><a class="subheader-menu__link" data-nid="19157" href="/utv-atv-speaker-pods">Speaker Pods</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Batteries"><a class="subheader-menu__link" data-nid="19085" href="/utv-atv-batteries">Batteries</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Bumpers &amp; Protection">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="19170" href="/utv-atv-bumpers-protection">Bumpers
+                                                         &amp; Protection</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="19170" data-node-name="Bumpers &amp; Protection" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="19083">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Bumpers &amp; Protection"><a class="subheader-menu__link" data-nid="19170" href="/utv-atv-bumpers-protection">Shop All Bumpers &amp;
+                                                               Protection</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Bumpers"><a class="subheader-menu__link" data-nid="19338" href="/utv-atv-bumpers">Bumpers</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Sliders / Nerf Bars"><a class="subheader-menu__link" data-nid="19339" href="/utv-atv-sliders-nerf-bars">Sliders / Nerf Bars</a>
+                                                                        </li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Skid Plates"><a class="subheader-menu__link" data-nid="19340" href="/utv-atv-skid-plates">Skid Plates</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Drive &amp; Transmission">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="19172" href="/utv-atv-drive-transmission">Drive &amp;
+                                                         Transmission</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="19172" data-node-name="Drive &amp; Transmission" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="19083">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Drive &amp; Transmission"><a class="subheader-menu__link" data-nid="19172" href="/utv-atv-drive-transmission">Shop All Drive &amp;
+                                                               Transmission</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Belts"><a class="subheader-menu__link" data-nid="19341" href="/utv-atv-belts">Belts</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Exhaust"><a class="subheader-menu__link" data-nid="20051" href="/utv-atv-exhaust">Exhaust</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Filters">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="19173" href="/utv-atv-filters">Filters</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="19173" data-node-name="Filters" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="19083">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Filters"><a class="subheader-menu__link" data-nid="19173" href="/utv-atv-filters">Shop All Filters</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Air Filters &amp; Accessories"><a class="subheader-menu__link" data-nid="19160" href="/utv-atv-air-filters-accessories">Air Filters &amp;
+                                                               Accessories</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Oil Filter"><a class="subheader-menu__link" data-nid="19186" href="/utv-atv-oil-filter">Oil Filter</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Handlebars &amp; Controls"><a class="subheader-menu__link" data-nid="19174" href="/atv-handlebars-controls">Handlebars &amp; Controls</a>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Hitch &amp; Towing"><a class="subheader-menu__link" data-nid="19393" href="/utv-atv-hitch-towing">Hitch &amp; Towing</a></li>
+                                                            </ul>
+                                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Lighting">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="19176" href="/utv-atv-lighting">Lighting</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="19176" data-node-name="Lighting" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="19083">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Lighting"><a class="subheader-menu__link" data-nid="19176" href="/utv-atv-lighting">Shop All Lighting</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Light Bars"><a class="subheader-menu__link" data-nid="19342" href="/utv-atv-light-bars">Light Bars</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Lighting Hardware"><a class="subheader-menu__link" data-nid="19343" href="/utv-atv-lighting-hardware">Lighting Hardware</a>
+                                                                        </li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Tail &amp; Chase Lights"><a class="subheader-menu__link" data-nid="19344" href="/utv-atv-tail-chase-lights">Tail &amp; Chase
+                                                               Lights</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Mirrors"><a class="subheader-menu__link" data-nid="19226" href="/utv-atv-mirrors">Mirrors</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Plows"><a class="subheader-menu__link" data-nid="19321" href="/utv-atv-plows">Plows</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Racks"><a class="subheader-menu__link" data-nid="19550" href="/utv-atv-racks">Racks</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Roofs &amp; Doors"><a class="subheader-menu__link" data-nid="19178" href="/utv-roofs-doors">Roofs &amp; Doors</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Seat Harnesses"><a class="subheader-menu__link" data-nid="19345" href="/utv-seat-harnesses">Seat Harnesses</a></li>
+                                                            </ul>
+                                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Tires">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="19346" href="/utv-atv-tires">Tires</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="19346" data-node-name="Tires" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="19083">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Tires"><a class="subheader-menu__link" data-nid="19346" href="/utv-atv-tires">Shop All Tires</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="All Terrain Tires"><a class="subheader-menu__link" data-nid="19347" href="/all-terrain-utv-atv-tires">All Terrain Tires</a>
+                                                                        </li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Hard Terrain / Street">
+                                                                            <a class="subheader-menu__link" data-nid="19348" href="/hard-terrain-street-utv-atv-tires">Hard Terrain /
+                                                               Street</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Sand Tires"><a class="subheader-menu__link" data-nid="19349" href="/sand-utv-atv-tires">Sand Tires</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Soft Terrain / Mud Tires"><a class="subheader-menu__link" data-nid="19350" href="/soft-terrain-mud-aggressive-utv-atv-tires">Soft
+                                                               Terrain / Mud Tires</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Wheels">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="19194" href="/utv-atv-wheels">Wheels</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="19194" data-node-name="Wheels" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="19083">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Wheels"><a class="subheader-menu__link" data-nid="19194" href="/utv-atv-wheels">Shop All Wheels</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Beadlock Wheels"><a class="subheader-menu__link" data-nid="19231" href="/utv-atv-beadlock-wheels">Beadlock Wheels</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Lug Nuts"><a class="subheader-menu__link" data-nid="19183" href="/utv-atv-lug-nuts">Lug Nuts</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Wheel Spacers"><a class="subheader-menu__link" data-nid="19232" href="/utv-atv-wheel-spacers">Wheel Spacers</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Winches &amp; Recovery"><a class="subheader-menu__link" data-nid="19324" href="/utv-atv-winches-accessories">Winches &amp; Recovery</a>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Windshield"><a class="subheader-menu__link" data-nid="19326" href="/utv-atv-windshields">Windshield</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Closeouts"><a class="subheader-menu__link" data-nid="19329" href="/closeout-utv-atv-parts" style="font-weight: bold; color: var(--brand-color);">Closeouts</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cmto-subheader__top-link-li" data-child-count="1" data-nav-level="2" data-nav-section="Accessories" data-node-id="19566" onmouseover="if (!window.__cfRLUnblockHandlers) return false; setTimeout(() =&gt; $(window).trigger(&#39;LazyImgSrc.elementsChanged&#39;), 150)"
+                    data-cf-modified-136ba6a1ac3be6cd75fee6c3-="">
+                        <a class="cmto-subheader__top-link" data-nid="19566" href="/all-accessories">Accessories</a>
+                        <div class="cmto-subheader__menu-container" data-node-id="19566">
+                            <div class="subheader-menu">
+                                <div class="segment-toggle__tabs ui-tabs__tabs-container">
+                                    <div class="segment-toggle__tabs-instructions ui-tabs__tabs-instructions">Filter by Vehicle:
+                                    </div>
+                                    <input checked class="segment-toggle__tab-switch js-SegmentToggle-input ui-switch ui-switch--shop ui-tabs__tab-toggle" data-segment-type="motorcycle" id="motorcycle_19567" name="tabs_19567" type="radio">
+                                    <label class="ui-tabs__tab-label" for="motorcycle_19567"><span>Motorcycle</span></label>
+                                    <div class="ui-tabs__tab-content" id="motorcycle_19567">
+                                        <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="19568" data-node-name="Motorcycle" data-node-node-type-atom="navTab" data-node-parent-id="19567">
+                                            <ul class="subheader-menu__list subheader-menu__list--5" data-node-id="9123" data-node-name="Accessories" data-node-node-type-atom="departmentPage" data-node-parent-id="19568">
+                                                <div class="subheader-menu__panel subheader-menu__panel--split">
+                                                    <div class="subheader-menu__panel-content">
+                                                        <div class="subheader-menu__title" data-nid="10272"><a class="subheader-menu__title-link-text" href="/motorcycle-accessories">Accessories</a><a class="subheader-menu__title-link-shop-all" href="/motorcycle-accessories?view_all=true">Shop All</a></div>
+                                                        <div class="subheader-menu__columns">
+                                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Battery Chargers"><a class="subheader-menu__link" data-nid="9558" href="/motorcycle-battery-chargers">Battery Chargers</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Books &amp; DVDs"><a class="subheader-menu__link" data-nid="10011" href="/motorcycle-books-dvds">Books &amp; DVDs</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Camping">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="10422" href="/motorcycle-camping">Camping</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="10422" data-node-name="Camping" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10272">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Camping"><a class="subheader-menu__link" data-nid="10422" href="/motorcycle-camping">Shop All Camping</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Camping Kitchen"><a class="subheader-menu__link" data-nid="15177" href="/camping-kitchen">Camping Kitchen</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Sleeping Bags &amp; Pads"><a class="subheader-menu__link" data-nid="15178" href="/sleeping-bags-pads">Sleeping Bags &amp; Pads</a>
+                                                                        </li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Tents"><a class="subheader-menu__link" data-nid="15179" href="/tents">Tents</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Cleaning Supplies">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="9578" href="/motorcycle-cleaning-supplies">Cleaning
+                                                         Supplies</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="9578" data-node-name="Cleaning Supplies" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10272">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Cleaning Supplies"><a class="subheader-menu__link" data-nid="9578" href="/motorcycle-cleaning-supplies">Shop All Cleaning
+                                                               Supplies</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Chain Care"><a class="subheader-menu__link" data-nid="16718" href="/motorcycle-chain-maintenance-tools">Chain Care</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Electronics &amp; Mounts">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="9562" href="/motorcycle-electronics-mounts">Electronics &amp;
+                                                         Mounts</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="9562" data-node-name="Electronics &amp; Mounts" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10272">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Electronics &amp; Mounts"><a class="subheader-menu__link" data-nid="9562" href="/motorcycle-electronics-mounts">Shop All
+                                                               Electronics &amp; Mounts</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Bluetooth Communications"><a class="subheader-menu__link" data-nid="9563" href="/motorcycle-bluetooth-communications">Bluetooth
+                                                               Communications</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Cameras"><a class="subheader-menu__link" data-nid="9565" href="/motorcycle-riding-cameras">Cameras</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="GPS"><a class="subheader-menu__link" data-nid="9564" href="/motorcycle-gps">GPS</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Lap Timers"><a class="subheader-menu__link" data-nid="9569" href="/motorcycle-lap-timers">Lap Timers</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Mounts"><a class="subheader-menu__link" data-nid="9566" href="/motorcycle-gps-phone-mounts">Mounts</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Power Adapters"><a class="subheader-menu__link" data-nid="9567" href="/motorcycle-power-adapters">Power Adapters</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Power Outlets &amp; Kits"><a class="subheader-menu__link" data-nid="14306" href="/motorcycle-power-outlets-kits">Power Outlets &amp;
+                                                               Kits</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Radar Detectors"><a class="subheader-menu__link" data-nid="9568" href="/motorcycle-radar-detectors">Radar Detectors</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Gifts">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="9605" href="/motorcycle-gifts-and-novelties">Gifts</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="9605" data-node-name="Gifts" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10272">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Gifts"><a class="subheader-menu__link" data-nid="9605" href="/motorcycle-gifts-and-novelties">Shop All Gifts</a>
+                                                                        </li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Keychains"><a class="subheader-menu__link" data-nid="9607" href="/motorcycle-keychains">Keychains</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Toys &amp; Models"><a class="subheader-menu__link" data-nid="9606" href="/motorcycle-toys-models">Toys &amp; Models</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Wallets"><a class="subheader-menu__link" data-nid="9604" href="/motorcycle-wallets">Wallets</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Luggage &amp; Backpacks">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="9544" href="/motorcycle-luggage-and-bags">Luggage
+                                                         &amp; Backpacks</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="9544" data-node-name="Luggage &amp; Backpacks" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10272">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Luggage &amp; Backpacks"><a class="subheader-menu__link" data-nid="9544" href="/motorcycle-luggage-and-bags">Shop All Luggage
+                                                               &amp; Backpacks</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Backpacks"><a class="subheader-menu__link" data-nid="9545" href="/motorcycle-backpacks">Backpacks</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Dry Bags"><a class="subheader-menu__link" data-nid="9548" href="/motorcycle-dry-bags">Dry Bags</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Gear Bags"><a class="subheader-menu__link" data-nid="9550" href="/motorcycle-gear-bags">Gear Bags</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Hard Luggage"><a class="subheader-menu__link" data-nid="9546" href="/hard-motorcycle-luggage">Hard Luggage</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Hydration"><a class="subheader-menu__link" data-nid="9551" href="/motorcycle-hydration">Hydration</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Luggage Accessories">
+                                                                            <a class="subheader-menu__link" data-nid="9553" href="/motorcycle-luggage-accessories">Luggage
+                                                               Accessories</a>
+                                                                            <ul class="subheader-menu__list subheader-menu__list--8" data-node-id="9553" data-node-name="Luggage Accessories" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="9544">
+                                                                                <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--7" data-nav-level="8" data-nav-section="Luggage Accessories"><a class="subheader-menu__link" data-nid="9553" href="/motorcycle-luggage-accessories">Shop All
+                                                                     Luggage Accessories</a></li>
+                                                                                <li class="subheader-menu__item subheader-menu__item--8 subheader-menu__item--mobile-only" data-nav-level="8" data-nav-section="Saddlebag Liners"><a class="subheader-menu__link" data-nid="23186" href="/motorcycle-saddlebag-liners">Saddlebag
+                                                                     Liners</a></li>
+                                                                                <li class="subheader-menu__item subheader-menu__item--8 subheader-menu__item--mobile-only" data-nav-level="8" data-nav-section="Harley Saddlebag Liners"><a class="subheader-menu__link" data-nid="23187" href="/harley-saddlebag-liners">Harley Saddlebag
+                                                                     Liners</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Luggage Racks"><a class="subheader-menu__link" data-nid="9552" href="/motorcycle-luggage-racks">Luggage Racks</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Saddlebags"><a class="subheader-menu__link" data-nid="10017" href="/motorcycle-saddlebags">Saddlebags</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Saddlebag Extensions">
+                                                                            <a class="subheader-menu__link" data-nid="23332" href="/motorcycle-saddlebag-extensions">Saddlebag
+                                                               Extensions</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Saddlebag Locks"><a class="subheader-menu__link" data-nid="23213" href="/motorcycle-saddlebag-locks">Saddlebag Locks</a>
+                                                                        </li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Saddlebag Latches"><a class="subheader-menu__link" data-nid="22002" href="/motorcycle-saddlebag-latches">Saddlebag
+                                                               Latches</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Side Cases"><a class="subheader-menu__link" data-nid="10016" href="/motorcycle-side-cases">Side Cases</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Soft Luggage"><a class="subheader-menu__link" data-nid="9547" href="/soft-motorcycle-luggage">Soft Luggage</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Tail Bags"><a class="subheader-menu__link" data-nid="10010" href="/motorcycle-tail-bags">Tail Bags</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Tank Bags"><a class="subheader-menu__link" data-nid="9549" href="/motorcycle-tank-bags">Tank Bags</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Top Cases"><a class="subheader-menu__link" data-nid="10014" href="/motorcycle-top-cases">Top Cases</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Tool Rolls"><a class="subheader-menu__link" data-nid="10015" href="/motorcycle-tool-rolls">Tool Rolls</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="All Luggage &amp; Bags"><a class="subheader-menu__link" data-nid="14055" href="/motorcycle-luggage-and-bags">All Luggage &amp;
+                                                               Bags</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Coolers"><a class="subheader-menu__link" data-nid="23212" href="/motorcycle-coolers">Coolers</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Windshield Bags"><a class="subheader-menu__link" data-nid="23327" href="/motorcycle-windshield-bags">Windshield Bags</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Maps"><a class="subheader-menu__link" data-nid="10423" href="/motorcycle-maps">Maps</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Oil &amp; Fluids">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="9575" href="/motorcycle-oil-fluids">Oil &amp;
+                                                         Fluids</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="9575" data-node-name="Oil &amp; Fluids" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10272">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Oil &amp; Fluids"><a class="subheader-menu__link" data-nid="9575" href="/motorcycle-oil-fluids">Shop All Oil &amp;
+                                                               Fluids</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Air Filter Oil"><a class="subheader-menu__link" data-nid="14517" href="/motorcycle-air-filter-oil">Air Filter Oil</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Brake Fluid"><a class="subheader-menu__link" data-nid="14518" href="/motorcycle-brake-fluid">Brake Fluid</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Chain Lubricant"><a class="subheader-menu__link" data-nid="9577" href="/motorcycle-chain-lube">Chain Lubricant</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Coolant"><a class="subheader-menu__link" data-nid="14519" href="/motorcycle-coolant">Coolant</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Engine Oil"><a class="subheader-menu__link" data-nid="9576" href="/motorcycle-engine-oil">Engine Oil</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Fuel Additives"><a class="subheader-menu__link" data-nid="14520" href="/motorcycle-fuel-additives">Fuel Additives</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Fuel Cans &amp; Storage"><a class="subheader-menu__link" data-nid="10442" href="/motorcycle-fuel-cans-storage-transfer">Fuel Cans
+                                                               &amp; Storage</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Fork Oil"><a class="subheader-menu__link" data-nid="14521" href="/motorcycle-fork-oil">Fork Oil</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Solvents"><a class="subheader-menu__link" data-nid="14522" href="/motorcycle-solvents">Solvents</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Security">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="9559" href="/motorcycle-security">Security</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="9559" data-node-name="Security" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10272">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Security"><a class="subheader-menu__link" data-nid="9559" href="/motorcycle-security">Shop All Security</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Alarms"><a class="subheader-menu__link" data-nid="9560" href="/motorcycle-alarms">Alarms</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Locks &amp; Chains"><a class="subheader-menu__link" data-nid="9561" href="/motorcycle-locks-chains">Locks &amp; Chains</a>
+                                                                        </li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Helmet Locks"><a class="subheader-menu__link" data-nid="17117" href="/motorcycle-helmet-locks">Helmet Locks</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Tools">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="9570" href="/motorcycle-tools">Tools</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="9570" data-node-name="Tools" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10272">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Tools"><a class="subheader-menu__link" data-nid="9570" href="/motorcycle-tools">Shop All Tools</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Hand Tools"><a class="subheader-menu__link" data-nid="9571" href="/motorcycle-hand-tools">Hand Tools</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Tire Repair"><a class="subheader-menu__link" data-nid="9573" href="/motorcycle-tire-repair-tools">Tire Repair</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Tool Kits"><a class="subheader-menu__link" data-nid="9572" href="/motorcycle-tool-kits">Tool Kits</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Tie Downs"><a class="subheader-menu__link" data-nid="9574" href="/motorcycle-tie-down-straps">Tie Downs</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Transport &amp; Storage">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="9554" href="/motorcycle-transport-and-storage">Transport &amp;
+                                                         Storage</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="9554" data-node-name="Transport &amp; Storage" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10272">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Transport &amp; Storage"><a class="subheader-menu__link" data-nid="9554" href="/motorcycle-transport-and-storage">Shop All
+                                                               Transport &amp; Storage</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Covers"><a class="subheader-menu__link" data-nid="9557" href="/motorcycle-covers">Covers</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Rain Covers"><a class="subheader-menu__link" data-nid="23333" href="/motorcycle-luggage-rain-covers">Rain Covers</a>
+                                                                        </li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Ramps"><a class="subheader-menu__link" data-nid="15901" href="/motorcycle-ramps">Ramps</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Stands"><a class="subheader-menu__link" data-nid="9556" href="/motorcycle-stands">Stands</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Tie Downs"><a class="subheader-menu__link" data-nid="9555" href="/motorcycle-tie-down-straps">Tie Downs</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7 subheader-menu__item--mobile-only" data-nav-level="7" data-nav-section="Trailer Hitches"><a class="subheader-menu__link" data-nid="21997" href="/motorcycle-trailer-hitches">Trailer Hitches</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Insta360 up to $90 Off"><a class="subheader-menu__link" data-nid="28090" href="/accessories-insta360">Insta360 up to $90 Off</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Closeouts"><a class="subheader-menu__link" data-nid="14605" href="/closeout-motorcycle-accessories" style="font-weight: bold; color: var(--brand-color);">Closeouts</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="subheader-menu__panel subheader-menu__panel--split">
+                                                    <div class="subheader-menu__title" data-nid="10275"><span class="subheader-menu__title-link-text subheader-menu__title-link-text--shop-by">Shop
+                                                By Riding Style</span></div>
+                                                    <ul class="subheader-menu__list">
+                                                        <ul class="subheader-menu__list subheader-menu__list--6" data-node-id="10275" data-node-name="Shop Accessories By Riding Style" data-node-node-type-atom="navRidingStyleSelector" data-node-parent-id="9123">
+                                                            <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Sport"><a class="subheader-menu__link" data-nid="14030" href="/sportbike-accessories">Sport</a></li>
+                                                            <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="ADV/Touring"><a class="subheader-menu__link" data-nid="14031" href="/adv-touring-accessories">ADV/Touring</a></li>
+                                                            <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="V-Twin"><a class="subheader-menu__link" data-nid="14032" href="/harley-davidson-accessories">V-Twin</a></li>
+                                                            <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Dirt"><a class="subheader-menu__link" data-nid="14033" href="/dirt-bike-accessories">Dirt</a></li>
+                                                            <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Cafe"><a class="subheader-menu__link" data-nid="14034" href="/cafe-motorcycle-accessories">Cafe</a></li>
+                                                            <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Snow"><a class="subheader-menu__link" data-nid="14035" href="/snowmobile-accessories">Snow</a></li>
+                                                            <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="E-Bike"><a class="subheader-menu__link" data-nid="23139" href="/ebikes-parts-gear-accessories">E-Bike</a></li>
+                                                        </ul>
+                                                    </ul>
+                                                </div>
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                    <input class="segment-toggle__tab-switch js-SegmentToggle-input ui-switch ui-switch--shop ui-tabs__tab-toggle" data-segment-type="utv_atv" id="utv_atv_19567" name="tabs_19567" type="radio">
+                                    <label class="ui-tabs__tab-label" for="utv_atv_19567"><span>UTV/ATV</span></label>
+                                    <div class="ui-tabs__tab-content" id="utv_atv_19567">
+                                        <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="19569" data-node-name="UTV/ATV" data-node-node-type-atom="navTab" data-node-parent-id="19567">
+                                            <ul class="subheader-menu__list subheader-menu__list--5" data-node-id="19195" data-node-name="UTV / ATV Accessories" data-node-node-type-atom="departmentPage" data-node-parent-id="19569">
+                                                <div class="subheader-menu__panel">
+                                                    <div class="subheader-menu__panel-content">
+                                                        <div class="subheader-menu__title" data-nid="19575"><a class="subheader-menu__title-link-text" href="/utv-atv-accessories">UTV / ATV Accessories</a><a class="subheader-menu__title-link-shop-all" href="/utv-atv-accessories?view_all=true">Shop All</a></div>
+                                                        <div class="subheader-menu__columns">
+                                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Battery Chargers"><a class="subheader-menu__link" data-nid="19353" href="/utv-atv-battery-chargers">Battery Chargers</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Cab &amp; Interior">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="19171" href="/utv-atv-cab-interior">Cab &amp;
+                                                         Interior</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="19171" data-node-name="Cab &amp; Interior" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="19575">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Cab &amp; Interior"><a class="subheader-menu__link" data-nid="19171" href="/utv-atv-cab-interior">Shop All Cab &amp;
+                                                               Interior</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Accessory Mounts"><a class="subheader-menu__link" data-nid="19205" href="/utv-atv-accessory-mounts">Accessory Mounts</a>
+                                                                        </li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Grab Bars &amp; Handles"><a class="subheader-menu__link" data-nid="19181" href="/utv-atv-grab-bars-handles">Grab Bars &amp;
+                                                               Handles</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Phone / GPS Holder"><a class="subheader-menu__link" data-nid="19369" href="/utv-atv-phone-gps-holder">Phone / GPS Holder</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Camping">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="19328" href="/motorcycle-camping">Camping</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="19328" data-node-name="Camping" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="19575">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Camping"><a class="subheader-menu__link" data-nid="19328" href="/motorcycle-camping">Shop All Camping</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Camping Kitchen"><a class="subheader-menu__link" data-nid="19327" href="/camping-kitchen">Camping Kitchen</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Sleeping Bags &amp; Pads"><a class="subheader-menu__link" data-nid="19372" href="/sleeping-bags-pads">Sleeping Bags &amp; Pads</a>
+                                                                        </li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Tents"><a class="subheader-menu__link" data-nid="19368" href="/tents">Tents</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Cargo &amp; Storage">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="19204" href="/utv-atv-cargo-storage">Cargo &amp;
+                                                         Storage</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="19204" data-node-name="Cargo &amp; Storage" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="19575">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Cargo &amp; Storage"><a class="subheader-menu__link" data-nid="19204" href="/utv-atv-cargo-storage">Shop All Cargo &amp;
+                                                               Storage</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Cargo Box"><a class="subheader-menu__link" data-nid="19359" href="/utv-atv-cargo-box">Cargo Box</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Luggage Straps, Nets &amp; Anchors"><a class="subheader-menu__link" data-nid="19312" href="/utv-atv-luggage-straps-nets-anchors">Luggage
+                                                               Straps, Nets &amp; Anchors</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Rack Bags"><a class="subheader-menu__link" data-nid="19322" href="/utv-atv-rack-bags">Rack Bags</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Fire Extinguisher &amp; Safety"><a class="subheader-menu__link" data-nid="19370" href="/utv-atv-fire-extinguisher-safety">Fire Extinguisher
+                                                         &amp; Safety</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Flags &amp; Whips"><a class="subheader-menu__link" data-nid="19202" href="/utv-atv-flags-whips">Flags &amp; Whips</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="GPS"><a class="subheader-menu__link" data-nid="19354" href="/utv-atv-gps">GPS</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Hitch &amp; Towing"><a class="subheader-menu__link" data-nid="19175" href="/utv-atv-hitch-towing">Hitch &amp; Towing</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Hunting &amp; Fishing"><a class="subheader-menu__link" data-nid="19197" href="/utv-atv-hunting-fishing">Hunting &amp; Fishing</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Intercoms &amp; Communication"><a class="subheader-menu__link" data-nid="19355" href="/utv-atv-intercoms-communication">Intercoms &amp;
+                                                         Communication</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Oil &amp; Chemical">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="19201" href="/utv-atv-oil-chemical">Oil &amp;
+                                                         Chemical</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="19201" data-node-name="Oil &amp; Chemical" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="19575">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Oil &amp; Chemical"><a class="subheader-menu__link" data-nid="19201" href="/utv-atv-oil-chemical">Shop All Oil &amp;
+                                                               Chemical</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Engine Oil"><a class="subheader-menu__link" data-nid="19351" href="/utv-atv-engine-oil">Engine Oil</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Fuel Cans &amp; Storage"><a class="subheader-menu__link" data-nid="19198" href="/utv-atv-fuel-cans-storage">Fuel Cans &amp;
+                                                               Storage</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Plows"><a class="subheader-menu__link" data-nid="19177" href="/utv-atv-plows">Plows</a></li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Racks">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="19356" href="/utv-atv-racks">Racks</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="19356" data-node-name="Racks" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="19575">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Racks"><a class="subheader-menu__link" data-nid="19356" href="/utv-atv-racks">Shop All Racks</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Front Racks"><a class="subheader-menu__link" data-nid="19357" href="/utv-atv-front-racks">Front Racks</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Rear Racks"><a class="subheader-menu__link" data-nid="19358" href="/utv-atv-rear-racks">Rear Racks</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Tire Racks"><a class="subheader-menu__link" data-nid="19200" href="/utv-tire-rack">Tire Racks</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Speakers"><a class="subheader-menu__link" data-nid="19371" href="/utv-atv-audio">Speakers</a></li>
+                                                            </ul>
+                                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Tools">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="19360" href="/utv-atv-tools">Tools</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="19360" data-node-name="Tools" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="19575">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Tools"><a class="subheader-menu__link" data-nid="19360" href="/utv-atv-tools">Shop All Tools</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Hand Tools"><a class="subheader-menu__link" data-nid="19361" href="/utv-atv-hand-tools">Hand Tools</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Tool Kits"><a class="subheader-menu__link" data-nid="19363" href="/utv-atv-tool-kits">Tool Kits</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Tire Repair"><a class="subheader-menu__link" data-nid="19362" href="/utv-atv-tire-repair">Tire Repair</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Transport &amp; Storage">
+                                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="19364" href="/utv-atv-transport-storage">Transport
+                                                         &amp; Storage</a>
+                                                                    <ul class="subheader-menu__list subheader-menu__list--7" data-node-id="19364" data-node-name="Transport &amp; Storage" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="19575">
+                                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--6" data-nav-level="7" data-nav-section="Transport &amp; Storage"><a class="subheader-menu__link" data-nid="19364" href="/utv-atv-transport-storage">Shop All Transport
+                                                               &amp; Storage</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Covers"><a class="subheader-menu__link" data-nid="19203" href="/utv-atv-covers">Covers</a></li>
+                                                                        <li class="subheader-menu__item subheader-menu__item--7" data-nav-level="7" data-nav-section="Tie Down Straps"><a class="subheader-menu__link" data-nid="19366" href="/utv-atv-tie-down-straps">Tie Down Straps</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Winches &amp; Recovery"><a class="subheader-menu__link" data-nid="19323" href="/utv-atv-winches-accessories">Winches &amp; Recovery</a>
+                                                                </li>
+                                                                <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Closeouts"><a class="subheader-menu__link" data-nid="19330" href="/closeout-utv-atv-accessories" style="font-weight: bold; color: var(--brand-color);">Closeouts</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </ul>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cmto-subheader__top-link-li" data-child-count="1" data-nav-level="2" data-nav-section="Tires" data-node-id="19570" onmouseover="if (!window.__cfRLUnblockHandlers) return false; setTimeout(() =&gt; $(window).trigger(&#39;LazyImgSrc.elementsChanged&#39;), 150)"
+                    data-cf-modified-136ba6a1ac3be6cd75fee6c3-="">
+                        <a class="cmto-subheader__top-link" data-nid="19570" href="/all-tires">Tires</a>
+                        <div class="cmto-subheader__menu-container" data-node-id="19570">
+                            <div class="subheader-menu">
+                                <div class="subheader-menu__panel">
+                                    <div class="subheader-menu__panel-content">
+                                        <div class="subheader-menu__title" data-nid="10278"><a class="subheader-menu__title-link-text" href="/all-tires">Tires</a><a class="subheader-menu__title-link-shop-all" href="/all-tires?view_all=true">Shop
+                                       All</a></div>
+                                        <div class="subheader-menu__columns">
+                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="ADV &amp; Dual Sport"><a class="subheader-menu__link" data-nid="9583" href="/dual-sport-motorcycle-tires">ADV &amp; Dual
+                                             Sport</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Sport"><a class="subheader-menu__link" data-nid="9580" href="/sportbike-tires">Sport</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Touring"><a class="subheader-menu__link" data-nid="9579" href="/touring-motorcycle-tires">Touring</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="V-Twin &amp; Cruiser"><a class="subheader-menu__link" data-nid="9581" href="/harley-davidson-tires">V-Twin &amp; Cruiser</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Dirt Bike"><a class="subheader-menu__link" data-nid="9584" href="/dirt-bike-tires">Dirt Bike</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Race"><a class="subheader-menu__link" data-nid="9585" href="/race-motorcycle-tires">Race</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Super Moto"><a class="subheader-menu__link" data-nid="9582" href="/super-moto-motorcycle-tires">Super Moto</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Vintage"><a class="subheader-menu__link" data-nid="9587" href="/vintage-motorcycle-tires">Vintage</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Scooter"><a class="subheader-menu__link" data-nid="9586" href="/scooter-motorcycle-tires">Scooter</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="UTV / ATV"><a class="subheader-menu__link" data-nid="19084" href="/utv-atv-tires">UTV / ATV</a></li>
+                                            </ul>
+                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Popular Brands">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="26904" href="/tires-all-tires">Popular Brands</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="26904" data-node-name="Popular Brands" data-node-node-type-atom="contentPage" data-node-parent-id="10278">
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Michelin"><a class="subheader-menu__link" data-nid="26905" href="/tires-michelin-motorcycle-tires">Michelin</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Dunlop"><a class="subheader-menu__link" data-nid="26906" href="/tires-dunlop-motorcycle-tires">Dunlop</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Pirelli"><a class="subheader-menu__link" data-nid="26907" href="/tires-pirelli-motorcycle-tires">Pirelli</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Bridgestone"><a class="subheader-menu__link" data-nid="26908" href="/tires-bridgestone-motorcycle-tires">Bridgestone</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Metzeler"><a class="subheader-menu__link" data-nid="26909" href="/tires-metzeler-tires">Metzeler</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Shinko"><a class="subheader-menu__link" data-nid="26910" href="/tires-shinko-tires">Shinko</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Continental"><a class="subheader-menu__link" data-nid="26911" href="/tires-continental-motorcycle-tires">Continental</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Avon"><a class="subheader-menu__link" data-nid="26912" href="/tires-avon-motorcycle-tires">Avon</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Motoz"><a class="subheader-menu__link" data-nid="27336" href="/tires-motoz">Motoz</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Popular Tires">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="27658" href="/tires-popular-tires">Popular Tires</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="27658" data-node-name="Popular Tires" data-node-node-type-atom="contentPage" data-node-parent-id="10278">
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Michelin Road 6"><a class="subheader-menu__link" data-nid="27659" href="/tires-michelin-road-6">Michelin Road 6</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Michelin Power 6"><a class="subheader-menu__link" data-nid="27714" href="/tires-michelin-power-6">Michelin Power 6</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Pirelli Diablo Supercorsa SP V4"><a class="subheader-menu__link" data-nid="27715" href="/tires-pirelli-supercorsa-sp-v4">Pirelli Diablo Supercorsa SP
+                                                   V4</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Bridgestone Battlax Hypersport S23"><a class="subheader-menu__link" data-nid="27716" href="/tires-bridgestone-battlax-s23">Bridgestone Battlax Hypersport
+                                                   S23</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Pirelli Diablo Rosso IV"><a class="subheader-menu__link" data-nid="27663" href="/tires-pirelli-diablo-rosso-iv">Pirelli Diablo Rosso IV</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Metzeler ME888 Marathon"><a class="subheader-menu__link" data-nid="27660" href="/tires-metzeler-me888-marathon">Metzeler ME888 Marathon</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Metzeler Cruisetec"><a class="subheader-menu__link" data-nid="27661" href="/tires-metzeler-cruisetec">Metzeler
+                                                   Cruisetec</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Dunlop Trailmax Mission"><a class="subheader-menu__link" data-nid="27665" href="/tires-dunlop-trailmax-mission">Dunlop Trailmax Mission</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Michelin Commander III Touring"><a class="subheader-menu__link" data-nid="27666" href="/tires-michelin-commander-iii-touring">Michelin Commander III
+                                                   Touring</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Dunlop Geomax MX34"><a class="subheader-menu__link" data-nid="27717" href="/tires-dunlop-geomax-mx34">Dunlop Geomax
+                                                   MX34</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Tire Installation"><a class="subheader-menu__link" data-nid="26914" href="/tires-tire-install">Tire Installation</a></li>
+                                            </ul>
+                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Tire Accessories">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="9588" href="/motorcycle-tire-accessories">Tire Accessories</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="9588" data-node-name="Tire Accessories" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="10278">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Tire Accessories"><a class="subheader-menu__link" data-nid="9588" href="/motorcycle-tire-accessories">Shop All Tire Accessories</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Tubes"><a class="subheader-menu__link" data-nid="9590" href="/motorcycle-tubes">Tubes</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Bike Stands"><a class="subheader-menu__link" data-nid="26915" href="/tires-motorcycle-stands">Bike Stands</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Pumps / Inflators"><a class="subheader-menu__link" data-nid="26916" href="/motorcycle-tire-pumps">Pumps / Inflators</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Tire Repair &amp; Wheel Tools"><a class="subheader-menu__link" data-nid="26917" href="/tires-motorcycle-tire-repair-tools">Tire Repair &amp; Wheel
+                                                   Tools</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Wheel &amp; Axle"><a class="subheader-menu__link" data-nid="26918" href="/tires-motorcycle-wheel-axle">Wheel &amp;
+                                                   Axle</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Tire Tools"><a class="subheader-menu__link" data-nid="9592" href="/motorcycle-tire-tools-archive">Tire Tools</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Tire Warmers"><a class="subheader-menu__link" data-nid="9589" href="/motorcycle-tire-warmers">Tire Warmers</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Valve Stems"><a class="subheader-menu__link" data-nid="9591" href="/motorcycle-valve-stems">Valve Stems</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Comparisons &amp; How-to">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="26920" href="/tires-motorcycle-how-to-guides">Comparisons &amp;
+                                             How-to</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="26920" data-node-name="Comparisons &amp; How-to" data-node-node-type-atom="contentPage" data-node-parent-id="10278">
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Best of 2025"><a class="subheader-menu__link" data-nid="26921" href="/tires-best-motorcycle-tires-2025">Best of
+                                                   2025</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Tires 101"><a class="subheader-menu__link" data-nid="26922" href="/tires-common-tread/motorcycle-tires-101-guide">Tires 101</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="How to Repair a Flat Tire"><a class="subheader-menu__link" data-nid="26923" href="/tires-common-tread/how-to-repair-a-flat-tire-on-the-road">How
+                                                   to Repair a Flat Tire</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="How to Change a Tire"><a class="subheader-menu__link" data-nid="26924" href="/tires-common-tread/how-to-change-motorcycle-tires">How to
+                                                   Change a Tire</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Emergency Pump Comparison"><a class="subheader-menu__link" data-nid="26925" href="/tires-common-tread/the-best-emergency-motorcycle-tire-inflation-methods">Emergency
+                                                   Pump Comparison</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cmto-subheader__top-link-li" data-child-count="1" data-nav-level="2" data-nav-section="2025 Guides" data-node-id="22852" onmouseover="if (!window.__cfRLUnblockHandlers) return false; setTimeout(() =&gt; $(window).trigger(&#39;LazyImgSrc.elementsChanged&#39;), 150)"
+                    data-cf-modified-136ba6a1ac3be6cd75fee6c3-="">
+                        <a class="cmto-subheader__top-link" data-nid="22852" href="/best-motorcycle-gear">2025 Guides</a>
+                        <div class="cmto-subheader__menu-container" data-node-id="22852">
+                            <div class="subheader-menu">
+                                <div class="subheader-menu__panel">
+                                    <div class="subheader-menu__panel-content">
+                                        <div class="subheader-menu__title" data-nid="22853"><a class="subheader-menu__title-link-text" href="/best-motorcycle-gear">2025
+                                       Guides</a><a class="subheader-menu__title-link-shop-all" href="/best-motorcycle-gear?view_all=true">Shop All</a></div>
+                                        <div class="subheader-menu__columns">
+                                            <ul class="subheader-menu__column subheader-menu__column--3">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="New Rider Guide"><a class="subheader-menu__link" data-nid="26991" href="/guides-new-rider">New Rider Guide</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Helmets"><a class="subheader-menu__link" data-nid="19846" href="/best-motorcycle-helmets-2025">Helmets</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Riding Gear">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="26361" href="/guides-riding-gear">Riding Gear</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="26361" data-node-name="Riding Gear" data-node-node-type-atom="contentPage" data-node-parent-id="22853">
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="ADV &amp; Dual Sport Gear"><a class="subheader-menu__link" data-nid="19850" href="/best-adv-dual-sport-gear-2025">ADV &amp; Dual Sport Gear</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Airbags"><a class="subheader-menu__link" data-nid="26364" href="/guides-riding-airbags">Airbags</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Beginner Gear"><a class="subheader-menu__link" data-nid="19852" href="/best-beginner-motorcycle-gear-2025">Beginner
+                                                   Gear</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Boots &amp; Shoes"><a class="subheader-menu__link" data-nid="27778" href="/best-motorcycle-boots-shoes-2025">Boots &amp;
+                                                   Shoes</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Cold Weather Jackets"><a class="subheader-menu__link" data-nid="26458" href="/best-cold-weather-motorcycle-jackets-2025">Cold Weather
+                                                   Jackets</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Dirt Gear"><a class="subheader-menu__link" data-nid="19856" href="/best-dirt-bike-gear-2025">Dirt Gear</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Gloves"><a class="subheader-menu__link" data-nid="26363" href="/guides-riding-gear-gloves">Gloves</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Jackets"><a class="subheader-menu__link" data-nid="26362" href="/guides-riding-gear-jackets">Jackets</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Jeans"><a class="subheader-menu__link" data-nid="19854" href="/best-motorcycle-riding-jeans-2025">Jeans</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Mesh Jackets"><a class="subheader-menu__link" data-nid="25852" href="/best-motorcycle-mesh-jackets-2025">Mesh
+                                                   Jackets</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Pants"><a class="subheader-menu__link" data-nid="27779" href="/best-motorcycle-pants-2025">Pants</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Rain Gear"><a class="subheader-menu__link" data-nid="25650" href="/best-motorcycle-rain-gear-2025">Rain Gear</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Sport Gear"><a class="subheader-menu__link" data-nid="19849" href="/best-sportbike-gear-2025">Sport Gear</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Street &amp; Cafe Gear"><a class="subheader-menu__link" data-nid="19845" href="/best-cafe-racer-gear-2025">Street &amp; Cafe Gear</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Touring Gear"><a class="subheader-menu__link" data-nid="19848" href="/best-motorcycle-touring-gear-2025">Touring
+                                                   Gear</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="V-Twin &amp; Cruiser Gear"><a class="subheader-menu__link" data-nid="19847" href="/best-v-twin-gear-2025">V-Twin &amp; Cruiser Gear</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Women&#39;s Gear"><a class="subheader-menu__link" data-nid="19851" href="/best-womens-gear-2025">Women&#39;s Gear</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Best Jeans Shop All"><a class="subheader-menu__link" data-nid="26293" href="/best-motorcycle-riding-jeans-shop-all">Best Jeans Shop All</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Best Sportbike Gear"><a class="subheader-menu__link" data-nid="26297" href="/best-sportbike-gear-shop-all">Best Sportbike Gear</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Best V-Twin Gear"><a class="subheader-menu__link" data-nid="26296" href="/best-v-twin-gear-shop-all">Best V-Twin Gear</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Best Dirt Gear"><a class="subheader-menu__link" data-nid="26295" href="/best-dirt-bike-gear-shop-all">Best Dirt Gear</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Best Mesh Jackets Shop All"><a class="subheader-menu__link" data-nid="26418" href="/best-mesh-motorcycle-jackets-shop-all">Best Mesh Jackets Shop
+                                                   All</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Best Touring Gear"><a class="subheader-menu__link" data-nid="26294" href="/best-motorcycle-touring-gear-shop-all">Best Touring Gear</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="subheader-menu__column subheader-menu__column--3">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Parts">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="26365" href="/guides-parts">Parts</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="26365" data-node-name="Parts" data-node-node-type-atom="contentPage" data-node-parent-id="22853">
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Batteries"><a class="subheader-menu__link" data-nid="26366" href="/guides-parts-batteries">Batteries</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Speakers"><a class="subheader-menu__link" data-nid="26367" href="/guides-parts-speakers">Speakers</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Accessories">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="26368" href="/guides-accessories">Accessories</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="26368" data-node-name="Accessories" data-node-node-type-atom="contentPage" data-node-parent-id="22853">
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Backpacks"><a class="subheader-menu__link" data-nid="26371" href="/guides-accessories-backpacks">Backpacks</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Bluetooth"><a class="subheader-menu__link" data-nid="19853" href="/best-motorcycle-bluetooth-2025">Bluetooth</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Chain Lube"><a class="subheader-menu__link" data-nid="26370" href="/guides-accessories-chain-lube">Chain Lube</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Locks"><a class="subheader-menu__link" data-nid="26369" href="/guides-accessories-locks">Locks</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Tires">
+                                                    <a class="subheader-menu__link" data-nid="19855" href="/best-motorcycle-tires-2025">Tires</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="19855" data-node-name="Tires" data-node-node-type-atom="departmentPage" data-node-parent-id="22853">
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Best Motorcycle Tires Shop All"><a class="subheader-menu__link" data-nid="26298" href="/best-motorcycle-tires-shop-all">Best Motorcycle Tires Shop
+                                                   All</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="subheader-menu__column subheader-menu__column--3">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="How-to">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="26372" href="/guides-how-to">How-to</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="26372" data-node-name="How-to" data-node-node-type-atom="contentPage" data-node-parent-id="22853">
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Choose a Helmet"><a class="subheader-menu__link" data-nid="26373" href="/guides-how-to-choose-a-helmet">Choose a
+                                                   Helmet</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Choose a Jacket"><a class="subheader-menu__link" data-nid="26374" href="/guides-how-to-choose-a-jacket">Choose a
+                                                   Jacket</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Understand Helmet Safety"><a class="subheader-menu__link" data-nid="26375" href="/guides-how-to-understand-helmet-safety">Understand Helmet
+                                                   Safety</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Understand Gear Safety"><a class="subheader-menu__link" data-nid="26376" href="/guides-how-to-understand-gear-safety">Understand Gear
+                                                   Safety</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Pack for a Roadtrip"><a class="subheader-menu__link" data-nid="27727" href="/guides-road-trip-essentials">Pack for a
+                                                   Roadtrip</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Prep for a Track Day"><a class="subheader-menu__link" data-nid="27728" href="/guides-track-day-favorites">Prep for a Track
+                                                   Day</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Install a Battery"><a class="subheader-menu__link" data-nid="26377" href="/guides-how-to-install-a-battery">Install a
+                                                   Battery</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Change Your Oil"><a class="subheader-menu__link" data-nid="26378" href="/guides-how-to-change-your-oil">Change Your
+                                                   Oil</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Repair a Flat Tire"><a class="subheader-menu__link" data-nid="26379" href="/guides-how-to-repair-a-flat-tire">Repair a
+                                                   Flat Tire</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Ride in Cold Weather"><a class="subheader-menu__link" data-nid="26471" href="/guides-how-to-gearing-up-for-the-cold">Ride
+                                                   in Cold Weather</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Understand Heated Gear"><a class="subheader-menu__link" data-nid="26472" href="/guides-how-to-should-i-buy-heated-gear-for-my-motorcycle">Understand
+                                                   Heated Gear</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Learn to Ride"><a class="subheader-menu__link" data-nid="27729" href="/guides-ride-with-us">Learn to Ride</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="cmto-subheader__top-link-li" data-child-count="1" data-nav-level="2" data-nav-section="Sale" data-node-id="10490" onmouseover="if (!window.__cfRLUnblockHandlers) return false; setTimeout(() =&gt; $(window).trigger(&#39;LazyImgSrc.elementsChanged&#39;), 150)"
+                    data-cf-modified-136ba6a1ac3be6cd75fee6c3-="">
+                        <a class="cmto-subheader__top-link" data-nid="10490" href="/sale" style="color: red;">Sale</a>
+                        <div class="cmto-subheader__menu-container" data-node-id="10490">
+                            <div class="subheader-menu">
+                                <div class="subheader-menu__panel">
+                                    <div class="subheader-menu__panel-content">
+                                        <div class="subheader-menu__title" data-nid="13946"><a class="subheader-menu__title-link-text" href="/sale" style="color: red;">Sale
+                                       &amp; Closeouts</a><a class="subheader-menu__title-link-shop-all" href="/sale?view_all=true">Shop All</a></div>
+                                        <div class="subheader-menu__columns">
+                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Helmets">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="10491" href="/closeout-motorcycle-helmets">Helmets</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="10491" data-node-name="Helmets" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="13946">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Helmets"><a class="subheader-menu__link" data-nid="10491" href="/closeout-motorcycle-helmets">Shop All Helmets</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Open Box"><a class="subheader-menu__link" data-nid="14424" href="/zla-warehouse-helmets">Open Box</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Full Face Helmets"><a class="subheader-menu__link" data-nid="10492" href="/closeout-full-face-helmets">Full Face Helmets</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Modular Helmets"><a class="subheader-menu__link" data-nid="10494" href="/closeout-modular-helmets">Modular Helmets</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Open Face Helmets"><a class="subheader-menu__link" data-nid="10496" href="/closeout-open-face-helmets">Open Face Helmets</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Half Helmets"><a class="subheader-menu__link" data-nid="10495" href="/closeout-half-helmets">Half Helmets</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Dual Sport Helmets"><a class="subheader-menu__link" data-nid="13937" href="/closeout-dual-sport-helmets">Dual Sport Helmets</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Dirt Helmets"><a class="subheader-menu__link" data-nid="10493" href="/discount-motocross-helmets">Dirt Helmets</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Snow Helmets"><a class="subheader-menu__link" data-nid="10497" href="/closeout-snow-helmets">Snow Helmets</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Shoei GT-Air II 25% Off"><a class="subheader-menu__link" data-nid="26318" href="/shoei-gt-air-ii-25-off">Shoei GT-Air II 25% Off</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Shark up to 40% Off"><a class="subheader-menu__link" data-nid="26993" href="/sale-shark-helmets">Shark up to 40% Off</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Bell Moto-10 up to 60% Off"><a class="subheader-menu__link" data-nid="26992" href="/sale-bell-moto-10-spherical-helmets">Bell Moto-10 up to 60%
+                                                   Off</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Riding Gear">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="10498" href="/closeout-riding-gear">Riding Gear</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="10498" data-node-name="Riding Gear" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="13946">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Riding Gear"><a class="subheader-menu__link" data-nid="10498" href="/closeout-riding-gear">Shop All Riding Gear</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Open Box"><a class="subheader-menu__link" data-nid="13969" href="/zla-warehouse-riding-gear">Open Box</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Summer"><a class="subheader-menu__link" data-nid="25359" href="/closeout-summer-motorcycle-riding-gear">Summer</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Jackets &amp; Vests"><a class="subheader-menu__link" data-nid="10499" href="/closeout-motorcycle-jackets">Jackets &amp;
+                                                   Vests</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Pants"><a class="subheader-menu__link" data-nid="10501" href="/closeout-motorcycle-pants">Pants</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Boots &amp; Shoes"><a class="subheader-menu__link" data-nid="10502" href="/closeout-motorcycle-boots">Boots &amp;
+                                                   Shoes</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Gloves"><a class="subheader-menu__link" data-nid="10500" href="/closeout-motorcycle-gloves">Gloves</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Protection &amp; Armor"><a class="subheader-menu__link" data-nid="14316" href="/closeout-motorcycle-protection">Protection &amp; Armor</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="T-shirts, Hats &amp; Hoodies"><a class="subheader-menu__link" data-nid="14555" href="/casual-motorcycle-clothing-closeout-sale">T-shirts, Hats &amp;
+                                                   Hoodies</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Base &amp; Mid Layers"><a class="subheader-menu__link" data-nid="14049" href="/closeout-motorcycle-base-mid-layers">Base
+                                                   &amp; Mid Layers</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Women&#39;s"><a class="subheader-menu__link" data-nid="10531" href="/womens-closeout-motorcycle-gear">Women&#39;s</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Women&#39;s Gloves"><a class="subheader-menu__link" data-nid="10535" href="/womens-closeout-motorcycle-gloves">Women&#39;s Gloves</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Women&#39;s Footwear"><a class="subheader-menu__link" data-nid="10534" href="/womens-motorcycle-footwear-closeouts">Women&#39;s Footwear</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Women&#39;s Pants"><a class="subheader-menu__link" data-nid="10533" href="/womens-closeout-motorcycle-pants">Women&#39;s Pants</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Women&#39;s Jackets &amp; Vests"><a class="subheader-menu__link" data-nid="10532" href="/womens-closeout-motorcycle-jackets">Women&#39;s Jackets &amp;
+                                                   Vests</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Race Suits"><a class="subheader-menu__link" data-nid="10503" href="/closeout-motorcycle-racesuits">Race Suits</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Alpinestars up to 40% Off"><a class="subheader-menu__link" data-nid="26994" href="/sale-alpinestars-closeouts">Alpinestars up to 40% Off</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="REV&#39;IT! up to 40% Off"><a class="subheader-menu__link" data-nid="26995" href="/sale-revit-closeouts">REV&#39;IT! up to 40% Off</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Accessories">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="10523" href="/closeout-motorcycle-accessories">Accessories</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="10523" data-node-name="Accessories" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="13946">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Accessories"><a class="subheader-menu__link" data-nid="10523" href="/closeout-motorcycle-accessories">Shop All Accessories</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Open Box"><a class="subheader-menu__link" data-nid="13970" href="/zla-warehouse-accessories">Open Box</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Electronics &amp; Mounts"><a class="subheader-menu__link" data-nid="10528" href="/closeout-motorcycle-electronics-mounts">Electronics &amp;
+                                                   Mounts</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Luggage &amp; Backpacks"><a class="subheader-menu__link" data-nid="10524" href="/closeout-motorcycle-luggage-backpacks">Luggage &amp;
+                                                   Backpacks</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Battery Chargers"><a class="subheader-menu__link" data-nid="10526" href="/closeout-motorcycle-battery-chargers">Battery Chargers</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Cleaning Supplies"><a class="subheader-menu__link" data-nid="10530" href="/closeout-motorcycle-cleaning-supplies">Cleaning Supplies</a>
+                                                        </li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Security"><a class="subheader-menu__link" data-nid="10527" href="/closeout-motorcycle-security">Security</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Tools"><a class="subheader-menu__link" data-nid="10529" href="/closeout-motorcycle-tools">Tools</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Transport &amp; Storage"><a class="subheader-menu__link" data-nid="10525" href="/closeout-motorcycle-transport-storage">Transport &amp;
+                                                   Storage</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Parts">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="10504" href="/closeout-motorcycle-parts">Parts</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="10504" data-node-name="Parts" data-node-node-type-atom="facetSetBrowse" data-node-parent-id="13946">
+                                                        <li class="subheader-menu__item subheader-menu__item--mobile-only subheader-menu__item--3" data-nav-level="4" data-nav-section="Parts"><a class="subheader-menu__link" data-nid="10504" href="/closeout-motorcycle-parts">Shop All Parts</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Open Box"><a class="subheader-menu__link" data-nid="14485" href="/zla-warehouse-all-parts">Open Box</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Air &amp; Fuel"><a class="subheader-menu__link" data-nid="10505" href="/closeout-motorcycle-air-fuel">Air &amp; Fuel</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Audio"><a class="subheader-menu__link" data-nid="10521" href="/closeout-motorcycle-audio">Audio</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Batteries &amp; Electrical"><a class="subheader-menu__link" data-nid="10517" href="/closeout-motorcycle-batteries-electrical">Batteries &amp;
+                                                   Electrical</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Body, Fairing &amp; Fender"><a class="subheader-menu__link" data-nid="10506" href="/closeout-motorcycle-body-fairing-fender">Body, Fairing &amp;
+                                                   Fender</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Brakes"><a class="subheader-menu__link" data-nid="10520" href="/closeout-motorcycle-brakes">Brakes</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Dash &amp; Gauges"><a class="subheader-menu__link" data-nid="10511" href="/closeout-motorcycle-dash-gauges">Dash &amp; Gauges</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Drive &amp; Transmission"><a class="subheader-menu__link" data-nid="10507" href="/closeout-motorcycle-drive-transmission">Drive &amp;
+                                                   Transmission</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Engine"><a class="subheader-menu__link" data-nid="10516" href="/closeout-motorcycle-engine">Engine</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Exhaust"><a class="subheader-menu__link" data-nid="10508" href="/closeout-motorcycle-exhaust">Exhaust</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Foot Controls"><a class="subheader-menu__link" data-nid="10509" href="/closeout-motorcycle-foot-controls">Foot Controls</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Gas / Oil Tanks"><a class="subheader-menu__link" data-nid="10518" href="/closeout-motorcycle-gas-oil-tanks">Gas / Oil Tanks</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Handlebars &amp; Controls"><a class="subheader-menu__link" data-nid="10510" href="/closeout-motorcycle-handlebars-controls">Handlebars &amp;
+                                                   Controls</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Lighting"><a class="subheader-menu__link" data-nid="10514" href="/closeout-motorcycle-lighting">Lighting</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Mirrors"><a class="subheader-menu__link" data-nid="10513" href="/closeout-motorcycle-mirrors">Mirrors</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Seating"><a class="subheader-menu__link" data-nid="10515" href="/closeout-motorcycle-seating">Seating</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Suspension"><a class="subheader-menu__link" data-nid="10522" href="/closeout-motorcycle-suspension">Suspension</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Wheel &amp; Axle"><a class="subheader-menu__link" data-nid="10519" href="/closeout-motorcycle-wheel-axle">Wheel &amp; Axle</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4 subheader-menu__item--mobile-only" data-nav-level="4" data-nav-section="Windshields &amp; Windscreens"><a class="subheader-menu__link" data-nid="10512" href="/closeout-motorcycle-windshields-windscreens">Windshields &amp;
+                                                   Windscreens</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Shop By Riding Style">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="26315" href="/sale">Shop By Riding Style</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="26315" data-node-name="Shop By Riding Style" data-node-node-type-atom="departmentPage" data-node-parent-id="13946">
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="ADV/Touring"><a class="subheader-menu__link" data-nid="14401" href="/adv-touring-closeouts">ADV/Touring</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Dirt"><a class="subheader-menu__link" data-nid="14403" href="/discount-dirt-bike-gear-and-parts">Dirt</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Sport"><a class="subheader-menu__link" data-nid="14400" href="/sport-closeouts">Sport</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="V-Twin"><a class="subheader-menu__link" data-nid="14402" href="/discount-harley-parts-gear-clothes">V-Twin</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Cafe"><a class="subheader-menu__link" data-nid="14404" href="/cafe-motorcycle-closeouts">Cafe</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="Snow"><a class="subheader-menu__link" data-nid="14405" href="/snow-closeouts">Snow</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="UTV / ATV"><a class="subheader-menu__link" data-nid="22365" href="/closeout-utv-atv-parts-accessories">UTV /
+                                                   ATV</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="eBike"><a class="subheader-menu__link" data-nid="22369" href="/ebike-closeouts">eBike</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <ul class="subheader-menu__column subheader-menu__column--4">
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Insta360 up to $90 Off"><a class="subheader-menu__link" data-nid="28099" href="/sale-insta360">Insta360 up to $90 Off</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Shoei up to 10% Off"><a class="subheader-menu__link" data-nid="27788" href="/sale-shoei-helmet-closeouts">Shoei up to 10%
+                                             Off</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Dainese up to 50% Off"><a class="subheader-menu__link" data-nid="27789" href="/sale-dainese">Dainese up to 50% Off</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Bull-it Jeans up to 40% Off"><a class="subheader-menu__link" data-nid="28100" href="/sale-bull-it-jeans-closeouts">Bull-it Jeans up to
+                                             40% Off</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="AGV Pista up to $769 Off"><a class="subheader-menu__link" data-nid="28101" href="/sale-agv-helmet-sale">AGV Pista up to $769 Off</a>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Top-Rated up to 50% Off"><a class="subheader-menu__link" data-nid="26317" href="/top-rated-up-to-50-off">Top-Rated up to 50% Off</a>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Recent Markdowns"><a class="subheader-menu__link" data-nid="26319" href="/recent-markdowns-sale" style="font-weight: bold; color: var(--brand-color);">Recent Markdowns</a>
+                                                </li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Membership Savings"><a class="subheader-menu__link" data-nid="26320" href="/membership-savings">Membership Savings</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Refer-A-Friend Discount"><a class="subheader-menu__link" data-nid="26321" href="/refer-a-friend-discount">Refer-A-Friend
+                                             Discount</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="All Open Box"><a class="subheader-menu__link" data-nid="13968" href="/zla-warehouse">All Open Box</a></li>
+                                                <li class="subheader-menu__item subheader-menu__item--3" data-nav-level="3" data-nav-section="Deep Discounts">
+                                                    <a class="subheader-menu__link subheader-menu__link--collapsed" data-nid="26323" href="/deep-discounts">Deep Discounts</a>
+                                                    <ul class="subheader-menu__list subheader-menu__list--4" data-node-id="26323" data-node-name="Deep Discounts" data-node-node-type-atom="contentPage" data-node-parent-id="13946">
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="30% Off"><a class="subheader-menu__link" data-nid="26324" href="/deep-discounts-30-off">30% Off</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="40% Off"><a class="subheader-menu__link" data-nid="26325" href="/deep-discounts-40-off">40% Off</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="50% Off"><a class="subheader-menu__link" data-nid="26326" href="/deep-discounts-50-off">50% Off</a></li>
+                                                        <li class="subheader-menu__item subheader-menu__item--4" data-nav-level="4" data-nav-section="60% Off"><a class="subheader-menu__link" data-nid="26327" href="/deep-discounts-60-off">60% Off</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="cmto-mask__mask"></div>
+            </div>
+            <div class="cmto-subheader__menu cmto-header-layout__left">
+                <label class="cmto-subheader__secondary-link" for="cmto-nav-drawer-toggle"><span>Menu</span></label>
+            </div>
+            <div class="cmto-header-layout__right">
+                <a class="cmto-subheader__blog-link" href="/common-tread"><img class="cmto-subheader__blog-logo" src="https://www.revzilla.com/images/redline/support/header/common_tread_blog_logo-dba3a5d0e4e1b422de07af5829bbd89c.svg?vsn=d"></a>
+            </div>
+        </div>
+    </div>
+    <input autocomplete="off" class="js-Panel-scrollLockToggle js-CmtoNavigation-classToggle cmto-mask__toggle js-Panel-input cmto-nav-panel__toggle" id="cmto-nav-drawer-toggle" type="checkbox">
+    <div class="cmto-subheader__secondary-menu js-CmtoNavigation-panel js-CmtoNavigation-panelRoot cmto-nav-panel cmto-nav-panel--from-left js-CmtoNavigation-panel cmto-mask__content" data-qa="cmto-nav-panel" data-panel-id="cmto-nav-drawer-toggle">
+        <div class="cmto-nav-panel__header"><span>Menu</span>
+            <label class="cmto-nav-panel__header-close" for="cmto-nav-drawer-toggle"></label>
+        </div>
+        <div class="cmto-nav-panel__content js-Panel-content">
+            <!-- NAV HELPER ~ NAV_DRAWER ~ 2025-07-18 19:27:13.119788Z -->
+            <ul class="cmto-nav-drawer__menu-list">
+                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label cmto-nav-drawer__menu-item--hide-for-large">
+                    <div class="cmto-nav-drawer__item-group-header">
+                        <div class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading">Categories</div>
+                    </div>
+                    <ul class="cmto-nav-drawer__menu-list">
+                        <li class="cmto-nav-drawer__menu-item">
+                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Helmets" for="secondary-menu-9120">Helmets</label>
+                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9120" type="checkbox">
+                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9120" data-cmto-panel-depth data-panel-id="secondary-menu-9120">
+                                <div class="cmto-nav-panel__header">
+                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-9120"><span>Back to Categories</span></label>
+                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-9120"></label>
+                                </div>
+                                <div class="cmto-nav-panel__content js-Panel-content">
+                                    <ul class="cmto-nav-drawer__menu-list">
+                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-helmets">Helmets</a><a class="ui-link ui-link--small ui-link--underlined ui-link--black"
+                                                data-qa="shop-all-motorcycle-helmets" href="/motorcycle-helmets?view_all=true">Shop All</a></div>
+                                            <ul class="cmto-nav-drawer__menu-list">
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/full-face-motorcycle-helmets">Full Face</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/modular-motorcycle-helmets">Modular</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/dual-sport-helmets">Dual Sport</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/open-face-helmets">Open Face</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-half-helmets">Half</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/dirt-bike-helmets">Dirt</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/bluetooth-integrated-helmets">Bluetooth Included</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/carbon-fiber-motorcycle-helmets">Carbon Fiber</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/graphic-motorcycle-helmets">Graphics</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/internal-sun-visor-motorcycle-helmets">Internal Sun Visor</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmets-motorcycle-helmets">Helmet Finder</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-bluetooth-communications">Bluetooth Communications</a>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Helmet Accessories" for="secondary-menu-9135">Helmet Accessories
+                                                    </label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9135" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9135" data-cmto-panel-depth data-panel-id="secondary-menu-9135">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-9135"><span>Back to Helmets</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-9135"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/helmet-accessories">All Helmet Accessories</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/face-shields-visors">Face Shields</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmet-l1-goggles-sunglasses">Goggles &amp;
+                                                               Sunglasses</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmet-cheek-pads-liners">Cheek Pads &amp;
+                                                               Liners</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-headwear">Balaclavas &amp; Headwear</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmet-care">Cleaners &amp; Polish</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmets-ls2-closeouts">LS2 20% Off Select Models</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmets-agv-helmet-sale">AGV Pista up to $769 Off</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmets-bell-helmets-closeouts">Bell up to 40% Off</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/closeout-motorcycle-helmets" style="font-weight: bold; color: var(--brand-color);">Closeouts</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmet-l1-open-box">Open Box</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/new-motorcycle-helmet-releases">New Arrivals</a></li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Best Sellers" for="secondary-menu-26767">Best Sellers
+                                                    </label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-26767" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-26767" data-cmto-panel-depth data-panel-id="secondary-menu-26767">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-26767"><span>Back to Helmets</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-26767"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/helmet-l1-best-sellers">All Best Sellers</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmets-agv-k6-s-helmets">AGV K6 S</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmets-alpinestars-supertech-r10-helmets">Alpinestars
+                                                               Supertech R10</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmet-l1-arai-regent-x">Arai Regent-X</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmets-arai-xd5-helmets">Arai XD-5</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmets-ls2-advant-x-helmets">LS2 Advant X</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmets-schuberth-c5-helmets">Schuberth C5</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmets-scorpion-r430">Scorpion EXO-R430</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmets-sedici-strada-3-helmets">Sedici Strada
+                                                               3</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmet-l1-best-of-2025">Best of 2025</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmet-l1-buying-guide">Buying Guide</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmet-l1-safety-certifications">ECE vs Snell vs DOT</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/helmets-rotational-impacts">Understanding Rotational Impacts</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cmto-nav-drawer__menu-item">
+                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Riding Gear" for="secondary-menu-9121">Riding Gear</label>
+                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9121" type="checkbox">
+                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9121" data-cmto-panel-depth data-panel-id="secondary-menu-9121">
+                                <div class="cmto-nav-panel__header">
+                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-9121"><span>Back to Categories</span></label>
+                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-9121"></label>
+                                </div>
+                                <div class="cmto-nav-panel__content js-Panel-content">
+                                    <ul class="cmto-nav-drawer__menu-list">
+                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-riding-gear">Riding Gear</a><a class="ui-link ui-link--small ui-link--underlined ui-link--black"
+                                                href="/motorcycle-riding-gear?view_all=true">Shop All</a></div>
+                                            <ul class="cmto-nav-drawer__menu-list">
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Jackets &amp; Vests" for="secondary-menu-9461">Jackets &amp; Vests</label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9461" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9461" data-cmto-panel-depth data-panel-id="secondary-menu-9461">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-9461"><span>Back to Riding
+                                                      Gear</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-9461"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-jackets-vests">All Jackets &amp; Vests</a>
+                                                                    </div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/summer-motorcycle-jackets">Summer</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/4-season-motorcycle-jackets">4 Season</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/textile-motorcycle-jackets">Textile</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/leather-motorcycle-jackets">Leather</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/waterproof-motorcycle-jackets">Waterproof</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-riding-shirts">Riding Shirts</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/heated-motorcycle-jackets-vests">Heated</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/winter-motorcycle-jackets">Winter</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Pants" for="secondary-menu-9471">Pants</label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9471" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9471" data-cmto-panel-depth data-panel-id="secondary-menu-9471">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-9471"><span>Back to Riding
+                                                      Gear</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-9471"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-pants">All Pants</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/summer-motorcycle-pants">Summer</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/all-weather-motorcycle-pants">4 Season</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-riding-pants">Riding Pants</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-jeans">Riding Jeans</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motocross-pants">Motocross Pants</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/heated-motorcycle-pants">Heated</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/winter-motorcycle-pants">Winter</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Boots" for="secondary-menu-9478">Boots</label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9478" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9478" data-cmto-panel-depth data-panel-id="secondary-menu-9478">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-9478"><span>Back to Riding
+                                                      Gear</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-9478"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-boots">All Boots</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/summer-motorcycle-boots">Summer</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/waterproof-motorcycle-boots-shoes">Waterproof</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/short-motorcycle-boots-shoes">Short Boots &amp;
+                                                               Shoes</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tall-motorcycle-boots">Tall Boots</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/touring-motorcycle-boots">ADV/Touring Boots</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/dirt-bike-boots">Dirt Bike Boots</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/harley-cruiser-boots">HD &amp; Cruiser Boots</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/track-race-boots">Track &amp; Race Boots</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-socks">Socks</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/heated-motorcycle-socks-insoles">Heated Socks
+                                                               &amp; Insoles</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Gloves" for="secondary-menu-15524">Gloves</label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-15524" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-15524" data-cmto-panel-depth data-panel-id="secondary-menu-15524">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-15524"><span>Back to Riding
+                                                      Gear</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-15524"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-gloves">All Gloves</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/summer-motorcycle-gloves">Summer</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/short-cuff-motorcycle-gloves">Short Cuff</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/gauntlet-motorcycle-gloves">Gauntlet</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/waterproof-motorcycle-gloves">Waterproof</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/heated-motorcycle-gloves">Heated</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/winter-motorcycle-gloves">Winter</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-race-suits">Race Suits</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-helmets">Helmets</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-air-bags">Airbags</a></li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Protection" for="secondary-menu-9516">Protection</label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9516" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9516" data-cmto-panel-depth data-panel-id="secondary-menu-9516">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-9516"><span>Back to Riding
+                                                      Gear</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-9516"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-protection">All Protection</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/armored-motorcycle-shorts-pants">Armored Shorts
+                                                               &amp; Pants</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/armored-motorcycle-jackets-vests">Armored Tops</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-back-protectors">Back Protectors</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-knee-braces-guards">Knee Braces &amp;
+                                                               Guards</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-rain-gear">Rain Gear</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motocross-jerseys">Jerseys</a></li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Eyewear" for="secondary-menu-9512">Eyewear</label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9512" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9512" data-cmto-panel-depth data-panel-id="secondary-menu-9512">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-9512"><span>Back to Riding
+                                                      Gear</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-9512"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-eyewear">All Eyewear</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-sunglasses">Sunglasses</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-goggles">Goggles</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Casual Clothing" for="secondary-menu-9124">Casual Clothing
+                                                    </label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9124" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9124" data-cmto-panel-depth data-panel-id="secondary-menu-9124">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-9124"><span>Back to Riding
+                                                      Gear</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-9124"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/casual-motorcycle-clothing">All Casual Clothing</a>
+                                                                    </div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/hats-headwear">Hats</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/casual-shirts">Shirts</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-base-mid-layers">Base &amp; Mid Layers</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-riding-suits">Riding Suits</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/heated-motorcycle-gear">Heated Gear</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-headwear">Headwear</a></li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Top Brands" for="secondary-menu-27600">Top Brands
+                                                    </label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-27600" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-27600" data-cmto-panel-depth data-panel-id="secondary-menu-27600">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-27600"><span>Back to Riding
+                                                      Gear</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-27600"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/top-brands-riding-gear">All Top Brands</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/riding-gear-alpinestars">Alpinestars</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/riding-gear-revit">REV&#39;IT!</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/riding-gear-klim">Klim</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/riding-gear-icon">Icon</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/riding-gear-dainese">Dainese</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/riding-gear-sedici">Sedici</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/riding-gear-bilt">BILT</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/riding-gear-dainese-closeouts">Dainese up to 50% Off</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/riding-gear-bull-it-jeans-closeouts">Bull-it Jeans up to 40% Off</a>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/riding-gear-roland-sands-closeouts">Roland Sands up to 60% Off</a>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/closeout-riding-gear" style="font-weight: bold; color: var(--brand-color);">Closeouts</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/womens-motorcycle-riding-gear">Women&#39;s Gear</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/youth-riding-gear">Youth Gear</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="https://www.revzilla.com/new-motorcycle-gear">New Arrivals</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                            <div class="cmto-nav-drawer__item-group-header">
+                                                <div class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading">Shop Gear By Riding Style</div>
+                                            </div>
+                                            <ul class="cmto-nav-drawer__menu-list">
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/adv-sport-touring-gear">ADV/Touring</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/dirt-bike-gear">Dirt</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/sportbike-gear">Sport</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/cafe-motorcycle-riding-gear">Cafe</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/harley-riding-gear">V-Twin</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/snowmobile-gear">Snow</a></li>
+                                                <li class="cmto-nav-drawer__menu-item ebikes"><a class="cmto-nav-drawer__menu-text" href="/ebikes-parts-gear-accessories">E-Bike</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-apparel-helmets">UTV</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cmto-nav-drawer__menu-item">
+                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Parts" for="secondary-menu-19562">Parts</label>
+                            <!-- <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19562" type="checkbox"> -->
+                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19562" data-cmto-panel-depth data-panel-id="secondary-menu-19562">
+                                <div class="cmto-nav-panel__header">
+                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-19562"><span>Back to
+                                    Categories</span></label>
+                                    <!-- <label class="cmto-nav-panel__header-close" for="secondary-menu-19562"></label> -->
+                                </div>
+                                <div class="cmto-nav-panel__content js-Panel-content">
+                                    <div class="segment-toggle__tabs ui-tabs__tabs-container">
+                                        <!-- <div class="segment-toggle__tabs-instructions ui-tabs__tabs-instructions">Filter by Vehicle:</div>
+                                                <div class="cmto-nav-drawer__shop-by-vehicle-spacer"></div> -->
+                                        <!-- <input checked class="segment-toggle__tab-switch js-SegmentToggle-input ui-switch ui-switch--shop ui-tabs__tab-toggle" data-segment-type="motorcycle" id="motorcycle_nav_drawer_19563" name="tabs_nav_drawer_19563" type="radio"><label class="ui-tabs__tab-label" for="motorcycle_nav_drawer_19563"><span>Motorcycle</span></label> -->
+                                        <div class="ui-tabs__tab-content" id="motorcycle_nav_drawer_19563">
+                                            <ul class="cmto-nav-drawer__menu-list">
+                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-parts">Parts</a><a class="ui-link ui-link--small ui-link--underlined ui-link--black"
+                                                        href="/motorcycle-parts?view_all=true">Shop All</a></div>
+                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                        <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Shop OEM Parts" for="secondary-menu-28293">Shop OEM Parts
+                                                            </label>
+                                                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-28293" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-28293" data-cmto-panel-depth data-panel-id="secondary-menu-28293">
+                                                                <div class="cmto-nav-panel__header">
+                                                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-28293"><span>Back to
+                                                            Parts</span></label>
+                                                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-28293"></label>
+                                                                </div>
+                                                                <div class="cmto-nav-panel__content js-Panel-content">
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/parts-oem-motorcycle-parts">All Shop OEM
+                                                                  Parts</a></div>
+                                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/oem-yamaha-motorcycle-parts">Yamaha OEM
+                                                                     Parts</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/oem-kawasaki-motorcycle-parts">Kawasaki OEM
+                                                                     Parts</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/oem-suzuki-motorcycle-parts">Suzuki OEM
+                                                                     Parts</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/oem-honda-motorcycle-parts">Honda OEM
+                                                                     Parts</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/bmw">BMW
+                                                                     OEM Accessories</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Air &amp; Fuel" for="secondary-menu-9158">Air &amp; Fuel
+                                                            </label>
+                                                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9158" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9158" data-cmto-panel-depth data-panel-id="secondary-menu-9158">
+                                                                <div class="cmto-nav-panel__header">
+                                                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-9158"><span>Back to
+                                                            Parts</span></label>
+                                                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-9158"></label>
+                                                                </div>
+                                                                <div class="cmto-nav-panel__content js-Panel-content">
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-air-fuel">All Air &amp; Fuel</a>
+                                                                            </div>
+                                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-air-cleaners">Air Cleaners</a>
+                                                                                </li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-air-filters">Air Filters</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-fuel-management">Fuel
+                                                                     Management</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-audio">Audio
+                                                   &amp; Speakers</a></li>
+                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-batteries-electrical">Batteries &amp;
+                                                   Electrical</a></li>
+                                                        <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Bike Protection" for="secondary-menu-9346">Bike Protection
+                                                            </label>
+                                                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9346" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9346" data-cmto-panel-depth data-panel-id="secondary-menu-9346">
+                                                                <div class="cmto-nav-panel__header">
+                                                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-9346"><span>Back to
+                                                            Parts</span></label>
+                                                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-9346"></label>
+                                                                </div>
+                                                                <div class="cmto-nav-panel__content js-Panel-content">
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-bike-protection">All Bike
+                                                                  Protection</a></div>
+                                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-crash-bars">Crash Bars</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-frame-sliders">Frame Sliders</a>
+                                                                                </li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-hand-guards">Hand Guards</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-tank-protectors">Tank
+                                                                     Protectors</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Body, Fairing &amp; Fender" for="secondary-menu-9162">Body, Fairing &amp; Fender</label>
+                                                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9162" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9162" data-cmto-panel-depth data-panel-id="secondary-menu-9162">
+                                                                <div class="cmto-nav-panel__header">
+                                                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-9162"><span>Back to
+                                                            Parts</span></label>
+                                                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-9162"></label>
+                                                                </div>
+                                                                <div class="cmto-nav-panel__content js-Panel-content">
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-body-parts">All Body, Fairing &amp;
+                                                                  Fender</a></div>
+                                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-fender-eliminator-kits">Fender
+                                                                     Eliminator Kits</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-graphics-kits">Graphics &amp;
+                                                                     Decals</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-plastics-kits">Plastics</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-brakes">Brakes</a></li>
+                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-dash-gauges">Dash &amp; Gauges</a></li>
+                                                        <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Drive &amp; Transmission" for="secondary-menu-9332">Drive &amp; Transmission</label>
+                                                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9332" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9332" data-cmto-panel-depth data-panel-id="secondary-menu-9332">
+                                                                <div class="cmto-nav-panel__header">
+                                                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-9332"><span>Back to
+                                                            Parts</span></label>
+                                                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-9332"></label>
+                                                                </div>
+                                                                <div class="cmto-nav-panel__content js-Panel-content">
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-drive-transmission">All Drive &amp;
+                                                                  Transmission</a></div>
+                                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-chains">Chains</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-clutch">Clutch</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-sprockets">Sprockets</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Engine" for="secondary-menu-9341">Engine</label>
+                                                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9341" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9341" data-cmto-panel-depth data-panel-id="secondary-menu-9341">
+                                                                <div class="cmto-nav-panel__header">
+                                                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-9341"><span>Back to
+                                                            Parts</span></label>
+                                                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-9341"></label>
+                                                                </div>
+                                                                <div class="cmto-nav-panel__content js-Panel-content">
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-engine">All Engine</a></div>
+                                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-camshafts">Camshafts</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Exhaust" for="secondary-menu-9333">Exhaust</label>
+                                                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9333" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9333" data-cmto-panel-depth data-panel-id="secondary-menu-9333">
+                                                                <div class="cmto-nav-panel__header">
+                                                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-9333"><span>Back to
+                                                            Parts</span></label>
+                                                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-9333"></label>
+                                                                </div>
+                                                                <div class="cmto-nav-panel__content js-Panel-content">
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-exhaust">All Exhaust</a></div>
+                                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-slip-on-exhaust">Slip-On</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-full-system-exhaust">Full
+                                                                     System</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Filters" for="secondary-menu-9160">Filters</label>
+                                                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9160" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9160" data-cmto-panel-depth data-panel-id="secondary-menu-9160">
+                                                                <div class="cmto-nav-panel__header">
+                                                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-9160"><span>Back to
+                                                            Parts</span></label>
+                                                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-9160"></label>
+                                                                </div>
+                                                                <div class="cmto-nav-panel__content js-Panel-content">
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-air-fuel-oil-filters">All
+                                                                  Filters</a></div>
+                                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-air-filters">Air Filters</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-oil-filters">Oil Filters</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Foot Controls" for="secondary-menu-9334">Foot Controls
+                                                            </label>
+                                                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9334" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9334" data-cmto-panel-depth data-panel-id="secondary-menu-9334">
+                                                                <div class="cmto-nav-panel__header">
+                                                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-9334"><span>Back to
+                                                            Parts</span></label>
+                                                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-9334"></label>
+                                                                </div>
+                                                                <div class="cmto-nav-panel__content js-Panel-content">
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-foot-controls">All Foot Controls</a>
+                                                                            </div>
+                                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-floorboards">Floorboards</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-rear-sets">Rearsets</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-gas-oil-tanks">Gas &amp; Oil Tanks</a></li>
+                                                        <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Handlebars &amp; Controls" for="secondary-menu-9335">Handlebars &amp; Controls</label>
+                                                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9335" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9335" data-cmto-panel-depth data-panel-id="secondary-menu-9335">
+                                                                <div class="cmto-nav-panel__header">
+                                                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-9335"><span>Back to
+                                                            Parts</span></label>
+                                                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-9335"></label>
+                                                                </div>
+                                                                <div class="cmto-nav-panel__content js-Panel-content">
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-hand-controls-handlebars">All
+                                                                  Handlebars &amp; Controls</a></div>
+                                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-clip-ons">Clip-Ons</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-grips">Grips</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-handlebars">Handlebars</a></li>
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-levers">Levers</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-lighting">Lighting</a></li>
+                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-mirrors">Mirrors</a></li>
+                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-seating">Seats
+                                                   &amp; Sissy Bars</a></li>
+                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-suspension">Suspension &amp; Frame</a></li>
+                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="https://www.revzilla.com/all-tires" target="_blank">Tires</a>
+                                                        </li>
+                                                        <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Wheel &amp; Axle" for="secondary-menu-9387">Wheel &amp; Axle</label>
+                                                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9387" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9387" data-cmto-panel-depth data-panel-id="secondary-menu-9387">
+                                                                <div class="cmto-nav-panel__header">
+                                                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-9387"><span>Back to
+                                                            Parts</span></label>
+                                                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-9387"></label>
+                                                                </div>
+                                                                <div class="cmto-nav-panel__content js-Panel-content">
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-wheel-axle">All Wheel &amp; Axle</a>
+                                                                            </div>
+                                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/wheel-bearings">Wheel Bearings</a></li>
+                                                                            </ul>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </li>
+                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-windshields-windscreens">Windshields &amp;
+                                                   Windscreens</a></li>
+                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/closeout-motorcycle-parts" style="font-weight: bold; color: var(--brand-color);">Closeouts</a>
+                                                        </li>
+                                                        <li class="cmto-nav-drawer__menu-item ebikes"><a class="cmto-nav-drawer__menu-text" href="/ebikes-parts-gear-accessories">E-Bike</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <!-- <input class="segment-toggle__tab-switch js-SegmentToggle-input ui-switch ui-switch--shop ui-tabs__tab-toggle" data-segment-type="utv_atv" id="utv_atv_nav_drawer_19563" name="tabs_nav_drawer_19563" type="radio"><label class="ui-tabs__tab-label" for="utv_atv_nav_drawer_19563"><span>UTV/ATV</span></label> -->
+                                        <!-- <div class="ui-tabs__tab-content" id="utv_atv_nav_drawer_19563">
+                                                <ul class="cmto-nav-drawer__menu-list">
+                                                   <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                      <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/utv-atv-parts">UTV / ATV Parts</a><a class="ui-link ui-link--small ui-link--underlined ui-link--black" href="/utv-atv-parts?view_all=true">Shop All</a></div>
+                                                      <ul class="cmto-nav-drawer__menu-list">
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Audio &amp; Speakers" for="secondary-menu-19154">Audio &amp; Speakers</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19154" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19154" data-cmto-panel-depth data-panel-id="secondary-menu-19154">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-19154"><span>Back to UTV / ATV Parts</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-19154"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/utv-atv-audio">All Audio &amp; Speakers</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-audio-kit">Audio Kits</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-sound-bars">Sound Bars</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-speaker-pods">Speaker Pods</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-batteries">Batteries</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Bumpers &amp; Protection" for="secondary-menu-19170">Bumpers &amp; Protection</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19170" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19170" data-cmto-panel-depth data-panel-id="secondary-menu-19170">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-19170"><span>Back to UTV / ATV Parts</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-19170"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/utv-atv-bumpers-protection">All Bumpers &amp; Protection</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-bumpers">Bumpers</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-sliders-nerf-bars">Sliders / Nerf Bars</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-skid-plates">Skid Plates</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Drive &amp; Transmission" for="secondary-menu-19172">Drive &amp; Transmission</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19172" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19172" data-cmto-panel-depth data-panel-id="secondary-menu-19172">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-19172"><span>Back to UTV / ATV Parts</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-19172"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/utv-atv-drive-transmission">All Drive &amp; Transmission</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-belts">Belts</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-exhaust">Exhaust</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Filters" for="secondary-menu-19173">Filters</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19173" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19173" data-cmto-panel-depth data-panel-id="secondary-menu-19173">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-19173"><span>Back to UTV / ATV Parts</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-19173"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/utv-atv-filters">All Filters</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-air-filters-accessories">Air Filters &amp; Accessories</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-oil-filter">Oil Filter</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/atv-handlebars-controls">Handlebars &amp; Controls</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-hitch-towing">Hitch &amp; Towing</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Lighting" for="secondary-menu-19176">Lighting</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19176" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19176" data-cmto-panel-depth data-panel-id="secondary-menu-19176">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-19176"><span>Back to UTV / ATV Parts</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-19176"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/utv-atv-lighting">All Lighting</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-light-bars">Light Bars</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-lighting-hardware">Lighting Hardware</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-tail-chase-lights">Tail &amp; Chase Lights</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-mirrors">Mirrors</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-plows">Plows</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-racks">Racks</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-roofs-doors">Roofs &amp; Doors</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-seat-harnesses">Seat Harnesses</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Tires" for="secondary-menu-19346">Tires</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19346" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19346" data-cmto-panel-depth data-panel-id="secondary-menu-19346">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-19346"><span>Back to UTV / ATV Parts</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-19346"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/utv-atv-tires">All Tires</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/all-terrain-utv-atv-tires">All Terrain Tires</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/hard-terrain-street-utv-atv-tires">Hard Terrain / Street</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/sand-utv-atv-tires">Sand Tires</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/soft-terrain-mud-aggressive-utv-atv-tires">Soft Terrain / Mud Tires</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Wheels" for="secondary-menu-19194">Wheels</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19194" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19194" data-cmto-panel-depth data-panel-id="secondary-menu-19194">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-19194"><span>Back to UTV / ATV Parts</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-19194"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/utv-atv-wheels">All Wheels</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-beadlock-wheels">Beadlock Wheels</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-lug-nuts">Lug Nuts</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-wheel-spacers">Wheel Spacers</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-winches-accessories">Winches &amp; Recovery</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-windshields">Windshield</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/closeout-utv-atv-parts" style="font-weight: bold; color: var(--brand-color);">Closeouts</a></li>
+                                                      </ul>
+                                                   </li>
+                                                </ul>
+                                                </div> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- <li class="cmto-nav-drawer__menu-item">
+                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Accessories" for="secondary-menu-19566">Accessories</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19566" type="checkbox">
+                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19566" data-cmto-panel-depth data-panel-id="secondary-menu-19566">
+                                       <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-19566"><span>Back to Categories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-19566"></label></div>
+                                       <div class="cmto-nav-panel__content js-Panel-content">
+                                          <div class="segment-toggle__tabs ui-tabs__tabs-container">
+                                             <div class="segment-toggle__tabs-instructions ui-tabs__tabs-instructions">Filter by Vehicle:</div>
+                                             <div class="cmto-nav-drawer__shop-by-vehicle-spacer"></div>
+                                             <input checked class="segment-toggle__tab-switch js-SegmentToggle-input ui-switch ui-switch--shop ui-tabs__tab-toggle" data-segment-type="motorcycle" id="motorcycle_nav_drawer_19567" name="tabs_nav_drawer_19567" type="radio"><label class="ui-tabs__tab-label" for="motorcycle_nav_drawer_19567"><span>Motorcycle</span></label>
+                                             <div class="ui-tabs__tab-content" id="motorcycle_nav_drawer_19567">
+                                                <ul class="cmto-nav-drawer__menu-list">
+                                                   <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                      <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-accessories">Accessories</a><a class="ui-link ui-link--small ui-link--underlined ui-link--black" href="/motorcycle-accessories?view_all=true">Shop All</a></div>
+                                                      <ul class="cmto-nav-drawer__menu-list">
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-battery-chargers">Battery Chargers</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-books-dvds">Books &amp; DVDs</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Camping" for="secondary-menu-10422">Camping</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-10422" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-10422" data-cmto-panel-depth data-panel-id="secondary-menu-10422">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-10422"><span>Back to Accessories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-10422"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-camping">All Camping</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/camping-kitchen">Camping Kitchen</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/sleeping-bags-pads">Sleeping Bags &amp; Pads</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tents">Tents</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Cleaning Supplies" for="secondary-menu-9578">Cleaning Supplies</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9578" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9578" data-cmto-panel-depth data-panel-id="secondary-menu-9578">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-9578"><span>Back to Accessories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-9578"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-cleaning-supplies">All Cleaning Supplies</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-chain-maintenance-tools">Chain Care</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Electronics &amp; Mounts" for="secondary-menu-9562">Electronics &amp; Mounts</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9562" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9562" data-cmto-panel-depth data-panel-id="secondary-menu-9562">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-9562"><span>Back to Accessories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-9562"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-electronics-mounts">All Electronics &amp; Mounts</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-bluetooth-communications">Bluetooth Communications</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-riding-cameras">Cameras</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-gps">GPS</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-gps-phone-mounts">Mounts</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-power-adapters">Power Adapters</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Gifts" for="secondary-menu-9605">Gifts</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9605" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9605" data-cmto-panel-depth data-panel-id="secondary-menu-9605">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-9605"><span>Back to Accessories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-9605"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-gifts-and-novelties">All Gifts</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-keychains">Keychains</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-toys-models">Toys &amp; Models</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-wallets">Wallets</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Luggage &amp; Backpacks" for="secondary-menu-9544">Luggage &amp; Backpacks</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9544" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9544" data-cmto-panel-depth data-panel-id="secondary-menu-9544">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-9544"><span>Back to Accessories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-9544"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-luggage-and-bags">All Luggage &amp; Backpacks</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-backpacks">Backpacks</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-hydration">Hydration</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-luggage-racks">Luggage Racks</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-saddlebags">Saddlebags</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-tail-bags">Tail Bags</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-tank-bags">Tank Bags</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-maps">Maps</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Oil &amp; Fluids" for="secondary-menu-9575">Oil &amp; Fluids</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9575" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9575" data-cmto-panel-depth data-panel-id="secondary-menu-9575">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-9575"><span>Back to Accessories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-9575"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-oil-fluids">All Oil &amp; Fluids</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-chain-lube">Chain Lubricant</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-engine-oil">Engine Oil</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-fuel-cans-storage-transfer">Fuel Cans &amp; Storage</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Security" for="secondary-menu-9559">Security</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9559" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9559" data-cmto-panel-depth data-panel-id="secondary-menu-9559">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-9559"><span>Back to Accessories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-9559"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-security">All Security</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-alarms">Alarms</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-locks-chains">Locks &amp; Chains</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Tools" for="secondary-menu-9570">Tools</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9570" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9570" data-cmto-panel-depth data-panel-id="secondary-menu-9570">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-9570"><span>Back to Accessories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-9570"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-tools">All Tools</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-hand-tools">Hand Tools</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-tire-repair-tools">Tire Repair</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-tool-kits">Tool Kits</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Transport &amp; Storage" for="secondary-menu-9554">Transport &amp; Storage</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9554" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9554" data-cmto-panel-depth data-panel-id="secondary-menu-9554">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-9554"><span>Back to Accessories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-9554"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-transport-and-storage">All Transport &amp; Storage</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-covers">Covers</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-ramps">Ramps</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-stands">Stands</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-tie-down-straps">Tie Downs</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/accessories-insta360">Insta360 up to $90 Off</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/closeout-motorcycle-accessories" style="font-weight: bold; color: var(--brand-color);">Closeouts</a></li>
+                                                      </ul>
+                                                   </li>
+                                                   <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                      <div class="cmto-nav-drawer__item-group-header">
+                                                         <div class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading">Shop Accessories By Riding Style</div>
+                                                      </div>
+                                                      <ul class="cmto-nav-drawer__menu-list">
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/sportbike-accessories">Sport</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/adv-touring-accessories">ADV/Touring</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/harley-davidson-accessories">V-Twin</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/dirt-bike-accessories">Dirt</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/cafe-motorcycle-accessories">Cafe</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/snowmobile-accessories">Snow</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item ebikes"><a class="cmto-nav-drawer__menu-text" href="/ebikes-parts-gear-accessories">E-Bike</a></li>
+                                                      </ul>
+                                                   </li>
+                                                </ul>
+                                             </div>
+                                             <input class="segment-toggle__tab-switch js-SegmentToggle-input ui-switch ui-switch--shop ui-tabs__tab-toggle" data-segment-type="utv_atv" id="utv_atv_nav_drawer_19567" name="tabs_nav_drawer_19567" type="radio"><label class="ui-tabs__tab-label" for="utv_atv_nav_drawer_19567"><span>UTV/ATV</span></label>
+                                             <div class="ui-tabs__tab-content" id="utv_atv_nav_drawer_19567">
+                                                <ul class="cmto-nav-drawer__menu-list">
+                                                   <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                      <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/utv-atv-accessories">UTV / ATV Accessories</a><a class="ui-link ui-link--small ui-link--underlined ui-link--black" href="/utv-atv-accessories?view_all=true">Shop All</a></div>
+                                                      <ul class="cmto-nav-drawer__menu-list">
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-battery-chargers">Battery Chargers</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Cab &amp; Interior" for="secondary-menu-19171">Cab &amp; Interior</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19171" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19171" data-cmto-panel-depth data-panel-id="secondary-menu-19171">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-19171"><span>Back to UTV / ATV Accessories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-19171"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/utv-atv-cab-interior">All Cab &amp; Interior</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-accessory-mounts">Accessory Mounts</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-grab-bars-handles">Grab Bars &amp; Handles</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-phone-gps-holder">Phone / GPS Holder</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Camping" for="secondary-menu-19328">Camping</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19328" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19328" data-cmto-panel-depth data-panel-id="secondary-menu-19328">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-19328"><span>Back to UTV / ATV Accessories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-19328"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-camping">All Camping</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/camping-kitchen">Camping Kitchen</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/sleeping-bags-pads">Sleeping Bags &amp; Pads</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tents">Tents</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Cargo &amp; Storage" for="secondary-menu-19204">Cargo &amp; Storage</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19204" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19204" data-cmto-panel-depth data-panel-id="secondary-menu-19204">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-19204"><span>Back to UTV / ATV Accessories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-19204"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/utv-atv-cargo-storage">All Cargo &amp; Storage</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-cargo-box">Cargo Box</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-luggage-straps-nets-anchors">Luggage Straps, Nets &amp; Anchors</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-rack-bags">Rack Bags</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-fire-extinguisher-safety">Fire Extinguisher &amp; Safety</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-flags-whips">Flags &amp; Whips</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-gps">GPS</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-hitch-towing">Hitch &amp; Towing</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-hunting-fishing">Hunting &amp; Fishing</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-intercoms-communication">Intercoms &amp; Communication</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Oil &amp; Chemical" for="secondary-menu-19201">Oil &amp; Chemical</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19201" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19201" data-cmto-panel-depth data-panel-id="secondary-menu-19201">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-19201"><span>Back to UTV / ATV Accessories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-19201"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/utv-atv-oil-chemical">All Oil &amp; Chemical</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-engine-oil">Engine Oil</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-fuel-cans-storage">Fuel Cans &amp; Storage</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-plows">Plows</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Racks" for="secondary-menu-19356">Racks</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19356" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19356" data-cmto-panel-depth data-panel-id="secondary-menu-19356">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-19356"><span>Back to UTV / ATV Accessories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-19356"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/utv-atv-racks">All Racks</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-front-racks">Front Racks</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-rear-racks">Rear Racks</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-tire-rack">Tire Racks</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-audio">Speakers</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Tools" for="secondary-menu-19360">Tools</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19360" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19360" data-cmto-panel-depth data-panel-id="secondary-menu-19360">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-19360"><span>Back to UTV / ATV Accessories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-19360"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/utv-atv-tools">All Tools</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-hand-tools">Hand Tools</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-tool-kits">Tool Kits</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-tire-repair">Tire Repair</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item">
+                                                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Transport &amp; Storage" for="secondary-menu-19364">Transport &amp; Storage</label><input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19364" type="checkbox">
+                                                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19364" data-cmto-panel-depth data-panel-id="secondary-menu-19364">
+                                                               <div class="cmto-nav-panel__header"><label class="cmto-nav-panel__header-back" for="secondary-menu-19364"><span>Back to UTV / ATV Accessories</span></label><label class="cmto-nav-panel__header-close" for="secondary-menu-19364"></label></div>
+                                                               <div class="cmto-nav-panel__content js-Panel-content">
+                                                                  <ul class="cmto-nav-drawer__menu-list">
+                                                                     <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                        <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/utv-atv-transport-storage">All Transport &amp; Storage</a></div>
+                                                                        <ul class="cmto-nav-drawer__menu-list">
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-covers">Covers</a></li>
+                                                                           <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-tie-down-straps">Tie Down Straps</a></li>
+                                                                        </ul>
+                                                                     </li>
+                                                                  </ul>
+                                                               </div>
+                                                            </div>
+                                                         </li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-winches-accessories">Winches &amp; Recovery</a></li>
+                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/closeout-utv-atv-accessories" style="font-weight: bold; color: var(--brand-color);">Closeouts</a></li>
+                                                      </ul>
+                                                   </li>
+                                                </ul>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    </li> -->
+                        <li class="cmto-nav-drawer__menu-item">
+                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Tires" for="secondary-menu-19570">Tires</label>
+                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19570" type="checkbox">
+                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19570" data-cmto-panel-depth data-panel-id="secondary-menu-19570">
+                                <div class="cmto-nav-panel__header">
+                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-19570"><span>Back to Categories</span></label>
+                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-19570"></label>
+                                </div>
+                                <div class="cmto-nav-panel__content js-Panel-content">
+                                    <ul class="cmto-nav-drawer__menu-list">
+                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/all-tires">Tires</a><a class="ui-link ui-link--small ui-link--underlined ui-link--black"
+                                                href="/all-tires?view_all=true">Shop All</a></div>
+                                            <ul class="cmto-nav-drawer__menu-list">
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/dual-sport-motorcycle-tires">ADV &amp; Dual Sport</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/sportbike-tires">Sport</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/touring-motorcycle-tires">Touring</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/harley-davidson-tires">V-Twin &amp; Cruiser</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/dirt-bike-tires">Dirt Bike</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/race-motorcycle-tires">Race</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/super-moto-motorcycle-tires">Super Moto</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/vintage-motorcycle-tires">Vintage</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/scooter-motorcycle-tires">Scooter</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/utv-atv-tires">UTV / ATV</a></li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Popular Brands" for="secondary-menu-26904">Popular Brands
+                                                    </label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-26904" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-26904" data-cmto-panel-depth data-panel-id="secondary-menu-26904">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-26904"><span>Back to Tires</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-26904"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/tires-all-tires">All Popular Brands</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-michelin-motorcycle-tires">Michelin</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-dunlop-motorcycle-tires">Dunlop</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-pirelli-motorcycle-tires">Pirelli</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-bridgestone-motorcycle-tires">Bridgestone</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-metzeler-tires">Metzeler</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-shinko-tires">Shinko</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-continental-motorcycle-tires">Continental</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-avon-motorcycle-tires">Avon</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-motoz">Motoz</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Popular Tires" for="secondary-menu-27658">Popular Tires
+                                                    </label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-27658" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-27658" data-cmto-panel-depth data-panel-id="secondary-menu-27658">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-27658"><span>Back to Tires</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-27658"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/tires-popular-tires">All Popular Tires</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-michelin-road-6">Michelin Road 6</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-michelin-power-6">Michelin Power 6</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-pirelli-supercorsa-sp-v4">Pirelli Diablo
+                                                               Supercorsa SP V4</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-bridgestone-battlax-s23">Bridgestone Battlax
+                                                               Hypersport S23</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-pirelli-diablo-rosso-iv">Pirelli Diablo
+                                                               Rosso IV</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-metzeler-me888-marathon">Metzeler ME888
+                                                               Marathon</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-metzeler-cruisetec">Metzeler Cruisetec</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-dunlop-trailmax-mission">Dunlop Trailmax
+                                                               Mission</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-michelin-commander-iii-touring">Michelin
+                                                               Commander III Touring</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-dunlop-geomax-mx34">Dunlop Geomax MX34</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-tire-install">Tire Installation</a></li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Tire Accessories" for="secondary-menu-9588">Tire Accessories
+                                                    </label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-9588" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-9588" data-cmto-panel-depth data-panel-id="secondary-menu-9588">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-9588"><span>Back to Tires</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-9588"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-tire-accessories">All Tire Accessories</a>
+                                                                    </div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-tubes">Tubes</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-motorcycle-stands">Bike Stands</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/motorcycle-tire-pumps">Pumps / Inflators</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-motorcycle-tire-repair-tools">Tire Repair
+                                                               &amp; Wheel Tools</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-motorcycle-wheel-axle">Wheel &amp; Axle</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Comparisons &amp; How-to" for="secondary-menu-26920">Comparisons &amp; How-to</label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-26920" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-26920" data-cmto-panel-depth data-panel-id="secondary-menu-26920">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-26920"><span>Back to Tires</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-26920"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/tires-motorcycle-how-to-guides">All Comparisons &amp;
+                                                            How-to</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-best-motorcycle-tires-2025">Best of 2025</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-common-tread/motorcycle-tires-101-guide">Tires
+                                                               101</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-common-tread/how-to-repair-a-flat-tire-on-the-road">How
+                                                               to Repair a Flat Tire</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-common-tread/how-to-change-motorcycle-tires">How
+                                                               to Change a Tire</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/tires-common-tread/the-best-emergency-motorcycle-tire-inflation-methods">Emergency
+                                                               Pump Comparison</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cmto-nav-drawer__menu-item">
+                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="2025 Guides" for="secondary-menu-22852">2025 Guides</label>
+                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-22852" type="checkbox">
+                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-22852" data-cmto-panel-depth data-panel-id="secondary-menu-22852">
+                                <div class="cmto-nav-panel__header">
+                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-22852"><span>Back to Categories</span></label>
+                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-22852"></label>
+                                </div>
+                                <div class="cmto-nav-panel__content js-Panel-content">
+                                    <ul class="cmto-nav-drawer__menu-list">
+                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/best-motorcycle-gear">2025 Guides</a><a class="ui-link ui-link--small ui-link--underlined ui-link--black"
+                                                href="/best-motorcycle-gear?view_all=true">Shop All</a></div>
+                                            <ul class="cmto-nav-drawer__menu-list">
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-new-rider">New Rider Guide</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-motorcycle-helmets-2025">Helmets</a></li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Riding Gear" for="secondary-menu-26361">Riding Gear
+                                                    </label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-26361" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-26361" data-cmto-panel-depth data-panel-id="secondary-menu-26361">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-26361"><span>Back to 2025
+                                                      Guides</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-26361"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/guides-riding-gear">All Riding Gear</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-adv-dual-sport-gear-2025">ADV &amp; Dual
+                                                               Sport Gear</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-riding-airbags">Airbags</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-beginner-motorcycle-gear-2025">Beginner
+                                                               Gear</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-motorcycle-boots-shoes-2025">Boots &amp;
+                                                               Shoes</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-cold-weather-motorcycle-jackets-2025">Cold
+                                                               Weather Jackets</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-dirt-bike-gear-2025">Dirt Gear</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-riding-gear-gloves">Gloves</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-riding-gear-jackets">Jackets</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-motorcycle-riding-jeans-2025">Jeans</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-motorcycle-mesh-jackets-2025">Mesh
+                                                               Jackets</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-motorcycle-pants-2025">Pants</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-motorcycle-rain-gear-2025">Rain Gear</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-sportbike-gear-2025">Sport Gear</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-cafe-racer-gear-2025">Street &amp; Cafe
+                                                               Gear</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-motorcycle-touring-gear-2025">Touring
+                                                               Gear</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-v-twin-gear-2025">V-Twin &amp; Cruiser
+                                                               Gear</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-womens-gear-2025">Women&#39;s Gear</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Parts" for="secondary-menu-26365">Parts</label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-26365" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-26365" data-cmto-panel-depth data-panel-id="secondary-menu-26365">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-26365"><span>Back to 2025
+                                                      Guides</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-26365"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/guides-parts">All Parts</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-parts-batteries">Batteries</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-parts-speakers">Speakers</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Accessories" for="secondary-menu-26368">Accessories</label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-26368" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-26368" data-cmto-panel-depth data-panel-id="secondary-menu-26368">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-26368"><span>Back to 2025
+                                                      Guides</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-26368"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/guides-accessories">All Accessories</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-accessories-backpacks">Backpacks</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-motorcycle-bluetooth-2025">Bluetooth</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-accessories-chain-lube">Chain Lube</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-accessories-locks">Locks</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/best-motorcycle-tires-2025">Tires</a></li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="How-to" for="secondary-menu-26372">How-to</label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-26372" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-26372" data-cmto-panel-depth data-panel-id="secondary-menu-26372">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-26372"><span>Back to 2025
+                                                      Guides</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-26372"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/guides-how-to">All How-to</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-how-to-choose-a-helmet">Choose a Helmet</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-how-to-choose-a-jacket">Choose a Jacket</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-how-to-understand-helmet-safety">Understand
+                                                               Helmet Safety</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-how-to-understand-gear-safety">Understand
+                                                               Gear Safety</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-road-trip-essentials">Pack for a
+                                                               Roadtrip</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-track-day-favorites">Prep for a Track
+                                                               Day</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-how-to-install-a-battery">Install a
+                                                               Battery</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-how-to-change-your-oil">Change Your Oil</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-how-to-repair-a-flat-tire">Repair a Flat
+                                                               Tire</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-how-to-gearing-up-for-the-cold">Ride in
+                                                               Cold Weather</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-how-to-should-i-buy-heated-gear-for-my-motorcycle">Understand
+                                                               Heated Gear</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-ride-with-us">Learn to Ride</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cmto-nav-drawer__menu-item">
+                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Sale" for="secondary-menu-10490" style="color: red;">Sale</label>
+                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-10490" type="checkbox">
+                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-10490" data-cmto-panel-depth data-panel-id="secondary-menu-10490">
+                                <div class="cmto-nav-panel__header">
+                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-10490"><span>Back to Categories</span></label>
+                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-10490"></label>
+                                </div>
+                                <div class="cmto-nav-panel__content js-Panel-content">
+                                    <ul class="cmto-nav-drawer__menu-list">
+                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/sale">Sale &amp; Closeouts</a><a class="ui-link ui-link--small ui-link--underlined ui-link--black"
+                                                href="/sale?view_all=true">Shop All</a></div>
+                                            <ul class="cmto-nav-drawer__menu-list">
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Helmets" for="secondary-menu-10491">Helmets</label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-10491" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-10491" data-cmto-panel-depth data-panel-id="secondary-menu-10491">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-10491"><span>Back to Sale &amp;
+                                                      Closeouts</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-10491"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" data-qa="shop-all-motorcycle-helmets" href="/closeout-motorcycle-helmets">All Helmets</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/zla-warehouse-helmets">Open Box</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/shoei-gt-air-ii-25-off">Shoei GT-Air II 25%
+                                                               Off</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/sale-shark-helmets">Shark up to 40% Off</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/sale-bell-moto-10-spherical-helmets">Bell Moto-10
+                                                               up to 60% Off</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Riding Gear" for="secondary-menu-10498">Riding Gear
+                                                    </label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-10498" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-10498" data-cmto-panel-depth data-panel-id="secondary-menu-10498">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-10498"><span>Back to Sale &amp;
+                                                      Closeouts</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-10498"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/closeout-riding-gear">All Riding Gear</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/zla-warehouse-riding-gear">Open Box</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/closeout-summer-motorcycle-riding-gear">Summer</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/closeout-motorcycle-jackets">Jackets &amp;
+                                                               Vests</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/closeout-motorcycle-pants">Pants</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/closeout-motorcycle-boots">Boots &amp; Shoes</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/closeout-motorcycle-gloves">Gloves</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/closeout-motorcycle-protection">Protection &amp;
+                                                               Armor</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/casual-motorcycle-clothing-closeout-sale">T-shirts,
+                                                               Hats &amp; Hoodies</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/closeout-motorcycle-base-mid-layers">Base &amp;
+                                                               Mid Layers</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/womens-closeout-motorcycle-gear">Women&#39;s</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/sale-alpinestars-closeouts">Alpinestars up to 40%
+                                                               Off</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/sale-revit-closeouts">REV&#39;IT! up to 40%
+                                                               Off</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Accessories" for="secondary-menu-10523">Accessories</label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-10523" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-10523" data-cmto-panel-depth data-panel-id="secondary-menu-10523">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-10523"><span>Back to Sale &amp;
+                                                      Closeouts</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-10523"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/closeout-motorcycle-accessories">All Accessories</a>
+                                                                    </div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/zla-warehouse-accessories">Open Box</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/closeout-motorcycle-electronics-mounts">Electronics
+                                                               &amp; Mounts</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/closeout-motorcycle-luggage-backpacks">Luggage
+                                                               &amp; Backpacks</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Parts" for="secondary-menu-10504">Parts</label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-10504" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-10504" data-cmto-panel-depth data-panel-id="secondary-menu-10504">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-10504"><span>Back to Sale &amp;
+                                                      Closeouts</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-10504"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/closeout-motorcycle-parts">All Parts</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/zla-warehouse-all-parts">Open Box</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Shop By Riding Style" for="secondary-menu-26315">Shop By Riding Style</label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-26315" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-26315" data-cmto-panel-depth data-panel-id="secondary-menu-26315">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-26315"><span>Back to Sale &amp;
+                                                      Closeouts</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-26315"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/sale">All Shop By Riding Style</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/adv-touring-closeouts">ADV/Touring</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/discount-dirt-bike-gear-and-parts">Dirt</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/sport-closeouts">Sport</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/discount-harley-parts-gear-clothes">V-Twin</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/cafe-motorcycle-closeouts">Cafe</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/snow-closeouts">Snow</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/closeout-utv-atv-parts-accessories">UTV / ATV</a>
+                                                                        </li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/ebike-closeouts">eBike</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/sale-insta360">Insta360 up to $90 Off</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/sale-shoei-helmet-closeouts">Shoei up to 10% Off</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/sale-dainese">Dainese up to 50% Off</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/sale-bull-it-jeans-closeouts">Bull-it Jeans up to 40% Off</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/sale-agv-helmet-sale">AGV Pista up to $769 Off</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/top-rated-up-to-50-off">Top-Rated up to 50% Off</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/recent-markdowns-sale" style="font-weight: bold; color: var(--brand-color);">Recent Markdowns</a>
+                                                </li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/membership-savings">Membership Savings</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/refer-a-friend-discount">Refer-A-Friend Discount</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/zla-warehouse">All Open Box</a></li>
+                                                <li class="cmto-nav-drawer__menu-item">
+                                                    <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Deep Discounts" for="secondary-menu-26323">Deep Discounts
+                                                    </label>
+                                                    <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-26323" type="checkbox">
+                                                    <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-26323" data-cmto-panel-depth data-panel-id="secondary-menu-26323">
+                                                        <div class="cmto-nav-panel__header">
+                                                            <label class="cmto-nav-panel__header-back" for="secondary-menu-26323"><span>Back to Sale &amp;
+                                                      Closeouts</span></label>
+                                                            <label class="cmto-nav-panel__header-close" for="secondary-menu-26323"></label>
+                                                        </div>
+                                                        <div class="cmto-nav-panel__content js-Panel-content">
+                                                            <ul class="cmto-nav-drawer__menu-list">
+                                                                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/deep-discounts">All Deep Discounts</a></div>
+                                                                    <ul class="cmto-nav-drawer__menu-list">
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/deep-discounts-30-off">30% Off</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/deep-discounts-40-off">40% Off</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/deep-discounts-50-off">50% Off</a></li>
+                                                                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/deep-discounts-60-off">60% Off</a></li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cmto-nav-drawer__menu-item">
+                            <a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--label cmto-nav-drawer__menu-text--hide-for-large" href="/rpm"><img class="cmto-nav-drawer__rpm-tach" height="36" src="https://www.revzilla.com/images/redline/support/account/clp_logo-45b5fb1bda277edae612e85948314c9f.svg?vsn=d" width="36">Riders Preferred Membership</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                    <div class="cmto-nav-drawer__item-group-header">
+                        <div class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading">Discover</div>
+                    </div>
+                    <ul class="cmto-nav-drawer__menu-list">
+                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/zillacash-rewards-program">ZillaCash</a></li>
+                        <li class="cmto-nav-drawer__menu-item pinned first-pinned"><a class="cmto-nav-drawer__menu-text" href="/new-rider">New Rider Guide</a></li>
+                        <li class="cmto-nav-drawer__menu-item">
+                            <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Common Tread Blog" for="secondary-menu-19965">Common Tread Blog
+                            </label>
+                            <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle" id="secondary-menu-19965" type="checkbox">
+                            <div class="cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="secondary-menu-19965" data-cmto-panel-depth data-panel-id="secondary-menu-19965">
+                                <div class="cmto-nav-panel__header">
+                                    <label class="cmto-nav-panel__header-back" for="secondary-menu-19965"><span>Back to Discover</span></label>
+                                    <label class="cmto-nav-panel__header-close" for="secondary-menu-19965"></label>
+                                </div>
+                                <div class="cmto-nav-panel__content js-Panel-content">
+                                    <ul class="cmto-nav-drawer__menu-list">
+                                        <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                                            <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/common-tread">Common Tread Blog</a><a class="ui-link ui-link--small ui-link--underlined ui-link--black"
+                                                href="/common-tread">Blog Home</a></div>
+                                            <ul class="cmto-nav-drawer__menu-list">
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/common-tread-news">News</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/common-tread-reviews">Reviews</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/common-tread-education">Learn</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/common-tread-opinions">Opinion</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/common-tread-rides-events">Rides &amp; Events</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/common-tread-motorcycle-gear-articles">Moto Gear</a></li>
+                                                <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/common-tread-hosts">Meet The Team</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/new-arrivals">New Arrivals</a></li>
+                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/track-your-ride">Track Your Ride with Rever</a></li>
+                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/?extole_source=discovery&amp;promotable_code=discovery&amp;labels=refer-a-friend&amp;extole_zone_name=share_experience">Give
+                           15% Off, Get 15% Off</a></li>
+                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/all-brands">Brand Directory</a></li>
+                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/discover-events">Events</a></li>
+                    </ul>
+                </li>
+                <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
+                    <div class="cmto-nav-drawer__item-group-header">
+                        <div class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading">Help</div>
+                    </div>
+                    <ul class="cmto-nav-drawer__menu-list">
+                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/customer-service">Customer Service Center</a></li>
+                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="tel:+18777929455">Call Us</a></li>
+                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/contact-us">Email Us</a></li>
+                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/revzilla-stores">Find a Store</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <ul class="cmto-nav-drawer__mobile-footer">
+            <li>
+                <label class="cmto-nav-drawer__mobile-footer-item js-CmtoNavigation-ajaxMenuToggle" data-class="authentication-form-modal" data-href="#" data-qa="log-in" for="account" id="login-image"><img height="20" src="https://www.revzilla.com/images/redline/support/header/account_icon-895e762bda4d1b16a29085a786328ca5.svg?vsn=d" width="23">Log In</label>
+            </li>
+            <li>
+                <label class="cmto-nav-drawer__mobile-footer-item js-CmtoNavigation-ajaxMenuToggle" data-href="/vehicle_selector?workflow=shop_by_vehicle" for="sbv"><img height="20" src="https://www.revzilla.com/images/redline/support/header/sbv_icon-1d221934a7c516300c0e336329a98c5e.svg?vsn=d" width="23">Shop by Vehicle</label>
+                <input autocomplete="off" class="js-Panel-input cmto-nav-panel__toggle"
+                id="sbv" type="checkbox">
+                <div class="js-CmtoNavigation-ajaxMenu cmto-nav-panel cmto-nav-panel--child cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-for="sbv" data-panel-id="sbv">
+                    <div class="cmto-nav-panel__header">
+                        <label class="cmto-nav-panel__header-back" for="sbv"><span>Shop by
+                           Vehicle</span></label>
+                        <label class="cmto-nav-panel__header-close" for="sbv"></label>
+                    </div>
+                    <div class="cmto-nav-panel__content js-Panel-content"></div>
+                </div>
+            </li>
+            <li>
+                <a class="cmto-nav-drawer__mobile-footer-item" href="/order-status"><img height="20" src="https://www.revzilla.com/images/redline/support/header/order_icon-2b3ddc0d8baa8a94cc14f1a4f6563ac0.svg?vsn=d" width="23">Track Order</a>
+            </li>
+            <li>
+                <a class="cmto-nav-drawer__mobile-footer-item" href="/customer-service"><img height="20" src="https://www.revzilla.com/images/redline/support/header/contact_icon-74d94404a3b25f5389e17506270c5eef.svg?vsn=d" width="23">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+    <label class="cmto-mask__mask" for="cmto-nav-drawer-toggle"></label>
+    <div class="flash-messages js-Flash-flashes"></div>
+</div>
