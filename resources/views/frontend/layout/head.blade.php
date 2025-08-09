@@ -1085,6 +1085,22 @@
           .footer__reviews-social-list-item--icon a:hover {
              color: #ffffff;
           }
+          /* brand slide */
+.top-brands__scroll-wrapper {
+    display: flex;
+    overflow-x: hidden; /* Hide the default scrollbar */
+    scroll-snap-type: x mandatory; /* Optional: adds a snapping effect */
+}
+
+.top-brands__brand-link {
+    flex: 0 0 auto; /* Prevent items from shrinking */
+    scroll-snap-align: start; /* Optional: snaps the beginning of each item to the container */
+}
+/* product page */
+.product-show-details-quantity__select {
+  float: left !important;
+  width: 110px !important;
+}
    </style>
    <meta content="max-image-preview:large" name="robots">
    <link href="/" rel="canonical">
@@ -1109,7 +1125,7 @@
    <link rel="stylesheet" href="{{ asset('frontend') }}/css/components_engine-d4d606e3c1d514eb42e771bbcae11953.css">
    <link rel="stylesheet" href="{{ asset('frontend') }}/css/index-ac5c251d8f6f2df437334aaf69ef0659.css" />
    <link rel="stylesheet" href="{{ asset('frontend') }}/css/show-973dfb26efb7f9bc4dcba729aed035e7.css">
-   {{-- <link rel="stylesheet" href="{{ asset('frontend') }}/css/app-39314be15c1f30a59259a417b8053afd.css"> --}}
+    <link rel="stylesheet" href="{{ asset('frontend') }}/css/app-39314be15c1f30a59259a417b8053afd.css"> 
     <link rel="stylesheet" href="{{ asset('frontend') }}/css/show-505e834ef3c46c4ffc03893c23d4be25.css">
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
