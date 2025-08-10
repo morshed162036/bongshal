@@ -2211,13 +2211,13 @@
                         <div class="bannerboard__board bannerboard__board--short bannerboard__board--mobile-left"
                            data-analytics-asset-id="86481" data-analytics-asset-type="BannerboardShort"
                            data-analytics-asset-position="0">
-                           <a data-analytics-asset-link="https://rideagainfoundation.org/raftbex/"
-                              href="https://rideagainfoundation.org/raftbex/" target="_blank"><img
+                           <a data-analytics-asset-link="#"
+                              href="#" target="_blank"><img
                                  alt="Learn More About How To Help Riders Get Back On Two Wheels"
                                  class="bannerboard__image"
                                  data-analytics-asset-image="/asset_instance_attachments/86481/86481_1751039688.jpg"
-                                 src="https://www.revzilla.com/asset_instance_attachments/86481/86481_1751039688.jpg"
-                                 src="https://www.revzilla.com/images/redline/components/bannerboard/short_placeholder.png"></a>
+                                src="{{ asset('frontend/image/ads/twowheel.jpg') }}"
+                                 src="{{ asset('frontend/image/ads/twowheel.jpg') }}"></a>
                         </div>
                      </div>
                   </div>
@@ -2260,32 +2260,31 @@
                                        src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect,format=auto,q=75,w=358/asset_instance_attachments/86862/86862_1753811245_tablet_2x.jpg"></a>
                               </div>
                               <div class="trioboard__board trioboard__board--TrioboardTall "
-                                 data-analytics-asset-id="86482" data-analytics-asset-position="3"
-                                 data-analytics-asset-type="TrioboardTall"><a
-                                    data-analytics-asset-link="/photochromic-helmets" href="/photochromic-helmets"><img
-                                       alt="Photochromic Face Shields & Helmets - Shop Now" class="trioboard__image"
-                                       data-analytics-asset-image="/asset_instance_attachments/86482/86482_1751040856.jpg"
-                                       src="https://www.revzilla.com/asset_instance_attachments/86482/86482_1751040856.jpg"
-                                       src="https://www.revzilla.com/images/redline/components/trioboard/tall_placeholder.png"></a>
+                                 data-analytics-asset-id="86483" data-analytics-asset-position="1"
+                                 data-analytics-asset-type="TrioboardTall"><a data-analytics-asset-link="/rpm"
+                                    href="/rpm"><img alt="All Inclusive Moto Adventure For RPM Members - Join Now"
+                                       class="trioboard__image"
+                                       data-analytics-asset-image="/asset_instance_attachments/86483/86483_1751040996.jpg"
+                                       src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect,format=auto,q=75,w=358/asset_instance_attachments/86482/86482_1751040856_tablet_2x.jpg"
+                                       src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect,format=auto,q=75,w=358/asset_instance_attachments/86482/86482_1751040856_tablet_2x.jpg"></a>
                               </div>
                               <div class="trioboard__board trioboard__board--TrioboardTall "
-                                 data-analytics-asset-id="85342" data-analytics-asset-position="4"
-                                 data-analytics-asset-type="TrioboardTall"><a
-                                    data-analytics-asset-link="https://www.revzilla.com/riding-must-haves"
-                                    href="https://www.revzilla.com/riding-must-haves"><img
-                                       alt="Riding Must-Haves - Shop Now" class="trioboard__image"
-                                       data-analytics-asset-image="/asset_instance_attachments/85342/85342_1749490389.jpg"
-                                       src="https://www.revzilla.com/asset_instance_attachments/85342/85342_1749490389.jpg"
-                                       src="https://www.revzilla.com/images/redline/components/trioboard/tall_placeholder.png"></a>
+                                 data-analytics-asset-id="86483" data-analytics-asset-position="1"
+                                 data-analytics-asset-type="TrioboardTall"><a data-analytics-asset-link="/rpm"
+                                    href="/rpm"><img alt="All Inclusive Moto Adventure For RPM Members - Join Now"
+                                       class="trioboard__image"
+                                       data-analytics-asset-image="/asset_instance_attachments/86483/86483_1751040996.jpg"
+                                       src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect,format=auto,q=75,w=358/asset_instance_attachments/86482/86482_1751040856_tablet_2x.jpg"
+                                       src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect,format=auto,q=75,w=358/asset_instance_attachments/86482/86482_1751040856_tablet_2x.jpg"></a>
                               </div>
                               <div class="trioboard__board trioboard__board--TrioboardTall "
-                                 data-analytics-asset-id="78256" data-analytics-asset-position="5"
-                                 data-analytics-asset-type="TrioboardTall"><a
-                                    data-analytics-asset-link="/common-tread-xp" href="/common-tread-xp"><img
-                                       alt="Common Tread XP - Learn More" class="trioboard__image"
-                                       data-analytics-asset-image="/asset_instance_attachments/78256/78256_1743416312.jpg"
-                                       src="https://www.revzilla.com/asset_instance_attachments/78256/78256_1743416312.jpg"
-                                       src="https://www.revzilla.com/images/redline/components/trioboard/tall_placeholder.png"></a>
+                                 data-analytics-asset-id="86483" data-analytics-asset-position="1"
+                                 data-analytics-asset-type="TrioboardTall"><a data-analytics-asset-link="/rpm"
+                                    href="/rpm"><img alt="All Inclusive Moto Adventure For RPM Members - Join Now"
+                                       class="trioboard__image"
+                                       data-analytics-asset-image="/asset_instance_attachments/86483/86483_1751040996.jpg"
+                                       src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect,format=auto,q=75,w=358/asset_instance_attachments/86482/86482_1751040856_tablet_2x.jpg"
+                                       src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect,format=auto,q=75,w=358/asset_instance_attachments/86482/86482_1751040856_tablet_2x.jpg"></a>
                               </div>
                            </div>
                            <button class="js-CmtoTray-button js-CmtoTray-prevButton" disabled style="display: none">
@@ -2319,19 +2318,19 @@
                      <div class="duoboard__boards">
                         <div class="duoboard__board duoboard__board--DuoboardShort" data-analytics-asset-id="83591"
                            data-analytics-asset-position="0" data-analytics-asset-type="DuoboardShort"><a
-                              data-analytics-asset-link="/new-rider" href="/new-rider"><img
+                              data-analytics-asset-link="#" href="#"><img
                                  alt="I've Got My License, Set Me Up For Success - Learn More" class="duoboard__image"
                                  data-analytics-asset-image="/asset_instance_attachments/83591/83591_1742336390.jpg"
-                                 src="https://www.revzilla.com/asset_instance_attachments/83591/83591_1742336390.jpg"
-                                 src="https://www.revzilla.com/images/redline/components/duoboard/short_placeholder.png"></a>
+                                 src="{{ asset('frontend/image/ads/leftads.jpg') }}"
+                                 src="{{ asset('frontend/image/ads/leftads.jpg') }}"></a>
                         </div>
                         <div class="duoboard__board duoboard__board--DuoboardShort" data-analytics-asset-id="83592"
                            data-analytics-asset-position="1" data-analytics-asset-type="DuoboardShort"><a
-                              data-analytics-asset-link="/ride" href="/ride"><img
+                              data-analytics-asset-link="#" href="#"><img
                                  alt="Your First Step To Riding - Learn More" class="duoboard__image"
                                  data-analytics-asset-image="/asset_instance_attachments/83592/83592_1741962058.jpg"
-                                 src="https://www.revzilla.com/asset_instance_attachments/83592/83592_1741962058.jpg"
-                                 src="https://www.revzilla.com/images/redline/components/duoboard/short_placeholder.png"></a>
+                                 src="{{ asset('frontend/image/ads/rightsads.jpg') }}"
+                                 src="{{ asset('frontend/image/ads/rightsads.jpg') }}"></a>
                         </div>
                      </div>
                   </div>
@@ -2970,7 +2969,7 @@
             <div class="component__content">
                <div class="bannerboard__wrapper">
                   <a href="YOUR_LINK_HERE" class="ad-banner-link" target="_blank" rel="noopener noreferrer">
-                     <img src="{{ asset('frontend') }}/image/banner/bongshalban2.jpg" alt="Ad banner image" class="ad-banner-image">
+                     <img src="{{ asset('frontend') }}/image/banner/banner3.jpg" alt="Ad banner image" class="ad-banner-image">
                   </a>
                </div>
             </div>

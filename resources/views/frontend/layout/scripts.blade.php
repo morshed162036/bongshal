@@ -366,3 +366,72 @@
         }
     });
 </script>
+<script>
+//hedaer slider script
+document.addEventListener('DOMContentLoaded', () => {
+    const messages = document.querySelectorAll('.js-MarketingBanner-message');
+    const prevButton = document.querySelector('.js-MarketingBanner-prevButton');
+    const nextButton = document.querySelector('.js-MarketingBanner-nextButton');
+    let currentIndex = 0;
+    const slideInterval = 5000;
+    function showMessage(index) {
+        messages.forEach(message => {
+            message.style.display = 'none';
+        });
+        messages[index].style.display = 'block';
+    }
+    function nextMessage() {
+        currentIndex = (currentIndex + 1) % messages.length;
+        showMessage(currentIndex);
+    }
+    function prevMessage() {
+        currentIndex = (currentIndex - 1 + messages.length) % messages.length;
+        showMessage(currentIndex);
+    }
+
+    let sliderTimer = setInterval(nextMessage, slideInterval);
+
+    function resetTimer() {
+        clearInterval(sliderTimer);
+        sliderTimer = setInterval(nextMessage, slideInterval);
+    }
+
+    nextButton.addEventListener('click', () => {
+        nextMessage();
+        resetTimer();
+    });
+    prevButton.addEventListener('click', () => {
+        prevMessage();
+        resetTimer();
+    });
+    showMessage(currentIndex);
+});
+</script>
+//brand auto slide
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollWrapper = document.querySelector('.top-brands__scroll-wrapper');
+    const brandLinks = document.querySelectorAll('.top-brands__brand-link');
+    
+    if (!scrollWrapper || brandLinks.length === 0) {
+        console.error('Slider elements not found.');
+        return;
+    }
+    
+    const slideWidth = brandLinks[0].offsetWidth;
+    let currentIndex = 0;
+
+    function autoSlide() {
+        currentIndex = (currentIndex + 1) % brandLinks.length;
+        const newScrollPosition = brandLinks[currentIndex].offsetLeft;
+        
+        scrollWrapper.scrollTo({
+            left: newScrollPosition,
+            behavior: 'smooth'
+        });
+    }
+
+    // Set an interval to trigger the auto-sliding every 3 seconds
+    setInterval(autoSlide, 3000);
+});
+</script>

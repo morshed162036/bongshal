@@ -513,7 +513,7 @@
 
 
                             <label type="button" class="loyalty-value-props__rpm js-ClpInfoPanel-pdpToggle" for="rpm-sales-pitch-panel" aria-haspopup="dialog" aria-controls="Riders Preferred Membership information panel">
-                                <img class="loyalty-value-props__rpm-logo" src="/images/sites/shared/rpm-secondary-on-dark.svg" alt="Riders Preferred Membership logo">
+                                <img class="loyalty-value-props__rpm-logo" src="{{asset('frontend/image/small/rpmsmall.svg')}}" alt="Riders Preferred Membership logo">
                                 <span class="loyalty-value-props__rpm-message">
                            Members get up to
                            <span class="loyalty-value-props__rpm-value js-SkuSelector-rpmTotalValue">$44</span> in total value.
@@ -1000,7 +1000,7 @@
 
                             <div class="product-show-media-help__link-wrapper  product-show-media-help__link-wrapper--contact">
                                 <div class="product-show-media-help__geek-photo">
-                                    <img src="/images/sites/revzilla/support/geeks/Geek6.png" class="product-show-media-help__geek-photo--image" alt="Gear Geek">
+                                    <img src="{{ asset('frontend/image/small/Geek13.jpg') }}" class="product-show-media-help__geek-photo--image" alt="Gear Geek">
                                 </div>
                                 <div class="product-show-media-help__contact-info">
                                     <div>
@@ -2380,7 +2380,7 @@
 
                                         <div data-wrapper-for=".helmet-dimensions" data-wrapper-at="small medium large xlarge xxlarge">
                                             <div class="product-description__helmet-dimensions helmet-dimensions">
-                                                <img alt="Helmet shape is Intermediate Oval" class="helmet-dimensions__image" data-src="/images/sites/revzilla/pages/product/show/helmet_shape_weight/intermediate_oval.png" src="/images/sites/revzilla/pages/product/show/helmet_shape_weight/intermediate_oval_80x63.png">
+                                                <img alt="Helmet shape is Intermediate Oval" class="helmet-dimensions__image" data-src="/images/sites/revzilla/pages/product/show/helmet_shape_weight/intermediate_oval.png" src="{{asset('frontend/image/small/intermediate_oval_80x63.jpg')}}">
 
                                                 <p class="helmet-dimensions__dimension ui-copy">
                                                     <span class="helmet-dimensions__dimension-label helmet-dimensions__dimension-label--shape">Shape:</span>
@@ -4548,7 +4548,7 @@
                     <div class="product-show-section__content">
                         <div class="clp-banner clp-banner--no-membershipclp-banner--clp-banner--no-details">
                             <div class="clp-banner__logo">
-                                <img class="clp-banner__logo-img" src="./image/referimg.svg">
+                                <img class="clp-banner__logo-img" src="{{asset('frontend/image/small/rpm2.svg')}}">
                             </div>
                             <div class="clp-banner__copy">
                                 <div class="clp-banner__copy-heading">Join now &amp; get rewarded!</div>
