@@ -125,9 +125,9 @@
          <div class="cmto-nav-panel__content js-Panel-content"></div>
       </div>
    </div>
-    @include('frontend.layout.footer')
-    @include('frontend.layout.scripts')
-    @include('frontend.layout.popup')
+   @include('frontend.layout.popup')
+   @include('frontend.layout.footer')
+   @include('frontend.layout.scripts')
     </div>
 </body>
 

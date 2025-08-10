@@ -17,6 +17,16 @@ class HomeController extends Controller
         // This method can be used to return the homepage view
         return view('frontend.shop');
     }
+    public function blog()
+    {
+        // This method can be used to return the homepage view
+        return view('frontend.blog');
+    }
+     public function blogdetails()
+    {
+        // This method can be used to return the homepage view
+        return view('frontend.blogdetails');
+    }
     public function product()
     {
         // This method can be used to return the homepage view

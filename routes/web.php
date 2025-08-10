@@ -21,6 +21,8 @@ use App\Http\Controllers\Frontend\HomeController;
 Route::get('/', [HomeController::class, 'index'])->name('homepage');
 Route::get('/shop', [HomeController::class, 'shop'])->name('shoppage');
 Route::get('/product', [HomeController::class, 'product'])->name('productpage');
+Route::get('/blog', [HomeController::class, 'blog'])->name('blogpage');
+Route::get('/blog-details', [HomeController::class, 'blogdetails'])->name('blogdetailspage');
 Route::get('/cart', [HomeController::class, 'cart'])->name('cartpage');
 Route::prefix('/')->group(function(){
     Route::match(['get', 'post'], 'login',[AdminController::class,'login'])->name('admin.login');
