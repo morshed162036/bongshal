@@ -1127,8 +1127,22 @@
    <link rel="stylesheet" href="{{ asset('frontend') }}/css/show-973dfb26efb7f9bc4dcba729aed035e7.css">
     <link rel="stylesheet" href="{{ asset('frontend') }}/css/app-39314be15c1f30a59259a417b8053afd.css"> 
     <link rel="stylesheet" href="{{ asset('frontend') }}/css/show-505e834ef3c46c4ffc03893c23d4be25.css">
+    <link rel="stylesheet" href="{{ asset('frontend/css/shop.css') }}">
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+   <!-- blog css start -->
+      <link rel="stylesheet"
+    href="https://www.revzilla.com/css/sites/revzilla/app-0e055e2ef291a0dcc4d4ccf2265e71b0.css?vsn=d">
+
+  <link rel="stylesheet"
+    href="https://www.revzilla.com/css/sites/revzilla/components/components_engine/components_engine-93cad5c6112fe240859522ee56f196a2.css?vsn=d">
+
+  <link rel="stylesheet"
+    href="https://www.revzilla.com/css/sites/revzilla/templates/blog-86bb7d2beccb4b5a5b32e1f5595b2942.css?vsn=d">
+
+  <link rel="stylesheet"
+    href="https://www.revzilla.com/css/sites/revzilla/templates/blog/show-6be7b73ad7abf9e52da202e55ed184fb.css?vsn=d">
+    <!-- blog css end -->
    <script type="136ba6a1ac3be6cd75fee6c3-text/javascript">
       (function (w) {
          w.__rq = w.__rq || []
