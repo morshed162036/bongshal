@@ -3782,8 +3782,15 @@
         <div class="cmto-header-layout cmto-header-layout--header">
             <div class="cmto-header-layout__left">
                 <label class="cmto-header__hamburger js-PreviewSearchService-navPanelButton" for="cmto-nav-drawer-toggle" data-qa="nav-drawer-toggle"></label>
-                <a class="cmto-header__logo" href="/"><img class="cmto-header__logo-img" height="50" src="{{ asset('images/setting/1754108727_logo.png') }}" width="200" height="70"></a>
+                <a class="cmto-header__logo" href="{{ route('homepage') }}"><img class="cmto-header__logo-img" src="{{ asset('images/setting/'.$company->logo) }}"></a>
             </div>
+            <style>
+                .cmto-header__logo-img{
+                    width: 160px;
+                    height: 25px;
+                    margin-top: 20px;
+                }
+            </style>
             <div class="cmto-header__utility cmto-header-utility cmto-header-layout__right js-CmtoNavigation-utility">
                 <div class="cmto-header-utility__item cmto-header-utility__item--rpm js-CmtoNavigation-utilityItem">
                     <a class="cmto-header-utility__item--rpm-image" href="/rpm">
@@ -3811,7 +3818,7 @@
                             </g>
                         </g>
                     </svg>
-                    <span class="cmto-header__search-sbv-text">Shop Your Ride</span>
+                    <span class="cmto-header__search-sbv-text">My Garage</span>
                 </a>
                 <form action="/search" class="search-form js-PreviewSearchService-searchForm" data-form-name="Site Search" data-qa="search-form" method="get">
                     <div class="ui-search-input__wrapper">
@@ -4849,7 +4856,7 @@
                                                 <div class="subheader-menu__panel">
                                                     <div class="subheader-menu__panel-content">
                                                         <div class="subheader-menu__title" data-nid="19083"><a class="subheader-menu__title-link-text" href="/utv-atv-parts">UTV /
-                                                   ATV Parts</a><a class="subheader-menu__title-link-shop-all" href="/utv-atv-parts?view_all=true">Shop All</a></div>
+                                                   ATV Parts</a><a class="subheader-menu__title-link-shop-all" href="{{ route('shop.catalogue',4) }}">Shop All</a></div>
                                                         <div class="subheader-menu__columns">
                                                             <ul class="subheader-menu__column subheader-menu__column--4">
                                                                 <li class="subheader-menu__item subheader-menu__item--6" data-nav-level="6" data-nav-section="Audio &amp; Speakers">
@@ -6085,7 +6092,7 @@
                                             <ul class="cmto-nav-drawer__menu-list">
                                                 <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
                                                     <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/motorcycle-parts">Parts</a><a class="ui-link ui-link--small ui-link--underlined ui-link--black"
-                                                        href="/motorcycle-parts?view_all=true">Shop All</a></div>
+                                                        href="{{ route('shop.index') }}">Shop All</a></div>
                                                     <ul class="cmto-nav-drawer__menu-list">
                                                         <li class="cmto-nav-drawer__menu-item">
                                                             <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Shop OEM Parts" for="secondary-menu-28293">Shop OEM Parts
@@ -7118,7 +7125,7 @@
                                                         <div class="cmto-nav-panel__content js-Panel-content">
                                                             <ul class="cmto-nav-drawer__menu-list">
                                                                 <li class="cmto-nav-drawer__menu-item cmto-nav-drawer__menu-item--label">
-                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="/guides-parts">All Parts</a></div>
+                                                                    <div class="cmto-nav-drawer__item-group-header"><a class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading ui-link ui-link--underlined ui-link--black" href="#">All Parts</a></div>
                                                                     <ul class="cmto-nav-drawer__menu-list">
                                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-parts-batteries">Batteries</a></li>
                                                                         <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/guides-parts-speakers">Speakers</a></li>
