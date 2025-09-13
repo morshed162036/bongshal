@@ -1674,11 +1674,11 @@
                             @endforeach
                         </select>
 
-                        <select name="bike_id" id="modelSelectt" class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--model ui-select" disabled>
+                        <select name="bike_id" id="modelSelectt" class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--type ui-select" disabled>
                             <option value="">Select Model</option>
                         </select>
 
-                        <select name="color_id" id="colorSelectt" class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--model ui-select" disabled>
+                        <select name="color_id" id="colorSelectt" class="form-control" disabled>
                             <option value="">Select Color</option>
                         </select>
 
@@ -1686,6 +1686,27 @@
                         </form>
                         <div class="shop-by-bike__select-close shop-by-bike__select-close--mobile" data-click-toggle data-toggle-selector=".shop-by-bike__select, .shop-by-bike__mobile-select-toggle"></div>
                     </div>
+                    <style>
+                        /* Match height/width with your other dropdowns */
+                            .select2-container .select2-selection--single {
+                                height: 42px;              /* adjust to your form-control height */
+                                border: 1px solid #ccc;    /* same border as other selects */
+                                border-radius: 4px;
+                                padding: 5px 8px;
+                            }
+
+                            /* Align text */
+                            .select2-container .select2-selection__rendered {
+                                line-height: 28px;
+                                font-size: 14px;
+                            }
+
+                            /* Remove extra arrow styling */
+                            .select2-container--default .select2-selection--single .select2-selection__arrow {
+                                height: 36px;
+                                right: 5px;
+                            }
+                    </style>
                 </div>
             </div>
             </div>
@@ -2421,7 +2442,7 @@
                     if (data.length > 0) {
                         colorSelect.disabled = false;
                         data.forEach(color => {
-                            colorSelect.innerHTML += `<option value="${color.id}">${color.color_name} </option>`;
+                            colorSelect.innerHTML += `<option value="${color.id}" data-image="${color.image}">${color.color_name} </option>`;
                         });
                     } else {
                         goBtn.disabled = false; // enable if no colors
@@ -2437,6 +2458,199 @@
         }
     });
 });
+// $('#colorSelectt').select2({
+//     templateResult: function (data) {
+//         if (!data.id) return data.text;
+//         let img = $(data.element).data('image');
+//         return $(`<span><img src="{{ asset('images/multiimage/bike') }}/${img}" width="50" height="50" style="margin-right:5px;"> ${data.text}</span>`);
+//     },
+//     templateSelection: function (data) {
+//         if (!data.id) return data.text;
+//         let img = $(data.element).data('image');
+//         return $(`<span>
+//                 <img src="{{ asset('images/multiimage/bike') }}/${img}" width="50" height="50" style="margin-right:5px;">${data.text}</span>`);}
+//         });
+
 
    </script>
+
+    {{-- <script>
+        $(function () {
+            // elements (adjust IDs if yours differ)
+            const $company = $('#companySelectt');   // <select name="company_id" id="companySelect">
+            const $model   = $('#modelSelectt');     // <select name="bike_id" id="modelSelect">
+            const $color   = $('#colorSelectt');     // <select name="color_id" id="colorSelect">
+            // 'Go' may be a button or an anchor; try to find both
+            const $goBtn   = $('#goBtnn').length ? $('#goBtnn') : $('.shop-by-bike__select-selection-link[data-js="VehicleSelector.selection"]');
+
+            const getModelsUrl  = "{{ url('/get-models') }}";   // GET /get-models/{companyId}
+            const getColorsUrl  = "{{ url('/get-colors') }}";   // GET /get-colors/{bikeId}
+            const productsRoute = "{{ route('shop.products') }}"; // result page (GET)
+
+            // helper: enable/disable the Go control and set href when it's an <a>
+            function setGoEnabled(enabled) {
+                $goBtn.each(function () {
+                    const $el = $(this);
+                    if ($el.is('a')) {
+                        if (enabled) {
+                            $el.removeAttr('aria-disabled').removeClass('disabled').attr('href', buildProductsUrl());
+                        } else {
+                            $el.attr('aria-disabled', 'true').addClass('disabled').attr('href', 'javascript:void(0)');
+                        }
+                    } else { // button/input
+                        $el.prop('disabled', !enabled);
+                    }
+                });
+            }
+
+            // build target URL (for anchor or manual redirect)
+            function buildProductsUrl() {
+                const params = [];
+                if ($company.val()) params.push('company_id=' + encodeURIComponent($company.val()));
+                if ($model.val())   params.push('bike_id='    + encodeURIComponent($model.val()));
+                if ($color.val())   params.push('color_id='   + encodeURIComponent($color.val()));
+                return productsRoute + (params.length ? ('?' + params.join('&')) : '');
+            }
+
+            // reset helpers
+            function resetModel() {
+                // destroy select2 if initialized
+                if ($.fn.select2 && $model.hasClass('select2-hidden-accessible')) {
+                    $model.select2('destroy');
+                }
+                $model.empty().append('<option value="">Select Model</option>').prop('disabled', true);
+            }
+            function resetColor() {
+                if ($.fn.select2 && $color.hasClass('select2-hidden-accessible')) {
+                    $color.select2('destroy');
+                }
+                $color.empty().append('<option value="">Select Color</option>').prop('disabled', true);
+            }
+
+            // initial state
+            resetModel();
+            resetColor();
+            setGoEnabled(false);
+
+            // company -> load models
+            $company.on('change', function () {
+                const companyId = $(this).val();
+                resetModel();
+                resetColor();
+                setGoEnabled(false);
+
+                if (!companyId) return;
+
+                $.getJSON(getModelsUrl + '/' + companyId)
+                .done(function (models) {
+                    if (Array.isArray(models) && models.length > 0) {
+                        models.forEach(function (m) {
+                            // adapt property names if different (model_name, name, etc.)
+                            const label = m.model_name ?? m.name ?? m.model ?? ('Model ' + m.id);
+                            $model.append(`<option value="${m.id}">${label}</option>`);
+                        });
+                        $model.prop('disabled', false);
+
+                        // if you want model select to be Select2, init here (optional)
+                        // if ($.fn.select2 && $model.hasClass('use-select2')) { $model.select2(); }
+                    } else {
+                        // no models found -> allow GO with company-only filter
+                        setGoEnabled(true);
+                    }
+                })
+                .fail(function (xhr) {
+                    console.error('Failed loading models', xhr);
+                });
+            });
+
+            // model -> load colors
+            $model.on('change', function () {
+                const bikeId = $(this).val();
+                resetColor();
+                setGoEnabled(false);
+
+                if (!bikeId) {
+                    // if company selected but model cleared, allow GO only if you want -> here we disable
+                    return;
+                }
+
+                $.getJSON(getColorsUrl + '/' + bikeId)
+                .done(function (colors) {
+                    if (Array.isArray(colors) && colors.length > 0) {
+                        colors.forEach(function (c) {
+                            // store image url in data-image for Select2 template
+                            const label = c.color_name ?? c.name ?? ('Color ' + c.id);
+                            const img   = c.image_url ?? c.image ?? '';
+                            $color.append(`<option value="${c.id}" data-image="${img}">${label}</option>`);
+                        });
+
+                        // Re-init Select2 for color if present
+                        if ($.fn.select2) {
+                            // destroy old then init fresh
+                            if ($color.hasClass('select2-hidden-accessible')) {
+                                $color.select2('destroy');
+                            }
+                            $color.prop('disabled', false);
+
+                            $color.select2({
+                                width: 'resolve',
+                                templateResult: function (data) {
+                                    if (!data.id) return data.text;
+                                    const img = $(data.element).data('image');
+                                    if (img) return $(`<span><img src="{{ asset('images/multiimage/bike') }}/${img}" style="width:50px;height:50px;margin-right:6px;object-fit:cover;"> ${data.text}</span>`);
+                                    return data.text;
+                                },
+                                templateSelection: function (data) {
+                                    if (!data.id) return data.text;
+                                    const img = $(data.element).data('image');
+                                    if (img) return $(`<span><img src="{{ asset('images/multiimage/bike') }}/${img}" style="width:50px;height:50px;margin-right:6px;object-fit:cover;"> ${data.text}</span>`);
+                                    return data.text;
+                                },
+                                escapeMarkup: function (m) { return m; }
+                            });
+                        } else {
+                            $color.prop('disabled', false);
+                        }
+
+                        // enable Go after model/colors are available
+                        setGoEnabled(true);
+                    } else {
+                        // no colors -> still allow GO (filtered by model only)
+                        setGoEnabled(true);
+                    }
+                })
+                .fail(function (xhr) {
+                    console.error('Failed loading colors', xhr);
+                });
+            });
+
+            // when color changed -> update Go url (and enable)
+            $color.on('change', function () {
+                setGoEnabled(!!$company.val()); // enable if company present, adjust logic if you require model/color too
+            });
+
+            // If Go is an anchor and user clicks, it will navigate to the built URL.
+            // If Go is a button inside the form (type=submit), the form will submit normally to route('shop.products').
+            // For defensive handling of anchor click (in case JS built href failed), ensure click handler:
+            $goBtn.on('click', function (e) {
+                const $el = $(this);
+                // if anchor disabled via aria-disabled, prevent
+                if ($el.is('a') && $el.attr('aria-disabled') === 'true') {
+                    e.preventDefault();
+                    return false;
+                }
+                // if anchor and href is javascript:void(0), build url and go:
+                if ($el.is('a') && ($el.attr('href') === 'javascript:void(0)' || !$el.attr('href'))) {
+                    e.preventDefault();
+                    const url = buildProductsUrl();
+                    if (url) window.location.href = url;
+                }
+                // else for button -> normal submit will handle
+            });
+
+            // debug helper: show current URL in console (optional)
+            // setInterval(() => console.log('GO URL ->', buildProductsUrl()), 3000);
+        });
+    </script> --}}
+
 @endsection

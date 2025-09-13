@@ -1248,4 +1248,13 @@
       };
    </script>
    <script src="{{ asset('frontend') }}/js/rocket-loader.min.js" data-cf-settings="136ba6a1ac3be6cd75fee6c3-|49"></script>
+   <!-- Select2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+<!-- jQuery (required for Select2) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Select2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
 </head>
