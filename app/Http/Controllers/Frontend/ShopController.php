@@ -35,10 +35,10 @@ public function getModels($companyId)
         // dd($request->all());
         $query = Product::query();
 
-        if ($request->company_id) {
-            $bikeIds = Bike::where('company_id', $request->company_id)->pluck('id');
-            $query->whereIn('bike_id', $bikeIds);
-        }
+        // if ($request->company_id) {
+        //     $bikeIds = Bike::where('company_id', $request->company_id)->pluck('id');
+        //     $query->whereIn('bike_id', $bikeIds);
+        // }
         // dd($query->get());
 
         if ($request->bike_id) {

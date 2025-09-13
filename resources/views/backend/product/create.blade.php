@@ -26,6 +26,7 @@
        <!-- BEGIN: Custom CSS-->
        <link rel="stylesheet" type="text/css" href="{{ asset('admin_template/assets/css/style.css') }}">
        <!-- END: Custom CSS-->
+          {{-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> --}}
          <!-- include summernote css/js -->
        <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-bs4.min.css" rel="stylesheet">
        <style>
@@ -77,8 +78,17 @@
                                         <label for="category_id">Category <span class="text-danger">*</span></label>
                                         <select name="category_id" id="category_id" class="form-control" required>
                                             <option value="">Select Category</option>
-                                            @foreach($categories as $category)
+                                            {{-- @foreach($categories as $category)
                                                 <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
+                                            @endforeach --}}
+                                             @foreach ($catalogues as $catalogue)
+                                                <optgroup label="{{ $catalogue['name'] }}"></optgroup>
+                                                @foreach ($catalogue['category'] as $category)
+                                                    <option value="{{ $category['id'] }} {{ old('category_id') == $category->id ? 'selected' : '' }}">&nbsp;&nbsp;&nbsp;--&nbsp;{{ $category['name'] }}</option>
+                                                    @foreach ($category['subcategories'] as $subcategories)
+                                                        <option value="{{ $subcategories['id'] }} {{ old('category_id') == $subcategories['id'] ? 'selected' : '' }}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;---&nbsp;{{ $subcategories['name'] }}</option>
+                                                    @endforeach
+                                                @endforeach
                                             @endforeach
                                         </select>
                                         @error('category_id')
@@ -106,7 +116,7 @@
                                         <select name="bike_id" id="bike_id" class="form-control" required>
                                             <option value="">Select Model</option>
                                             @foreach($bikes as $bike)
-                                                <option value="{{ $bike->id }}" {{ old('bike_id') == $bike->id ? 'selected' : '' }}>{{ $bike->model }} ({{ $bike->company->name }})</option>
+                                                <option value="{{ $bike->id }}">{{ $bike->model }} ({{ $bike->company->name }})</option>
                                             @endforeach
                                         </select>
                                         @error('bike_id')
@@ -146,7 +156,7 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="part_number">Part Number <span class="text-danger">*</span></label>
-                                        <input type="text" name="part_number" class="form-control" id="part_number" placeholder="(e.g. CUSHION ASSY, REAR etc)" value="{{ old('part_number') }}" required>
+                                        <input type="text" name="part_number" class="form-control" id="part_number" placeholder="(e.g. 123-322-1212)" value="{{ old('part_number') }}">
                                         @error('part_number')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
@@ -616,7 +626,8 @@
 <script>
     $(document).ready(function () {
             $('#title').focus();
-
+            $('.select2').select2();
+            // $('[data-toggle="tooltip"]').tooltip();
             $('#name').on('keyup', function () {
                 var title = $(this).val();
 
