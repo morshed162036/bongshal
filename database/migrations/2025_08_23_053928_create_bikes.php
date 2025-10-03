@@ -16,8 +16,12 @@ return new class extends Migration
             $table->string('model')->nullable();
             $table->bigInteger('company_id')->nullable();
             $table->string('type')->nullable();
-            $table->string('front_tire_size')->nullable();
-            $table->string('rear_tire_size')->nullable();
+            $table->string('front_tire_width')->nullable();
+            $table->string('front_tire_aspectratio')->nullable();
+            $table->string('front_tire_rim')->nullable();
+            $table->string('rear_tire_width')->nullable();
+            $table->string('rear_tire_aspectratio')->nullable();
+            $table->string('rear_tire_rim')->nullable();
             $table->string('battery')->nullable();
             $table->string('status')->nullable();
             $table->timestamps();

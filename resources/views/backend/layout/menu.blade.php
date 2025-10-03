@@ -96,7 +96,7 @@
     <!-- END: Header-->
 
     <!-- BEGIN: Main Menu-->
-    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow d-block d-md-block d-lg-block" data-scroll-to-active="true">
         <div class="navbar-header">
             <ul class="nav navbar-nav flex-row">
                 <li class="nav-item mr-auto"><a class="navbar-brand" href="{{ route('admin.dashboard') }}">
@@ -106,10 +106,12 @@
                             </div>
                         {{-- <h2 class="brand-text mb-0 ml-auto">Cleaning</h2> --}}
                     </a></li>
-                <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i
-                            class="bx bx-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i
-                            class="toggle-icon bx bx-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary"
-                            data-ticon="bx-disc"></i></a></li>
+                <li class="nav-item nav-toggle">
+                    <a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse">
+                        <i class="bx bx-x d-block d-xl-none font-medium-4 primary toggle-icon"></i>
+                        <i class="toggle-icon bx bx-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="bx-disc"></i>
+                    </a>
+                </li>
             </ul>
         </div>
         <div class="shadow-bottom"></div>
@@ -221,7 +223,7 @@
                             class="menu-title">Brand</span></a>
                 </li>
                 <li class=" nav-item"><a href="{{ route('company') }}"><i class="bx bx-badge"></i><span
-                            class="menu-title">Company</span></a>
+                            class="menu-title">Bike Company</span></a>
                 </li>
                 <li class=" nav-item"><a href="{{ route('catalogue.index') }}"><i class="bx bx-badge"></i><span
                             class="menu-title">Catalogue</span></a>

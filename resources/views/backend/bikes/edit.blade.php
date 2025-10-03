@@ -110,14 +110,38 @@
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
-                                        <label for="front_tire_size">Front Tire Size <span class="text-danger">*</span></label>
-                                        <input type="text" id="front_tire_size" class="form-control" name="front_tire_size" value="{{ $bike->front_tire_size }}" placeholder="Enter Front Tire Size" required>
+                                        <label for="front_tire_size">Front Tire Width <span class="text-danger">*</span></label>
+                                        <input type="text" id="front_tire_width" class="form-control" name="front_tire_width" value="{{ $bike->front_tire_width }}" placeholder="Enter Front Tire width" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
-                                        <label for="rear_tire_size">Rear Tire Size <span class="text-danger">*</span></label>
-                                        <input type="text" id="rear_tire_size" class="form-control" name="rear_tire_size" value="{{ $bike->rear_tire_size }}" placeholder="Enter Rear Tire Size" required>
+                                        <label for="front_tire_aspectratio">Front Tire Aspect Ratio <span class="text-danger">*</span></label>
+                                        <input type="text" id="front_tire_aspectratio" class="form-control" name="front_tire_aspectratio" value="{{ $bike->front_tire_aspectratio }}" placeholder="Enter Front Tire Aspectratio" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="front_tire_rim">Front Tire Rim <span class="text-danger">*</span></label>
+                                        <input type="text" id="front_tire_rim" class="form-control" name="front_tire_rim" value="{{ $bike->front_tire_rim }}" placeholder="Enter Front Tire Rim" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="rear_tire_width">Rear Tire Width <span class="text-danger">*</span></label>
+                                        <input type="text" id="rear_tire_width" class="form-control" name="rear_tire_width" value="{{ $bike->rear_tire_width }}" placeholder="Enter Rear Tire Width" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="rear_tire_aspectratio">Rear Tire Aspect Ratio <span class="text-danger">*</span></label>
+                                        <input type="text" id="rear_tire_aspectratio" class="form-control" name="rear_tire_aspectratio" value="{{ $bike->rear_tire_aspectratio }}" placeholder="Enter Rear Tire aspectratio" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="rear_tire_rim">Rear Tire Rim <span class="text-danger">*</span></label>
+                                        <input type="text" id="rear_tire_rim" class="form-control" name="rear_tire_rim" value="{{ $bike->rear_tire_rim }}" placeholder="Enter Rear Tire Rim" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-12">

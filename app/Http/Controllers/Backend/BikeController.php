@@ -32,8 +32,8 @@ public function store(Request $request)
         'model' => 'required|string',
         'company_id' => 'required|integer',
         'type' => 'required|string',
-        'front_tire_size' => 'required|string',
-        'rear_tire_size' => 'required|string',
+        // 'front_tire_size' => 'required|string',
+        // 'rear_tire_size' => 'required|string',
         'battery_capacity' => 'required|string',
         'group-color.*.color' => 'required|string',
         'group-color.*.image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
@@ -48,8 +48,12 @@ public function store(Request $request)
         $bike->model = $request->model;
         $bike->company_id = $request->company_id;
         $bike->type = $request->type;
-        $bike->front_tire_size = $request->front_tire_size;
-        $bike->rear_tire_size = $request->rear_tire_size;
+        $bike->front_tire_width = $request->front_tire_width;
+        $bike->front_tire_aspectratio = $request->front_tire_aspectratio;
+        $bike->front_tire_rim = $request->front_tire_rim;
+        $bike->rear_tire_width = $request->rear_tire_width;
+        $bike->rear_tire_aspectratio = $request->rear_tire_aspectratio;
+        $bike->rear_tire_rim = $request->rear_tire_rim;
         $bike->battery = $request->battery_capacity;
         $bike->status = 'active';
         $bike->save();
@@ -111,8 +115,8 @@ public function update(Request $request, $id)
         'model' => 'required|string',
         'company_id' => 'required|integer',
         'type' => 'required|string',
-        'front_tire_size' => 'required|string',
-        'rear_tire_size' => 'required|string',
+        // 'front_tire_size' => 'required|string',
+        // 'rear_tire_size' => 'required|string',
         'battery_capacity' => 'required|string',
         'group-color.*.color' => 'nullable|string',
         'group-color.*.image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
@@ -130,8 +134,12 @@ public function update(Request $request, $id)
             'model' => $request->model,
             'company_id' => $request->company_id,
             'type' => $request->type,
-            'front_tire_size' => $request->front_tire_size,
-            'rear_tire_size' => $request->rear_tire_size,
+            'front_tire_width' => $request->front_tire_width,
+        'front_tire_aspectratio' => $request->front_tire_aspectratio,
+        'front_tire_rim' => $request->front_tire_rim,
+        'rear_tire_width' => $request->rear_tire_width,
+        'rear_tire_aspectratio' => $request->rear_tire_aspectratio,
+        'rear_tire_rim' => $request->rear_tire_rim,
             'battery' => $request->battery_capacity,
         ]);
 

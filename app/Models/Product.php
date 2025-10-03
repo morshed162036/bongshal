@@ -53,7 +53,15 @@ class Product extends Model
         'status',
         'meta_title',
         'meta_image',
-        'meta_description'
+        'meta_description',
+        'grade',
+        'engine_oil_type',
+        'engine_oil_capacity',
+        'quantity',
+        'width',
+        'aspect_ratio',
+        'rim',
+        'features',
     ];
 
     public function images()
@@ -62,7 +70,7 @@ class Product extends Model
     }
     public function attributes()
     {
-        return $this->hasMany(ProductAttribute::class);
+        return $this->hasMany(ProductAttribute::class)->with('attribute', 'attributeValue');
     }
     public function brand()
     {
@@ -76,5 +84,5 @@ class Product extends Model
     {
         return $this->belongsTo(Bike::class);
     }
-    
+
 }

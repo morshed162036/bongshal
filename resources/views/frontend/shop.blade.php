@@ -32,7 +32,9 @@
                <strong data-js="ProductCatalog.searchQuery"></strong>
                in
                </span>
-               Spare Parts
+               {{ $title ?? 'Spare Parts' }}
+               {{-- @if ($catalogue)
+               {{ $catalogue->name }}
                {{-- <h1>{{ $catalogue->name }}</h1> --}}
                {{-- <h1>{{ $category->name }}</h1> --}}
                {{-- <h1>{{ $catalogue->name }}</h1> --}}
@@ -1630,175 +1632,691 @@
             </div>
          </div>
       </div> --}}
-      <div class="product-index-main__navigation browse-navigation">
-        <div data-wrapper-for=".parts-type-toggle" data-wrapper-at="small medium"></div>
-        <div class="shop-by-bike__wrapper" data-default-interface="select" data-js="ShopByBike.interface">
-            <div class="shop-by-bike shop-by-bike--select">
-            <div class="shop-by-bike__mobile-select-toggle ui-action-button ui-action-button--fast" data-click-toggle data-toggle-selector=".shop-by-bike__select, .shop-by-bike__mobile-select-toggle" data-qa="shop-by-bike-link">My Garage</div>
-            <div class="shop-by-bike__select">
-                <div class="shop-by-bike__action-button shop-by-bike__action-button--mobile ui-action-button ui-action-button--cog ui-action-button--bold ui-action-button--dark" data-js="ShopByBike.garageFlyoutToggle ShopByBike.authedInterface" style="display: none">
-                    Garage
-                    <span class="shop-by-bike__action-button-label">Select a Saved Vehicle</span>
-                </div>
-                <a class="shop-by-bike__action-button shop-by-bike__action-button--mobile ui-action-button ui-action-button--cog ui-action-button--bold ui-action-button--dark" data-js="ShopByBike.unauthedInterface ShopByBike.logInLink" data-open-href data-open-class="authentication-form-modal" data-open-href-reuse-modal href="/auth/identity" style="display: none">
-                Garage
-                <span class="shop-by-bike__action-button-label">Log In to Access Saved Vehicles</span>
-                </a>
-                <div class="shop-by shop-by-bike__content shop-by-bike__content--select">
-                    <div class="shop-by-bike__header">
-                        <span class="shop-by__heading">
-                        <span class="shop-by__heading-text">My Garage</span>
-                        </span>
-                        <span class="shop-by-bike__action shop-by-bike__action--garage" data-js="ShopByBike.garageFlyoutToggle ShopByBike.authedInterface" style="display: none">
-                        <span class="shop-by-bike__action-label shop-by-bike__action-label--garage shop-by-bike__action-label--authed">Garage</span>
-                        <span class="shop-by-bike__action-link ui-link">Select a Saved Vehicle</span>
-                        </span>
-                        <span class="shop-by-bike__action shop-by-bike__action--garage" data-js="ShopByBike.unauthedInterface" style="display: none">
-                        <span class="shop-by-bike__action-label shop-by-bike__action-label--garage">Garage</span>
-                        <a class="shop-by-bike__action-link ui-link" data-js="ShopByBike.logInLink" data-open-href data-open-class="authentication-form-modal" data-open-href-reuse-modal href="/auth/identity">Log In to Access Saved Vehicles</a>
-                        </span>
-                        <span class="shop-by-bike__action-label shop-by-bike__action-label--recent" data-js="ShopByBike.recentBike" style="display: none">Recent Vehicle</span>
-                        <a class="shop-by-bike__action-link shop-by-bike__action-link--recent ui-link" data-js="ShopByBike.recentBike ShopByBike.recentBike.link ShopByBike.vehicleLink" href="" style="display: none"></a>
+
+    <div class="product-index-main__navigation browse-navigation">
+        @if ($bike == null)
+            <div class="shop-by-bike__wrapper" data-default-interface="select" data-js="ShopByBike.interface">
+                <div class="shop-by-bike shop-by-bike--select">
+                <div class="shop-by-bike__mobile-select-toggle ui-action-button ui-action-button--fast" data-click-toggle data-toggle-selector=".shop-by-bike__select, .shop-by-bike__mobile-select-toggle" data-qa="shop-by-bike-link">My Garage</div>
+                    <div class="shop-by-bike__select">
+                        <div class="shop-by-bike__action-button shop-by-bike__action-button--mobile ui-action-button ui-action-button--cog ui-action-button--bold ui-action-button--dark" data-js="ShopByBike.garageFlyoutToggle ShopByBike.authedInterface" style="display: none">
+                            Garage
+                            <span class="shop-by-bike__action-button-label">Select a Saved Vehicle</span>
+                        </div>
+                        <a class="shop-by-bike__action-button shop-by-bike__action-button--mobile ui-action-button ui-action-button--cog ui-action-button--bold ui-action-button--dark" data-js="ShopByBike.unauthedInterface ShopByBike.logInLink" data-open-href data-open-class="authentication-form-modal" data-open-href-reuse-modal href="/auth/identity" style="display: none">
+                        Garage
+                        <span class="shop-by-bike__action-button-label">Log In to Access Saved Vehicles</span>
+                        </a>
+                        <div class="shop-by shop-by-bike__content shop-by-bike__content--select">
+                            <div class="shop-by-bike__header">
+                                <span class="shop-by__heading">
+                                <span class="shop-by__heading-text">My Garage</span>
+                                </span>
+                                <span class="shop-by-bike__action shop-by-bike__action--garage" data-js="ShopByBike.garageFlyoutToggle ShopByBike.authedInterface" style="display: none">
+                                <span class="shop-by-bike__action-label shop-by-bike__action-label--garage shop-by-bike__action-label--authed">Garage</span>
+                                <span class="shop-by-bike__action-link ui-link">Select a Saved Vehicle</span>
+                                </span>
+                                <span class="shop-by-bike__action shop-by-bike__action--garage" data-js="ShopByBike.unauthedInterface" style="display: none">
+                                <span class="shop-by-bike__action-label shop-by-bike__action-label--garage">Garage</span>
+                                <a class="shop-by-bike__action-link ui-link" data-js="ShopByBike.logInLink" data-open-href data-open-class="authentication-form-modal" data-open-href-reuse-modal href="/auth/identity">Log In to Access Saved Vehicles</a>
+                                </span>
+                                <span class="shop-by-bike__action-label shop-by-bike__action-label--recent" data-js="ShopByBike.recentBike" style="display: none">Recent Vehicle</span>
+                                <a class="shop-by-bike__action-link shop-by-bike__action-link--recent ui-link" data-js="ShopByBike.recentBike ShopByBike.recentBike.link ShopByBike.vehicleLink" href="" style="display: none"></a>
+                            </div>
+                            <div class="shop-by-bike__form">
+                                <form class="shop-by-bike__select-dimensions" action="{{ route('shop.products') }}" method="GET" id="bikeFormm">
+                                @csrf
+                                <input type="hidden" name="catalogue_id" value="{{ $catalogue?$catalogue->id:'' }}">
+                                <select name="company_id" id="companySelectt" class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--type ui-select">
+                                    <option value="">Make</option>
+                                    @php
+                                    $companies = App\Models\Company::all();
+                                    @endphp
+                                    @foreach($companies as $company)
+                                        <option value="{{ $company->id }}">{{ $company->name }}</option>
+                                    @endforeach
+                                </select>
+
+                                <select name="bike_id" id="modelSelectt" class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--type ui-select" disabled>
+                                    <option value="">Select Model</option>
+                                </select>
+
+                                <select name="color_id" id="colorSelectt" class="form-control" disabled>
+                                    <option value="">Select Color</option>
+                                </select>
+
+                                <button type="submit" id="goBtnn" class="shop-by-bike__select-selection-link ui-button" disabled>Go!</button>
+                                </form>
+                                <div class="shop-by-bike__select-close shop-by-bike__select-close--mobile" data-click-toggle data-toggle-selector=".shop-by-bike__select, .shop-by-bike__mobile-select-toggle"></div>
+                            </div>
+                            <style>
+                                /* Match height/width with your other dropdowns */
+                                    .select2-container .select2-selection--single {
+                                        height: 42px;              /* adjust to your form-control height */
+                                        border: 1px solid #ccc;    /* same border as other selects */
+                                        border-radius: 4px;
+                                        padding: 5px 8px;
+                                    }
+
+                                    /* Align text */
+                                    .select2-container .select2-selection__rendered {
+                                        line-height: 28px;
+                                        font-size: 14px;
+                                    }
+
+                                    /* Remove extra arrow styling */
+                                    .select2-container--default .select2-selection--single .select2-selection__arrow {
+                                        height: 36px;
+                                        right: 5px;
+                                    }
+                            </style>
+                        </div>
                     </div>
-                    <div class="shop-by-bike__form">
-                        <form class="shop-by-bike__select-dimensions" action="{{ route('shop.products') }}" method="GET" id="bikeFormm">
-                         @csrf
-                         <input type="hidden" name="catalogue_id" value="{{ $catalogue?$catalogue->id:'' }}">
-                        <select name="company_id" id="companySelectt" class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--type ui-select">
-                            <option value="">Make</option>
-                            @php
-                            $companies = App\Models\Company::all();
-                            @endphp
-                            @foreach($companies as $company)
-                                <option value="{{ $company->id }}">{{ $company->name }}</option>
+                </div>
+                <div class="shop-by-bike__garage-flyout garage-flyout garage-flyout--shop-by-bike" data-js="ShopByBike.garageFlyout">
+                <div class="garage-flyout__heading">Select a Vehicle</div>
+                <div data-js="ShopByBike.garageFlyout.emptyGarage">
+                    <div class="garage-flyout__subheading">No saved vehicles?</div>
+                    <div class="garage-flyout__copy">Use the Shop Your Ride tool to search for parts that fit your vehicle.</div>
+                </div>
+                <div data-js="ShopByBike.garageFlyout.garage" style="display: none;">
+                    <div class="garage-flyout__subheading">Saved Vehicles</div>
+                    <div data-js="ShopByBike.garageFlyout.bikes">
+                        <a class="garage-flyout__link ui-link" data-js="ShopByBike.garageFlyout.bikeTemplate ShopByBike.vehicleLink" href="" style="display: none"></a>
+                        <a class="garage-flyout__link garage-flyout__link--primary ui-link" data-js="ShopByBike.garageFlyout.primaryBikeTemplate ShopByBike.vehicleLink" href="" style="display: none"></a>
+                    </div>
+                    <a class="garage-flyout__subheading garage-flyout__subheading--manage ui-link" href="/account/garage">Manage Garage</a>
+                </div>
+                </div>
+            </div>
+        @else
+            <div class="vehicle-specs">
+            <input
+                type="checkbox"
+                checked
+                id="vehicle-specs-toggle"
+                class="vehicle-specs__toggle-input"
+            />
+            <label
+                class="vehicle-specs__toggle-label"
+                for="vehicle-specs-toggle"
+                >Stock fitment for this vehicle</label
+            >
+            <div class="vehicle-specs__content">
+                <ul class="vehicle-specs__list">
+                    <li class="vehicle-specs__item">
+                        <strong>Front Tire: </strong
+                        ><a
+                        class="ui-link"
+                        href="#"
+                        >{{ $bike->front_tire_width }}/{{ $bike->front_tire_aspectratio }}-{{ $bike->front_tire_rim }}</a
+                        >
+                    </li>
+                    <li class="vehicle-specs__item">
+                        <strong>Rear Tire: </strong
+                        ><a
+                        class="ui-link"
+                        href="#"
+                        >{{ $bike->rear_tire_width }}/{{ $bike->rear_tire_aspectratio }}-{{ $bike->rear_tire_rim }}</a
+                        >
+                    </li>
+                    <li class="vehicle-specs__item">
+                        <strong>Battery: </strong
+                        ><a class="ui-link" href="#"
+                        >{{ $bike->battery }}</a
+                        >
+                    </li>
+                    <li class="vehicle-specs__item">
+                        <strong>Recommended Engine Oil: </strong
+                        ><a
+                        class="ui-link"
+                        href=""
+                        >@if (count($bike->grade)>0)
+                            @foreach ($bike->grade as $grade)
+                                {{ $grade->grade }}: {{ $grade->volume }}
+                                @if (!$loop->last)
+                                    ,
+                                @endif
+
                             @endforeach
-                        </select>
+                        @endif</a
+                        >
+                    </li>
+                    <li class="vehicle-specs__item">
+                        <strong><a
+                        class="ui-link"
+                        href="#"
+                        >Shop Aftermarket parts for your bike</a
+                        > </strong
+                        >
+                    </li>
+                    <li class="vehicle-specs__item">
+                        <strong><a class="ui-link" href="#"
+                        >Shop Accessories for your bike</a
+                        ></strong
+                        >
+                    </li>
+                    {{-- <li class="vehicle-specs__item">
+                        <strong>Battery: </strong
+                        ><a
+                        class="ui-link"
+                        href="?facets%5B%5D=905&amp;fit=exact_fit"
+                        >YTZ7S</a
+                        >
+                    </li>
+                    <li class="vehicle-specs__item">
+                        <strong>Spark Plug: </strong
+                        ><a class="ui-link" href="?facets%5B%5D=2667"
+                        >LMAR9EJ</a
+                        >
+                    </li> --}}
+                </ul>
+                <p class="vehicle-specs__disclaimer ui-copy">
+                    For reference only, please consult your owner’s
+                    manual to confirm your fitment.
+                </p>
+            </div>
+            </div>
+        @endif
 
-                        <select name="bike_id" id="modelSelectt" class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--type ui-select" disabled>
-                            <option value="">Select Model</option>
-                        </select>
+            {{-- <div
+            data-wrapper-for=".parts-type-toggle"
+            data-wrapper-at="small medium"
+            ></div> --}}
 
-                        <select name="color_id" id="colorSelectt" class="form-control" disabled>
-                            <option value="">Select Color</option>
-                        </select>
+            <div
+            class="shop-by-bike__wrapper shop-by-bike__wrapper--saveable"
+            data-default-interface="search"
+            data-js=""
+            >
+            <a
+                class="shop-by-bike__action-button ui-action-button ui-action-button--plus"
+                data-open-href
+                data-open-class="authentication-form-modal"
+                data-open-href-reuse-modal
+                href="">Save Vehicle to Garage</a
+            >
 
-                        <button type="submit" id="goBtnn" class="shop-by-bike__select-selection-link ui-button" disabled>Go!</button>
+            {{-- <div
+                class="shop-by-bike shop-by-bike--select"
+                data-js="ShopByBike.selectInterface"
+                data-qa="shop-by-bike-select"
+            >
+                <div
+                    class="shop-by-bike__mobile-select-toggle ui-action-button ui-action-button--fast"
+                    data-click-toggle
+                    data-toggle-selector=".shop-by-bike__select, .shop-by-bike__mobile-select-toggle"
+                    data-qa="shop-by-bike-link"
+                >
+                    Shop Your Ride
+                </div>
+                <div class="shop-by-bike__select">
+                    <div
+                        class="shop-by-bike__action-button shop-by-bike__action-button--mobile ui-action-button ui-action-button--cog ui-action-button--bold ui-action-button--dark"
+                        data-js="ShopByBike.garageFlyoutToggle ShopByBike.authedInterface"
+                        style="display: block"
+                    >
+                        Garage
+                        <span class="shop-by-bike__action-button-label"
+                        >Select a Saved Vehicle</span
+                        >
+                    </div>
+                    <a
+                        class="shop-by-bike__action-button shop-by-bike__action-button--mobile ui-action-button ui-action-button--cog ui-action-button--bold ui-action-button--dark"
+                        data-js="ShopByBike.unauthedInterface ShopByBike.logInLink"
+                        data-open-href
+                        data-open-class="authentication-form-modal"
+                        data-open-href-reuse-modal
+                        href="/auth/identity"
+                        style="display: block"
+                    >
+                        Garage
+                        <span class="shop-by-bike__action-button-label"
+                        >Log In to Access Saved Vehicles</span
+                        >
+                    </a>
+
+                    <div
+                        class="shop-by shop-by-bike__content shop-by-bike__content--select"
+                    >
+                        <div class="shop-by-bike__header">
+                        <span class="shop-by__heading">
+                            <span class="shop-by__heading-text"
+                                >Shop Your Ride</span
+                            >
+                        </span>
+
+                        <span
+                            class="shop-by-bike__action shop-by-bike__action--garage"
+                            data-js="ShopByBike.garageFlyoutToggle ShopByBike.authedInterface"
+                            style="display: block"
+                        >
+                            <span
+                                class="shop-by-bike__action-label shop-by-bike__action-label--garage shop-by-bike__action-label--authed"
+                                >Garage</span
+                            >
+                            <span
+                                class="shop-by-bike__action-link ui-link"
+                                >Select a Saved Vehicle</span
+                            >
+                        </span>
+
+                        <span
+                            class="shop-by-bike__action shop-by-bike__action--garage"
+                            data-js="ShopByBike.unauthedInterface"
+                            style="display: block"
+                        >
+                            <span
+                                class="shop-by-bike__action-label shop-by-bike__action-label--garage"
+                                >Garage</span
+                            >
+                            <a
+                                class="shop-by-bike__action-link ui-link"
+                                data-js="ShopByBike.logInLink"
+                                data-open-href
+                                data-open-class="authentication-form-modal"
+                                data-open-href-reuse-modal
+                                href="/auth/identity"
+                                >Log In to Access Saved Vehicles</a
+                            >
+                        </span>
+
+                        <span
+                            class="shop-by-bike__action-label shop-by-bike__action-label--recent"
+                            data-js="ShopByBike.recentBike"
+                            style="display: block"
+                            >Recent Vehicle</span
+                        >
+                        <a
+                            class="shop-by-bike__action-link shop-by-bike__action-link--recent ui-link"
+                            data-js="ShopByBike.recentBike ShopByBike.recentBike.link ShopByBike.vehicleLink"
+                            href=""
+                            style="display: block"
+                        ></a>
+                        <div class="shop-by-bike__form" style="margin-bottom:20px;">
+                        <form class="shop-by-bike__select-dimensions" action="{{ route('shop.products') }}" method="GET" id="bikeFormm">
+                            @csrf
+                            <input type="hidden" name="catalogue_id" value="{{ $catalogue?$catalogue->id:'' }}">
+                            <select name="company_id" id="companySelectt" class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--type ui-select">
+                                <option value="">Make</option>
+                                @php
+                                $companies = App\Models\Company::all();
+                                @endphp
+                                @foreach($companies as $company)
+                                    <option value="{{ $company->id }}">{{ $company->name }}</option>
+                                @endforeach
+                            </select>
+
+                            <select name="bike_id" id="modelSelectt" class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--type ui-select" disabled>
+                                <option value="">Select Model</option>
+                            </select>
+
+                            <select name="color_id" id="colorSelectt" class="form-control" disabled>
+                                <option value="">Select Color</option>
+                            </select>
+
+                            <button type="submit" id="goBtnn" class="shop-by-bike__select-selection-link ui-button" disabled>Go!</button>
                         </form>
                         <div class="shop-by-bike__select-close shop-by-bike__select-close--mobile" data-click-toggle data-toggle-selector=".shop-by-bike__select, .shop-by-bike__mobile-select-toggle"></div>
                     </div>
-                    <style>
-                        /* Match height/width with your other dropdowns */
-                            .select2-container .select2-selection--single {
-                                height: 42px;              /* adjust to your form-control height */
-                                border: 1px solid #ccc;    /* same border as other selects */
-                                border-radius: 4px;
-                                padding: 5px 8px;
-                            }
+                    </div>
+                    </div>
+                </div>
+            </div> --}}
 
-                            /* Align text */
-                            .select2-container .select2-selection__rendered {
-                                line-height: 28px;
-                                font-size: 14px;
-                            }
+            <div
+                class="shop-by-bike__garage-flyout garage-flyout garage-flyout--shop-by-bike"
+                data-js="ShopByBike.garageFlyout"
+            >
+                <div class="garage-flyout__heading">
+                    Select a Vehicle
+                </div>
+                <div data-js="ShopByBike.garageFlyout.emptyGarage">
+                    <div class="garage-flyout__subheading">
+                        No saved vehicles?
+                    </div>
+                    <div class="garage-flyout__copy">
+                        Use the Shop Your Ride tool to search for parts
+                        that fit your vehicle.
+                    </div>
+                </div>
+                <div
+                    data-js="ShopByBike.garageFlyout.garage"
+                    style="display: none"
+                >
+                    <div class="garage-flyout__subheading">
+                        Saved Vehicles
+                    </div>
+                    <div data-js="ShopByBike.garageFlyout.bikes">
+                        <a
+                        class="garage-flyout__link ui-link"
+                        data-js="ShopByBike.garageFlyout.bikeTemplate ShopByBike.vehicleLink"
+                        href=""
+                        style="display: none"
+                        ></a>
+                        <a
+                        class="garage-flyout__link garage-flyout__link--primary ui-link"
+                        data-js="ShopByBike.garageFlyout.primaryBikeTemplate ShopByBike.vehicleLink"
+                        href=""
+                        style="display: none"
+                        ></a>
+                    </div>
+                    <a
+                        class="garage-flyout__subheading garage-flyout__subheading--manage ui-link"
+                        href="/account/garage"
+                        >Manage Garage</a
+                    >
+                </div>
+            </div>
 
-                            /* Remove extra arrow styling */
-                            .select2-container--default .select2-selection--single .select2-selection__arrow {
-                                height: 36px;
-                                right: 5px;
-                            }
-                    </style>
+            <div
+                class="shop-by-bike shop-by-bike--search"
+                data-js="ShopByBike.searchInterface"
+            >
+                <div class="shop-by shop-by-bike__content">
+                    <div class="shop-by-bike__header">
+                        <span class="shop-by__heading">
+                        <span class="shop-by__heading-text"
+                            >Shop Your Ride</span
+                        >
+                        </span>
+                        <span
+                        class="shop-by-bike__action shop-by-bike__action--garage"
+                        data-js="ShopByBike.garageFlyoutToggle ShopByBike.authedInterface"
+                        style="display: block"
+                        >
+                        <span
+                            class="shop-by-bike__action-label shop-by-bike__action-label--garage shop-by-bike__action-label--authed"
+                            >Garage</span
+                        >
+                        <span
+                            class="shop-by-bike__action-link ui-link"
+                            >Select a Saved Vehicle</span
+                        >
+                        </span>
+
+                        <span
+                        class="shop-by-bike__action shop-by-bike__action--garage"
+                        data-js="ShopByBike.unauthedInterface"
+                        style="display: none"
+                        >
+                        <span
+                            class="shop-by-bike__action-label shop-by-bike__action-label--garage"
+                            >Garage</span
+                        >
+                        <a
+                            class="shop-by-bike__action-link ui-link"
+                            data-js="ShopByBike.logInLink"
+                            data-open-href
+                            data-open-class="authentication-form-modal"
+                            data-open-href-reuse-modal
+                            href="/auth/identity"
+                            >Log In to Access Saved Vehicles</a
+                        >
+                        </span>
+                    </div>
+                    <div class="shop-by-bike__form">
+                        <form action="{{ url('/search') }}" method="get"
+      class="search-form product-index-vehicle-search__form js-product-index-vehicle-search__form"
+      data-form-name="Vehicle Search">
+
+    <div class="shop-by-bike__search-input-wrapper">
+        <input aria-label="Search parts for this vehicle"
+               class="shop-by-bike__search-input js-product-index-vehicle-search__input ui-text-input"
+               name="query"
+               id="searchInput"
+               placeholder="Search parts for this vehicle"
+               type="text"
+               autocomplete="off"
+        />
+        <span class="shop-by-bike__search-input-clear"
+              data-js="ShopByBike.clear"
+              style="display:none"></span>
+    </div>
+
+    <button class="shop-by-bike__search-button ui-button" type="submit">
+        <span class="shop-by-bike__search-button-text">Search</span>
+    </button>
+
+    <!-- Live Results -->
+    <div id="searchResults"
+         style="position:absolute; background:white; width:100%; z-index:999;
+                border:1px solid #ddd; display:none;"></div>
+</form>
+
+<script>
+const input = document.getElementById('searchInput');
+const resultsBox = document.getElementById('searchResults');
+let timer;
+
+input.addEventListener('keyup', function() {
+    clearTimeout(timer);
+    const q = this.value.trim();
+    if (!q) { resultsBox.style.display = 'none'; return; }
+
+    timer = setTimeout(() => {
+        fetch(`/search-ajax?q=${encodeURIComponent(q)}`)
+        .then(res => res.json())
+        .then(data => {
+            if (!data.length) { resultsBox.innerHTML = '<div style="padding:10px;">No results</div>'; }
+            else {
+                resultsBox.innerHTML = data.map(item =>
+                    `<div style="padding:8px;border-bottom:1px solid #eee;cursor:pointer"
+                         onclick="window.location='/product/${item.id}'">
+                        <strong>${item.name}</strong> - $${item.price}
+                    </div>`
+                ).join('');
+            }
+            resultsBox.style.display = 'block';
+        });
+    }, 300); // delay for smooth typing
+});
+</script>
+
+                                 <span
+                                    class="shop-by-bike__search-interface-toggle ui-link"
+                                    data-js="ShopByBike.interfaceToggle"
+                                    >Select Different Vehicle</span
+                                 >
+                            </div>
+
                 </div>
             </div>
             </div>
-            <div class="shop-by-bike__garage-flyout garage-flyout garage-flyout--shop-by-bike" data-js="ShopByBike.garageFlyout">
-            <div class="garage-flyout__heading">Select a Vehicle</div>
-            <div data-js="ShopByBike.garageFlyout.emptyGarage">
-                <div class="garage-flyout__subheading">No saved vehicles?</div>
-                <div class="garage-flyout__copy">Use the Shop Your Ride tool to search for parts that fit your vehicle.</div>
-            </div>
-            <div data-js="ShopByBike.garageFlyout.garage" style="display: none;">
-                <div class="garage-flyout__subheading">Saved Vehicles</div>
-                <div data-js="ShopByBike.garageFlyout.bikes">
-                    <a class="garage-flyout__link ui-link" data-js="ShopByBike.garageFlyout.bikeTemplate ShopByBike.vehicleLink" href="" style="display: none"></a>
-                    <a class="garage-flyout__link garage-flyout__link--primary ui-link" data-js="ShopByBike.garageFlyout.primaryBikeTemplate ShopByBike.vehicleLink" href="" style="display: none"></a>
-                </div>
-                <a class="garage-flyout__subheading garage-flyout__subheading--manage ui-link" href="/account/garage">Manage Garage</a>
-            </div>
-            </div>
-        </div>
+            <script type="d9b7a4c0c5590b41998d726c-text/javascript">
+            (function(w){w.__rq.push(function(req){
+                req("web/static/js/sites/revzilla/components/shop_by_bike")
+                .then(({ShopByBike}) => ShopByBike.init('search', 37259));
+            })})(this)
+            </script>
 
-        <div class="browse-navigation--mobile">
-            <span class="browse-navigation__button browse-navigation__button--filter ui-button ui-button--blue ui-button--secondary ui-button--half-width" data-open="filters" data-open-class="product-index-filter-modal" data-qa="filter">Filter<span class="product-faceted-browse-index__filter-count" data-js="ProductCatalog.filterCount" data-filter-count="0">0</span></span>
-            <span class="browse-navigation__button browse-navigation__button--sort ui-button ui-button--blue ui-button--secondary ui-button--half-width">
-            <select class="browse-navigation__mobile-sort-select" data-js="ProductCatalog.sortSelect ProductCatalog.sortSelectMobile" data-field-name="Sort By" aria-label="Sort by">
-                <option value="rating">Rating</option>
-                <option value="brand">Brand</option>
-                <option value="best_seller" selected>Best Sellers</option>
-                <option value="newest">Newest Arrivals</option>
-                <option value="price_asc">Price: Low to High</option>
-                <option value="price_desc">Price: High to Low</option>
-            </select>
-            Sort By
-            </span>
-        </div>
-        <div class="browse-navigation--desktop">
-            <div class="browse-navigation__sort_filter_options">
-            <div class="browse-navigation__sort">
-                <select aria-label="Sort by" class="browse-navigation__sort-select ui-select" data-field-name="Sort by" data-js="ProductCatalog.sortSelect ProductCatalog.sortSelectDesktop" name="[]">
-                    <option value="rating">Sort by Rating</option>
-                    <option value="brand">Sort by Brand</option>
-                    <option selected value="best_seller">Sort by Best Sellers</option>
-                    <option value="newest">Sort by Newest Arrivals</option>
-                    <option value="price_asc">Sort by Price: Low to High</option>
-                    <option value="price_desc">Sort by Price: High to Low</option>
+            <div class="browse-navigation--mobile">
+            <span
+                class="browse-navigation__button browse-navigation__button--filter ui-button ui-button--blue ui-button--secondary ui-button--half-width"
+                data-open="filters"
+                data-open-class="product-index-filter-modal"
+                data-qa="filter"
+                >Filter<span
+                    class="product-faceted-browse-index__filter-count"
+                    data-js="ProductCatalog.filterCount"
+                    data-filter-count="0"
+                    >0</span
+                ></span
+            >
+            <span
+                class="browse-navigation__button browse-navigation__button--sort ui-button ui-button--blue ui-button--secondary ui-button--half-width"
+            >
+                <select
+                    class="browse-navigation__mobile-sort-select"
+                    data-js="ProductCatalog.sortSelect ProductCatalog.sortSelectMobile"
+                    data-field-name="Sort By"
+                    aria-label="Sort by"
+                >
+                    <option value="rating">Rating</option>
+
+                    <option value="brand">Brand</option>
+
+                    <option value="best_seller" selected>
+                        Best Sellers
+                    </option>
+
+                    <option value="newest">Newest Arrivals</option>
+
+                    <option value="price_asc">
+                        Price: Low to High
+                    </option>
+
+                    <option value="price_desc">
+                        Price: High to Low
+                    </option>
                 </select>
+                Sort By
+            </span>
             </div>
+
+            <div class="browse-navigation--desktop">
+            <div class="browse-navigation__sort_filter_options">
+                <div class="browse-navigation__sort">
+                    <select
+                        aria-label="Sort by"
+                        class="browse-navigation__sort-select ui-select"
+                        data-field-name="Sort by"
+                        data-js="ProductCatalog.sortSelect ProductCatalog.sortSelectDesktop"
+                        name="[]"
+                    >
+                        <option value="rating">Sort by Rating</option>
+                        <option value="brand">Sort by Brand</option>
+                        <option selected value="best_seller">
+                        Sort by Best Sellers
+                        </option>
+                        <option value="newest">
+                        Sort by Newest Arrivals
+                        </option>
+                        <option value="price_asc">
+                        Sort by Price: Low to High
+                        </option>
+                        <option value="price_desc">
+                        Sort by Price: High to Low
+                        </option>
+                    </select>
+                </div>
+
+                <span
+                    class="browse-navigation__view_all_for_vehicle ui-link"
+                    data-js="ProductCatalog.viewAllForVehicle"
+                    >View all products for this vehicle</span
+                >
             </div>
-            {{-- <div class="browse-navigation__pagination browse-navigation__pagination--top" data-js="ProductCatalog.paginationTop">
-            <div class="pagination" data-js="Pagination">
-                <a href="" class="pagination__incrementer  pagination__incrementer--prev" aria-label="Previous page">
-                </a>
-                <span class="pagination__links-wrapper">
-                <a class="pagination__page-link" href="?page=1">1</a>
-                <a class="pagination__page-link" href="?page=2">2</a>
-                <a class="pagination__page-link" href="?page=3">3</a>
-                <a class="pagination__page-link" href="?page=4">4</a>
-                <a class="pagination__page-link" href="?page=5">5</a>
-                <a class="pagination__page-link" href="?page=6">6</a>
-                <a class="pagination__page-link" href="?page=7">7</a>
-                <a class="pagination__page-link" href="?page=8">8</a>
-                <a class="pagination__page-link" href="?page=9">9</a>
-                <a class="pagination__page-link" href="?page=10">10</a>
-                <a class="pagination__page-link" href="?page=11">11</a>
-                <a class="pagination__page-link" href="?page=12">12</a>
-                <a class="pagination__page-link" href="?page=13">13</a>
-                <a class="pagination__page-link" href="?page=14">14</a>
-                <a class="pagination__page-link" href="?page=15">15</a>
-                <a class="pagination__page-link" href="?page=16">16</a>
-                <a class="pagination__page-link" href="?page=17">17</a>
-                <a class="pagination__page-link" href="?page=18">18</a>
-                <a class="pagination__page-link" href="?page=19">19</a>
-                <a class="pagination__page-link" href="?page=20">20</a>
-                <a class="pagination__page-link" href="?page=21">21</a>
-                <a class="pagination__page-link" href="?page=22">22</a>
-                <a class="pagination__page-link" href="?page=23">23</a>
-                <a class="pagination__page-link" href="?page=24">24</a>
-                <a class="pagination__page-link" href="?page=25">25</a>
-                <a class="pagination__page-link" href="?page=26">26</a>
-                <a class="pagination__page-link" href="?page=27">27</a>
-                <a class="pagination__page-link" href="?page=28">28</a>
-                <a class="pagination__page-link" href="?page=29">29</a>
-                <a class="pagination__page-link" href="?page=30">30</a>
-                <a class="pagination__page-link" href="?page=31">31</a>
-                <a class="pagination__page-link" href="?page=32">32</a>
-                <a class="pagination__page-link" href="?page=33">33</a>
-                <a class="pagination__page-link" href="?page=34">34</a>
-                <a class="pagination__page-link" href="?page=35">35</a>
-                <a class="pagination__page-link" href="?page=36">36</a>
-                <a class="pagination__page-link" href="?page=37">37</a>
-                </span>
-                <span class="pagination__select-wrapper">
-                    <select class="pagination__select product-index-pagination__select ui-select" name="[]">
+
+            <div
+                class="browse-navigation__pagination browse-navigation__pagination--top"
+                data-js="ProductCatalog.paginationTop"
+            >
+                <div class="pagination" data-js="Pagination">
+                    <a
+                        href=""
+                        class="pagination__incrementer pagination__incrementer--prev"
+                        aria-label="Previous page"
+                    >
+                    </a>
+
+                    <span class="pagination__links-wrapper">
+                        <a class="pagination__page-link" href="?page=1"
+                        >1</a
+                        >
+
+                        <a class="pagination__page-link" href="?page=2"
+                        >2</a
+                        >
+
+                        <a class="pagination__page-link" href="?page=3"
+                        >3</a
+                        >
+
+                        <a class="pagination__page-link" href="?page=4"
+                        >4</a
+                        >
+
+                        <a class="pagination__page-link" href="?page=5"
+                        >5</a
+                        >
+
+                        <a class="pagination__page-link" href="?page=6"
+                        >6</a
+                        >
+
+                        <a class="pagination__page-link" href="?page=7"
+                        >7</a
+                        >
+
+                        <a class="pagination__page-link" href="?page=8"
+                        >8</a
+                        >
+
+                        <a class="pagination__page-link" href="?page=9"
+                        >9</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=10"
+                        >10</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=11"
+                        >11</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=12"
+                        >12</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=13"
+                        >13</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=14"
+                        >14</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=15"
+                        >15</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=16"
+                        >16</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=17"
+                        >17</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=18"
+                        >18</a
+                        >
+                    </span>
+
+                    <span class="pagination__select-wrapper">
+                        <select
+                        class="pagination__select product-index-pagination__select ui-select"
+                        name="[]"
+                        >
                         <option selected value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -1817,38 +2335,25 @@
                         <option value="16">16</option>
                         <option value="17">17</option>
                         <option value="18">18</option>
-                        <option value="19">19</option>
-                        <option value="20">20</option>
-                        <option value="21">21</option>
-                        <option value="22">22</option>
-                        <option value="23">23</option>
-                        <option value="24">24</option>
-                        <option value="25">25</option>
-                        <option value="26">26</option>
-                        <option value="27">27</option>
-                        <option value="28">28</option>
-                        <option value="29">29</option>
-                        <option value="30">30</option>
-                        <option value="31">31</option>
-                        <option value="32">32</option>
-                        <option value="33">33</option>
-                        <option value="34">34</option>
-                        <option value="35">35</option>
-                        <option value="36">36</option>
-                        <option value="37">37</option>
-                    </select>
-                    <span class="pagination__select-page-count">
-                    of 37
+                        </select>
+                        <span class="pagination__select-page-count">
+                        of 18
+                        </span>
                     </span>
-                </span>
-                <a href="?page=2" class="pagination__incrementer  pagination__incrementer--next" aria-label="Next page" >
-                </a>
+                    <a
+                        href="?page=2"
+                        class="pagination__incrementer pagination__incrementer--next"
+                        aria-label="Next page"
+                    >
+                    </a>
+                </div>
             </div>
-            </div> --}}
-        </div>
-      </div>
-      <div class="product-index-main__results product-index-results">
-         <div data-wrapper-for="[data-js='ProductCatalog.activeFilters']" data-wrapper-at="large xlarge xxlarge">
+            </div>
+    </div>
+
+    <div class="product-index-main__results product-index-results">
+
+         <div data-wrapper-for="" data-wrapper-at="large xlarge xxlarge">
             <div class="product-index-results__active-filters" data-js="ProductCatalog.activeFilters" style="display: none">
                <span class="product-index-active-filter__clear-all ui-link" data-js="ProductCatalog.clearFilters">Clear
                All</span>
@@ -1858,13 +2363,13 @@
             @foreach($products as $product)
                 <div class="product-index-results__product-tile-wrapper">
                     <a class="product-index-results__product-tile product-tile"
-                    href="{{ route('product.show', $product->slug) }}"
+                    href="{{ route('productpage', $product->slug) }}"
                     title="{{ $product->name }}">
 
                         <meta content="{{ $product->name }}" itemprop="name" />
                         <meta content="{{ $product->brand ?? 'Brand' }}" itemprop="brand" />
                         <meta content="{{ $product->id }}" itemprop="productId" />
-                        <meta content="{{ $product->image_url }}" itemprop="image" />
+                        <meta content="{{ $product->image }}" itemprop="image" />
 
                         <div class="product-tile__content">
                             {{-- Image --}}
@@ -1876,7 +2381,15 @@
                             </div>
 
                             {{-- Summary --}}
+
                             <div class="product-tile__summary">
+                                @if ($bike)
+                                <div class="product-tile__details product-tile__details--fit">
+                                    <span
+                                        class="product-tile__fit-message product-tile__fit-message--vehicle-specific-with-vehicle">Fits your {{ $bike->company->name }} {{ $bike->model }}
+                                    </span>
+                                </div>
+                                @endif
                                 {{-- Name --}}
                                 <div class="product-tile__name">{{ $product->name }}</div>
 
@@ -1887,7 +2400,7 @@
 
                                     <div class="product-tile__prices">
                                         <span class="product-tile__price-retail">
-                                            {{ number_format($product->price, 2) }} Tk
+                                             ৳ {{ number_format($product->unit_price, 2) }}
                                         </span>
                                     </div>
                                 </div>
@@ -1905,6 +2418,19 @@
                                         <span class="product-tile__rating-count">{{ $product->reviews_count }}</span>
                                     </div>
                                 @endif
+                                <!--<span class="product-tile__rating-stars product-rating__stars" data-js="ReviewInterface.ratingStars" data-rating="4.5"></span>-->
+                                <span class="stars">
+                                  ★★★★☆
+                                </span>
+
+                                <style>
+                                .stars {
+                                  color: gold;
+                                  font-size: 18px;
+                                }
+                                </style>
+                           <span class="product-tile__rating-count product-rating__count">182</span><img alt="Video Available" class="product-tile__video-icon" src="{{asset('Youtube_logo.png')}}"
+                              height="16" width="20" />
                             </div>
                         </div>
                     </a>
@@ -2473,6 +2999,75 @@
 
 
    </script>
+    {{-- <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const vehicleSpecs = document.querySelector(".vehicle-specs");
+    const shopForm = document.querySelector("[data-js='ShopByBike.selectInterfacse']");
+    const differentVehicleBtn = document.querySelector("[data-js='ShopByBike.interfaceToggle']");
+    const goBtn = document.querySelector("#goBtnn");
+
+    // Hide specs initially, show form
+    vehicleSpecs.style.display = "none";
+    shopForm.style.display = "block";
+
+    // When "Go!" clicked → show specs, hide form
+    if (goBtn) {
+        goBtn.addEventListener("click", function (e) {
+            e.preventDefault(); // stop form submit
+            vehicleSpecs.style.display = "block";
+            shopForm.style.display = "none";
+        });
+    }
+
+    // When "Select Different Vehicle" clicked → show form, hide specs
+    if (differentVehicleBtn) {
+        differentVehicleBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            vehicleSpecs.style.display = "none";
+            shopForm.style.display = "block";
+        });
+    }
+});
+
+
+    </script> --}}
+{{-- <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const selectForm = document.querySelector(".shop-by-bike--select .shop-by-bike__form");
+    const searchForm = document.querySelector(".shop-by-bike--search .shop-by-bike__form");
+    const goBtn = document.querySelector("#goBtnn");
+    const differentVehicleBtn = document.querySelector("[data-js='ShopByBike.interfaceToggle']");
+
+    if (!selectForm || !searchForm) {
+        console.error("❌ Could not find forms");
+        return;
+    }
+
+    // Initial state → show select form, hide search form
+    selectForm.style.display = "block";
+    searchForm.style.display = "none";
+
+    // When Go! clicked → hide select form, show search form
+    if (goBtn) {
+        goBtn.addEventListener("click", function (e) {
+            e.preventDefault(); // prevent form submit for now
+            selectForm.style.display = "none";
+            searchForm.style.display = "block";
+            console.log("👉 Go clicked: show search form, hide select form");
+        });
+    }
+
+    // When "Select Different Vehicle" clicked → reverse
+    if (differentVehicleBtn) {
+        differentVehicleBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            selectForm.style.display = "block";
+            searchForm.style.display = "none";
+            console.log("👉 Different Vehicle clicked: show select form, hide search form");
+        });
+    }
+});
+</script> --}}
 
     {{-- <script>
         $(function () {

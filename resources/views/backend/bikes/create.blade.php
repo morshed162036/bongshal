@@ -140,7 +140,6 @@
                                                     <option value="street">Street / Naked</option>
                                                     <option value="scooty">Scooty</option>
                                                 </select>
-
                                             </div>
                                         </fieldset>
                                         <fieldset class="mt-2">
@@ -153,21 +152,57 @@
                                             </div>
                                         </fieldset>
                                         <fieldset class="mt-2">
-                                            <h5>Front Tire Size</h5>
+                                            <h5>Front Tire Width</h5>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-Createon1"><i class="bx bx-spreadsheet"></i></span>
                                                 </div>
-                                                <input type="text" name="front_tire_size" class="form-control">
+                                                <input type="text" name="front_tire_width" class="form-control">
                                             </div>
                                         </fieldset>
                                         <fieldset class="mt-2">
-                                            <h5>Rear Tire Size</h5>
+                                            <h5>Front Tire Aspect Ratio</h5>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-Createon1"><i class="bx bx-spreadsheet"></i></span>
                                                 </div>
-                                                <input type="text" name="rear_tire_size" class="form-control">
+                                                <input type="text" name="front_tire_aspectratio" class="form-control">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="mt-2">
+                                            <h5>Front Tire Rim</h5>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-Createon1"><i class="bx bx-spreadsheet"></i></span>
+                                                </div>
+                                                <input type="text" name="front_tire_rim" class="form-control">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="mt-2">
+                                            <h5>Rear Tire Width</h5>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-Createon1"><i class="bx bx-spreadsheet"></i></span>
+                                                </div>
+                                                <input type="text" name="rear_tire_width" class="form-control">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="mt-2">
+                                            <h5>Rear Tire AspectRatio</h5>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-Createon1"><i class="bx bx-spreadsheet"></i></span>
+                                                </div>
+                                                <input type="text" name="rear_tire_aspectratio" class="form-control">
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="mt-2">
+                                            <h5>Rear Tire Rim</h5>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-Createon1"><i class="bx bx-spreadsheet"></i></span>
+                                                </div>
+                                                <input type="text" name="rear_tire_rim" class="form-control">
                                             </div>
                                         </fieldset>
 

@@ -11,11 +11,12 @@ use App\Models\Bike;
 use App\Models\BikeColor;
 use Illuminate\Pagination\Paginator;
 use App\Models\Company;
+use Illuminate\Support\Str;
 
 
 class ShopController extends Controller
 {
-public function getModels($companyId)
+    public function getModels($companyId)
     {
         // dd($companyId);
         $models = Bike::where('company_id', $companyId)->get();
@@ -30,6 +31,10 @@ public function getModels($companyId)
 
     public function getProducts(Request $request)
     {
+
+        $bike = $request->bike_id ? Bike::find($request->bike_id) : null;
+        // dd($bike->grade);
+        $title = $bike ? $bike->model.' '.$bike->company->name : 'All Products';
         $catalogues = Catalogue::with('category')->get();
         $catalogue=$request->catalogue_id ? Catalogue::find($request->catalogue_id) : null;
         // dd($request->all());
@@ -55,7 +60,7 @@ public function getModels($companyId)
 
         $products = $query->get();
 
-        return view('frontend.shop', compact('products','catalogues','catalogue'));
+        return view('frontend.shop', compact('products','catalogues','catalogue','bike','title'));
     }
 
     // All products
@@ -70,6 +75,8 @@ public function getModels($companyId)
     // Products by Catalogue
     public function catalogue(Catalogue $catalogue)
     {
+        $bike = null;
+        $title = $catalogue->name;
         $catalogues = Catalogue::with('category')->get();
 
         // Get all category IDs under this catalogue
@@ -77,7 +84,7 @@ public function getModels($companyId)
 
         $products = Product::whereIn('category_id', $categoryIds)->paginate(50);
         // dd($products);
-        return view('frontend.shop', compact('products', 'catalogues', 'catalogue'));
+        return view('frontend.shop', compact('products', 'catalogues', 'catalogue','bike','title'));
     }
     // Products by Category
     public function category(Category $category)
@@ -87,6 +94,55 @@ public function getModels($companyId)
         $products = $category->products()->paginate(12);
 
         return view('frontend.shop', compact('products', 'catalogues', 'category'));
+    }
+
+    // Page search (full results)
+    public function search(Request $request)
+    {
+        $q = trim($request->get('query'));
+        // dd($q);
+
+        // 1️⃣ Basic LIKE to fetch a pool of candidates
+        $products = Product::when($q, function ($query) use ($q) {
+                $query->where('name', 'LIKE', "%{$q}%")
+                      ->orWhere('description', 'LIKE', "%{$q}%");
+            })
+            ->take(100) // small pool for ranking
+            ->get();
+            // 2️⃣ Optional: PHP fuzzy ranking (levenshtein)
+            $products = $products->sortBy(function($p) use ($q) {
+                return levenshtein(Str::lower($q), Str::lower($p->name));
+            });
+            // dd($products);
+
+        return view('frontend.shop', [
+            'products' => $products,
+            'bike' => null,
+            'catalogues' => Catalogue::with('category')->get(),
+            'catalogue' => null,
+            'title' => 'Search results',
+            'q' => $q
+        ]);
+    }
+
+    // Live AJAX search (top suggestions)
+    public function ajaxSearch(Request $request)
+    {
+        $q = trim($request->get('q'));
+
+        $products = Product::select('id','name','price')
+            ->when($q, function ($query) use ($q) {
+                $query->where('name', 'LIKE', "%{$q}%");
+            })
+            ->take(20)
+            ->get();
+
+        // Optional fuzzy sort
+        $products = $products->sortBy(function($p) use ($q) {
+            return levenshtein(Str::lower($q), Str::lower($p->name));
+        })->values();
+
+        return response()->json($products);
     }
 
 }

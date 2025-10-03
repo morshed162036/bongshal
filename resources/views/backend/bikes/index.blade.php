@@ -95,8 +95,8 @@
                                                         <td>@if ($bike->company)
                                                             {{ $bike->company->name }}
                                                         @endif</td>
-                                                        <td>{{ $bike->front_tire_size }}</td>
-                                                        <td>{{ $bike->rear_tire_size }}</td>
+                                                        <td>{{ $bike->front_tire_width }}/{{ $bike->front_tire_aspectratio }}-{{ $bike->front_tire_rim }}</td>
+                                                        <td>{{ $bike->rear_tire_width }}/{{ $bike->front_tire_aspectratio }}-{{ $bike->front_tire_rim }}</td>
                                                         <td>{{ $bike->battery }}</td>
                                                         <td>
                                                             @foreach ($bike->color as $color)

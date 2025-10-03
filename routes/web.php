@@ -33,12 +33,17 @@ Route::get('/shop', [ShopController::class, 'index'])->name('shop.index');
 Route::get('/shop/catalogue/{catalogue:id}', [ShopController::class, 'catalogue'])->name('shop.catalogue');
 Route::get('/shop/category/{category:slug}', [ShopController::class, 'category'])->name('shop.category');
 
+// routes/web.php
+Route::get('/search', [ShopController::class, 'search']);
+Route::get('/search-ajax', [ShopController::class, 'ajaxSearch']);
+
+
 // Ajax routes for dynamic dropdowns in the shop page popup filters
 Route::get('/get-models/{companyId}', [ShopController::class, 'getModels']);
 Route::get('/get-colors/{bikeId}', [ShopController::class, 'getColors']);
 Route::get('/get-products', [ShopController::class, 'getProducts'])->name('shop.products');
 
-Route::get('/product', [HomeController::class, 'product'])->name('productpage');
+Route::get('/product-details/{slug}', [HomeController::class, 'product'])->name('productpage');
 Route::get('/blog', [HomeController::class, 'blog'])->name('blogpage');
 Route::get('/blog-details', [HomeController::class, 'blogdetails'])->name('blogdetailspage');
 Route::get('/cart', [HomeController::class, 'cart'])->name('cartpage');
