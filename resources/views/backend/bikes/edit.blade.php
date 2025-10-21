@@ -104,46 +104,57 @@
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
-                                        <label for="battery">Battery <span class="text-danger">*</span></label>
+                                        <label for="battery">Battery Size <span class="text-danger">*</span></label>
                                         <input type="text" id="battery" class="form-control" name="battery_capacity" value="{{ $bike->battery }}" placeholder="Enter Battery" required>
                                     </div>
                                 </div>
-                                <div class="col-md-6 col-12">
-                                    <div class="form-group">
-                                        <label for="front_tire_size">Front Tire Width <span class="text-danger">*</span></label>
-                                        <input type="text" id="front_tire_width" class="form-control" name="front_tire_width" value="{{ $bike->front_tire_width }}" placeholder="Enter Front Tire width" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-12">
-                                    <div class="form-group">
-                                        <label for="front_tire_aspectratio">Front Tire Aspect Ratio <span class="text-danger">*</span></label>
-                                        <input type="text" id="front_tire_aspectratio" class="form-control" name="front_tire_aspectratio" value="{{ $bike->front_tire_aspectratio }}" placeholder="Enter Front Tire Aspectratio" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-12">
-                                    <div class="form-group">
-                                        <label for="front_tire_rim">Front Tire Rim <span class="text-danger">*</span></label>
-                                        <input type="text" id="front_tire_rim" class="form-control" name="front_tire_rim" value="{{ $bike->front_tire_rim }}" placeholder="Enter Front Tire Rim" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-12">
-                                    <div class="form-group">
-                                        <label for="rear_tire_width">Rear Tire Width <span class="text-danger">*</span></label>
-                                        <input type="text" id="rear_tire_width" class="form-control" name="rear_tire_width" value="{{ $bike->rear_tire_width }}" placeholder="Enter Rear Tire Width" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-12">
-                                    <div class="form-group">
-                                        <label for="rear_tire_aspectratio">Rear Tire Aspect Ratio <span class="text-danger">*</span></label>
-                                        <input type="text" id="rear_tire_aspectratio" class="form-control" name="rear_tire_aspectratio" value="{{ $bike->rear_tire_aspectratio }}" placeholder="Enter Rear Tire aspectratio" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 col-12">
-                                    <div class="form-group">
-                                        <label for="rear_tire_rim">Rear Tire Rim <span class="text-danger">*</span></label>
-                                        <input type="text" id="rear_tire_rim" class="form-control" name="rear_tire_rim" value="{{ $bike->rear_tire_rim }}" placeholder="Enter Rear Tire Rim" required>
-                                    </div>
-                                </div>
+                                <div class="row mt-3">
+    <div class="col-12">
+        <h5 class="mb-2">Tire Specifications</h5>
+    </div>
+
+    {{-- Front Tire --}}
+    <div class="col-md-12">
+        <fieldset>
+            <h6>Front Tire</h6>
+            <div class="row">
+                <div class="col-md-4 mb-2">
+                    <label>Width</label>
+                    <input type="text" name="front_tire_width" class="form-control" value="{{ old('front_tire_width',$bike->front_tire_width) }}">
+                </div>
+                <div class="col-md-4 mb-2">
+                    <label>Aspect Ratio</label>
+                    <input type="text" name="front_tire_aspectratio" class="form-control" value="{{ old('front_tire_aspectratio',$bike->front_tire_aspectratio) }}">
+                </div>
+                <div class="col-md-4 mb-2">
+                    <label>Rim</label>
+                    <input type="text" name="front_tire_rim" class="form-control" value="{{ old('front_tire_rim',$bike->front_tire_rim) }}">
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    {{-- Rear Tire --}}
+    <div class="col-md-12">
+        <fieldset>
+            <h6>Rear Tire</h6>
+            <div class="row">
+                <div class="col-md-4 mb-2">
+                    <label>Width</label>
+                    <input type="text" name="rear_tire_width" class="form-control" value="{{ old('rear_tire_width',$bike->rear_tire_width) }}">
+                </div>
+                <div class="col-md-4 mb-2">
+                    <label>Aspect Ratio</label>
+                    <input type="text" name="rear_tire_aspectratio" class="form-control" value="{{ old('rear_tire_aspectratio',$bike->rear_tire_aspectratio) }}">
+                </div>
+                <div class="col-md-4 mb-2">
+                    <label>Rim</label>
+                    <input type="text" name="rear_tire_rim" class="form-control" value="{{ old('rear_tire_rim',$bike->rear_tire_rim) }}">
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="type">Type <span class="text-danger">*</span></label>
@@ -205,7 +216,7 @@
                                         </div>
                                         <div class="col-md-4 col-12">
                                             <div class="form-group">
-                                                <label for="volume_{{ $index }}">Volume <span class="text-danger">*</span></label>
+                                                <label for="volume_{{ $index }}">Capacity <span class="text-danger">*</span></label>
                                                 <input type="text" id="volume_{{ $index }}" class="form-control" name="group-grade[{{ $index }}][volume]" value="{{ $grade->volume }}" placeholder="Enter Volume" required>
                                             </div>
                                         </div>

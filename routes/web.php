@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CatalogueController;
 use App\Http\Controllers\Backend\BikeController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\VendorController;
 
 
 use App\Http\Controllers\Frontend\HomeController;
@@ -47,6 +48,11 @@ Route::get('/product-details/{slug}', [HomeController::class, 'product'])->name(
 Route::get('/blog', [HomeController::class, 'blog'])->name('blogpage');
 Route::get('/blog-details', [HomeController::class, 'blogdetails'])->name('blogdetailspage');
 Route::get('/cart', [HomeController::class, 'cart'])->name('cartpage');
+
+Route::get('/vendor-registration', [HomeController::class, 'vendorRegistration'])->name('vendor.registration');
+Route::post('/vendor-registration', [HomeController::class, 'vendorRegistrationStore'])->name('vendor.registration.store');
+Route::get('/contact-us', [HomeController::class, 'contactUs'])->name('contact.us');
+Route::post('/contact-us', [HomeController::class, 'contactUsStore'])->name('contact.submit');
 Route::prefix('/')->group(function(){
     Route::match(['get', 'post'], 'login',[AdminController::class,'login'])->name('admin.login');
     Route::group(['middleware'=>['user']],function(){
@@ -65,14 +71,24 @@ Route::prefix('/')->group(function(){
         Route::get('append-categories-level',[CategoryController::class,'appendCategoryLevel'])->name('appendCategory');
         Route::post('update-category-status',[CategoryController::class,'updateCategoryStatus'])->name('updateCategoryStatus');
         Route::resource('catalogue', CatalogueController::class);
+
+        Route::resource('vendor', VendorController::class);
+        Route::post('vendor/store', [VendorController::class,'store'])->name('vendor.store');
+
+        Route::get('vendor-approval', [VendorController::class,'vendorApproval'])->name('vendorApproval');
+        Route::get('vendor/approve/{id}', [VendorController::class,'approveVendor'])->name('approveVendor');
+        Route::get('vendor/reject/{id}', [VendorController::class,'rejectVendor'])->name('rejectVendor');
+        Route::post('update-vendor-status',[VendorController::class,'updateVendorStatus'])->name('updateVendorStatus');
+
+
         Route::post('update-catalogue-status',[CatalogueController::class,'updateCatalogueStatus'])->name('updateCatalogueStatus');
         Route::resource('bike', BikeController::class);
         Route::post('update-bike-status',[BikeController::class,'updateBikeStatus'])->name('updateBikeStatus');
         // Route::match(['get', 'post'], 'product/{id
         Route::resource('product', ProductController::class);
-        // web.php
-        Route::get('/attributes/{attribute}/values', [ProductController::class, 'values'])
-    ->name('attributes.values');
+        Route::get('/attributes/{attribute}/values', [ProductController::class, 'values'])->name('attributes.values');
+        Route::get('/get-categories-subcategories/{catalogue_id}', [ProductController::class, 'getCategoriesWithSubcategories']);
+
 
         // Route::post('update-product-status',[ProductController::class,'updateProductStatus'])->name('updateProductStatus');
         // Route::resource('coupon', CouponController::class);

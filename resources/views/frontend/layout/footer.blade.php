@@ -606,7 +606,7 @@
                            <ul class="footer__list footer__list--level-1">
                               <li class="footer__item footer__item--level-2" data-nav-level="3"
                                  data-nav-section="Contact Us"><a class="footer__link footer__link--level-2"
-                                    data-nid="10470" href="/contact-us">Contact Us</a></li>
+                                    data-nid="10470" href="{{ route('contact.us') }}">Contact Us</a></li>
                               <li class="footer__item footer__item--level-2" data-nav-level="3"
                                  data-nav-section="Return Policy"><a class="footer__link footer__link--level-2"
                                     data-nid="10471" href="/returns">Return Policy</a></li>

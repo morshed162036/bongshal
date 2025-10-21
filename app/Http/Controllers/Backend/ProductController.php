@@ -47,6 +47,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
         $request->validate([
             'category_id'       => 'required|exists:categories,id',
             // 'brand_id'          => 'required|exists:brands,id',
@@ -177,7 +178,7 @@ class ProductController extends Controller
 
         $product->description = $dom->saveHTML();
 
-         // Handle file upload for the image
+        // Handle file upload for the image
         $Imagename = null;
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -387,7 +388,7 @@ class ProductController extends Controller
             $product->meta_image = $filename;
         }
 
-        $product->save();
+        $product->update();
 
         //  Handle multiple images (add new ones)
         if ($request->hasFile("multi_image")) {
@@ -430,10 +431,67 @@ class ProductController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
-    {
-        //
+    public function destroy($id)
+{
+    DB::beginTransaction();
+
+    try {
+        $product = Product::with('images', 'attributes')->findOrFail($id);
+
+        // Delete single main image
+        if ($product->image && file_exists(public_path('images/products/image/' . $product->image))) {
+            unlink(public_path('images/products/image/' . $product->image));
+        }
+
+        // Delete size chart
+        if ($product->size_chart && file_exists(public_path('images/products/size_chart/' . $product->size_chart))) {
+            unlink(public_path('images/products/size_chart/' . $product->size_chart));
+        }
+
+        // Delete meta image
+        if ($product->meta_image && file_exists(public_path('images/products/meta/' . $product->meta_image))) {
+            unlink(public_path('images/products/meta/' . $product->meta_image));
+        }
+
+        // Delete multiple images
+        if ($product->images && count($product->images)) {
+            foreach ($product->images as $multi) {
+                if ($multi->image && file_exists(public_path('images/products/multi/' . $multi->image))) {
+                    unlink(public_path('images/products/multi/' . $multi->image));
+                }
+                $multi->delete();
+            }
+        }
+
+        // Delete description embedded images (optional cleanup)
+        $description = $product->description;
+        if ($description) {
+            preg_match_all('/<img[^>]+src="([^">]+)"/', $description, $matches);
+            if (!empty($matches[1])) {
+                foreach ($matches[1] as $src) {
+                    $path = public_path($src);
+                    if (file_exists($path) && str_contains($src, '/images/products/upload/')) {
+                        unlink($path);
+                    }
+                }
+            }
+        }
+
+        // Delete attributes
+        $product->attributes()->delete();
+
+        // Finally delete product record
+        $product->delete();
+
+        DB::commit();
+
+        return redirect()->route('product.index')->with('success', 'Product deleted successfully.');
+    } catch (\Exception $e) {
+        DB::rollBack();
+        return back()->with('error', 'Error deleting product: ' . $e->getMessage());
     }
+}
+
 
     public function values($id)
     {
@@ -484,6 +542,17 @@ class ProductController extends Controller
         }
 
         return $dom->saveHTML();
+    }
+
+    public function getCategoriesWithSubcategories($catalogue_id)
+    {
+
+        // Make sure $catalogue_id exists in the catalogues table
+    $categories = \App\Models\Category::where('catalogue_id', $catalogue_id) // filter by catalogue_id
+        ->where('status', 'active')
+        ->with('subcategories') // eager load subcategories
+        ->get(); // include catalogue_id for filtering
+        return response()->json($categories);
     }
 
 

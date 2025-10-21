@@ -21,7 +21,6 @@
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('admin_template/assets/css/style.css') }}">
-    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
     <!-- END: Custom CSS-->
     <style>
         a label{
@@ -44,12 +43,12 @@
                                 </button>
                         </div>
                     @endif
-                    <h5 class="content-header-title float-left pr-1 mb-0">Bike Table</h5>
+                    <h5 class="content-header-title float-left pr-1 mb-0">Vendor Table</h5>
                     <div class="breadcrumb-wrapper col-12">
                         <ol class="breadcrumb p-0 mb-0">
                             <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"><i class="bx bx-home-alt"></i></a>
                             </li>
-                            <li class="breadcrumb-item active">Bikes
+                            <li class="breadcrumb-item active">Vendors
                             </li>
                         </ol>
                     </div>
@@ -63,10 +62,10 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="card-title">Bikes List</h5>
+                            <h5 class="card-title">Vendor List</h5>
                             <div class="heading-elements">
                                 <ul class="list-inline mb-0">
-                                    <li class="ml-2"><a href="{{ route('bike.create') }}" class="btn btn-primary">+ Create</a></li>
+                                    <li class="ml-2"><a href="{{ route('vendor.create') }}" class="btn btn-primary">+ Create</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -76,92 +75,73 @@
                                     <table class="table zero-configuration">
                                         <thead>
                                             <tr>
-                                                <th>Model</th>
-                                                <th>Company</th>
-                                                <th>Front Tire</th>
-                                                <th>Rear Tire</th>
-                                                <th>Battery Size</th>
-                                                <th>Color</th>
-                                                <th>Grade</th>
+                                                <th>Image</th>
+                                                <th>Name</th>
+                                                <th>Contact</th>
+                                                <th>Approved By</th>
+                                                <th>Create By</th>
+                                                <th>Update By</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @if ($bikes->count() > 0)
-
-                                                @foreach ($bikes as $bike)
+                                            @if ($vendors)
+                                                @foreach ($vendors as $vendor)
                                                     <tr>
-                                                        <td>{{ $bike->model }}</td>
-                                                        <td>@if ($bike->company)
-                                                            {{ $bike->company->name }}
-                                                        @endif</td>
-                                                        <td>{{ $bike->front_tire_width }}/{{ $bike->front_tire_aspectratio }}-{{ $bike->front_tire_rim }}</td>
-                                                        <td>{{ $bike->rear_tire_width }}/{{ $bike->front_tire_aspectratio }}-{{ $bike->front_tire_rim }}</td>
-                                                        <td>{{ $bike->battery }}</td>
-                                                        <td>
-                                                            {{-- @foreach ($bike->color as $color)
-                                                            <img src="{{ asset('images/multiimage/bike/'.$color->image) }}" alt="" height="100px">
-                                                                {{ $color->color_name }},<br>
-                                                            @endforeach --}}
-                                                            <button type="button" class="btn btn-sm btn-outline-primary"
-            data-bs-toggle="modal" data-bs-target="#colorsModal{{ $bike->id }}">
-        View Colors ({{ $bike->color->count() }})
-    </button>
-
-    <!-- Modal -->
-    <div class="modal fade" id="colorsModal{{ $bike->id }}" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content p-3 position-relative">
-
-            <!-- Close Button -->
-            <button type="button"
-                    class="btn-close position-absolute"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                    style="top:10px; right:15px;">
-            </button>
-
-            <h6 class="mb-3 mt-2 text-center">Available Colors</h6>
-
-            <div class="container-fluid">
-                @foreach ($bike->color->chunk(4) as $colorChunk)
-                    <div class="row mb-3">
-                        @foreach ($colorChunk as $color)
-                            <div class="col-md-3 col-sm-4 col-6 text-center">
-                                <img src="{{ asset('images/multiimage/bike/'.$color->image) }}"
-                                     alt="{{ $color->color_name }}"
-                                     class="img-fluid"
-                                     style="border-radius:6px; height:100px; object-fit:cover;">
-                                <div class="mt-1">{{ $color->color_name }}</div>
-                            </div>
-                        @endforeach
-                    </div>
-                @endforeach
-            </div>
-
-        </div>
-    </div>
-</div>
-
-
+                                                        <td class="text-bold-600" ><img src="{{ asset($vendor->image) }}" alt="" height="100px"></td>
+                                                        <td>{{ $vendor->name }}</td>
+                                                        <td>@if ($vendor->phone)
+                                                                Phone: {{ $vendor->phone }} <br>
+                                                            @endif
+                                                            @if ($vendor->wechat)
+                                                                Whatsapp: {{ $vendor->wechat }} <br>
+                                                            @endif
+                                                            @if ($vendor->email)
+                                                                Email: {{ $vendor->email }} <br>
+                                                            @endif
+                                                            @if ($vendor->address)
+                                                                Address: {{ $vendor->address }} <br>
+                                                            @endif
+                                                            @if ($vendor->website)
+                                                                Website: {{ $vendor->website }} <br>
+                                                            @endif
+                                                        </td>
+                                                        <td>@if ($vendor->approvedBy)
+                                                                {{ $vendor->approvedBy->name }}
+                                                            @else
+                                                                N/A
+                                                            @endif
+                                                        </td>
+                                                        <td>{{ $vendor->createdBy->name }}</td>
+                                                        <td>@if ($vendor->updatedBy)
+                                                                {{ $vendor->updatedBy->name }}
+                                                            @else
+                                                                N/A
+                                                            @endif
                                                         </td>
                                                         <td>
-                                                            @foreach ($bike->grade as $grade)
-                                                                {{ $grade->grade }} :
-                                                                {{ $grade->volume }}, <br>
-                                                            @endforeach
-                                                        </td>
-                                                        <td>
-                                                            @if($bike->status == 'active')
-                                                                <a class="updateBikeStatus" id="product_type-{{ $bike->id }}"
-                                                                    product_type = "{{ $bike->id }}"
+                                                            @if($vendor->status == 'active')
+                                                                <a class="updateCatalogueStatus" id="product_type-{{ $vendor->id }}"
+                                                                    product_type = "{{ $vendor->id }}"
                                                                     href="javascript:void(0)">
                                                                         <label class="badge badge-success" status="active">Active</label>
                                                                 </a>
+                                                            @elseif ($vendor->status == 'pending')
+                                                                <a class="updateCatalogueStatus" id="product_type-{{ $vendor->id }}"
+                                                                    product_type = "{{ $vendor->id }}"
+                                                                    href="javascript:void(0)">
+                                                                        <label class="badge badge-warning" status="pending">Pending</label>
+                                                                </a>
+                                                            @elseif ($vendor->status == 'rejected')
+                                                                <a class="updateCatalogueStatus" id="product_type-{{ $vendor->id }}"
+                                                                    product_type = "{{ $vendor->id }}"
+                                                                    href="javascript:void(0)">
+                                                                        <label class="badge badge-warning" status="rejected">Rejected</label>
+                                                                </a>
                                                             @else
-                                                                <a class="updateBikeStatus" id="product_type-{{ $bike->id }}"
-                                                                    product_type = "{{ $bike->id }}"
+                                                                <a class="updateCatalogueStatus" id="product_type-{{ $vendor->id }}"
+                                                                    product_type = "{{ $vendor->id }}"
                                                                     href="javascript:void(0)">
                                                                         <label class="badge badge-danger" status="inactive">Inactive</label>
                                                                 </a>
@@ -171,10 +151,10 @@
                                                             <div class="dropdown">
                                                                 <span class="bx bx-dots-vertical-rounded font-medium-3 dropdown-toggle nav-hide-arrow cursor-pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="menu"></span>
                                                                 <div class="dropdown-menu dropdown-menu-right">
-                                                                    <a class="dropdown-item" href="{{ route('bike.edit',$bike->id) }}"><i class="bx bx-edit-alt mr-1"></i> edit</a>
-                                                                    {{-- <form action="{{ route('bike.destroy',$bike->id) }}" method="post"> @csrf @method('Delete')
+                                                                    <a class="dropdown-item" href="{{ route('vendor.edit',$vendor->id) }}"><i class="bx bx-edit-alt mr-1"></i> edit</a>
+                                                                    <form action="{{ route('vendor.destroy',$vendor->id) }}" method="post"> @csrf @method('Delete')
                                                                         <button type="submit" class="dropdown-item"><i class="bx bx-trash mr-1"></i> delete</button>
-                                                                    </form> --}}
+                                                                    </form>
 
                                                                 </div>
                                                             </div>
@@ -187,13 +167,12 @@
                                         </tbody>
                                         <tfoot>
                                             <tr>
-                                                <th>Model</th>
-                                                <th>Company</th>
-                                                <th>Front Tire</th>
-                                                <th>Rear Tire</th>
-                                                <th>Battery</th>
-                                                <th>Color</th>
-                                                <th>Grade</th>
+                                                <th>Image</th>
+                                                <th>Name</th>
+                                                <th>Contact</th>
+                                                <th>Approved By</th>
+                                                <th>Create By</th>
+                                                <th>Update By</th>
                                                 <th>Status</th>
                                                 <th>Action</th>
                                             </tr>
@@ -241,38 +220,37 @@
     <!-- BEGIN: Page JS-->
     <script src="{{ asset('admin_template/app-assets/js/scripts/datatables/datatable.js') }}"></script>
     <!-- END: Page JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
 
-        $(document).ready(function (){
-            $(document).on("click", ".updateBikeStatus", function () {
-                var status = $(this).children("label").attr("status");
-                var product_type = $(this).attr("product_type");
+        // $(document).ready(function (){
+        //     $(document).on("click", ".updateCatalogueStatus", function () {
+        //         var status = $(this).children("label").attr("status");
+        //         var product_type = $(this).attr("product_type");
 
-                $.ajax({
-                    headers: {
-                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
-                    },
-                    type: "post",
-                    url: "{{ route('updateBikeStatus') }}",
-                    data: { status: status, product_type: product_type },
-                    success: function (resp) {
-                        if (resp["status"] == 'inactive') {
-                            $("#product_type-" + product_type).html(
-                                "<label class='badge badge-danger' status='Inactive'>Inactive</label>"
-                            );
-                        } else if (resp["status"] == 'active') {
-                            $("#product_type-" + product_type).html(
-                                "<label class='badge badge-success' status='Active'>Active</label>"
-                            );
-                        }
-                    },
-                    error: function () {
-                        alert("Error");
-                    },
-                });
-            });
-        })
+        //         $.ajax({
+        //             headers: {
+        //                 "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+        //             },
+        //             type: "post",
+        //             url: "{{ route('updateCatalogueStatus') }}",
+        //             data: { status: status, product_type: product_type },
+        //             success: function (resp) {
+        //                 if (resp["status"] == 'inactive') {
+        //                     $("#product_type-" + product_type).html(
+        //                         "<label class='badge badge-danger' status='Inactive'>Inactive</label>"
+        //                     );
+        //                 } else if (resp["status"] == 'active') {
+        //                     $("#product_type-" + product_type).html(
+        //                         "<label class='badge badge-success' status='Active'>Active</label>"
+        //                     );
+        //                 }
+        //             },
+        //             error: function () {
+        //                 alert("Error");
+        //             },
+        //         });
+        //     });
+        // })
 
     </script>
 @endsection

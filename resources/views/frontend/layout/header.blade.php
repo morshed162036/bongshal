@@ -3798,7 +3798,10 @@
                     </a>
                 </div>
                 <div class="cmto-header-utility__item cmto-header-utility__item--account cmto-header-utility__item--toggle-hybrid js-CmtoNavigation-utilityItem">
-                    <a class="cmto-header-utility__link open-login-modal-btnn" data-js="" data-qa="" href="{{ route('admin.login') }}">
+                    {{-- <a class="cmto-header-utility__link open-login-modal-btnn" data-js="" data-qa="" href="{{ route('admin.login') }}">
+                        <img class="cmto-header-utility__icon" id="login-image" height="24" src="https://www.revzilla.com/images/redline/support/header/account_icon-895e762bda4d1b16a29085a786328ca5.svg?vsn=d" width="24">
+                    </a> --}}
+                    <a class="cmto-header-utility__link open-login-modal-btnn" data-js="" data-qa="" href="{{ route('vendor.registration') }}">
                         <img class="cmto-header-utility__icon" id="login-image" height="24" src="https://www.revzilla.com/images/redline/support/header/account_icon-895e762bda4d1b16a29085a786328ca5.svg?vsn=d" width="24">
                     </a>
                 </div>

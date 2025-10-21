@@ -2963,6 +2963,7 @@ input.addEventListener('keyup', function() {
 
         if (bikeId) {
             fetch("{{ url('/get-colors') }}/" + bikeId)
+           
                 .then(res => res.json())
                 .then(data => {
                     if (data.length > 0) {

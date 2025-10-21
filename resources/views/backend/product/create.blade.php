@@ -55,14 +55,23 @@
                         <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
+                                {{-- Catalogue Dropdown --}}
+                                <div class="form-group mb-3">
+                                    <label for="catalogue_id">Catalogue</label>
+                                    <select name="catalogue_id" id="catalogue_id" class="form-control" required>
+                                        <option value="">Select Catalogue</option>
+                                        @foreach ($catalogues as $catalogue)
+                                            <option value="{{ $catalogue->id }}">{{ $catalogue->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6" id="category-div" style="display:none;">
+                                    {{-- <div class="form-group">
                                         <label for="category_id">Category <span class="text-danger">*</span></label>
                                         <select name="category_id" id="category_id" class="form-control" required>
                                             <option value="">Select Category</option>
-                                            {{-- @foreach($categories as $category)
-                                                <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
-                                            @endforeach --}}
                                              @foreach ($catalogues as $catalogue)
                                                 <optgroup label="{{ $catalogue['name'] }}"></optgroup>
                                                 @foreach ($catalogue['category'] as $category)
@@ -76,9 +85,15 @@
                                         @error('category_id')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
+                                    </div> --}}
+                                    <div class="form-group mb-3">
+                                        <label for="category_id">Category</label>
+                                        <select name="category_id" id="category_id" class="form-control" required>
+                                            <option value="">Select Category</option>
+                                        </select>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="brand-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="brand_id">Brand</label>
                                         <select name="brand_id" id="brand_id" class="form-control">
@@ -92,11 +107,12 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="fitment-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="bike_id">Fitment Model <span class="text-danger">*</span></label>
-                                        <select name="bike_id" id="bike_id" class="form-control" required>
+                                        <select name="bike_id" id="bike_id" class="form-control">
                                             <option value="">Select Model</option>
+                                            <option value="0">Universal</option>
                                             @foreach($bikes as $bike)
                                                 <option value="{{ $bike->id }}">{{ $bike->model }} ({{ $bike->company->name }})</option>
                                             @endforeach
@@ -106,7 +122,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="series-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="series">Model / Series</label>
                                         <input type="text" name="series" class="form-control" id="series" placeholder="(e.g. G-TX Series etc)" value="{{ old('series') }}">
@@ -117,7 +133,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="traditional-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="traditional_name">Traditional Name <span class="text-danger">*</span></label>
                                         <input type="text" name="traditional_name" class="form-control" id="traditional_name" placeholder="(e.g. Rear Suspension etc)" value="{{ old('traditional_name') }}" required>
@@ -126,16 +142,16 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="commercial-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="commercial_name">Commercial Name <span class="text-danger">*</span></label>
-                                        <input type="text" name="commercial_name" class="form-control" id="commercial_name" placeholder="(e.g. CUSHION ASSY, REAR etc)" value="{{ old('commercial_name') }}" required>
+                                        <input type="text" name="commercial_name" class="form-control" id="commercial_name" placeholder="(e.g. CUSHION ASSY, REAR etc)" value="{{ old('commercial_name') }}">
                                         @error('commercial_name')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="partnumber-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="part_number">Part Number <span class="text-danger">*</span></label>
                                         <input type="text" name="part_number" class="form-control" id="part_number" placeholder="(e.g. 123-322-1212)" value="{{ old('part_number') }}">
@@ -146,7 +162,7 @@
                                 </div>
 
 
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="unit-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="unit">Unit <span class="text-danger">*</span></label>
                                         <input type="text" name="unit" class="form-control" id="unit" placeholder="Enter Unit (e.g. KG, Pc etc)" value="{{ old('unit') }}" required>
@@ -155,7 +171,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="grade-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="grade">Grade <span class="text-danger">*</span></label>
                                         <input type="text" name="grade" class="form-control" id="grade" placeholder="Enter Grade" value="{{ old('grade') }}">
@@ -164,7 +180,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6"   id="engine_oil-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="engine_oil_type">Engine Oil Type <span class="text-danger">*</span></label>
                                         <select name="engine_oil_type" id="engine_oil_type" class="form-control">
@@ -178,7 +194,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6"  id="quantity-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="quantity">Quantity (ml/L) <span class="text-danger">*</span></label>
                                         <input type="text" name="quantity" class="form-control" id="quantity" placeholder="Enter Quantity" value="{{ old('quantity') }}">
@@ -187,31 +203,34 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="width">Width<span class="text-danger">*</span></label>
-                                        <input type="text" name="width" class="form-control" id="width" placeholder="Enter Width" value="{{ old('width') }}">
-                                        @error('width')
-                                            <span class="text-danger">{{ $message }}</span>
-                                        @enderror
+                                <div id="tyre-row" style="display:none;">
+                                    <h4>Tyre Size</h4>
+                                    <div class="col-md-4" id="width-div" style="display:none;">
+                                        <div class="form-group">
+                                            <label for="width">Width<span class="text-danger">*</span></label>
+                                            <input type="text" name="width" class="form-control" id="width" placeholder="Enter Width" value="{{ old('width') }}">
+                                            @error('width')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="aspectratio">Aspect Ratio<span class="text-danger">*</span></label>
-                                        <input type="text" name="aspectratio" class="form-control" id="aspectratio" placeholder="Enter Aspectratio" value="{{ old('aspectratio') }}" >
-                                        @error('aspectratio')
-                                            <span class="text-danger">{{ $message }}</span>
-                                        @enderror
+                                    <div class="col-md-4" id="aspectratio-div" style="display:none;">
+                                        <div class="form-group">
+                                            <label for="aspectratio">Aspect Ratio<span class="text-danger">*</span></label>
+                                            <input type="text" name="aspectratio" class="form-control" id="aspectratio" placeholder="Enter Aspectratio" value="{{ old('aspectratio') }}" >
+                                            @error('aspectratio')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="rim">Rim Size<span class="text-danger">*</span></label>
-                                        <input type="text" name="rim" class="form-control" id="rim" placeholder="Enter Rim Size" value="{{ old('rim') }}" >
-                                        @error('rim')
-                                            <span class="text-danger">{{ $message }}</span>
-                                        @enderror
+                                    <div class="col-md-4" id="rim-div" style="display:none;">
+                                        <div class="form-group">
+                                            <label for="rim">Rim Size<span class="text-danger">*</span></label>
+                                            <input type="text" name="rim" class="form-control" id="rim" placeholder="Enter Rim Size" value="{{ old('rim') }}" >
+                                            @error('rim')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -226,7 +245,7 @@
                                         @enderror
                                     </div>
                                 </div> --}}
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="barcode-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="barcode">Barcode</label>
                                         <input type="text" name="barcode" class="form-control" id="barcode" placeholder="Enter barcode" value="{{ old('barcode') }}">
@@ -235,7 +254,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="min_purchase_qty-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="min_purchase_qty">Minimum Purchase Quantity</label>
                                         <input type="number" name="min_purchase_qty" class="form-control" id="min_purchase_qty" placeholder="Enter Minimum Purchase Quantity" value="{{ old('min_purchase_qty') }}">
@@ -248,13 +267,13 @@
                     </div>
                     <!-- /.card-body -->
                 </div>
-                <div class="card">
+                <div class="card" id="image-card" style="display:none;">
                     <div class="card-header">
                         <h3 class="card-title">Product Gallery</h3>
                         <hr>
                     </div>
                     <!-- /.card-header -->
-                    <div class="card-body">
+                    <div class="card-body" >
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -296,7 +315,7 @@
                     </div>
                     <!-- /.card-body -->
                 </div>
-                <div class="card">
+                <div class="card" id="attribute-card" style="display:none;">
                     <div class="card-header">
                         <h3 class="card-title">Product Attribute</h3>
                         <hr>
@@ -391,7 +410,7 @@
                     </div>
                     <!-- /.card-body -->
                 </div>
-                <div class="card">
+                <div class="card" id="stock-price-card" style="display:none;">
                     <div class="card-header">
                         <h3 class="card-title">Product Stock & Price</h3>
                         <hr>
@@ -399,7 +418,7 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="unit_price-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="unit_price">Unit Price <span class="text-danger">*</span></label>
                                         <input type="number" name="unit_price" class="form-control" id="unit_price" placeholder="0" value="{{ old('unit_price') }}" required>
@@ -408,7 +427,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="purchase_price-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="purchase_price">Purchase Price</label>
                                         <input type="number" name="purchase_price" class="form-control" id="purchase_price" placeholder="0" value="{{ old('purchase_price') }}">
@@ -417,7 +436,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="discount_start-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="start_date">Discount Start Date</label>
                                         <input type="date" name="start_date" class="form-control" id="start_date" placeholder="0" value="{{ old('start_date') }}">
@@ -426,7 +445,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="discount_end-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="end_date">Discount End Date</label>
                                         <input type="date" name="end_date" class="form-control" id="end_date" placeholder="0" value="{{ old('end_date') }}">
@@ -435,7 +454,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="discount-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="discount">Discount</label>
                                         <input type="number" name="discount" class="form-control" id="discount" placeholder="0" value="{{ old('discount') }}">
@@ -444,7 +463,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="discount_type-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="discount_type">Discount Type</label>
                                         <select name="discount_type" id="discount_type" class="form-control">
@@ -457,7 +476,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="stock_quantity-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="stock_quantity">Stock Quantity </label>
                                         <input type="number" name="stock_quantity" class="form-control" id="stock_quantity" placeholder="0" value="{{ old('stock_quantity',0) }}">
@@ -466,7 +485,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="alert_quantity-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="alert_quantity">Alert Quantity</label>
                                         <input type="number" name="alert_quantity" class="form-control" id="alert_quantity" placeholder="0" value="{{ old('alert_quantity') }}">
@@ -475,7 +494,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="weight-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="weight">Weight</label>
                                         <input type="text" name="weight" class="form-control" id="weight" placeholder="Enter Weight" value="{{ old('weight') }}">
@@ -484,7 +503,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="sku-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="sku">SKU</label>
                                         <input type="text" name="sku" class="form-control" id="sku" placeholder="Enter SKU" value="{{ old('sku') }}">
@@ -494,7 +513,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row" id="description-div" style="display:none;">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="content">Description</label>
@@ -508,7 +527,7 @@
                     </div>
                     <!-- /.card-body -->
                 </div>
-                <div class="card">
+                <div class="card" id="product-view-card" style="display:none;">
                     <div class="card-header">
                         <h3 class="card-title">Product View</h3>
                         <hr>
@@ -516,7 +535,7 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                             <div class="row">
-                                <div class="col-md-6">
+                                {{-- <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="weight">Weight</label>
                                         <input type="text" name="weight" class="form-control" id="weight" placeholder="Enter Weight" value="{{ old('weight') }}">
@@ -524,8 +543,8 @@
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
-                                </div>
-                                <div class="col-md-6">
+                                </div> --}}
+                                <div class="col-md-6" id="oem-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="is_oem">OEM</label>
                                         <select name="is_oem" id="is_oem" class="form-control">
@@ -540,7 +559,7 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="preorder-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="is_preorder">Preorder</label>
                                         <select name="is_preorder" id="is_preorder" class="form-control">
@@ -553,7 +572,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6" id="shipping_time-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="shipping_time">Shipping Time</label>
                                         <input type="text" name="shipping_time" class="form-control" id="shipping_time" placeholder="Enter Shipping Time" value="{{ old('shipping_time') }}">
@@ -566,7 +585,7 @@
                     </div>
                     <!-- /.card-body -->
                 </div>
-                <div class="card">
+                <div class="card" id="seo-card" style="display:none;">
                     <div class="card-header">
                         <h3 class="card-title">SEO Meta Tags</h3>
                         <hr>
@@ -632,8 +651,31 @@
 <!-- Summernote JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<script src="{{ asset('admin_template/app-assets/js/scripts/forms/form-repeater.js') }}"></script>
-<script src="{{ asset('admin_template/app-assets/vendors/js/forms/repeater/jquery.repeater.min.js') }}"></script>
+    <script src="{{ asset('admin_template/app-assets/vendors/js/vendors.min.js')}}"></script>
+    <script src="{{ asset('admin_template/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js')}}"></script>
+    <script src="{{ asset('admin_template/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js')}}"></script>
+    <script src="{{ asset('admin_template/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js')}}"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="{{ asset('admin_template/app-assets/vendors/js/tables/datatable/datatables.min.js')}}"></script>
+    <script src="{{ asset('admin_template/app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js')}}"></script>
+    <script src="{{ asset('admin_template/app-assets/vendors/js/charts/apexcharts.min.js')}}"></script>
+    <script src="{{ asset('admin_template/app-assets/vendors/js/pickers/daterange/moment.min.js')}}"></script>
+    <script src="{{ asset('admin_template/app-assets/vendors/js/pickers/daterange/daterangepicker.js')}}"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="{{ asset('admin_template/app-assets/js/core/app-menu.js')}}"></script>
+    <script src="{{ asset('admin_template/app-assets/js/core/app.js')}}"></script>
+    <script src="{{ asset('admin_template/app-assets/js/scripts/components.js')}}"></script>
+    <script src="{{ asset('admin_template/app-assets/js/scripts/footer.js')}}"></script>
+    <script src="{{ asset('admin_template/app-assets/js/scripts/forms/form-repeater.js') }}"></script>
+    <script src="{{ asset('admin_template/app-assets/vendors/js/forms/repeater/jquery.repeater.min.js') }}"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="{{ asset('admin_template/app-assets/js/scripts/pages/table-extended.js')}}"></script>
     <script>
     $(document).ready(function () {
         $('#content').summernote({
@@ -736,6 +778,308 @@
 
     });
 </script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const catalogueSelect = document.getElementById('catalogue_id');
+        const categoryDiv = document.getElementById('category-div');
+        const categorySelect = document.getElementById('category_id');
+        const brandDiv = document.getElementById('brand-div');
+        const fitmentDiv = document.getElementById('fitment-div');
+        const seriesDiv = document.getElementById('series-div');
+        const traditionalDiv = document.getElementById('traditional-div');
+        const commercialDiv = document.getElementById('commercial-div');
+        const partnumberDiv = document.getElementById('partnumber-div');
+        const unitDiv = document.getElementById('unit-div');
+        const gradeDiv = document.getElementById('grade-div');
+        const engine_oilDiv = document.getElementById('engine_oil-div');
+        const quantityDiv = document.getElementById('quantity-div');
+        const widthDiv = document.getElementById('width-div');
+        const aspectratioDiv = document.getElementById('aspectratio-div');
+        const rimDiv = document.getElementById('rim-div');
+        const barcodeDiv = document.getElementById('barcode-div');
+        const min_purchase_qtyDiv = document.getElementById('min_purchase_qty-div');
+        const tyre_row = document.getElementById('tyre-row');
+
+
+        const imageCard = document.getElementById('image-card');
+        const attributeCard = document.getElementById('attribute-card');
+        const stock_priceCard = document.getElementById('stock-price-card');
+
+        const descriptionDiv = document.getElementById('description-div');
+        const product_viewCard = document.getElementById('product-view-card');
+        const seoCard = document.getElementById('seo-card');
+
+
+        const unit_priceDiv = document.getElementById('unit_price-div');
+        const purchase_priceDiv = document.getElementById('purchase_price-div');
+        const discount_startDiv = document.getElementById('discount_start-div');
+        const discount_endDiv = document.getElementById('discount_end-div');
+        const discountDiv = document.getElementById('discount-div');
+        const discount_typeDiv = document.getElementById('discount_type-div');
+        const stock_quantityDiv = document.getElementById('stock_quantity-div');
+        const alert_quantityDiv = document.getElementById('alert_quantity-div');
+        const weightDiv = document.getElementById('weight-div');
+        const skuDiv = document.getElementById('sku-div');
+        const oemDiv = document.getElementById('oem-div');
+        const preorderDiv = document.getElementById('preorder-div');
+        const shipping_timeDiv = document.getElementById('shipping_time-div');
+
+
+        // On catalogue change
+
+
+        function handleCatalogueChange() {
+        const catalogueId = this.value;
+
+            // Hide all fields first
+            [categoryDiv,brandDiv, fitmentDiv, seriesDiv, traditionalDiv, commercialDiv, partnumberDiv, unitDiv, gradeDiv, engine_oilDiv, quantityDiv, widthDiv, aspectratioDiv, rimDiv, barcodeDiv, min_purchase_qtyDiv, imageCard, attributeCard, stock_priceCard, descriptionDiv, product_viewCard, seoCard, unit_priceDiv, purchase_priceDiv, discount_startDiv, discount_endDiv, discountDiv, discount_typeDiv, stock_quantityDiv, alert_quantityDiv, weightDiv, skuDiv, oemDiv, preorderDiv, shipping_timeDiv, tyre_row].forEach(d => d.style.display = 'none');
+
+            // Show fields based on catalogue
+            // Example IDs: 1 = Spare Parts, 2 = After Market
+            if (catalogueId == 1) {
+                categoryDiv.style.display = 'block';
+                unitDiv.style.display = 'block';
+                barcodeDiv.style.display = 'block';
+                fitmentDiv.style.display = 'block';
+                brandDiv.style.display = 'block';
+                seriesDiv.style.display = 'block';
+                traditionalDiv.style.display = 'block';
+
+                stock_priceCard.style.display = 'block';
+                preorderDiv.style.display = 'block';
+                min_purchase_qtyDiv.style.display = 'block';
+                unit_priceDiv.style.display = 'block';
+                purchase_priceDiv.style.display = 'block';
+                discount_startDiv.style.display = 'block';
+                discount_endDiv.style.display = 'block';
+                discountDiv.style.display = 'block';
+                discount_typeDiv.style.display = 'block';
+                stock_quantityDiv.style.display = 'block';
+                descriptionDiv.style.display = 'block';
+
+
+                imageCard.style.display = 'block';
+                attributeCard.style.display = 'block';
+                product_viewCard.style.display = 'block';
+                skuDiv.style.display = 'block';
+
+                seoCard.style.display = 'block';
+            } else if (catalogueId == 2) {
+                categoryDiv.style.display = 'block';
+                unitDiv.style.display = 'block';
+                barcodeDiv.style.display = 'block';
+                fitmentDiv.style.display = 'block';
+                brandDiv.style.display = 'block';
+                seriesDiv.style.display = 'block';
+                traditionalDiv.style.display = 'block';
+
+                stock_priceCard.style.display = 'block';
+                preorderDiv.style.display = 'block';
+                min_purchase_qtyDiv.style.display = 'block';
+                unit_priceDiv.style.display = 'block';
+                purchase_priceDiv.style.display = 'block';
+                discount_startDiv.style.display = 'block';
+                discount_endDiv.style.display = 'block';
+                discountDiv.style.display = 'block';
+                discount_typeDiv.style.display = 'block';
+                stock_quantityDiv.style.display = 'block';
+                descriptionDiv.style.display = 'block';
+
+
+                imageCard.style.display = 'block';
+                attributeCard.style.display = 'block';
+                product_viewCard.style.display = 'block';
+                skuDiv.style.display = 'block';
+
+                seoCard.style.display = 'block';
+            } else if (catalogueId == 3) {
+                categoryDiv.style.display = 'block';
+                unitDiv.style.display = 'block';
+                barcodeDiv.style.display = 'block';
+                // fitmentDiv.style.display = 'block';
+                brandDiv.style.display = 'block';
+                seriesDiv.style.display = 'block';
+                traditionalDiv.style.display = 'block';
+                gradeDiv.style.display = 'block';
+                engine_oilDiv.style.display = 'block';
+                quantityDiv.style.display = 'block';
+
+                stock_priceCard.style.display = 'block';
+                preorderDiv.style.display = 'block';
+                min_purchase_qtyDiv.style.display = 'block';
+                unit_priceDiv.style.display = 'block';
+                purchase_priceDiv.style.display = 'block';
+                discount_startDiv.style.display = 'block';
+                discount_endDiv.style.display = 'block';
+                discountDiv.style.display = 'block';
+                discount_typeDiv.style.display = 'block';
+                stock_quantityDiv.style.display = 'block';
+                descriptionDiv.style.display = 'block';
+
+
+                imageCard.style.display = 'block';
+                attributeCard.style.display = 'block';
+                product_viewCard.style.display = 'block';
+                skuDiv.style.display = 'block';
+
+                seoCard.style.display = 'block';
+            } else if (catalogueId == 4) {
+                categoryDiv.style.display = 'block';
+                unitDiv.style.display = 'block';
+                barcodeDiv.style.display = 'block';
+                fitmentDiv.style.display = 'block';
+                // brandDiv.style.display = 'block';
+                // seriesDiv.style.display = 'block';
+                traditionalDiv.style.display = 'block';
+                commercialDiv.style.display = 'block';
+                partnumberDiv.style.display = 'block';
+
+                stock_priceCard.style.display = 'block';
+                preorderDiv.style.display = 'block';
+                min_purchase_qtyDiv.style.display = 'block';
+                unit_priceDiv.style.display = 'block';
+                purchase_priceDiv.style.display = 'block';
+                discount_startDiv.style.display = 'block';
+                discount_endDiv.style.display = 'block';
+                discountDiv.style.display = 'block';
+                discount_typeDiv.style.display = 'block';
+                stock_quantityDiv.style.display = 'block';
+                descriptionDiv.style.display = 'block';
+
+
+                imageCard.style.display = 'block';
+                attributeCard.style.display = 'block';
+                product_viewCard.style.display = 'block';
+                skuDiv.style.display = 'block';
+                oemDiv.style.display = 'block';
+
+                seoCard.style.display = 'block';
+            } else if (catalogueId == 5) {
+                categoryDiv.style.display = 'block';
+                unitDiv.style.display = 'block';
+                barcodeDiv.style.display = 'block';
+                // fitmentDiv.style.display = 'block';
+                brandDiv.style.display = 'block';
+                seriesDiv.style.display = 'block';
+                traditionalDiv.style.display = 'block';
+
+                stock_priceCard.style.display = 'block';
+                preorderDiv.style.display = 'block';
+                min_purchase_qtyDiv.style.display = 'block';
+                unit_priceDiv.style.display = 'block';
+                purchase_priceDiv.style.display = 'block';
+                discount_startDiv.style.display = 'block';
+                discount_endDiv.style.display = 'block';
+                discountDiv.style.display = 'block';
+                discount_typeDiv.style.display = 'block';
+                stock_quantityDiv.style.display = 'block';
+                descriptionDiv.style.display = 'block';
+
+
+                imageCard.style.display = 'block';
+                attributeCard.style.display = 'block';
+                product_viewCard.style.display = 'block';
+                skuDiv.style.display = 'block';
+
+                seoCard.style.display = 'block';
+            } else if (catalogueId == 6) {
+                categoryDiv.style.display = 'block';
+                unitDiv.style.display = 'block';
+                barcodeDiv.style.display = 'block';
+                // fitmentDiv.style.display = 'block';
+                brandDiv.style.display = 'block';
+                seriesDiv.style.display = 'block';
+                traditionalDiv.style.display = 'block';
+                tyre_row.style.display = 'block';
+                widthDiv.style.display = 'block';
+                aspectratioDiv.style.display = 'block';
+                rimDiv.style.display = 'block';
+
+                stock_priceCard.style.display = 'block';
+                preorderDiv.style.display = 'block';
+                min_purchase_qtyDiv.style.display = 'block';
+                unit_priceDiv.style.display = 'block';
+                purchase_priceDiv.style.display = 'block';
+                discount_startDiv.style.display = 'block';
+                discount_endDiv.style.display = 'block';
+                discountDiv.style.display = 'block';
+                discount_typeDiv.style.display = 'block';
+                stock_quantityDiv.style.display = 'block';
+                descriptionDiv.style.display = 'block';
+
+
+                imageCard.style.display = 'block';
+                attributeCard.style.display = 'block';
+                product_viewCard.style.display = 'block';
+                skuDiv.style.display = 'block';
+
+                seoCard.style.display = 'block';
+            } else if (catalogueId == 7) {
+                categoryDiv.style.display = 'block';
+                unitDiv.style.display = 'block';
+                barcodeDiv.style.display = 'block';
+                // fitmentDiv.style.display = 'block';
+                brandDiv.style.display = 'block';
+                seriesDiv.style.display = 'block';
+                traditionalDiv.style.display = 'block';
+
+                stock_priceCard.style.display = 'block';
+                preorderDiv.style.display = 'block';
+                min_purchase_qtyDiv.style.display = 'block';
+                unit_priceDiv.style.display = 'block';
+                purchase_priceDiv.style.display = 'block';
+                discount_startDiv.style.display = 'block';
+                discount_endDiv.style.display = 'block';
+                discountDiv.style.display = 'block';
+                discount_typeDiv.style.display = 'block';
+                stock_quantityDiv.style.display = 'block';
+                descriptionDiv.style.display = 'block';
+
+
+                imageCard.style.display = 'block';
+                attributeCard.style.display = 'block';
+                product_viewCard.style.display = 'block';
+                skuDiv.style.display = 'block';
+
+                seoCard.style.display = 'block';
+            }
+            // Add more conditions as needed
+            categorySelect.innerHTML = '<option value="">Select Category</option>';
+
+            if (!catalogueId) return;
+
+            fetch("{{ url('/get-categories-subcategories') }}"+ "/" +catalogueId)
+                .then(res => res.json())
+                .then(data => {
+                    data.forEach(cat => {
+                        // Add main category
+                        categorySelect.innerHTML += `<option value="${cat.id}">${cat.name}</option>`;
+
+                        // Add subcategories (indented visually)
+                        if (cat.subcategories && cat.subcategories.length > 0) {
+                            cat.subcategories.forEach(sub => {
+                                categorySelect.innerHTML += `<option value="${sub.id}">— ${sub.name}</option>`;
+                            });
+                        }
+                    });
+                });
+
+        // your existing logic here
+        }
+
+        // Run once on load (if already has a value)
+        if (catalogueSelect.value) {
+            handleCatalogueChange();
+        }
+
+
+        // Also run when user changes it
+        catalogueSelect.addEventListener('change', handleCatalogueChange);
+    });
+</script>
+
+
 
 
 

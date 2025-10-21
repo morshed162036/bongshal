@@ -36,7 +36,7 @@ public function store(Request $request)
         // 'rear_tire_size' => 'required|string',
         'battery_capacity' => 'required|string',
         'group-color.*.color' => 'required|string',
-        'group-color.*.image' => 'nullable|image|mimes:jpg,jpeg,png|max:2048',
+        'group-color.*.image' => 'nullable|image|mimes:webp,jpeg,png,jpg,gif,svg|max:2048',
         'group-grade.*.grade' => 'required|string',
         'group-grade.*.volume' => 'required|string',
     ]);
