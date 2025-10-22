@@ -25,133 +25,54 @@
                </section>
                <!-- banner end -->
             </div>
+            <!-- Feature category start -->
             <div class="component__wrapper">
                <section class="component component--visual-category-links visual-category-links"
-                  data-analytics-component-id="171829" data-analytics-component-type="VisualCategoryLinks"
-                  data-component-type="Visual Category Links" data-js-component="VisualCategoryLinks"
-                  data-js-scheduled-component-id="171829">
-                  <div class="component__content">
-                     <div class="visual-category-links__content visual-category-links__content--full-width">
-                        <div class="visual-category-links__header ui-h1" data-heading="Featured Categories">Featured
-                           Categories</div>
-                        <div class="visual-category-links__row">
-                           <a class="visual-category-links__link visual-category-links__link--odd"
-                              href="/motorcycle-helmets" data-link="/motorcycle-helmets" data-asset-name="Helmets"
-                              data-asset-type="Visual Category Link" data-asset-id="85013" data-position="0">
-                              <img src="https://www.revzilla.com/facet_set/image/16099/MRKT-11088-VCL-HELMETS.jpg"
-                                 alt="Helmets" class="visual-category-links__image"
-                                 data-image="/facet_set/image/16099/MRKT-11088-VCL-HELMETS.jpg">
-                              <div class="visual-category-links__link-label ui-h2" data-link-label="Helmets">Helmets
-                              </div>
-                           </a>
-                           <a class="visual-category-links__link" href="/motorcycle-riding-gear"
-                              data-link="/motorcycle-riding-gear" data-asset-name="Riding Gear"
-                              data-asset-type="Visual Category Link" data-asset-id="85014" data-position="1">
-                              <img
-                                 src="https://www.revzilla.com/facet_set/image/16102/MRKT-11088-VCL-RIDING-GEAR.jpg"
-                                 alt="Riding Gear" class="visual-category-links__image"
-                                 data-image="/facet_set/image/16102/MRKT-11088-VCL-RIDING-GEAR.jpg">
-                              <div class="visual-category-links__link-label ui-h2" data-link-label="Riding Gear">Riding
-                                 Gear</div>
-                           </a>
-                           <a class="visual-category-links__link visual-category-links__link--odd"
-                              href="/motorcycle-parts" data-link="/motorcycle-parts" data-asset-name="Parts"
-                              data-asset-type="Visual Category Link" data-asset-id="85015" data-position="2">
-                              <img src="https://www.revzilla.com/facet_set/image/16104/MRKT-11088-VCL-PARTS.jpg"
-                                 alt="Parts" class="visual-category-links__image"
-                                 data-image="/facet_set/image/16104/MRKT-11088-VCL-PARTS.jpg">
-                              <div class="visual-category-links__link-label ui-h2" data-link-label="Parts">Parts</div>
-                           </a>
-                           <a class="visual-category-links__link" href="/motorcycle-accessories"
-                              data-link="/motorcycle-accessories" data-asset-name="Accessories"
-                              data-asset-type="Visual Category Link" data-asset-id="85016" data-position="3">
-                              <img
-                                 src="https://www.revzilla.com/facet_set/image/16097/MRKT-11088-VCL-ACCESSORIES.jpg"
-                                 alt="Accessories" class="visual-category-links__image"
-                                 data-image="/facet_set/image/16097/MRKT-11088-VCL-ACCESSORIES.jpg">
-                              <div class="visual-category-links__link-label ui-h2" data-link-label="Accessories">
-                                 Accessories</div>
-                           </a>
-                           <a class="visual-category-links__link visual-category-links__link--odd" href="/all-tires"
-                              data-link="/all-tires" data-asset-name="Tires" data-asset-type="Visual Category Link"
-                              data-asset-id="85017" data-position="4">
-                              <img src="https://www.revzilla.com/facet_set/image/16094/MRKT-11088-VCL-TIRES.jpg"
-                                 alt="Tires" class="visual-category-links__image"
-                                 data-image="/facet_set/image/16094/MRKT-11088-VCL-TIRES.jpg">
-                              <div class="visual-category-links__link-label ui-h2" data-link-label="Tires">Tires</div>
-                           </a>
-                           <a class="visual-category-links__link" href="/motorcycle-protection"
-                              data-link="/motorcycle-protection" data-asset-name="Protection"
-                              data-asset-type="Visual Category Link" data-asset-id="85018" data-position="5">
-                              <img src="https://www.revzilla.com/facet_set/image/16095/MRKT-11088-VCL-AIRBAGS.jpg"
-                                 alt="Protection" class="visual-category-links__image"
-                                 data-image="/facet_set/image/16095/MRKT-11088-VCL-AIRBAGS.jpg">
-                              <div class="visual-category-links__link-label ui-h2" data-link-label="Protection">
-                                 Protection</div>
-                           </a>
-                        </div>
-                        <div class="visual-category-links__row">
-                           <a class="visual-category-links__link visual-category-links__link--odd"
-                              href="/motorcycle-bluetooth-communications"
-                              data-link="/motorcycle-bluetooth-communications" data-asset-name="Bluetooth Units"
-                              data-asset-type="Visual Category Link" data-asset-id="85019" data-position="0">
-                              <img
-                                 src="https://www.revzilla.com/facet_set/image/16096/MRKT-11088-VCL-BLUETOOTH.jpg"
-                                 alt="Bluetooth Units" class="visual-category-links__image"
-                                 data-image="/facet_set/image/16096/MRKT-11088-VCL-BLUETOOTH.jpg">
-                              <div class="visual-category-links__link-label ui-h2" data-link-label="Bluetooth Units">
-                                 Bluetooth Units</div>
-                           </a>
-                           <a class="visual-category-links__link" href="/new-rider" data-link="/new-rider"
-                              data-asset-name="New Riders" data-asset-type="Visual Category Link" data-asset-id="85020"
-                              data-position="1">
-                              <img
-                                 src="https://www.revzilla.com/facet_set/image/16100/MRKT-11088-VCL-NEW-RIDER.jpg"
-                                 alt="New Riders" class="visual-category-links__image"
-                                 data-image="/facet_set/image/16100/MRKT-11088-VCL-NEW-RIDER.jpg">
-                              <div class="visual-category-links__link-label ui-h2" data-link-label="New Riders">New
-                                 Riders</div>
-                           </a>
-                           <a class="visual-category-links__link visual-category-links__link--odd" href="/sale"
-                              data-link="/sale" data-asset-name="Sale" data-asset-type="Visual Category Link"
-                              data-asset-id="85021" data-position="2">
-                              <img src="https://www.revzilla.com/facet_set/image/16105/MRKT-11088-VCL-SALE.jpg"
-                                 alt="Sale" class="visual-category-links__image"
-                                 data-image="/facet_set/image/16105/MRKT-11088-VCL-SALE.jpg">
-                              <div class="visual-category-links__link-label ui-h2" data-link-label="Sale">Sale</div>
-                           </a>
-                           <a class="visual-category-links__link" href="/dirt-bike-gear" data-link="/dirt-bike-gear"
-                              data-asset-name="Dirt" data-asset-type="Visual Category Link" data-asset-id="85022"
-                              data-position="3">
-                              <img src="https://www.revzilla.com/facet_set/image/16098/MRKT-11088-VCL-DIRT.jpg"
-                                 alt="Dirt" class="visual-category-links__image"
-                                 data-image="/facet_set/image/16098/MRKT-11088-VCL-DIRT.jpg">
-                              <div class="visual-category-links__link-label ui-h2" data-link-label="Dirt">Dirt</div>
-                           </a>
-                           <a class="visual-category-links__link visual-category-links__link--odd"
-                              href="/mesh-motorcycle-gear" data-link="/mesh-motorcycle-gear" data-asset-name="Mesh Gear"
-                              data-asset-type="Visual Category Link" data-asset-id="85023" data-position="4">
-                              <img
-                                 src="https://www.revzilla.com/facet_set/image/16103/MRKT-11088-VCL-SUMMER-GEAR.jpg"
-                                 alt="Mesh Gear" class="visual-category-links__image"
-                                 data-image="/facet_set/image/16103/MRKT-11088-VCL-SUMMER-GEAR.jpg">
-                              <div class="visual-category-links__link-label ui-h2" data-link-label="Mesh Gear">Mesh Gear
-                              </div>
-                           </a>
-                           <a class="visual-category-links__link" href="/womens-motorcycle-riding-gear"
-                              data-link="/womens-motorcycle-riding-gear" data-asset-name="Women's"
-                              data-asset-type="Visual Category Link" data-asset-id="85024" data-position="5">
-                              <img src="https://www.revzilla.com/facet_set/image/16091/MRKT-11088-VCL-WOMENS.jpg"
-                                 alt="Women's" class="visual-category-links__image"
-                                 data-image="/facet_set/image/16091/MRKT-11088-VCL-WOMENS.jpg">
-                              <div class="visual-category-links__link-label ui-h2" data-link-label="Women's">Women's
-                              </div>
-                           </a>
-                        </div>
-                     </div>
-                  </div>
-               </section>
+    data-analytics-component-id="171829" 
+    data-analytics-component-type="VisualCategoryLinks"
+    data-component-type="Visual Category Links" 
+    data-js-component="VisualCategoryLinks"
+    data-js-scheduled-component-id="171829">
+    <div class="component__content">
+        <div class="visual-category-links__content visual-category-links__content--full-width">
+            <div class="visual-category-links__header ui-h1" 
+                 data-heading="Featured Categories">
+                Featured Categories
             </div>
+            @foreach ($featuredCatalogues as $catalogue)
+                @if ($loop->iteration % 6 === 1)
+                    <div class="visual-category-links__row">
+                @endif
+                <a class="visual-category-links__link @if ($loop->odd) visual-category-links__link--odd @endif"
+                    href="{{ route('shop.catalogue', $catalogue) }}" 
+                    data-link="{{ route('shop.catalogue', $catalogue) }}" 
+                    data-asset-name="{{ $catalogue->name }}"
+                    data-asset-type="Visual Category Link" 
+                    data-asset-id="{{ $catalogue->id }}" 
+                    data-position="{{ $loop->index }}">
+                    <img src="{{ asset('images/category/'.$catalogue->image) }}"
+                        alt="{{ $catalogue->name }}" 
+                        class="visual-category-links__image"
+                        data-image="{{ asset('images/category/'.$catalogue->image) }}">
+                    <div class="visual-category-links__link-label ui-h2" 
+                         data-link-label="{{ $catalogue->name }}">
+                        {{ $catalogue->name }}
+                    </div>
+                </a>
+                @if ($loop->iteration % 6 === 0 || $loop->last)
+                    </div>
+                @endif      
+            @endforeach
+            @empty($featuredCatalogues)
+                <p>No featured categories are currently set up for display.</p>
+            @endempty
+        </div>
+    </div>
+</section>
+              
+
+            </div>
+            <!-- feature category end -->
             <div class="component__wrapper component__wrapper--background-white">
                <section class="component component--dynaboard dynaboard" data-analytics-component-id="173875"
                   data-analytics-component-type="Dynaboard" data-js-component="Dynaboard"

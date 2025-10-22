@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Slider;
+use App\Models\Catalogue;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,7 +12,8 @@ class HomeController extends Controller
     public function index()
     {
         $sliders = Slider::where('status', 'Active')->orderBy('order', 'asc')->get();
-        return view('frontend.home',compact('sliders'));
+        $featuredCatalogues = Catalogue::where('status', 'active')->get();
+        return view('frontend.home',compact('sliders', 'featuredCatalogues'));
     }
     public function shop()
     {
