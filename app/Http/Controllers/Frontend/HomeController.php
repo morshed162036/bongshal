@@ -3,14 +3,15 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Slider;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        // This method can be used to return the homepage view
-        return view('frontend.home');
+        $sliders = Slider::where('status', 'Active')->orderBy('order', 'asc')->get();
+        return view('frontend.home',compact('sliders'));
     }
     public function shop()
     {

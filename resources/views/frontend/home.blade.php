@@ -9,24 +9,17 @@
                   data-js-scheduled-component-id="173766">
                   <div class="component__content">
                      <div class="slider-container" id="autoSlider">
+                        {{-- Check if the $sliders collection is not empty --}}
+                    @if(count($sliders) > 0)
+                        @foreach ($sliders as $slider)
                         <div class="slider-item">
-                           <a href="/summer-motorcycle-gear-1" data-analytics-asset-link="/summer-motorcycle-gear-1">
-                              <img class="lazy-slider-image" data-src="{{ asset('frontend') }}/image/banner/banner1.jpg"
+                           <a href="{{ $slider->url }}">
+                              <img class="lazy-slider-image" data-src="{{ asset('images/slider/'.$slider->photo) }}"
                                  alt="Summer Gear - Shop Now 1">
                            </a>
                         </div>
-                        <div class="slider-item">
-                           <a href="/summer-motorcycle-gear-2" data-analytics-asset-link="/summer-motorcycle-gear-2">
-                              <img class="lazy-slider-image" src="{{ asset('frontend/image/banner/banner2.jpg') }}"
-                                 alt="Summer Gear - Shop Now 2">
-                           </a>
-                        </div>
-                        <div class="slider-item">
-                           <a href="/summer-motorcycle-gear-3" data-analytics-asset-link="/summer-motorcycle-gear-3">
-                              <img class="lazy-slider-image" src="{{ asset('frontend') }}/image/banner/banner3.jpg"
-                                 alt="Summer Gear - Shop Now 3">
-                           </a>
-                        </div>
+                        @endforeach
+                        @endif
                      </div>
                   </div>
                </section>
