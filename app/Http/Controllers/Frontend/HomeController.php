@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\ProductPromotion;
 use App\Models\Slider;
 use App\Models\Catalogue;
 use Illuminate\Http\Request;
@@ -13,7 +14,8 @@ class HomeController extends Controller
     {
         $sliders = Slider::where('status', 'Active')->orderBy('order', 'asc')->get();
         $featuredCatalogues = Catalogue::where('status', 'active')->get();
-        return view('frontend.home',compact('sliders', 'featuredCatalogues'));
+        $promotions = ProductPromotion::where('status', 'active')->latest()->take(3)->get();
+        return view('frontend.home',compact('sliders', 'featuredCatalogues','promotions'));
     }
     public function shop()
     {

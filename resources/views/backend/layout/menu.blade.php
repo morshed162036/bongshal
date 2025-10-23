@@ -175,6 +175,15 @@
                     <li class=" nav-item"><a href="#"><i class="bx bx-cart-alt"></i><span
                             class="menu-title">Vendor Product List</span></a>
                     </li>
+                    <!-- product promotion start -->
+                     <li class=" navigation-header"><span>Product Section</span></li>
+                     <li class=" nav-item">
+                        <a href="{{ route('promotions.index') }}">
+                            <i class="bx bx-cart-alt"></i>
+                            <span class="menu-title">product Promotion</span>
+                        </a>
+                    </li>
+                     <!-- product promotion end -->
                 <li class=" navigation-header"><span>Order Section</span></li>
                     <li class=" nav-item"><a href="#"><i class="bx bx-cart-alt"></i><span
                             class="menu-title">New Order</span></a>

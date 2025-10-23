@@ -8,6 +8,8 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\CatalogueController;
 use App\Http\Controllers\Backend\BikeController;
 use App\Http\Controllers\Backend\ProductController;
+use App\Http\Controllers\Backend\ProductPromotionController;
+
 
 
 use App\Http\Controllers\Frontend\HomeController;
@@ -32,6 +34,8 @@ Route::get('/', [HomeController::class, 'index'])->name('homepage');
 Route::get('/shop', [ShopController::class, 'index'])->name('shop.index');
 Route::get('/shop/catalogue/{catalogue:id}', [ShopController::class, 'catalogue'])->name('shop.catalogue');
 Route::get('/shop/category/{category:slug}', [ShopController::class, 'category'])->name('shop.category');
+
+
 
 // Ajax routes for dynamic dropdowns in the shop page popup filters
 Route::get('/get-models/{companyId}', [ShopController::class, 'getModels']);
@@ -74,5 +78,6 @@ Route::prefix('/')->group(function(){
         // Route::resource('service', ServiceController::class);
         // Route::resource('blog_category', BlogCategoryController::class);
         // Route::resource('order', OrderController::class);
+        Route::resource('promotions', ProductPromotionController::class);
     });
 });
