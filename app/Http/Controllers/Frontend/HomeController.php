@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use App\Models\Ading;
 use App\Models\Brand;
+use App\Models\MultipleAds;
 use App\Models\ProductPromotion;
 use App\Models\Slider;
 use App\Models\Catalogue;
@@ -24,7 +25,19 @@ class HomeController extends Controller
                        ->where('type', 'image')
                        ->inRandomOrder() // Optional: for variety
                        ->first();
-        return view('frontend.home',compact('sliders', 'featuredCatalogues','promotions','brands','activeVideoAd','activeImageAd'));
+        $sideBannerAd = MultipleAds::where('type', 'single_side_banner')
+                          ->where('status', 'active')
+                          ->first();
+        $mainBannerAd = MultipleAds::where('type', 'single_main_banner')
+                          ->where('status', 'active')
+                          ->first();
+        $tripleBannerAd = MultipleAds::where('type', 'triple_banner')
+                          ->where('status', 'active')
+                          ->first();
+        $doubleBannerAd = MultipleAds::where('type', 'double_banner')
+                            ->where('status', 'active')
+                            ->first();
+        return view('frontend.home',compact('sliders', 'featuredCatalogues','promotions','brands','activeVideoAd','activeImageAd','sideBannerAd','mainBannerAd','tripleBannerAd','doubleBannerAd'));
     }
     public function shop()
     {

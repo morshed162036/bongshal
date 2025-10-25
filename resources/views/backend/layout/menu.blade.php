@@ -197,6 +197,10 @@
                             <i class="bx bx-cart-alt"></i>
                             <span class="menu-title">Image & video ads</span>
                         </a>
+                        <a href="{{ route('ads.index') }}">
+                            <i class="bx bx-cart-alt"></i>
+                            <span class="menu-title">Multiple ads manage</span>
+                        </a>
                     </li>
                      <!-- ads manage end -->
                 <li class=" navigation-header"><span>Order Section</span></li>

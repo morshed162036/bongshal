@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Backend\AdingController;
+use App\Http\Controllers\Backend\MultipleAdsController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\SettingsController;
@@ -81,5 +82,6 @@ Route::prefix('/')->group(function(){
         // Route::resource('order', OrderController::class);
         Route::resource('promotions', ProductPromotionController::class);
         Route::resource('ading', AdingController::class);
+        Route::resource('ads', MultipleAdsController::class);
     });
 });
