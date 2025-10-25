@@ -122,89 +122,27 @@
             <div class="component__content">
                 <div class="top-brands__heading  stn-shd stn-shd--small" data-heading="Top-Selling Brands">
                     Top-Selling Brands</div>
-                <div class="top-brands__scroll-wrapper">
-                    <a href="https://www.revzilla.com/akrapovic" class="top-brands__brand-link"
-                        data-asset-name="Akrapovic" data-asset-type="Top Brand" data-asset-id="86691"
-                        data-link="https://www.revzilla.com/akrapovic">
-                        <img src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/14082/Akrapovic_Logo.svg"
-                            alt="Akrapovic" class="top-brands__brand-logo"
-                            data-image="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/14082/Akrapovic_Logo.svg">
-                    </a>
-                    <a href="https://www.revzilla.com/cardo-systems" class="top-brands__brand-link"
-                        data-asset-name="Cardo Systems" data-asset-type="Top Brand" data-asset-id="86692"
-                        data-link="https://www.revzilla.com/cardo-systems">
-                        <img src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/1305/Cardo_Logo.svg"
-                            alt="Cardo Systems" class="top-brands__brand-logo"
-                            data-image="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/1305/Cardo_Logo.svg">
-                    </a>
-                    <a href="/sedici" class="top-brands__brand-link" data-asset-name="Sedici"
-                        data-asset-type="Top Brand" data-asset-id="86693" data-link="/sedici">
-                        <img src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/17967/SEDICI_logo__22_.svg"
-                            alt="Sedici" class="top-brands__brand-logo"
-                            data-image="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/17967/SEDICI_logo__22_.svg">
-                    </a>
-                    <a href="https://www.revzilla.com/alpinestars?view_all=true" class="top-brands__brand-link"
-                        data-asset-name="Alpinestars" data-asset-type="Top Brand" data-asset-id="86694"
-                        data-link="https://www.revzilla.com/alpinestars?view_all=true">
-                        <img src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/7352/Alpinestars_Logo.svg"
-                            alt="Alpinestars" class="top-brands__brand-logo"
-                            data-image="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/7352/Alpinestars_Logo.svg">
-                    </a>
-                    <a href="https://www.revzilla.com/givi" class="top-brands__brand-link" data-asset-name="Givi"
-                        data-asset-type="Top Brand" data-asset-id="86695" data-link="https://www.revzilla.com/givi">
-                        <img src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/15448/Givi_Logo.svg"
-                            alt="Givi" class="top-brands__brand-logo"
-                            data-image="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/15448/Givi_Logo.svg">
-                    </a>
-                    <a href="https://www.revzilla.com/klim-spring-2025" class="top-brands__brand-link"
-                        data-asset-name="Klim" data-asset-type="Top Brand" data-asset-id="86696"
-                        data-link="https://www.revzilla.com/klim-spring-2025">
-                        <img src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/14096/Klim_Logo.svg"
-                            alt="Klim" class="top-brands__brand-logo"
-                            data-image="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/14096/Klim_Logo.svg">
-                    </a>
-                    <a href="https://www.revzilla.com/dainese" class="top-brands__brand-link" data-asset-name="Dainese"
-                        data-asset-type="Top Brand" data-asset-id="86697" data-link="https://www.revzilla.com/dainese">
-                        <img src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/12322/Dainese_Logo.svg"
-                            alt="Dainese" class="top-brands__brand-logo"
-                            data-image="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/12322/Dainese_Logo.svg">
-                    </a>
-                    <a href="https://www.revzilla.com/rabaconda" class="top-brands__brand-link"
-                        data-asset-name="Rabaconda" data-asset-type="Top Brand" data-asset-id="86698"
-                        data-link="https://www.revzilla.com/rabaconda">
-                        <img src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/20907/Rabaconda-logo---Transparent_background.webp"
-                            alt="Rabaconda" class="top-brands__brand-logo"
-                            data-image="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/20907/Rabaconda-logo---Transparent_background.webp">
-                    </a>
-                    <a href="https://www.revzilla.com/shoei-helmets" class="top-brands__brand-link"
-                        data-asset-name="Shoei Helmets" data-asset-type="Top Brand" data-asset-id="86699"
-                        data-link="https://www.revzilla.com/shoei-helmets">
-                        <img src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/7260/Shoei_Logo.svg"
-                            alt="Shoei Helmets" class="top-brands__brand-logo"
-                            data-image="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/7260/Shoei_Logo.svg">
-                    </a>
-                    <a href="https://www.revzilla.com/revit-spring-2025" class="top-brands__brand-link"
-                        data-asset-name="REV'IT!" data-asset-type="Top Brand" data-asset-id="86700"
-                        data-link="https://www.revzilla.com/revit-spring-2025">
-                        <img src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/7353/RevIt_Logo.svg"
-                            alt="REV'IT!" class="top-brands__brand-logo"
-                            data-image="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/7353/RevIt_Logo.svg">
-                    </a>
-                    <a href="https://www.revzilla.com/leatt-adventure-gear" class="top-brands__brand-link"
-                        data-asset-name="Leatt" data-asset-type="Top Brand" data-asset-id="86701"
-                        data-link="https://www.revzilla.com/leatt-adventure-gear">
-                        <img src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/15796/Leatt_Logo.svg"
-                            alt="Leatt" class="top-brands__brand-logo"
-                            data-image="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/15796/Leatt_Logo.svg">
-                    </a>
-                    <a href="https://www.revzilla.com/2025-fox-racing" class="top-brands__brand-link"
-                        data-asset-name="Fox Racing" data-asset-type="Top Brand" data-asset-id="86702"
-                        data-link="https://www.revzilla.com/2025-fox-racing">
-                        <img src="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/14341/Fox-Logo.svg"
-                            alt="Fox Racing" class="top-brands__brand-logo"
-                            data-image="https://www.revzilla.com/cdn-cgi/image/onerror=redirect/brand/image/14341/Fox-Logo.svg">
-                    </a>
-                </div>
+                <<div class="top-brands__scroll-wrapper">
+    @if(count($brands) > 0)
+        @foreach ($brands as $brand)
+            <a href="{{ $brand->details ?? '#' }}" 
+                class="top-brands__brand-link"
+                data-asset-name="{{ $brand->name }}" 
+                data-asset-type="Top Brand" 
+                data-asset-id="{{ $brand->id ?? '' }}"
+                data-link="{{ $brand->details ?? '#' }}">
+                
+                <img src="{{ asset('images/brand/' . ($brand->logo ?? 'default.svg')) }}" 
+                    alt="{{ $brand->name }}" 
+                    class="top-brands__brand-logo"
+                    data-image="{{ asset('images/brand/' . ($brand->logo ?? 'default.svg')) }}">
+            </a>
+        @endforeach
+    @else
+        {{-- Optional: Display a message if no brands are found --}}
+        <p>No top brands available at the moment.</p>
+    @endif
+</div>
             </div>
         </section>
     </div>
@@ -2939,18 +2877,36 @@
         </div>
 </section>
 <!-- video section start -->
-<section class="component component--bannerboard bannerboard" data-js-component="Bannerboard">
-    <div class="video-section">
-        <div class="video-container">
-            <iframe
-                src="https://www.youtube.com/embed/jQlfyIIfmQk?si=zbmLtiYwnNr3sTMv&controls=0&autoplay=1&mute=1&loop=1&playlist=jQlfyIIfmQk"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-            </iframe>
-        </div>
-    </div>
+ <section class="component component--bannerboard bannerboard" data-js-component="Bannerboard">
+   @if (isset($activeVideoAd) && $activeVideoAd->video_url)
+        @php
+            $videoId = null;
+            $url = $activeVideoAd->video_url;
+            if (preg_match('/(?:youtube\.com\/(?:[^\/]+\/.+\/|\w\/\w+\/|watch\?v=))([^&]+)/', $url, $matches)) {
+                $videoId = $matches[1];
+            } elseif (preg_match('/youtu\.be\/([^\?]+)/', $url, $matches)) {
+                $videoId = $matches[1];
+            } elseif (preg_match('/embed\/([^\?]+)/', $url, $matches)) {
+                $videoId = $matches[1];
+            }
+        @endphp
+        @if ($videoId)
+            <div class="video-section">
+                <div class="video-container">
+                    <iframe
+                        src="https://www.youtube.com/embed/{{ $videoId }}?controls=0&autoplay=1&mute=1&loop=1&playlist={{ $videoId }}"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        @else
+             <div class="text-center p-5 text-danger">Error: Video URL in database is invalid.</div>
+        @endif
+    @endif
 </section>
+
 <!-- video section end -->
 <!-- spin wheel start -->
 <section class="spin_wheel">
@@ -2966,15 +2922,21 @@
 </section>
 <!-- spin wheel end -->
 <!-- ads banner start -->
-<section class="component component--bannerboard bannerboard" data-js-component="Bannerboard">
-    <div class="component__content">
-        <div class="bannerboard__wrapper">
-            <a href="YOUR_LINK_HERE" class="ad-banner-link" target="_blank" rel="noopener noreferrer">
-                <img src="{{ asset('frontend') }}/image/banner/banner3.jpg" alt="Ad banner image"
-                    class="ad-banner-image">
-            </a>
+ <section class="component component--bannerboard bannerboard" data-js-component="Bannerboard">
+    {{-- Check: Ensure an image ad is loaded and has an image path --}}
+    @if (isset($activeImageAd) && $activeImageAd->image)
+        <div class="component__content">
+            <div class="bannerboard__wrapper">
+                <a href="{{ $activeImageAd->link ?? '#' }}" class="ad-banner-link" target="_blank" rel="noopener noreferrer">
+                    <img 
+                        {{-- FIX: Use asset() without the prefix --}}
+                        src="{{ asset($activeImageAd->image) }}" 
+                        alt="Ad banner image"
+                        class="ad-banner-image">
+                </a>
+            </div>
         </div>
-    </div>
+    @endif
 </section>
 <!-- ads banner end -->
 <div class="component__wrapper component__wrapper--background-black">

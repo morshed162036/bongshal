@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Backend\AdingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Backend\AdminController;
 use App\Http\Controllers\Backend\SettingsController;
@@ -79,5 +80,6 @@ Route::prefix('/')->group(function(){
         // Route::resource('blog_category', BlogCategoryController::class);
         // Route::resource('order', OrderController::class);
         Route::resource('promotions', ProductPromotionController::class);
+        Route::resource('ading', AdingController::class);
     });
 });

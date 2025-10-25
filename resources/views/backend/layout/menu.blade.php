@@ -183,7 +183,22 @@
                             <span class="menu-title">product Promotion</span>
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a href="{{ route('promotions.index') }}">
+                            <i class="bx bx-cart-alt"></i>
+                            <span class="menu-title">product wise ads</span>
+                        </a>
+                    </li>
                      <!-- product promotion end -->
+                      <!-- ads manage start -->
+                     <li class=" navigation-header"><span>Ads Section</span></li>
+                     <li class=" nav-item">
+                        <a href="{{ route('ading.index') }}">
+                            <i class="bx bx-cart-alt"></i>
+                            <span class="menu-title">Image & video ads</span>
+                        </a>
+                    </li>
+                     <!-- ads manage end -->
                 <li class=" navigation-header"><span>Order Section</span></li>
                     <li class=" nav-item"><a href="#"><i class="bx bx-cart-alt"></i><span
                             class="menu-title">New Order</span></a>

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Ading;
+use App\Models\Brand;
 use App\Models\ProductPromotion;
 use App\Models\Slider;
 use App\Models\Catalogue;
@@ -15,7 +17,14 @@ class HomeController extends Controller
         $sliders = Slider::where('status', 'Active')->orderBy('order', 'asc')->get();
         $featuredCatalogues = Catalogue::where('status', 'active')->get();
         $promotions = ProductPromotion::where('status', 'active')->latest()->take(3)->get();
-        return view('frontend.home',compact('sliders', 'featuredCatalogues','promotions'));
+        $brands = Brand::where('status', 'Active')->orderBy('order', 'asc')->get();
+        $activeVideoAd = Ading::where('status', 'active')->where('type', 'video')
+                       ->inRandomOrder()->first();
+        $activeImageAd = Ading::where('status', 'active')
+                       ->where('type', 'image')
+                       ->inRandomOrder() // Optional: for variety
+                       ->first();
+        return view('frontend.home',compact('sliders', 'featuredCatalogues','promotions','brands','activeVideoAd','activeImageAd'));
     }
     public function shop()
     {
