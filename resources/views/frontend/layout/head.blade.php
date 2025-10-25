@@ -1121,15 +1121,7 @@
    <link crossorigin href="//www.google.com" rel="preconnect">
    <link crossorigin href="//themes.googleusercontent.com" rel="preconnect">
    <meta content="C5119830137B7AA2497B0FBC0AA21BA4" name="msvalidate.01">
-   <link rel="stylesheet" href="{{ asset('frontend') }}/css/app-b78664b226f3a609b21b56dbdf68e838.css">
-   <link rel="stylesheet" href="{{ asset('frontend') }}/css/components_engine-d4d606e3c1d514eb42e771bbcae11953.css">
-   <link rel="stylesheet" href="{{ asset('frontend') }}/css/index-ac5c251d8f6f2df437334aaf69ef0659.css" />
-   <link rel="stylesheet" href="{{ asset('frontend') }}/css/show-973dfb26efb7f9bc4dcba729aed035e7.css">
-    <link rel="stylesheet" href="{{ asset('frontend') }}/css/app-39314be15c1f30a59259a417b8053afd.css"> 
-    <link rel="stylesheet" href="{{ asset('frontend') }}/css/show-505e834ef3c46c4ffc03893c23d4be25.css">
-    <link rel="stylesheet" href="{{ asset('frontend/css/shop.css') }}">
 
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
    <!-- blog css start -->
       <link rel="stylesheet"
     href="https://www.revzilla.com/css/sites/revzilla/app-0e055e2ef291a0dcc4d4ccf2265e71b0.css?vsn=d">
@@ -1143,6 +1135,17 @@
   <link rel="stylesheet"
     href="https://www.revzilla.com/css/sites/revzilla/templates/blog/show-6be7b73ad7abf9e52da202e55ed184fb.css?vsn=d">
     <!-- blog css end -->
+
+   <link rel="stylesheet" href="{{ asset('frontend') }}/css/app-b78664b226f3a609b21b56dbdf68e838.css">
+   <link rel="stylesheet" href="{{ asset('frontend') }}/css/components_engine-d4d606e3c1d514eb42e771bbcae11953.css">
+   <link rel="stylesheet" href="{{ asset('frontend') }}/css/index-ac5c251d8f6f2df437334aaf69ef0659.css" />
+   <link rel="stylesheet" href="{{ asset('frontend') }}/css/show-973dfb26efb7f9bc4dcba729aed035e7.css">
+    <link rel="stylesheet" href="{{ asset('frontend') }}/css/app-39314be15c1f30a59259a417b8053afd.css">
+    <link rel="stylesheet" href="{{ asset('frontend') }}/css/show-505e834ef3c46c4ffc03893c23d4be25.css">
+    <link rel="stylesheet" href="{{ asset('frontend/css/shop.css') }}">
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
    <script type="136ba6a1ac3be6cd75fee6c3-text/javascript">
       (function (w) {
          w.__rq = w.__rq || []
@@ -1245,4 +1248,13 @@
       };
    </script>
    <script src="{{ asset('frontend') }}/js/rocket-loader.min.js" data-cf-settings="136ba6a1ac3be6cd75fee6c3-|49"></script>
+   <!-- Select2 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+
+<!-- jQuery (required for Select2) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Select2 JS -->
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
 </head>

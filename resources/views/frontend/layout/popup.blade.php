@@ -1,5 +1,5 @@
 <div class="reveal-overlay"  id="shop-your-ride-modal">
-      <h1>hi</h1>
+      {{-- <h1>hi</h1> --}}
       <div class="reveal-href reveal authentication-form-modal" data-open-href-modal="/auth/identity" role="dialog"
          aria-hidden="false" data-fe="xjsvn3-fe" style="display: block; top: 101px;" tabindex="-1">
          <div class="reveal-header"><a class="reveal-header__close"></a></div>
@@ -11,13 +11,13 @@
                   <div class="shop-by-bike__mobile-select-toggle ui-action-button ui-action-button--fast"
                      data-click-toggle=""
                      data-toggle-selector=".shop-by-bike__select, .shop-by-bike__mobile-select-toggle"
-                     data-qa="shop-by-bike-link">Shop Your Ride</div>
+                     data-qa="shop-by-bike-link">My Garage</div>
                   <div class="shop-by-bike__select">
 
                      <div class="shop-by shop-by-bike__content shop-by-bike__content--select">
                         <div class="shop-by-bike__header">
                            <span class="shop-by__heading">
-                              <span class="shop-by__heading-text">Shop Your Ride</span>
+                              <span class="shop-by__heading-text">My Garage</span>
                            </span>
                            <span class="shop-by-bike__action-label shop-by-bike__action-label--recent"
                               data-js="ShopByBike.recentBike" style="display: none">Recent Vehicle</span>
@@ -28,40 +28,36 @@
                         </div>
 
                         <div class="shop-by-bike__form">
-                           <form class="shop-by-bike__select-dimensions" data-js="VehicleSelector.form"><input
-                                 name="is_oem" type="hidden" value="false"><select aria-label="Select vehicle type"
-                                 class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--type ui-select"
-                                 data-field-name="Bike Type" data-js="VehicleSelector.select"
-                                 data-vehicle-selector-model="vehicle-type" name="type">
-                                 <option data-js="VehicleSelector.defaultOption" value="">Type</option>
-                                 <option value="1">Street Bike</option>
-                                 <option value="4">Dirt Bike</option>
-                                 <option value="16">UTV/ATV</option>
-                              </select><select aria-label="Select vehicle year"
-                                 class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--year ui-select"
-                                 data-field-name="Year" data-js="VehicleSelector.select"
-                                 data-vehicle-selector-model="vehicle-years" disabled="" name="year">
-                                 <option data-js="VehicleSelector.defaultOption" value="">Year</option>
-                              </select><select aria-label="Select vehicle make"
-                                 class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--make ui-select"
-                                 data-field-name="Make" data-js="VehicleSelector.select"
-                                 data-vehicle-selector-model="vehicle-makes" disabled="" name="make">
-                                 <option data-js="VehicleSelector.defaultOption" value="">Make</option>
-                              </select><select aria-label="Select vehicle model"
-                                 class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--model ui-select"
-                                 data-field-name="Model" data-js="VehicleSelector.select"
-                                 data-vehicle-selector-model="vehicle-models" disabled="" name="model">
-                                 <option data-js="VehicleSelector.defaultOption" value="">Model</option>
-                              </select><a class="shop-by-bike__select-selection-link ui-button"
-                                 data-csrf="WDs8Il04WlA1BncUe1g5DxxwQT1mXAYH7ZNLhO3cyJDEV2cEO11D34cs"
-                                 data-js="VehicleSelector.selection" disabled="" href="">Go!</a></form>
+                            <form action="{{ route('shop.products') }}" method="GET" id="bikeForm" class="shop-by-bike__select-dimensions">
+                                @csrf
+                                <select name="company_id" id="companySelect" class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--type ui-select">
+                                    <option value="">Make</option>
+                                    @php
+                                    $companies = App\Models\Company::all();
+                                    @endphp
+                                    @foreach($companies as $company)
+                                        <option value="{{ $company->id }}">{{ $company->name }}</option>
+                                    @endforeach
+                                </select>
+
+                                <select name="bike_id" id="modelSelect" class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--model ui-select" disabled>
+                                    <option value="">Select Model</option>
+                                </select>
+
+                                <select name="color_id" id="colorSelect" class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--model ui-select" disabled>
+                                    <option value="">Select Color</option>
+                                </select>
+
+                                <button type="submit" id="goBtn" class="shop-by-bike__select-selection-link ui-button" disabled>Go!</button>
+                            </form>
+
 
                         </div>
-                        <div class="shop-by-bike__garage-copy">
+                        {{-- <div class="shop-by-bike__garage-copy">
     <a id="login-modal-button" class="ui-link ui-link--small open-login-modal-btn">Log in</a> to manage your garage
     &amp; search history
-</div>
-                        <div class="shop-by-bike__garage shop-by-bike__garage--unauthed">
+</div> --}}
+                        {{-- <div class="shop-by-bike__garage shop-by-bike__garage--unauthed">
                            <div class="shop-by-bike__garage-section shop-by-bike__garage-section--saved">
                               <div class="shop-by-bike__garage-heading">My Garage</div>
                               <div class="shop-by-bike__garage-list"><span
@@ -76,7 +72,7 @@
                                     <div class="shop-by-bike__garage-list-item-name">N/A</div>
                                  </span></div>
                            </div>
-                        </div>
+                        </div> --}}
                      </div>
                   </div>
                </div>
@@ -250,3 +246,66 @@
          </div>
       </div>
    </div>
+
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    let companySelect = document.getElementById('companySelect');
+    let modelSelect = document.getElementById('modelSelect');
+    let colorSelect = document.getElementById('colorSelect');
+    let goBtn = document.getElementById('goBtn');
+
+    // When company selected -> load models
+    companySelect.addEventListener('change', function() {
+        let companyId = this.value;
+        modelSelect.innerHTML = '<option value="">Select Model</option>';
+        colorSelect.innerHTML = '<option value="">Select Color</option>';
+        modelSelect.disabled = true;
+        colorSelect.disabled = true;
+        goBtn.disabled = true;
+
+        if (companyId) {
+            fetch("{{ url('/get-models') }}/" + companyId)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        modelSelect.disabled = false;
+                        data.forEach(model => {
+                            modelSelect.innerHTML += `<option value="${model.id}">${model.model}</option>`;
+                        });
+                    }
+                });
+        }
+    });
+
+    // When model selected -> load colors
+    modelSelect.addEventListener('change', function() {
+        let bikeId = this.value;
+        colorSelect.innerHTML = '<option value="">Select Color</option>';
+        colorSelect.disabled = true;
+        goBtn.disabled = true;
+
+        if (bikeId) {
+            fetch("{{ url('/get-colors') }}/" + bikeId)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        colorSelect.disabled = false;
+                        data.forEach(color => {
+                            colorSelect.innerHTML += `<option value="${color.id}">${color.color_name}</option>`;
+                        });
+                    } else {
+                        goBtn.disabled = false; // enable if no colors
+                    }
+                });
+        }
+    });
+
+    // When color selected -> enable Go
+    colorSelect.addEventListener('change', function() {
+        if (this.value) {
+            goBtn.disabled = false;
+        }
+    });
+});
+
+   </script>

@@ -12,21 +12,20 @@
                             <ol class="breadcrumbs__list" itemscope="" itemtype="http://schema.org/BreadcrumbList" data-js="Breadcrumbs.list">
 
                                 <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                                    <a class="breadcrumbs__link" href="/" itemprop="item">Home</a>
+                                    <a class="breadcrumbs__link" href="{{ route('homepage') }}" itemprop="item">Home</a>
                                     <meta content="Home" itemprop="name">
                                     <meta content="1" itemprop="position">
                                 </li>
 
                                 <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                                    <a class="breadcrumbs__link" href="/motorcycle-helmets" itemprop="item">Helmets</a>
-                                    <meta content="Helmets" itemprop="name">
+                                    <a class="breadcrumbs__link" href="{{ route('shop.catalogue',$product->category->catalogue->id) }}" itemprop="item">{{ $product->category->catalogue->name }}</a>
+                                    <meta content="{{ $product->category->catalogue->name }}" itemprop="name">
                                     <meta content="2" itemprop="position">
                                 </li>
 
                                 <li class="breadcrumbs__item" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                                    <a class="breadcrumbs__link" href="/full-face-motorcycle-helmets" itemprop="item">Full
-                              Face</a>
-                                    <meta content="Full Face" itemprop="name">
+                                    <a class="breadcrumbs__link" href="{{ route('shop.category',$product->category->id) }}" itemprop="item">{{ $product->category->name }}</a>
+                                    <meta content="{{ $product->category->name }}" itemprop="name">
                                     <meta content="3" itemprop="position">
                                 </li>
 
@@ -36,38 +35,35 @@
                     </div>
 
                     <div class="product-show-summary__details product-show-details">
-                        <section class="product-show-details-name__sashes-and-badges  ">
-
+                        {{-- <section class="product-show-details-name__sashes-and-badges  ">
                             <div class="badge badge--horizontal product-show-details-name__badge">
                                 <div class="badge__message badge__message--top-rated">Top Rated</div>
                             </div>
-
-
-                        </section>
+                        </section> --}}
 
                         <div class="product-show-details__name  product-show-details-name">
 
-                            <a class="product-show-details-name__link ui-link" href="/arai-helmets">Arai Helmets</a>
+                            {{-- <a class="product-show-details-name__link ui-link" href="/arai-helmets">Arai Helmets</a> --}}
 
                             <h1 class="product-show-details-name__name" data-qa="product-name">
-                        Arai Regent-X Helmet
-                     </h1>
+                                {{ $product->name }}
+                            </h1>
                         </div>
 
                         <div class="product-show-details__ids  product-show-details-ids">
                             <div class="product-show-details-ids__ids">
-                                <span class="product-show-details-ids__id">
-                           Item: P1100726
-                        </span>
+                                <span class="product-show-details-ids__id" style="display: none;">
+                                Item: P1100726
+                                </span>
 
-                                <span class="product-show-details-ids__id js-SkuSelector-skuInfo" style="display: none;">
-                           SKU:
-                           <span class="js-SkuSelector-skuInfoId"></span>
+                                <span class="product-show-details-ids__id js-SkuSelector-skuInfo" >
+                                    SKU: {{ $product->sku }}
+                                    <span class="js-SkuSelector-skuInfoId"></span>
                                 </span>
                             </div>
                         </div>
 
-                        <div data-js="ReviewInterface.hoverReviewsContainer" class="product-show-details__ugc  product-show-details-ugc">
+                        {{-- <div data-js="ReviewInterface.hoverReviewsContainer" class="product-show-details__ugc  product-show-details-ugc">
                             <div class="product-show-details-ugc__rating-stars-wrapper">
                                 <div class="product-show-details-ugc__rating-stars  product-rating__stars" data-rating="4.5" data-js="ReviewInterface.ratingStars">
                                     <div class="product-show-details-ugc__turnto"></div>
@@ -79,7 +75,7 @@
                             data-review-count="182" href="#product-reviews-mobile">182</a>
                             <a class="product-show-details-ugc__ratings-link  product-show-details-ugc__ratings-link--read ui-link" data-js="JumpLink.link Tabs.link ReviewInterface.readLink" data-singular-language="Read 1 Review" data-plural-language="Read 2 Reviews" data-review-count="182"
                             data-js-tab-id="product-reviews" href="#product-reviews">Read 182
-                        Reviews</a>
+                            Reviews</a>
 
                             <span class="product-show-details-ugc__divider"></span>
                             <a class="product-show-details-ugc__ratings-link  product-show-details-ugc__ratings-link--qa ui-link" data-js="JumpLink.link Tabs.link" data-js-tab-id="product-qa" data-tab-id="product-qa" href="#product-reviews">24 Q&amp;As</a>
@@ -88,7 +84,7 @@
                             <span class="product-show-details-ugc__divider"></span>
                             <span class="reviews-write product-show-details-ugc__ratings-link  product-show-details-ugc__ratings-link--write ui-link" data-js="ReviewInterface.writeLink">Write a Review</span>
 
-                        </div>
+                        </div> --}}
 
 
                     </div>
@@ -101,12 +97,12 @@
                                 <div class="product-show-media-image__video-wrapper" data-js="GalleryVideoButton.videoOverlay">
                                     <button class="product-show-media-image__video-close-button" data-js="GalleryVideoButton.videoCloseButton">Close</button>
 
-                                    <div class="product-show-media__video  product-show-media-video" id="primary-video" data-primary-video="">
+                                    {{-- <div class="product-show-media__video  product-show-media-video" id="primary-video" data-primary-video="">
                                         <div class="product-show-media-video__iframe-wrapper">
 
-                                            <div class="product-show-media-video__lazy-youtube lazy-youtube" itemscope="" itemtype="http://schema.org/VideoObject" data-lazy-src="https://img.youtube.com/vi/UuNpfXkA7DM/0.jpg">
-                                                <meta content="https://img.youtube.com/vi/UuNpfXkA7DM/0.jpg" itemprop="thumbnailURL">
-                                                <meta content="https://www.youtube.com/embed/UuNpfXkA7DM" itemprop="embedURL">
+                                            <div class="product-show-media-video__lazy-youtube lazy-youtube" itemscope="" itemtype="http://schema.org/VideoObject" data-lazy-src="https://img.youtube.com/vi/{{ $product->video }}/0.jpg">
+                                                <meta content="https://img.youtube.com/vi/{{ $product->video }}/0.jpg" itemprop="thumbnailURL">
+                                                <meta content="https://www.youtube.com/embed/{{ $product->video }}" itemprop="embedURL">
 
                                                 <meta content="Arai unveils their entry-level helmet, and it’s the perfect introduction to Japan’s finest. Utilizing a PB-cLc shell, the Regent-X uses a multi density EPS derived from their top-shelf models. Free Flow System (FFS) ventilation keeps riders cool and comfortable. The Regent-X uses Arai’s VAS-V Max Vision shield system, and the shield itself is pinlock ready. (Pinlock insert not included.) Additional features include an anti-microbial liner, speaker pockets, a chin curtain, and DOT/Snell M2020 certification."
                                                 itemprop="description">
@@ -117,7 +113,7 @@
 
                                                 <meta content="Arai Regent-x Helmet Review" itemprop="name">
 
-                                                <div class="lazy-youtube__frame" data-js="LazyYoutube.fakeEmbed" data-js-youtube-id="UuNpfXkA7DM">
+                                                <div class="lazy-youtube__frame" data-js="LazyYoutube.fakeEmbed" data-js-youtube-id="{{ $product->video }}">
                                                     <div class="lazy-youtube__thumbnail">
                                                         <button aria-label="Play youtube" class="lazy-youtube__play-button">
                                                             <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
@@ -141,14 +137,14 @@
                                             </div>
 
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                 </div>
 
 
                                 <div class="hover-zoom hover-zoom--not-zooming hover-zoom--done-zooming-out" data-js="HoverZoom.interface">
                                     <div class="product-show-media-image__image-wrapper">
-                                        <div class="hover-zoom__image-wrapper"><img alt="Frost Black" class="product-show-media-image__image" data-js="Gallery.activeImage" src="https://www.revzilla.com/product_images/2337/4781/arai_regent_x_helmet_modern_ivory_750x750.jpg" data-src="https://www.revzilla.com/product_images/2337/4781/arai_regent_x_helmet_modern_ivory.jpg"
+                                        <div class="hover-zoom__image-wrapper"><img alt="Frost Black" class="product-show-media-image__image" data-js="Gallery.activeImage" src="{{ asset('images/products/image/'.$product->image) }}" data-src="{{ asset('images/products/image/'.$product->image) }}"
                                             style="transform: translate3d(0px, 0px, 0px) scale(1); transition: transform 150ms ease-in;">
                                         </div>
                                     </div>
@@ -168,6 +164,25 @@
                                     <div class="product-show-media-image__video-button" data-js="GalleryVideoButton.videoButton" data-js-youtube="actualizeFakeEmbeds"></div>
                                 </div>
                                 <div class="product-show-media-image__thumbnail" data-js="Gallery.thumbnail" itemscope="" itemtype="http://schema.org/ImageObject">
+                                    <meta content="{{ asset('images/products/image/'.$product->image) }}" itemprop="contentUrl">
+                                    <meta content="{{ $product->name }}" itemprop="caption">
+                                    <div class="product-show-media-image__thumbnail-image" data-src="{{ asset('images/products/image/'.$product->image) }}" data-js="Gallery.thumbnailImage" title="{{ $product->name }}" style="background-image: url(&quot;{{ asset('images/products/image/'.$product->image) }}&quot;);">
+                                    </div>
+                                </div>
+                                {{-- Loop for multiple images --}}
+
+                                @if ($product->images)
+                                    @foreach (($product->images) as $image)
+                                        <div class="product-show-media-image__thumbnail" data-js="Gallery.thumbnail" itemscope="" itemtype="http://schema.org/ImageObject">
+                                            <meta content="{{ asset('images/products/multi/'.$image->image) }}" itemprop="contentUrl">
+                                            <meta content="{{ $product->name }}" itemprop="caption">
+                                            <div class="product-show-media-image__thumbnail-image" data-src="{{ asset('images/products/multi/'.$image->image) }}" data-js="Gallery.thumbnailImage" title="{{ $product->name }}" style="background-image: url(&quot;{{ asset('images/products/multi/'.$image->image) }}&quot;);">
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                @endif
+
+                                {{-- <div class="product-show-media-image__thumbnail" data-js="Gallery.thumbnail" itemscope="" itemtype="http://schema.org/ImageObject">
                                     <meta content="https://www.revzilla.com/product_images/2337/4594/arai_regent_x_helmet.jpg" itemprop="contentUrl">
                                     <meta content="Frost Black Arai Regent-X Helmet" itemprop="caption">
                                     <div class="product-show-media-image__thumbnail-image" data-src="https://www.revzilla.com/product_images/2337/4594/arai_regent_x_helmet.jpg" data-js="Gallery.thumbnailImage" data-more-images-count="+12" title="Frost Black" style="background-image: url(&quot;https://www.revzilla.com/product_images/2337/4594/arai_regent_x_helmet_75x75.jpg&quot;);">
@@ -244,7 +259,7 @@
                                     <meta content="Modern Ivory Arai Regent-X Helmet" itemprop="caption">
                                     <div class="product-show-media-image__thumbnail-image" data-src="https://www.revzilla.com/product_images/2337/4798/arai_regent_x_helmet_modern_ivory.jpg" data-js="Gallery.thumbnailImage" title="Modern Ivory" style="background-image: url(&quot;https://www.revzilla.com/product_images/2337/4798/arai_regent_x_helmet_modern_ivory_75x75.jpg&quot;);">
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
@@ -255,7 +270,11 @@
                         <div class="product-show-details-pricing">
                             <div class="product-show-details-pricing__pricing-container">
                                 <div class="product-show-details-pricing__pricing-container-price-and-tooltips">
-                                    <span class="product-show-details-pricing__price js-SkuSelector-priceRetail" data-qa="price"><span class="mny"><span class="mny__c">$</span>579<sup class="mny__s">.</sup><sup>95</sup></span>
+                                    <span class="product-show-details-pricing__price js-SkuSelector-priceRetail" data-qa="price">
+                                        <span class="mny">
+                                        <span class="mny__c">৳ </span>{{ $product->unit_price }}
+                                    {{-- <sup class="mny__s">.</sup><sup>95</sup> --}}
+                                        </span>
                                     </span>
 
 
@@ -268,7 +287,7 @@
 
                         </div>
 
-                        <div class="rebate-callout" data-js="rebateCallout">
+                        {{-- <div class="rebate-callout" data-js="rebateCallout">
                             <div class="rebate-callout__text-wrapper">
                                 <span class="rebate-callout__text">
                            Rebate Available!
@@ -276,7 +295,7 @@
                               data-js="rebateCallout.link" rel="noopener">View Details</a>
                         </span>
                             </div>
-                        </div>
+                        </div> --}}
 
                     </div>
 
@@ -293,14 +312,14 @@
 
 
 
-                        <div class="product-show-sku__international-exclusions">
+                        {{-- <div class="product-show-sku__international-exclusions">
                             <div class="alert alert--warning" data-js="">
                                 <div class="alert__icon  alert__icon--warning"></div>
                                 <div class="alert__message  alert__message--warning">
                                     This item will not ship to Bangladesh due to manufacturer or carrier restrictions, however you can ship FREE to The United States.
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
 
 
 
@@ -310,7 +329,7 @@
                         <div class="product-show-sku__options product-show-details-options">
 
 
-                            <div class="product-show-sku-actions__action-wrapper  product-show-sku-actions__action-wrapper--full-width">
+                            {{-- <div class="product-show-sku-actions__action-wrapper  product-show-sku-actions__action-wrapper--full-width">
                                 <div data-wrapper-for=".product-show-sku-actions__link--size-chart" data-wrapper-at="small medium"></div>
 
                                 <label class="js-SkuSelector-container option-type option-type--swatchable option-type--multi-option">
@@ -320,8 +339,10 @@
                                     <span class="option-type__label  option-type__label--selected-option" data-js="OptionSwatcher.selectedOptionLabel  SkuSelector.selectedOptionLabel" data-qa="selected-option">Modern Ivory</span>
                                     <span class="option-type__label  option-type__label--highlighted-option" data-js="OptionSwatcher.highlightedOptionLabel" style="display: none;"></span>
                                     <span class="option-type__label  option-type__label--missing-selection-notification" data-js="SkuSelector.skuNotificationMessage" data-option-name="Color">
-                              Select a Color
-                           </span>
+                                        Select a Color
+                                    </span>
+
+
 
                                     <select aria-hidden="" aria-label="Color" class="option-type__select ui-select js-SkuSelector-optionType" data-option-type="2" data-option-type-name="Color" data-option-type-name-label="Color" required="">
                                         <option data-order="0">Select Color</option>
@@ -383,12 +404,13 @@
                                             </div>
                                         </div>
 
+
                                     </div>
 
 
                                 </label>
 
-                            </div>
+                            </div> --}}
 
 
 
@@ -453,7 +475,7 @@
 
                             <div class="product-show-sku-actions__link-wrapper  product-show-sku-actions__link-wrapper--size-chart">
                                 <div data-wrapper-for=".product-show-sku-actions__link--size-chart" data-wrapper-at="large xlarge xxlarge">
-                                    <a class="product-show-sku-actions__link--size-chart ui-link" data-open-href="" href="/size-chart/105">View Size Chart</a>
+                                    <a class="product-show-sku-actions__link--size-chart ui-link" data-open-href="" href="#">View Size Chart</a>
                                 </div>
                             </div>
 
@@ -462,18 +484,10 @@
 
                         <div class="product-show-sku__actions  product-show-actions">
                             <div class="product-show-sku-actions__action-wrapper" data-is-available="false">
-
-
-
                             </div>
                         </div>
 
-
-
-
-
-
-                        <div class="loyalty-value-props">
+                        {{-- <div class="loyalty-value-props">
                             <p class="loyalty-value-props__ways-to-earn">Ways to earn:</p>
 
                             <a class="" data-js="Pdp.valueProp" data-open-href="" data-open-href-reuse-modal="" href="/value-prop/zilla-cash">
@@ -527,13 +541,7 @@
                                 <span class="js-SkuSelector-rpmWelcomeCredit" data-welcome-credit-amount="15"></span>
                             </div>
 
-                        </div>
-
-
-
-
-
-
+                        </div> --}}
 
 
                         <form action="/cart/add-item" class="js-SkuSelector-form js-ProductForm-form" data-form-name="Add To Cart" data-remote-add-to-wish-list="" data-auth="" data-selfref="/motorcycle/arai-regent-x-helmet" method="post" data-gtm-form-interact-id="0">
@@ -547,11 +555,11 @@
                             <div class="product-show-sku__actions  product-show-actions">
 
                                 <div class="css-tabs product-show-sku-actions__action-wrapper">
-                                    <input type="radio" id="robis-container-atc" name="robis-container-tabs" class="css-tabs__input" checked="" data-gtm-form-interact-field-id="1">
+                                    {{-- <input type="radio" id="robis-container-atc" name="robis-container-tabs" class="css-tabs__input "  checked="" data-gtm-form-interact-field-id="1">
                                     <label for="robis-container-atc" class="css-tabs__label robis-container__tabs-label js-SkuSelector-atc-tab">
                                         <div class="robis-container__tabs-label-icon robis-container__tabs-label-icon--atc"></div>
                                         Get It Delivered
-                                    </label>
+                                    </label> --}}
 
                                     <div class="css-tabs__panel">
 
@@ -592,7 +600,7 @@
 
                                     </div>
 
-                                    <input type="radio" id="robis-container-robis" name="robis-container-tabs" class="css-tabs__input" data-gtm-form-interact-field-id="0">
+                                    {{-- <input type="radio" id="robis-container-robis" name="robis-container-tabs" class="css-tabs__input" data-gtm-form-interact-field-id="0">
                                     <label for="robis-container-robis" class="css-tabs__label robis-container__tabs-label js-SkuSelector-robis-tab">
                                         <div class="robis-container__tabs-label-icon robis-container__tabs-label-icon--robis">
                                         </div>
@@ -629,19 +637,19 @@
                                                 </button>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
 
                                 <div class="product-show-sku-actions__links">
                                     <div class="product-show-sku-actions__link-wrapper">
 
 
-                                        <a class="product-show-sku-actions__link product-show-sku-actions__link--wishlist ui-link" data-open-href="" data-js="ProductForm.wishListButton" data-open-class="authentication-form-modal" data-open-href-reuse-modal="" href="/auth/identity?state=2f6163636f756e742f776973682d6c6973742f6164643f736b755f69643d267175616e746974793d312672656469726563745f746f3d74727565">Add
-                                 To Wish List</a>
+                                        {{-- <a class="product-show-sku-actions__link product-show-sku-actions__link--wishlist ui-link" data-open-href="" data-js="ProductForm.wishListButton" data-open-class="authentication-form-modal" data-open-href-reuse-modal="" href="/auth/identity?state=2f6163636f756e742f776973682d6c6973742f6164643f736b755f69643d267175616e746974793d312672656469726563745f746f3d74727565">Add
+                                 To Wish List</a> --}}
 
 
                                     </div>
-                                    <div class="product-show-sku-actions__link-wrapper product-show-sku-actions__link-wrapper--share">
+                                    {{-- <div class="product-show-sku-actions__link-wrapper product-show-sku-actions__link-wrapper--share">
                                         <span class="ui-link product-show-sku-actions__link product-show-sku-actions__link--share" id="extole_zone_product_page_atw">
                                  <div id="extole-7008977181758244555">
                                     <style>
@@ -710,7 +718,7 @@
                                  </div>
                               </span>
                                         <span class="ui-link product-show-sku-actions__link product-show-sku-actions__link--share" id="extole_zone_mobile_product_page_atw">Share</span>
-                                    </div>
+                                    </div>--}}
                                 </div>
 
                             </div>
@@ -781,7 +789,7 @@
 
 
 
-                        <div class="product-show-sku__value-prop product-show-sku-value-prop" data-js="Pdp.valueProps.wrapper">
+                        {{-- <div class="product-show-sku__value-prop product-show-sku-value-prop" data-js="Pdp.valueProps.wrapper">
 
                             <div class="product-show-sku-value-prop__data product-show-sku-value-prop__free-shipping-us">
                                 <a class="product-show-sku-value-prop__text product-show-sku-value-prop__text--free-shipping-us" data-js="Pdp.valueProp" data-open-href="" data-open-href-reuse-modal="" href="/value-prop/shipping">
@@ -813,19 +821,9 @@
                                 </a>
                             </div>
 
-                        </div>
+                        </div> --}}
 
                         <div class="product-show-sku__blemished-sku">
-
-
-
-
-
-
-
-
-
-
 
                             <div class="product-show-sku-blemished-sku product-show-sku-blemished-sku--single js-SkuSelector-blemishedSku" data-sku-id="10413827" style="display: none;">
                                 <div class="product-show-sku-blemished-sku__details">
@@ -855,183 +853,102 @@
                             </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                         </div>
 
                     </div>
+                    @if ($product->video)
+                        <div class="product-show-summary__media product-show-media">
 
-                    <div class="product-show-summary__media product-show-media">
+                            <div class="product-show-media__video  product-show-media-video" id="primary-video" data-primary-video="">
+                                <div class="product-show-media-video__iframe-wrapper">
 
-                        <div class="product-show-media__video  product-show-media-video" id="primary-video" data-primary-video="">
-                            <div class="product-show-media-video__iframe-wrapper">
+                                    <div class="product-show-media-video__lazy-youtube lazy-youtube" itemscope="" itemtype="http://schema.org/VideoObject" style="opacity: 1; background-image: url(&quot;https://img.youtube.com/vi/{{ $product->video }}/0.jpg&quot;);">
+                                        <meta content="https://img.youtube.com/vi/{{ $product->video }}/0.jpg" itemprop="thumbnailURL">
+                                        <meta content="https://www.youtube.com/embed/{{ $product->video }}" itemprop="embedURL">
 
-                                <div class="product-show-media-video__lazy-youtube lazy-youtube" itemscope="" itemtype="http://schema.org/VideoObject" style="opacity: 1; background-image: url(&quot;https://img.youtube.com/vi/UuNpfXkA7DM/0.jpg&quot;);">
-                                    <meta content="https://img.youtube.com/vi/UuNpfXkA7DM/0.jpg" itemprop="thumbnailURL">
-                                    <meta content="https://www.youtube.com/embed/UuNpfXkA7DM" itemprop="embedURL">
-
-                                    <meta content="Arai unveils their entry-level helmet, and it’s the perfect introduction to Japan’s finest. Utilizing a PB-cLc shell, the Regent-X uses a multi density EPS derived from their top-shelf models. Free Flow System (FFS) ventilation keeps riders cool and comfortable. The Regent-X uses Arai’s VAS-V Max Vision shield system, and the shield itself is pinlock ready. (Pinlock insert not included.) Additional features include an anti-microbial liner, speaker pockets, a chin curtain, and DOT/Snell M2020 certification."
-                                    itemprop="description">
-
-
-                                    <meta content="2020-3-9" itemprop="uploadDate">
+                                        <meta content="Arai unveils their entry-level helmet, and it’s the perfect introduction to Japan’s finest. Utilizing a PB-cLc shell, the Regent-X uses a multi density EPS derived from their top-shelf models. Free Flow System (FFS) ventilation keeps riders cool and comfortable. The Regent-X uses Arai’s VAS-V Max Vision shield system, and the shield itself is pinlock ready. (Pinlock insert not included.) Additional features include an anti-microbial liner, speaker pockets, a chin curtain, and DOT/Snell M2020 certification."
+                                        itemprop="description">
 
 
-                                    <meta content="Arai Regent-x Helmet Review" itemprop="name">
+                                        <meta content="2020-3-9" itemprop="uploadDate">
 
-                                    <div class="lazy-youtube__frame" data-js="LazyYoutube.fakeEmbed" data-js-youtube-id="UuNpfXkA7DM">
-                                        <div class="lazy-youtube__thumbnail">
-                                            <button aria-label="Play youtube" class="lazy-youtube__play-button">
-                                                <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
-                                                    <path class="lazy-youtube__play-button-background" d="m .66,37.62 c 0,0 .66,4.70 2.70,6.77 2.58,2.71 5.98,2.63 7.49,2.91 5.43,.52 23.10,.68 23.12,.68 .00,-1.3e-5 14.29,-0.02 23.81,-0.71 1.32,-0.15 4.22,-0.17 6.81,-2.89 2.03,-2.07 2.70,-6.77 2.70,-6.77 0,0 .67,-5.52 .67,-11.04 l 0,-5.17 c 0,-5.52 -0.67,-11.04 -0.67,-11.04 0,0 -0.66,-4.70 -2.70,-6.77 C 62.03,.86 59.13,.84 57.80,.69 48.28,0 34.00,0 34.00,0 33.97,0 19.69,0 10.18,.69 8.85,.84 5.95,.86 3.36,3.58 1.32,5.65 .66,10.35 .66,10.35 c 0,0 -0.55,4.50 -0.66,9.45 l 0,8.36 c .10,4.94 .66,9.45 .66,9.45 z"
-                                                    fill="#1f1f1e" fill-opacity="0.9"></path>
-                                                    <path d="m 26.96,13.67 18.37,9.62 -18.37,9.55 -0.00,-19.17 z" fill="#fff"></path>
-                                                    <path d="M 45.02,23.46 45.32,23.28 26.96,13.67 43.32,24.34 45.02,23.46 z" fill="#ccc"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
 
-                                        <div class="lazy-youtube__top-section">
-                                            <div class="lazy-youtube__title">
-                                                <div class="lazy-youtube__title-text">
-                                                    <a class="lazy-youtube__title-link" target="_blank" href="https://www.youtube.com/watch?v=UuNpfXkA7DM">Arai Regent-x Helmet
-                                          Review</a>
+                                        <meta content="Arai Regent-x Helmet Review" itemprop="name">
+
+                                        {{-- <div class="lazy-youtube__frame" data-js="" data-js-youtube-id="{{ $product->video }}">
+                                            <div class="lazy-youtube__thumbnail">
+                                                <button aria-label="Play youtube" class="lazy-youtube__play-button">
+                                                    <svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+                                                        <path class="lazy-youtube__play-button-background" d="m .66,37.62 c 0,0 .66,4.70 2.70,6.77 2.58,2.71 5.98,2.63 7.49,2.91 5.43,.52 23.10,.68 23.12,.68 .00,-1.3e-5 14.29,-0.02 23.81,-0.71 1.32,-0.15 4.22,-0.17 6.81,-2.89 2.03,-2.07 2.70,-6.77 2.70,-6.77 0,0 .67,-5.52 .67,-11.04 l 0,-5.17 c 0,-5.52 -0.67,-11.04 -0.67,-11.04 0,0 -0.66,-4.70 -2.70,-6.77 C 62.03,.86 59.13,.84 57.80,.69 48.28,0 34.00,0 34.00,0 33.97,0 19.69,0 10.18,.69 8.85,.84 5.95,.86 3.36,3.58 1.32,5.65 .66,10.35 .66,10.35 c 0,0 -0.55,4.50 -0.66,9.45 l 0,8.36 c .10,4.94 .66,9.45 .66,9.45 z"
+                                                        fill="#1f1f1e" fill-opacity="0.9"></path>
+                                                        <path d="m 26.96,13.67 18.37,9.62 -18.37,9.55 -0.00,-19.17 z" fill="#fff"></path>
+                                                        <path d="M 45.02,23.46 45.32,23.28 26.96,13.67 43.32,24.34 45.02,23.46 z" fill="#ccc"></path>
+                                                    </svg>
+                                                </button>
+                                            </div>
+
+                                            <div class="lazy-youtube__top-section">
+                                                <div class="lazy-youtube__title">
+                                                    <div class="lazy-youtube__title-text">
+                                                        <a class="lazy-youtube__title-link" target="_blank" href="https://www.youtube.com/watch?v={{ $product->video }}">Arai Regent-x Helmet
+                                            Review</a>
+                                                    </div>
                                                 </div>
                                             </div>
+                                        </div> --}}
+                                        <iframe width="560" height="315"
+                                            src="https://www.youtube.com/embed/{{ $product->video }}"
+                                            frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="product-show-media__help  product-show-media-help">
+
+                                <div class="product-show-media-help__link-wrapper  product-show-media-help__link-wrapper--videos product-show-media-help__link-wrapper--hide-for-desktop-test">
+                                    <a class="ui-link" data-js="" href="#videos">View More Videos</a>
+                                </div>
+
+                                {{-- <div class="product-show-media-help__link-wrapper  product-show-media-help__link-wrapper--contact">
+                                    <div class="product-show-media-help__geek-photo">
+                                        <img src="{{ asset('frontend/image/small/Geek13.jpg') }}" class="product-show-media-help__geek-photo--image" alt="Gear Geek">
+                                    </div>
+                                    <div class="product-show-media-help__contact-info">
+                                        <div>
+                                            Need Help?
+                                        </div>
+                                        <div class="product-show-media-help__subhead">
+                                            Speak to one of our Gear Geeks:
+                                        </div>
+                                        <div>
+                                            <span class="product-show-media-help__text product-show-media-help__text--mobile">
+                                    <a class="product-show-media-help__text product-show-media-help__text--phone ui-link"
+                                        href="tel:+1 (215) 334-5500">Tap to Call</a>
+                                </span>
+                                            <span class="product-show-media-help__text product-show-media-help__text--desktop">
+                                    <a class="product-show-media-help__text product-show-media-help__text--phone ui-link"
+                                        href="/customer-service" target="_blank">+1 (215) 334-5500</a>
+                                </span>
+                                            <span class="product-show-media-help__text product-show-media-help__text--desktop">
+                                    <a class="product-show-media-help__text product-show-media-help__text--email ui-link"
+                                        href="/contact-us" target="_blank">Email Us</a>
+                                </span>
+                                            <span class="product-show-media-help__text product-show-media-help__text--desktop product-show-media-help__live-help-now">
+                                    <span
+                                        class="product-show-media-help__text product-show-media-help__text--chat ui-link">Chat</span>
+                                            </span>
                                         </div>
                                     </div>
-                                </div>
-
+                                </div> --}}
                             </div>
+
                         </div>
-
-
-                        <div class="product-show-media__help  product-show-media-help">
-
-                            <div class="product-show-media-help__link-wrapper  product-show-media-help__link-wrapper--videos product-show-media-help__link-wrapper--hide-for-desktop-test">
-                                <a class="ui-link" data-js="JumpLink.link" href="#videos">View More Videos</a>
-                            </div>
-
-                            <div class="product-show-media-help__link-wrapper  product-show-media-help__link-wrapper--contact">
-                                <div class="product-show-media-help__geek-photo">
-                                    <img src="{{ asset('frontend/image/small/Geek13.jpg') }}" class="product-show-media-help__geek-photo--image" alt="Gear Geek">
-                                </div>
-                                <div class="product-show-media-help__contact-info">
-                                    <div>
-                                        Need Help?
-                                    </div>
-                                    <div class="product-show-media-help__subhead">
-                                        Speak to one of our Gear Geeks:
-                                    </div>
-                                    <div>
-                                        <span class="product-show-media-help__text product-show-media-help__text--mobile">
-                                 <a class="product-show-media-help__text product-show-media-help__text--phone ui-link"
-                                    href="tel:+1 (215) 334-5500">Tap to Call</a>
-                              </span>
-                                        <span class="product-show-media-help__text product-show-media-help__text--desktop">
-                                 <a class="product-show-media-help__text product-show-media-help__text--phone ui-link"
-                                    href="/customer-service" target="_blank">+1 (215) 334-5500</a>
-                              </span>
-                                        <span class="product-show-media-help__text product-show-media-help__text--desktop">
-                                 <a class="product-show-media-help__text product-show-media-help__text--email ui-link"
-                                    href="/contact-us" target="_blank">Email Us</a>
-                              </span>
-                                        <span class="product-show-media-help__text product-show-media-help__text--desktop product-show-media-help__live-help-now">
-                                 <span
-                                    class="product-show-media-help__text product-show-media-help__text--chat ui-link">Chat</span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                    @endif
 
                     <div class="product-show-summary__recommendations">
 
@@ -2378,195 +2295,195 @@
 
 
 
-                                        <div data-wrapper-for=".helmet-dimensions" data-wrapper-at="small medium large xlarge xxlarge">
-                                            <div class="product-description__helmet-dimensions helmet-dimensions">
-                                                <img alt="Helmet shape is Intermediate Oval" class="helmet-dimensions__image" data-src="/images/sites/revzilla/pages/product/show/helmet_shape_weight/intermediate_oval.png" src="{{asset('frontend/image/small/intermediate_oval_80x63.jpg')}}">
+                                            {{-- <div data-wrapper-for=".helmet-dimensions" data-wrapper-at="small medium large xlarge xxlarge">
+                                                <div class="product-description__helmet-dimensions helmet-dimensions">
+                                                    <img alt="Helmet shape is Intermediate Oval" class="helmet-dimensions__image" data-src="/images/sites/revzilla/pages/product/show/helmet_shape_weight/intermediate_oval.png" src="{{asset('frontend/image/small/intermediate_oval_80x63.jpg')}}">
 
-                                                <p class="helmet-dimensions__dimension ui-copy">
-                                                    <span class="helmet-dimensions__dimension-label helmet-dimensions__dimension-label--shape">Shape:</span>
-                                                    <span class="helmet-dimensions__dimension-value">Intermediate Oval</span>
+                                                    <p class="helmet-dimensions__dimension ui-copy">
+                                                        <span class="helmet-dimensions__dimension-label helmet-dimensions__dimension-label--shape">Shape:</span>
+                                                        <span class="helmet-dimensions__dimension-value">Intermediate Oval</span>
+                                                    </p>
+
+
+                                                    <hr class="helmet-dimensions__divider">
+
+
+                                                    <p class="helmet-dimensions__dimension ui-copy">
+                                                        <span class="helmet-dimensions__dimension-label. helmet-dimensions__dimension-label--weight">Weight:</span>
+                                                        <span class="helmet-dimensions__dimension-value">3.41 lbs.</span>
+                                                    </p>
+
+                                                    <a class="helmet-dimensions__help-link ui-link" data-open-href="" href="/head-shape-and-helmet-weight-help">What's this?</a>
+                                                </div>
+
+                                            </div>
+
+                                            <div class="product-details__details-long">
+
+                                                <h3>
+                                        Arai Regent-X Helmet</h3>
+                                                <div class="enhanced-description">
+                                                    <div class="two-up">
+                                                        <div class="enhanced-description stack-col">
+                                                            <h3>
+                                                PB SCLC Shell:</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    Peripherally Belted - Super Complex Laminate Construction shell</li>
+                                                                <li>
+                                                                    Design combines multiple materials and techniques created internally by Arai that deliver both performance and affordability</li>
+                                                                <li>
+                                                                    Shell has superb tensile strength due to a variety of carefully-positioned materials and light weight resin</li>
+                                                                <li>
+                                                                    4 shell sizes</li>
+                                                            </ul>
+                                                            <h3>
+                                                VAS Shield System:</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    VAS (Variable Axis System) shield and side pods are exclusive to the Arai Corsair X Helmet</li>
+                                                                <li>
+                                                                    Variable axis (moving pivot point) allows shield mount position to be lower than most helmets</li>
+                                                                <li>
+                                                                    Dual function lever releases both the side pod and the face shield for quick and simple face shield removal</li>
+                                                            </ul>
+                                                            <h3>
+                                                VAS Shield Latch System:</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    Captures and holds the face shield securely closed</li>
+                                                                <li>
+                                                                    Provides a de-mist position to slightly crack the shield open</li>
+                                                                <li>
+                                                                    Larger latch design allows for intuitive and seamless operation</li>
+                                                            </ul>
+                                                            <h3>
+                                                VAS V MV Shield:</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    VAS MAX Vision clear&nbsp;<a href="https://www.revzilla.com/arai-regent-x-accessories" target="_blank">face shield</a>&nbsp;included</li>
+                                                                <li>
+                                                                    Provides excellent visibility in all seasons</li>
+                                                                <li>
+                                                                    <span class="redline-tooltip redline-tooltip--help-keywords" data-js="Tooltip.Container">
+                                                    <span class="redline-tooltip__help-keyword" data-js="Tooltip.Icon">
+                                                        <strong>Pinlock</strong>
+                                                        <span class="redline-tooltip__popout-window"
+                                                            data-js="Tooltip.PopoutWindow">
+                                                            <span class="redline-tooltip__description"><img
+                                                                class="redline-tooltip__float-img"
+                                                                src="/help_keyword/image/1243/dks434_3d_c_mx_d.png">A
+                                                                Pinlock lens is made to enjoy a fog-free ride. It is based
+                                                                on two key principles to ensure a fog-free vision. The
+                                                                moisture absorbing surface of the lens effectively attracts
+                                                                and stores water molecules, while the airtight seal creates
+                                                                a thermal barrier together preventing condensation of the
+                                                                visor. The system is kept in place by positioning the lens
+                                                                between two adjustable pins, making Pinlock the number one
+                                                                anti-fog solution for helmets.</span>
+                                                                    <span class="redline-tooltip__arrow" data-js="Tooltip.Arrow"></span>
+                                                                    </span>
+                                                                    </span>
+                                                                    </span> Ready (available&nbsp;separately)</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="enhanced-description stack-col">
+                                                            <h3>
+                                                Ventilation:</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    Free Flow System (FFS) ventilation creates airflow under the helmet to reduce wind noise and turbulence while increasing hot air exhaust</li>
+                                                                <li>
+                                                                    Dual intake front vents, side exhausts and one-piece rear exhaust</li>
+                                                                <li>
+                                                                    Three position chin vent</li>
+                                                                <li>
+                                                                    Neck vent exhaust</li>
+                                                                <li>
+                                                                    Vents are easy to operate with gloved hands</li>
+                                                            </ul>
+                                                            <h3>
+                                                Interior:</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    Facial Contour System (FCS) offers a snug fit by using a foam spring support in the <a href="https://www.revzilla.com/arai-regent-x-accessories" target="_blank">cheek pad</a> that compresses
+                                                                    and rebounds without excessive pressure</li>
+                                                                <li>
+                                                                    Fully removable and soft interior liner with 5mm peel-away layer for a perfect fit</li>
+                                                                <li>
+                                                                    Speaker pockets</li>
+                                                                <li>
+                                                                    Made from odor-resistant material which helps maintain neutral acidity levels close to human skin</li>
+                                                                <li>
+                                                                    Non-removable chin curtain</li>
+                                                            </ul>
+                                                            <h3>
+                                                Safety:</h3>
+                                                            <ul>
+                                                                <li>
+                                                                    <span class="redline-tooltip redline-tooltip--help-keywords" data-js="Tooltip.Container">
+                                                    <span class="redline-tooltip__help-keyword" data-js="Tooltip.Icon">
+                                                        <strong>Double D-ring</strong>
+                                                        <span class="redline-tooltip__popout-window"
+                                                            data-js="Tooltip.PopoutWindow">
+                                                            <span class="redline-tooltip__description"><img
+                                                                class="redline-tooltip__float-img"
+                                                                src="/help_keyword/image/1258/images.jpg">The Double
+                                                                D-ring closure is THE tried-and-true motorcycle helmet
+                                                                retention system. Consisting of two "D" shaped rings, the
+                                                                rider laces the opposing strap through the closure to secure
+                                                                the helmet. It is strong, simple, reliable and infinitely
+                                                                adjustable. Some helmets use alternative closure methods,
+                                                                but the Double D-ring remains the gold standard for these
+                                                                reasons.</span>
+                                                                    <span class="redline-tooltip__arrow" data-js="Tooltip.Arrow"></span>
+                                                                    </span>
+                                                                    </span>
+                                                                    </span> closure</li>
+                                                                <li>
+                                                                    Snell M2025&nbsp;and DOT certified</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p>
+                                                    <img class="full-width" data-lazy-="" src="https://www.revzilla.com/content_image/image/92680/039fec77-67db-Regent_Hero_Size_Hero.jpg">
+                                                </p>
+                                                <p>
+                                                    <br>
+                                                    <b>Regent (re·​gent): Noun: A person who rules. </b></p>
+                                                <div class="enhanced-description">
+                                                    <div class="two-up">
+                                                        <div class="enhanced-description stack-col">
+                                                            <h2>
+                                                Heritage</h2>
+                                                            <p>
+                                                                The Arai Regent-X Helmet is a first-rate helmet that welcomes riders to Arai's exceptional build quality, materials and design.</p>
+                                                            <p>
+                                                                Using Super PB-cLc shell construction gives the Regent-X a structure that's extremely rigid and also lightweight - all while meeting rigorous Snell certification standard. With an intermediate oval head shape, the Regent-X fits those with heads that are
+                                                                slightly longer front to back compared to side to side. The multi-density EPS is a single piece that allows Arai to provide protection where it is needed most while still providing a sleek, low
+                                                                profile helmet.</p>
+                                                        </div>
+                                                        <img class="float-right" data-lazy-="" src="https://www.revzilla.com/content_image/image/92682/Arai-Regent-X-Review-motorcycle-helmet-16.jpg">
+                                                    </div>
+                                                    <div class="two-up">
+                                                        <img class="float-left" data-lazy-="" src="https://www.revzilla.com/content_image/image/92681/Arai-Regent-X-Review-motorcycle-helmet-8.jpg">
+                                                        <div class="enhanced-description stack-col">
+                                                            <h2>
+                                                Performance</h2>
+                                                            <p>
+                                                                The Variable Axis System (VAS) provides a pivot point for the face shield that moves so the face shield can be mounted lower on the helmet while still having enough clearance to open the face shield. The VAS Shield Latch System holds the face shield securely
+                                                                closed or it can be opened slightly to allow venting. The top padding cannot be removed, but cheek pads can be removed for cleaning or replacement.</p>
+                                                            <p>
+                                                                The Arai Regent-X Helmet fine tunes Arai's features to embrace riders looking for a comfortable, protective and premium helmet.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <p>
                                                 </p>
 
-
-                                                <hr class="helmet-dimensions__divider">
-
-
-                                                <p class="helmet-dimensions__dimension ui-copy">
-                                                    <span class="helmet-dimensions__dimension-label. helmet-dimensions__dimension-label--weight">Weight:</span>
-                                                    <span class="helmet-dimensions__dimension-value">3.41 lbs.</span>
-                                                </p>
-
-                                                <a class="helmet-dimensions__help-link ui-link" data-open-href="" href="/head-shape-and-helmet-weight-help">What's this?</a>
-                                            </div>
-
-                                        </div>
-
-                                        <div class="product-details__details-long">
-
-                                            <h3>
-                                    Arai Regent-X Helmet</h3>
-                                            <div class="enhanced-description">
-                                                <div class="two-up">
-                                                    <div class="enhanced-description stack-col">
-                                                        <h3>
-                                             PB SCLC Shell:</h3>
-                                                        <ul>
-                                                            <li>
-                                                                Peripherally Belted - Super Complex Laminate Construction shell</li>
-                                                            <li>
-                                                                Design combines multiple materials and techniques created internally by Arai that deliver both performance and affordability</li>
-                                                            <li>
-                                                                Shell has superb tensile strength due to a variety of carefully-positioned materials and light weight resin</li>
-                                                            <li>
-                                                                4 shell sizes</li>
-                                                        </ul>
-                                                        <h3>
-                                             VAS Shield System:</h3>
-                                                        <ul>
-                                                            <li>
-                                                                VAS (Variable Axis System) shield and side pods are exclusive to the Arai Corsair X Helmet</li>
-                                                            <li>
-                                                                Variable axis (moving pivot point) allows shield mount position to be lower than most helmets</li>
-                                                            <li>
-                                                                Dual function lever releases both the side pod and the face shield for quick and simple face shield removal</li>
-                                                        </ul>
-                                                        <h3>
-                                             VAS Shield Latch System:</h3>
-                                                        <ul>
-                                                            <li>
-                                                                Captures and holds the face shield securely closed</li>
-                                                            <li>
-                                                                Provides a de-mist position to slightly crack the shield open</li>
-                                                            <li>
-                                                                Larger latch design allows for intuitive and seamless operation</li>
-                                                        </ul>
-                                                        <h3>
-                                             VAS V MV Shield:</h3>
-                                                        <ul>
-                                                            <li>
-                                                                VAS MAX Vision clear&nbsp;<a href="https://www.revzilla.com/arai-regent-x-accessories" target="_blank">face shield</a>&nbsp;included</li>
-                                                            <li>
-                                                                Provides excellent visibility in all seasons</li>
-                                                            <li>
-                                                                <span class="redline-tooltip redline-tooltip--help-keywords" data-js="Tooltip.Container">
-                                                   <span class="redline-tooltip__help-keyword" data-js="Tooltip.Icon">
-                                                      <strong>Pinlock</strong>
-                                                      <span class="redline-tooltip__popout-window"
-                                                         data-js="Tooltip.PopoutWindow">
-                                                         <span class="redline-tooltip__description"><img
-                                                               class="redline-tooltip__float-img"
-                                                               src="/help_keyword/image/1243/dks434_3d_c_mx_d.png">A
-                                                            Pinlock lens is made to enjoy a fog-free ride. It is based
-                                                            on two key principles to ensure a fog-free vision. The
-                                                            moisture absorbing surface of the lens effectively attracts
-                                                            and stores water molecules, while the airtight seal creates
-                                                            a thermal barrier together preventing condensation of the
-                                                            visor. The system is kept in place by positioning the lens
-                                                            between two adjustable pins, making Pinlock the number one
-                                                            anti-fog solution for helmets.</span>
-                                                                <span class="redline-tooltip__arrow" data-js="Tooltip.Arrow"></span>
-                                                                </span>
-                                                                </span>
-                                                                </span> Ready (available&nbsp;separately)</li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="enhanced-description stack-col">
-                                                        <h3>
-                                             Ventilation:</h3>
-                                                        <ul>
-                                                            <li>
-                                                                Free Flow System (FFS) ventilation creates airflow under the helmet to reduce wind noise and turbulence while increasing hot air exhaust</li>
-                                                            <li>
-                                                                Dual intake front vents, side exhausts and one-piece rear exhaust</li>
-                                                            <li>
-                                                                Three position chin vent</li>
-                                                            <li>
-                                                                Neck vent exhaust</li>
-                                                            <li>
-                                                                Vents are easy to operate with gloved hands</li>
-                                                        </ul>
-                                                        <h3>
-                                             Interior:</h3>
-                                                        <ul>
-                                                            <li>
-                                                                Facial Contour System (FCS) offers a snug fit by using a foam spring support in the <a href="https://www.revzilla.com/arai-regent-x-accessories" target="_blank">cheek pad</a> that compresses
-                                                                and rebounds without excessive pressure</li>
-                                                            <li>
-                                                                Fully removable and soft interior liner with 5mm peel-away layer for a perfect fit</li>
-                                                            <li>
-                                                                Speaker pockets</li>
-                                                            <li>
-                                                                Made from odor-resistant material which helps maintain neutral acidity levels close to human skin</li>
-                                                            <li>
-                                                                Non-removable chin curtain</li>
-                                                        </ul>
-                                                        <h3>
-                                             Safety:</h3>
-                                                        <ul>
-                                                            <li>
-                                                                <span class="redline-tooltip redline-tooltip--help-keywords" data-js="Tooltip.Container">
-                                                   <span class="redline-tooltip__help-keyword" data-js="Tooltip.Icon">
-                                                      <strong>Double D-ring</strong>
-                                                      <span class="redline-tooltip__popout-window"
-                                                         data-js="Tooltip.PopoutWindow">
-                                                         <span class="redline-tooltip__description"><img
-                                                               class="redline-tooltip__float-img"
-                                                               src="/help_keyword/image/1258/images.jpg">The Double
-                                                            D-ring closure is THE tried-and-true motorcycle helmet
-                                                            retention system. Consisting of two "D" shaped rings, the
-                                                            rider laces the opposing strap through the closure to secure
-                                                            the helmet. It is strong, simple, reliable and infinitely
-                                                            adjustable. Some helmets use alternative closure methods,
-                                                            but the Double D-ring remains the gold standard for these
-                                                            reasons.</span>
-                                                                <span class="redline-tooltip__arrow" data-js="Tooltip.Arrow"></span>
-                                                                </span>
-                                                                </span>
-                                                                </span> closure</li>
-                                                            <li>
-                                                                Snell M2025&nbsp;and DOT certified</li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p>
-                                                <img class="full-width" data-lazy-="" src="https://www.revzilla.com/content_image/image/92680/039fec77-67db-Regent_Hero_Size_Hero.jpg">
-                                            </p>
-                                            <p>
-                                                <br>
-                                                <b>Regent (re·​gent): Noun: A person who rules. </b></p>
-                                            <div class="enhanced-description">
-                                                <div class="two-up">
-                                                    <div class="enhanced-description stack-col">
-                                                        <h2>
-                                             Heritage</h2>
-                                                        <p>
-                                                            The Arai Regent-X Helmet is a first-rate helmet that welcomes riders to Arai's exceptional build quality, materials and design.</p>
-                                                        <p>
-                                                            Using Super PB-cLc shell construction gives the Regent-X a structure that's extremely rigid and also lightweight - all while meeting rigorous Snell certification standard. With an intermediate oval head shape, the Regent-X fits those with heads that are
-                                                            slightly longer front to back compared to side to side. The multi-density EPS is a single piece that allows Arai to provide protection where it is needed most while still providing a sleek, low
-                                                            profile helmet.</p>
-                                                    </div>
-                                                    <img class="float-right" data-lazy-="" src="https://www.revzilla.com/content_image/image/92682/Arai-Regent-X-Review-motorcycle-helmet-16.jpg">
-                                                </div>
-                                                <div class="two-up">
-                                                    <img class="float-left" data-lazy-="" src="https://www.revzilla.com/content_image/image/92681/Arai-Regent-X-Review-motorcycle-helmet-8.jpg">
-                                                    <div class="enhanced-description stack-col">
-                                                        <h2>
-                                             Performance</h2>
-                                                        <p>
-                                                            The Variable Axis System (VAS) provides a pivot point for the face shield that moves so the face shield can be mounted lower on the helmet while still having enough clearance to open the face shield. The VAS Shield Latch System holds the face shield securely
-                                                            closed or it can be opened slightly to allow venting. The top padding cannot be removed, but cheek pads can be removed for cleaning or replacement.</p>
-                                                        <p>
-                                                            The Arai Regent-X Helmet fine tunes Arai's features to embrace riders looking for a comfortable, protective and premium helmet.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <p>
-                                            </p>
-
-                                            <div data-wrapper-for=".helmet-dimensions" data-wrapper-at="small"></div>
-
+                                                <div data-wrapper-for=".helmet-dimensions" data-wrapper-at="small"></div> --}}
+                                        {!! str_replace('/images/products/upload', asset('images/products/upload/'), $product->description) !!}
                                         </div>
 
                                     </div>
@@ -3563,8 +3480,8 @@
 
                                         <div class="size-chart">
                                             <h1 class="size-chart__header">
-                                    Arai Helmet Sizing
-                                 </h1>
+                                                Arai Helmet Sizing
+                                            </h1>
 
 
                                             <div class="size-chart__table">
@@ -3666,8 +3583,8 @@
                                             <div class="size-chart__measurements">
                                                 <hr>
                                                 <h2 class="size-chart__measurements-header">
-                                       How to Measure
-                                    </h2>
+                                                How to Measure
+                                                </h2>
 
                                                 <div class="size-chart__measurements-wrapper">
 
@@ -3722,7 +3639,7 @@
                         </div>
                     </div>
 
-                    <div data-js="ProductShow.accordion.details">
+                    {{-- <div data-js="ProductShow.accordion.details">
                         <div data-js="" class="product-show-section-accordion__item product-show-section-accordion__item--open">
                             <div class="product-show-section-accordion__label">Product Description</div>
                             <div class="accordion__content accordion__content--description product-show-section-accordion__content">
@@ -3769,7 +3686,7 @@
                             </div>
                             <div class="accordion__content product-show-section-accordion__content" data-wrapper-at="small" data-wrapper-for=".product-show-reviews__turn-to-content--qa" style="height: 0px;"></div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
 
                 <div class="cross-sell-recommendations-section-container">
@@ -4543,7 +4460,7 @@
                     </div>
                 </div>
             </div>
-            <div class="product-show-section">
+            {{-- <div class="product-show-section">
                 <div class="product-show-section__content-wrapper">
                     <div class="product-show-section__content">
                         <div class="clp-banner clp-banner--no-membershipclp-banner--clp-banner--no-details">
@@ -4568,11 +4485,11 @@
 
                     </div>
                 </div>
-            </div>
-            <div class="product-show-section  product-show-section--videos  product-show-video-tray clearfix" id="videos">
+            </div> --}}
+            {{-- <div class="product-show-section  product-show-section--videos  product-show-video-tray clearfix" id="videos">
                 <h2 class="product-show-section__heading stn-shd stn-shd--small">
-               Related Videos
-            </h2>
+                Related Videos
+                </h2>
 
                 <div class="product-show-video-tray__body-wrapper">
                     <div class="product-show-video-tray__tray-wrapper">
@@ -4648,7 +4565,7 @@
 
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <input autocomplete="off" class="js-Panel-scrollLockToggle js-CmtoNavigation-classToggle cmto-mask__toggle js-Panel-input cmto-nav-panel__toggle" id="robis-panel" type="checkbox">
             <div class="js-AjaxPanel-panel cmto-nav-panel cmto-nav-panel--from-right js-CmtoNavigation-panel cmto-mask__content" data-panel-id="robis-panel">
                 <div class="cmto-nav-panel__header">
@@ -4660,6 +4577,13 @@
             </div>
             <label class="cmto-mask__mask" for="robis-panel"></label>
             <!-- sticky atc eligible -->
+            <style>
+               .product-show-media-image__image {
+                    transition: transform 0.25s ease-out;
+                    cursor: zoom-in;
+                    will-change: transform;
+                }
+            </style>
             <script type="text/javascript">
                 (function (w) {
                    w.__rq.push(function (req) {
@@ -7358,4 +7282,132 @@
                    })
                 })(this)
             </script>
+
+            {{-- Custom Js Code --}}
+
+           <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const headers = document.querySelectorAll('[data-js="Tab.header"]');
+                const contents = document.querySelectorAll('[data-js="Tab.content"]');
+
+                headers.forEach(header => {
+                    header.addEventListener('click', () => {
+                        const tabId = header.dataset.tabId;
+
+                        // Remove active classes
+                        headers.forEach(h => h.classList.remove('tab-header--active'));
+                        contents.forEach(c => c.classList.remove('tab-content--active'));
+
+                        // Activate clicked header and its content
+                        header.classList.add('tab-header--active');
+                        document.querySelector(`[data-js="Tab.content"][data-tab-id="${tabId}"]`)
+                            .classList.add('tab-content--active');
+                    });
+                });
+            });
+            </script>
+
+            {{-- <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Main image element
+                const mainImg = document.querySelector('[data-js="Gallery.activeImage"]');
+
+                // All thumbnails
+                const thumbnails = document.querySelectorAll('.product-show-media-image__thumbnail-image');
+
+                thumbnails.forEach(function (thumb) {
+                    thumb.addEventListener('click', function () {
+                        // Get the full image URL from data-src
+                        const newSrc = thumb.getAttribute('data-src');
+                        if (newSrc) {
+                            mainImg.src = newSrc;
+                            mainImg.setAttribute('data-src', newSrc);
+
+                            // Remove active state from other thumbs
+                            thumbnails.forEach(t => t.parentElement.removeAttribute('aria-selected'));
+                            // Highlight current thumbnail
+                            thumb.parentElement.setAttribute('aria-selected', 'true');
+                        }
+                    });
+                });
+
+                // === Simple zoom effect on hover ===
+                const zoomContainer = mainImg.closest('.hover-zoom__image-wrapper');
+
+                zoomContainer.addEventListener('mousemove', function (e) {
+                    const rect = zoomContainer.getBoundingClientRect();
+                    const x = ((e.clientX - rect.left) / rect.width) * 100;
+                    const y = ((e.clientY - rect.top) / rect.height) * 100;
+                    mainImg.style.transformOrigin = `${x}% ${y}%`;
+                    mainImg.style.transform = 'scale(2)';
+                });
+
+                zoomContainer.addEventListener('mouseleave', function () {
+                    mainImg.style.transformOrigin = 'center center';
+                    mainImg.style.transform = 'scale(1)';
+                });
+            });
+            </script> --}}
+<!-- jQuery (required) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Elevate Zoom Plus -->
+<script src="https://cdn.jsdelivr.net/npm/elevatezoom-plus@1.1.21/jquery.ez-plus.min.js"></script>
+
+            <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const mainImg = document.querySelector('[data-js="Gallery.activeImage"]');
+    const thumbnails = document.querySelectorAll('.product-show-media-image__thumbnail-image');
+    const zoomContainer = mainImg.closest('.hover-zoom__image-wrapper');
+
+    // ===== Thumbnail switching =====
+    thumbnails.forEach(function (thumb) {
+        thumb.addEventListener('click', function () {
+            const newSrc = thumb.getAttribute('data-src');
+            if (newSrc) {
+                mainImg.src = newSrc;
+                mainImg.setAttribute('data-src', newSrc);
+                thumbnails.forEach(t => t.parentElement.removeAttribute('aria-selected'));
+                thumb.parentElement.setAttribute('aria-selected', 'true');
+            }
+        });
+    });
+
+    // ===== Smooth zoom tracking =====
+    let targetX = 50, targetY = 50;   // Desired position
+    let currentX = 50, currentY = 50; // Animated position
+    let scale = 2.2;                   // Zoom level
+    let animFrame;
+
+    function animate() {
+        // Ease the movement for smoothness
+        currentX += (targetX - currentX) * 0.15;
+        currentY += (targetY - currentY) * 0.15;
+        mainImg.style.transformOrigin = `${currentX}% ${currentY}%`;
+        animFrame = requestAnimationFrame(animate);
+    }
+
+    zoomContainer.addEventListener('mouseenter', () => {
+        cancelAnimationFrame(animFrame);
+        mainImg.style.transform = `scale(${scale})`;
+        animate();
+    });
+
+    zoomContainer.addEventListener('mousemove', e => {
+        const rect = zoomContainer.getBoundingClientRect();
+        targetX = ((e.clientX - rect.left) / rect.width) * 100;
+        targetY = ((e.clientY - rect.top) / rect.height) * 100;
+    });
+
+    zoomContainer.addEventListener('mouseleave', () => {
+        cancelAnimationFrame(animFrame);
+        mainImg.style.transformOrigin = 'center center';
+        mainImg.style.transform = 'scale(1)';
+    });
+});
+</script>
+
+
+
+
 @endsection

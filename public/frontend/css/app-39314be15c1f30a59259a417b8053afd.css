@@ -1,11 +1,11 @@
 @import url(https://use.typekit.net/wtb3omj.css);
 
 :root {
-    --brand-color: #fa4c06;
-    --brand-color-active: color-mix(in srgb, var(--brand-color) 84%, #000);
-    --brand-color-light: color-mix(in srgb, var(--brand-color) 10%, #fff);
-    --brand-color-foreground: #fff;
-    --brand-color-text: #fa4c06;
+    /* --brand-color: #fa4c06; */
+    /* --brand-color-active: color-mix(in srgb, var(--brand-color) 84%, #000); */
+    /* --brand-color-light: color-mix(in srgb, var(--brand-color) 10%, #fff); */
+    /* --brand-color-foreground: #fff; */
+    /* --brand-color-text: #fa4c06; */
     --brand-font: proxima-nova, Helvetica, Roboto, sans-serif;
     --brand-font-heading: ZillaSansCondensed, Roboto, Arial, sans-serif
 }

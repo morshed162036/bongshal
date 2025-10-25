@@ -407,24 +407,23 @@ document.addEventListener('DOMContentLoaded', () => {
     showMessage(currentIndex);
 });
 </script>
-//brand auto slide
 <script>
 document.addEventListener('DOMContentLoaded', () => {
     const scrollWrapper = document.querySelector('.top-brands__scroll-wrapper');
     const brandLinks = document.querySelectorAll('.top-brands__brand-link');
-    
+
     if (!scrollWrapper || brandLinks.length === 0) {
         console.error('Slider elements not found.');
         return;
     }
-    
+
     const slideWidth = brandLinks[0].offsetWidth;
     let currentIndex = 0;
 
     function autoSlide() {
         currentIndex = (currentIndex + 1) % brandLinks.length;
         const newScrollPosition = brandLinks[currentIndex].offsetLeft;
-        
+
         scrollWrapper.scrollTo({
             left: newScrollPosition,
             behavior: 'smooth'
