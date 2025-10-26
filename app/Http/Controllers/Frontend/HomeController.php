@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Vendor;
 use App\Models\User;
+use App\Models\Ading;
+use App\Models\Brand;
+use App\Models\ProductPromotion;
+use App\Models\Slider;
+use App\Models\Catalogue;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 
@@ -14,8 +19,17 @@ class HomeController extends Controller
 {
     public function index()
     {
-        // This method can be used to return the homepage view
-        return view('frontend.home');
+        $sliders = Slider::where('status', 'Active')->orderBy('order', 'asc')->get();
+        $featuredCatalogues = Catalogue::where('status', 'active')->get();
+        $promotions = ProductPromotion::where('status', 'active')->latest()->take(3)->get();
+        $brands = Brand::where('status', 'Active')->orderBy('order', 'asc')->get();
+        $activeVideoAd = Ading::where('status', 'active')->where('type', 'video')
+                       ->inRandomOrder()->first();
+        $activeImageAd = Ading::where('status', 'active')
+                       ->where('type', 'image')
+                       ->inRandomOrder() // Optional: for variety
+                       ->first();
+        return view('frontend.home',compact('sliders', 'featuredCatalogues','promotions','brands','activeVideoAd','activeImageAd'));
     }
     public function shop()
     {
