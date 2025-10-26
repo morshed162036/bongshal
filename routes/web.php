@@ -9,6 +9,8 @@ use App\Http\Controllers\Backend\CatalogueController;
 use App\Http\Controllers\Backend\BikeController;
 use App\Http\Controllers\Backend\ProductController;
 use App\Http\Controllers\Backend\VendorController;
+use App\Http\Controllers\Backend\AdingController;
+use App\Http\Controllers\Backend\ProductPromotionController;
 
 
 use App\Http\Controllers\Frontend\HomeController;
@@ -95,5 +97,8 @@ Route::prefix('/')->group(function(){
         // Route::resource('service', ServiceController::class);
         // Route::resource('blog_category', BlogCategoryController::class);
         // Route::resource('order', OrderController::class);
+
+        Route::resource('promotions', ProductPromotionController::class);
+        Route::resource('ading', AdingController::class);
     });
 });
