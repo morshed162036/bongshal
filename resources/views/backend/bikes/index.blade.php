@@ -21,6 +21,10 @@
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('admin_template/assets/css/style.css') }}">
+<<<<<<< HEAD
+=======
+    {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
     <!-- END: Custom CSS-->
     <style>
         a label{
@@ -79,7 +83,11 @@
                                                 <th>Company</th>
                                                 <th>Front Tire</th>
                                                 <th>Rear Tire</th>
+<<<<<<< HEAD
                                                 <th>Battery</th>
+=======
+                                                <th>Battery Size</th>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                                 <th>Color</th>
                                                 <th>Grade</th>
                                                 <th>Status</th>
@@ -95,6 +103,7 @@
                                                         <td>@if ($bike->company)
                                                             {{ $bike->company->name }}
                                                         @endif</td>
+<<<<<<< HEAD
                                                         <td>{{ $bike->front_tire_size }}</td>
                                                         <td>{{ $bike->rear_tire_size }}</td>
                                                         <td>{{ $bike->battery }}</td>
@@ -103,6 +112,57 @@
                                                             <img src="{{ asset('images/multiimage/bike/'.$color->image) }}" alt="" height="100px">
                                                                 {{ $color->color_name }},<br>
                                                             @endforeach
+=======
+                                                        <td>{{ $bike->front_tire_width }}/{{ $bike->front_tire_aspectratio }}-{{ $bike->front_tire_rim }}</td>
+                                                        <td>{{ $bike->rear_tire_width }}/{{ $bike->front_tire_aspectratio }}-{{ $bike->front_tire_rim }}</td>
+                                                        <td>{{ $bike->battery }}</td>
+                                                        <td>
+                                                            {{-- @foreach ($bike->color as $color)
+                                                            <img src="{{ asset('images/multiimage/bike/'.$color->image) }}" alt="" height="100px">
+                                                                {{ $color->color_name }},<br>
+                                                            @endforeach --}}
+                                                            <button type="button" class="btn btn-sm btn-outline-primary"
+            data-bs-toggle="modal" data-bs-target="#colorsModal{{ $bike->id }}">
+        View Colors ({{ $bike->color->count() }})
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="colorsModal{{ $bike->id }}" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content p-3 position-relative">
+
+            <!-- Close Button -->
+            <button type="button"
+                    class="btn-close position-absolute"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    style="top:10px; right:15px;">
+            </button>
+
+            <h6 class="mb-3 mt-2 text-center">Available Colors</h6>
+
+            <div class="container-fluid">
+                @foreach ($bike->color->chunk(4) as $colorChunk)
+                    <div class="row mb-3">
+                        @foreach ($colorChunk as $color)
+                            <div class="col-md-3 col-sm-4 col-6 text-center">
+                                <img src="{{ asset('images/multiimage/bike/'.$color->image) }}"
+                                     alt="{{ $color->color_name }}"
+                                     class="img-fluid"
+                                     style="border-radius:6px; height:100px; object-fit:cover;">
+                                <div class="mt-1">{{ $color->color_name }}</div>
+                            </div>
+                        @endforeach
+                    </div>
+                @endforeach
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                                         </td>
                                                         <td>
                                                             @foreach ($bike->grade as $grade)
@@ -199,6 +259,10 @@
     <!-- BEGIN: Page JS-->
     <script src="{{ asset('admin_template/app-assets/js/scripts/datatables/datatable.js') }}"></script>
     <!-- END: Page JS-->
+<<<<<<< HEAD
+=======
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
     <script>
 
         $(document).ready(function (){

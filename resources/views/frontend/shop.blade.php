@@ -32,7 +32,13 @@
                <strong data-js="ProductCatalog.searchQuery"></strong>
                in
                </span>
+<<<<<<< HEAD
                Spare Parts
+=======
+               {{ $title ?? 'Spare Parts' }}
+               {{-- @if ($catalogue)
+               {{ $catalogue->name }}
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                {{-- <h1>{{ $catalogue->name }}</h1> --}}
                {{-- <h1>{{ $category->name }}</h1> --}}
                {{-- <h1>{{ $catalogue->name }}</h1> --}}
@@ -1630,6 +1636,7 @@
             </div>
          </div>
       </div> --}}
+<<<<<<< HEAD
       <div class="product-index-main__navigation browse-navigation">
         <div data-wrapper-for=".parts-type-toggle" data-wrapper-at="small medium"></div>
         <div class="shop-by-bike__wrapper" data-default-interface="select" data-js="ShopByBike.interface">
@@ -1659,6 +1666,87 @@
                         </span>
                         <span class="shop-by-bike__action-label shop-by-bike__action-label--recent" data-js="ShopByBike.recentBike" style="display: none">Recent Vehicle</span>
                         <a class="shop-by-bike__action-link shop-by-bike__action-link--recent ui-link" data-js="ShopByBike.recentBike ShopByBike.recentBike.link ShopByBike.vehicleLink" href="" style="display: none"></a>
+=======
+
+    <div class="product-index-main__navigation browse-navigation">
+        @if ($bike == null)
+            <div class="shop-by-bike__wrapper" data-default-interface="select" data-js="ShopByBike.interface">
+                <div class="shop-by-bike shop-by-bike--select">
+                <div class="shop-by-bike__mobile-select-toggle ui-action-button ui-action-button--fast" data-click-toggle data-toggle-selector=".shop-by-bike__select, .shop-by-bike__mobile-select-toggle" data-qa="shop-by-bike-link">My Garage</div>
+                    <div class="shop-by-bike__select">
+                        <div class="shop-by-bike__action-button shop-by-bike__action-button--mobile ui-action-button ui-action-button--cog ui-action-button--bold ui-action-button--dark" data-js="ShopByBike.garageFlyoutToggle ShopByBike.authedInterface" style="display: none">
+                            Garage
+                            <span class="shop-by-bike__action-button-label">Select a Saved Vehicle</span>
+                        </div>
+                        <a class="shop-by-bike__action-button shop-by-bike__action-button--mobile ui-action-button ui-action-button--cog ui-action-button--bold ui-action-button--dark" data-js="ShopByBike.unauthedInterface ShopByBike.logInLink" data-open-href data-open-class="authentication-form-modal" data-open-href-reuse-modal href="/auth/identity" style="display: none">
+                        Garage
+                        <span class="shop-by-bike__action-button-label">Log In to Access Saved Vehicles</span>
+                        </a>
+                        <div class="shop-by shop-by-bike__content shop-by-bike__content--select">
+                            <div class="shop-by-bike__header">
+                                <span class="shop-by__heading">
+                                <span class="shop-by__heading-text">My Garage</span>
+                                </span>
+                                <span class="shop-by-bike__action shop-by-bike__action--garage" data-js="ShopByBike.garageFlyoutToggle ShopByBike.authedInterface" style="display: none">
+                                <span class="shop-by-bike__action-label shop-by-bike__action-label--garage shop-by-bike__action-label--authed">Garage</span>
+                                <span class="shop-by-bike__action-link ui-link">Select a Saved Vehicle</span>
+                                </span>
+                                <span class="shop-by-bike__action shop-by-bike__action--garage" data-js="ShopByBike.unauthedInterface" style="display: none">
+                                <span class="shop-by-bike__action-label shop-by-bike__action-label--garage">Garage</span>
+                                <a class="shop-by-bike__action-link ui-link" data-js="ShopByBike.logInLink" data-open-href data-open-class="authentication-form-modal" data-open-href-reuse-modal href="/auth/identity">Log In to Access Saved Vehicles</a>
+                                </span>
+                                <span class="shop-by-bike__action-label shop-by-bike__action-label--recent" data-js="ShopByBike.recentBike" style="display: none">Recent Vehicle</span>
+                                <a class="shop-by-bike__action-link shop-by-bike__action-link--recent ui-link" data-js="ShopByBike.recentBike ShopByBike.recentBike.link ShopByBike.vehicleLink" href="" style="display: none"></a>
+                            </div>
+                            <div class="shop-by-bike__form">
+                                <form class="shop-by-bike__select-dimensions" action="{{ route('shop.products') }}" method="GET" id="bikeFormm">
+                                @csrf
+                                <input type="hidden" name="catalogue_id" value="{{ $catalogue?$catalogue->id:'' }}">
+                                <select name="company_id" id="companySelectt" class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--type ui-select">
+                                    <option value="">Make</option>
+                                    @php
+                                    $companies = App\Models\Company::all();
+                                    @endphp
+                                    @foreach($companies as $company)
+                                        <option value="{{ $company->id }}">{{ $company->name }}</option>
+                                    @endforeach
+                                </select>
+
+                                <select name="bike_id" id="modelSelectt" class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--type ui-select" disabled>
+                                    <option value="">Select Model</option>
+                                </select>
+
+                                <select name="color_id" id="colorSelectt" class="form-control" disabled>
+                                    <option value="">Select Color</option>
+                                </select>
+
+                                <button type="submit" id="goBtnn" class="shop-by-bike__select-selection-link ui-button" disabled>Go!</button>
+                                </form>
+                                <div class="shop-by-bike__select-close shop-by-bike__select-close--mobile" data-click-toggle data-toggle-selector=".shop-by-bike__select, .shop-by-bike__mobile-select-toggle"></div>
+                            </div>
+                            <style>
+                                /* Match height/width with your other dropdowns */
+                                    .select2-container .select2-selection--single {
+                                        height: 42px;              /* adjust to your form-control height */
+                                        border: 1px solid #ccc;    /* same border as other selects */
+                                        border-radius: 4px;
+                                        padding: 5px 8px;
+                                    }
+
+                                    /* Align text */
+                                    .select2-container .select2-selection__rendered {
+                                        line-height: 28px;
+                                        font-size: 14px;
+                                    }
+
+                                    /* Remove extra arrow styling */
+                                    .select2-container--default .select2-selection--single .select2-selection__arrow {
+                                        height: 36px;
+                                        right: 5px;
+                                    }
+                            </style>
+                        </div>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                     </div>
                     <div class="shop-by-bike__form">
                         <form class="shop-by-bike__select-dimensions" action="{{ route('shop.products') }}" method="GET" id="bikeFormm">
@@ -1708,6 +1796,7 @@
                             }
                     </style>
                 </div>
+<<<<<<< HEAD
             </div>
             </div>
             <div class="shop-by-bike__garage-flyout garage-flyout garage-flyout--shop-by-bike" data-js="ShopByBike.garageFlyout">
@@ -2473,6 +2562,1543 @@
 
 
    </script>
+
+    {{-- <script>
+        $(function () {
+            // elements (adjust IDs if yours differ)
+            const $company = $('#companySelectt');   // <select name="company_id" id="companySelect">
+            const $model   = $('#modelSelectt');     // <select name="bike_id" id="modelSelect">
+            const $color   = $('#colorSelectt');     // <select name="color_id" id="colorSelect">
+            // 'Go' may be a button or an anchor; try to find both
+            const $goBtn   = $('#goBtnn').length ? $('#goBtnn') : $('.shop-by-bike__select-selection-link[data-js="VehicleSelector.selection"]');
+
+            const getModelsUrl  = "{{ url('/get-models') }}";   // GET /get-models/{companyId}
+            const getColorsUrl  = "{{ url('/get-colors') }}";   // GET /get-colors/{bikeId}
+            const productsRoute = "{{ route('shop.products') }}"; // result page (GET)
+
+            // helper: enable/disable the Go control and set href when it's an <a>
+            function setGoEnabled(enabled) {
+                $goBtn.each(function () {
+                    const $el = $(this);
+                    if ($el.is('a')) {
+                        if (enabled) {
+                            $el.removeAttr('aria-disabled').removeClass('disabled').attr('href', buildProductsUrl());
+                        } else {
+                            $el.attr('aria-disabled', 'true').addClass('disabled').attr('href', 'javascript:void(0)');
+                        }
+                    } else { // button/input
+                        $el.prop('disabled', !enabled);
+                    }
+                });
+            }
+
+            // build target URL (for anchor or manual redirect)
+            function buildProductsUrl() {
+                const params = [];
+                if ($company.val()) params.push('company_id=' + encodeURIComponent($company.val()));
+                if ($model.val())   params.push('bike_id='    + encodeURIComponent($model.val()));
+                if ($color.val())   params.push('color_id='   + encodeURIComponent($color.val()));
+                return productsRoute + (params.length ? ('?' + params.join('&')) : '');
+            }
+
+            // reset helpers
+            function resetModel() {
+                // destroy select2 if initialized
+                if ($.fn.select2 && $model.hasClass('select2-hidden-accessible')) {
+                    $model.select2('destroy');
+                }
+                $model.empty().append('<option value="">Select Model</option>').prop('disabled', true);
+            }
+            function resetColor() {
+                if ($.fn.select2 && $color.hasClass('select2-hidden-accessible')) {
+                    $color.select2('destroy');
+                }
+                $color.empty().append('<option value="">Select Color</option>').prop('disabled', true);
+            }
+
+            // initial state
+            resetModel();
+            resetColor();
+            setGoEnabled(false);
+
+            // company -> load models
+            $company.on('change', function () {
+                const companyId = $(this).val();
+                resetModel();
+                resetColor();
+                setGoEnabled(false);
+
+                if (!companyId) return;
+
+                $.getJSON(getModelsUrl + '/' + companyId)
+                .done(function (models) {
+                    if (Array.isArray(models) && models.length > 0) {
+                        models.forEach(function (m) {
+                            // adapt property names if different (model_name, name, etc.)
+                            const label = m.model_name ?? m.name ?? m.model ?? ('Model ' + m.id);
+                            $model.append(`<option value="${m.id}">${label}</option>`);
+                        });
+                        $model.prop('disabled', false);
+
+                        // if you want model select to be Select2, init here (optional)
+                        // if ($.fn.select2 && $model.hasClass('use-select2')) { $model.select2(); }
+                    } else {
+                        // no models found -> allow GO with company-only filter
+                        setGoEnabled(true);
+                    }
+                })
+                .fail(function (xhr) {
+                    console.error('Failed loading models', xhr);
+                });
+            });
+
+            // model -> load colors
+            $model.on('change', function () {
+                const bikeId = $(this).val();
+                resetColor();
+                setGoEnabled(false);
+
+                if (!bikeId) {
+                    // if company selected but model cleared, allow GO only if you want -> here we disable
+                    return;
+                }
+
+                $.getJSON(getColorsUrl + '/' + bikeId)
+                .done(function (colors) {
+                    if (Array.isArray(colors) && colors.length > 0) {
+                        colors.forEach(function (c) {
+                            // store image url in data-image for Select2 template
+                            const label = c.color_name ?? c.name ?? ('Color ' + c.id);
+                            const img   = c.image_url ?? c.image ?? '';
+                            $color.append(`<option value="${c.id}" data-image="${img}">${label}</option>`);
+                        });
+
+                        // Re-init Select2 for color if present
+                        if ($.fn.select2) {
+                            // destroy old then init fresh
+                            if ($color.hasClass('select2-hidden-accessible')) {
+                                $color.select2('destroy');
+                            }
+                            $color.prop('disabled', false);
+
+                            $color.select2({
+                                width: 'resolve',
+                                templateResult: function (data) {
+                                    if (!data.id) return data.text;
+                                    const img = $(data.element).data('image');
+                                    if (img) return $(`<span><img src="{{ asset('images/multiimage/bike') }}/${img}" style="width:50px;height:50px;margin-right:6px;object-fit:cover;"> ${data.text}</span>`);
+                                    return data.text;
+                                },
+                                templateSelection: function (data) {
+                                    if (!data.id) return data.text;
+                                    const img = $(data.element).data('image');
+                                    if (img) return $(`<span><img src="{{ asset('images/multiimage/bike') }}/${img}" style="width:50px;height:50px;margin-right:6px;object-fit:cover;"> ${data.text}</span>`);
+                                    return data.text;
+                                },
+                                escapeMarkup: function (m) { return m; }
+                            });
+                        } else {
+                            $color.prop('disabled', false);
+                        }
+
+                        // enable Go after model/colors are available
+                        setGoEnabled(true);
+                    } else {
+                        // no colors -> still allow GO (filtered by model only)
+                        setGoEnabled(true);
+                    }
+                })
+                .fail(function (xhr) {
+                    console.error('Failed loading colors', xhr);
+                });
+            });
+
+            // when color changed -> update Go url (and enable)
+            $color.on('change', function () {
+                setGoEnabled(!!$company.val()); // enable if company present, adjust logic if you require model/color too
+            });
+
+            // If Go is an anchor and user clicks, it will navigate to the built URL.
+            // If Go is a button inside the form (type=submit), the form will submit normally to route('shop.products').
+            // For defensive handling of anchor click (in case JS built href failed), ensure click handler:
+            $goBtn.on('click', function (e) {
+                const $el = $(this);
+                // if anchor disabled via aria-disabled, prevent
+                if ($el.is('a') && $el.attr('aria-disabled') === 'true') {
+                    e.preventDefault();
+                    return false;
+                }
+                // if anchor and href is javascript:void(0), build url and go:
+                if ($el.is('a') && ($el.attr('href') === 'javascript:void(0)' || !$el.attr('href'))) {
+                    e.preventDefault();
+                    const url = buildProductsUrl();
+                    if (url) window.location.href = url;
+                }
+                // else for button -> normal submit will handle
+            });
+
+            // debug helper: show current URL in console (optional)
+            // setInterval(() => console.log('GO URL ->', buildProductsUrl()), 3000);
+        });
+    </script> --}}
+=======
+                <div class="shop-by-bike__garage-flyout garage-flyout garage-flyout--shop-by-bike" data-js="ShopByBike.garageFlyout">
+                <div class="garage-flyout__heading">Select a Vehicle</div>
+                <div data-js="ShopByBike.garageFlyout.emptyGarage">
+                    <div class="garage-flyout__subheading">No saved vehicles?</div>
+                    <div class="garage-flyout__copy">Use the Shop Your Ride tool to search for parts that fit your vehicle.</div>
+                </div>
+                <div data-js="ShopByBike.garageFlyout.garage" style="display: none;">
+                    <div class="garage-flyout__subheading">Saved Vehicles</div>
+                    <div data-js="ShopByBike.garageFlyout.bikes">
+                        <a class="garage-flyout__link ui-link" data-js="ShopByBike.garageFlyout.bikeTemplate ShopByBike.vehicleLink" href="" style="display: none"></a>
+                        <a class="garage-flyout__link garage-flyout__link--primary ui-link" data-js="ShopByBike.garageFlyout.primaryBikeTemplate ShopByBike.vehicleLink" href="" style="display: none"></a>
+                    </div>
+                    <a class="garage-flyout__subheading garage-flyout__subheading--manage ui-link" href="/account/garage">Manage Garage</a>
+                </div>
+                </div>
+            </div>
+        @else
+            <div class="vehicle-specs">
+            <input
+                type="checkbox"
+                checked
+                id="vehicle-specs-toggle"
+                class="vehicle-specs__toggle-input"
+            />
+            <label
+                class="vehicle-specs__toggle-label"
+                for="vehicle-specs-toggle"
+                >Stock fitment for this vehicle</label
+            >
+            <div class="vehicle-specs__content">
+                <ul class="vehicle-specs__list">
+                    <li class="vehicle-specs__item">
+                        <strong>Front Tire: </strong
+                        ><a
+                        class="ui-link"
+                        href="#"
+                        >{{ $bike->front_tire_width }}/{{ $bike->front_tire_aspectratio }}-{{ $bike->front_tire_rim }}</a
+                        >
+                    </li>
+                    <li class="vehicle-specs__item">
+                        <strong>Rear Tire: </strong
+                        ><a
+                        class="ui-link"
+                        href="#"
+                        >{{ $bike->rear_tire_width }}/{{ $bike->rear_tire_aspectratio }}-{{ $bike->rear_tire_rim }}</a
+                        >
+                    </li>
+                    <li class="vehicle-specs__item">
+                        <strong>Battery: </strong
+                        ><a class="ui-link" href="#"
+                        >{{ $bike->battery }}</a
+                        >
+                    </li>
+                    <li class="vehicle-specs__item">
+                        <strong>Recommended Engine Oil: </strong
+                        ><a
+                        class="ui-link"
+                        href=""
+                        >@if (count($bike->grade)>0)
+                            @foreach ($bike->grade as $grade)
+                                {{ $grade->grade }}: {{ $grade->volume }}
+                                @if (!$loop->last)
+                                    ,
+                                @endif
+
+                            @endforeach
+                        @endif</a
+                        >
+                    </li>
+                    <li class="vehicle-specs__item">
+                        <strong><a
+                        class="ui-link"
+                        href="#"
+                        >Shop Aftermarket parts for your bike</a
+                        > </strong
+                        >
+                    </li>
+                    <li class="vehicle-specs__item">
+                        <strong><a class="ui-link" href="#"
+                        >Shop Accessories for your bike</a
+                        ></strong
+                        >
+                    </li>
+                    {{-- <li class="vehicle-specs__item">
+                        <strong>Battery: </strong
+                        ><a
+                        class="ui-link"
+                        href="?facets%5B%5D=905&amp;fit=exact_fit"
+                        >YTZ7S</a
+                        >
+                    </li>
+                    <li class="vehicle-specs__item">
+                        <strong>Spark Plug: </strong
+                        ><a class="ui-link" href="?facets%5B%5D=2667"
+                        >LMAR9EJ</a
+                        >
+                    </li> --}}
+                </ul>
+                <p class="vehicle-specs__disclaimer ui-copy">
+                    For reference only, please consult your owner’s
+                    manual to confirm your fitment.
+                </p>
+            </div>
+            </div>
+        @endif
+
+            {{-- <div
+            data-wrapper-for=".parts-type-toggle"
+            data-wrapper-at="small medium"
+            ></div> --}}
+
+            <div
+            class="shop-by-bike__wrapper shop-by-bike__wrapper--saveable"
+            data-default-interface="search"
+            data-js=""
+            >
+            <a
+                class="shop-by-bike__action-button ui-action-button ui-action-button--plus"
+                data-open-href
+                data-open-class="authentication-form-modal"
+                data-open-href-reuse-modal
+                href="">Save Vehicle to Garage</a
+            >
+
+            {{-- <div
+                class="shop-by-bike shop-by-bike--select"
+                data-js="ShopByBike.selectInterface"
+                data-qa="shop-by-bike-select"
+            >
+                <div
+                    class="shop-by-bike__mobile-select-toggle ui-action-button ui-action-button--fast"
+                    data-click-toggle
+                    data-toggle-selector=".shop-by-bike__select, .shop-by-bike__mobile-select-toggle"
+                    data-qa="shop-by-bike-link"
+                >
+                    Shop Your Ride
+                </div>
+                <div class="shop-by-bike__select">
+                    <div
+                        class="shop-by-bike__action-button shop-by-bike__action-button--mobile ui-action-button ui-action-button--cog ui-action-button--bold ui-action-button--dark"
+                        data-js="ShopByBike.garageFlyoutToggle ShopByBike.authedInterface"
+                        style="display: block"
+                    >
+                        Garage
+                        <span class="shop-by-bike__action-button-label"
+                        >Select a Saved Vehicle</span
+                        >
+                    </div>
+                    <a
+                        class="shop-by-bike__action-button shop-by-bike__action-button--mobile ui-action-button ui-action-button--cog ui-action-button--bold ui-action-button--dark"
+                        data-js="ShopByBike.unauthedInterface ShopByBike.logInLink"
+                        data-open-href
+                        data-open-class="authentication-form-modal"
+                        data-open-href-reuse-modal
+                        href="/auth/identity"
+                        style="display: block"
+                    >
+                        Garage
+                        <span class="shop-by-bike__action-button-label"
+                        >Log In to Access Saved Vehicles</span
+                        >
+                    </a>
+
+                    <div
+                        class="shop-by shop-by-bike__content shop-by-bike__content--select"
+                    >
+                        <div class="shop-by-bike__header">
+                        <span class="shop-by__heading">
+                            <span class="shop-by__heading-text"
+                                >Shop Your Ride</span
+                            >
+                        </span>
+
+                        <span
+                            class="shop-by-bike__action shop-by-bike__action--garage"
+                            data-js="ShopByBike.garageFlyoutToggle ShopByBike.authedInterface"
+                            style="display: block"
+                        >
+                            <span
+                                class="shop-by-bike__action-label shop-by-bike__action-label--garage shop-by-bike__action-label--authed"
+                                >Garage</span
+                            >
+                            <span
+                                class="shop-by-bike__action-link ui-link"
+                                >Select a Saved Vehicle</span
+                            >
+                        </span>
+
+                        <span
+                            class="shop-by-bike__action shop-by-bike__action--garage"
+                            data-js="ShopByBike.unauthedInterface"
+                            style="display: block"
+                        >
+                            <span
+                                class="shop-by-bike__action-label shop-by-bike__action-label--garage"
+                                >Garage</span
+                            >
+                            <a
+                                class="shop-by-bike__action-link ui-link"
+                                data-js="ShopByBike.logInLink"
+                                data-open-href
+                                data-open-class="authentication-form-modal"
+                                data-open-href-reuse-modal
+                                href="/auth/identity"
+                                >Log In to Access Saved Vehicles</a
+                            >
+                        </span>
+
+                        <span
+                            class="shop-by-bike__action-label shop-by-bike__action-label--recent"
+                            data-js="ShopByBike.recentBike"
+                            style="display: block"
+                            >Recent Vehicle</span
+                        >
+                        <a
+                            class="shop-by-bike__action-link shop-by-bike__action-link--recent ui-link"
+                            data-js="ShopByBike.recentBike ShopByBike.recentBike.link ShopByBike.vehicleLink"
+                            href=""
+                            style="display: block"
+                        ></a>
+                        <div class="shop-by-bike__form" style="margin-bottom:20px;">
+                        <form class="shop-by-bike__select-dimensions" action="{{ route('shop.products') }}" method="GET" id="bikeFormm">
+                            @csrf
+                            <input type="hidden" name="catalogue_id" value="{{ $catalogue?$catalogue->id:'' }}">
+                            <select name="company_id" id="companySelectt" class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--type ui-select">
+                                <option value="">Make</option>
+                                @php
+                                $companies = App\Models\Company::all();
+                                @endphp
+                                @foreach($companies as $company)
+                                    <option value="{{ $company->id }}">{{ $company->name }}</option>
+                                @endforeach
+                            </select>
+
+                            <select name="bike_id" id="modelSelectt" class="shop-by-bike__select-dimension-select shop-by-bike__select-dimension-select--type ui-select" disabled>
+                                <option value="">Select Model</option>
+                            </select>
+
+                            <select name="color_id" id="colorSelectt" class="form-control" disabled>
+                                <option value="">Select Color</option>
+                            </select>
+
+                            <button type="submit" id="goBtnn" class="shop-by-bike__select-selection-link ui-button" disabled>Go!</button>
+                        </form>
+                        <div class="shop-by-bike__select-close shop-by-bike__select-close--mobile" data-click-toggle data-toggle-selector=".shop-by-bike__select, .shop-by-bike__mobile-select-toggle"></div>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div> --}}
+
+            <div
+                class="shop-by-bike__garage-flyout garage-flyout garage-flyout--shop-by-bike"
+                data-js="ShopByBike.garageFlyout"
+            >
+                <div class="garage-flyout__heading">
+                    Select a Vehicle
+                </div>
+                <div data-js="ShopByBike.garageFlyout.emptyGarage">
+                    <div class="garage-flyout__subheading">
+                        No saved vehicles?
+                    </div>
+                    <div class="garage-flyout__copy">
+                        Use the Shop Your Ride tool to search for parts
+                        that fit your vehicle.
+                    </div>
+                </div>
+                <div
+                    data-js="ShopByBike.garageFlyout.garage"
+                    style="display: none"
+                >
+                    <div class="garage-flyout__subheading">
+                        Saved Vehicles
+                    </div>
+                    <div data-js="ShopByBike.garageFlyout.bikes">
+                        <a
+                        class="garage-flyout__link ui-link"
+                        data-js="ShopByBike.garageFlyout.bikeTemplate ShopByBike.vehicleLink"
+                        href=""
+                        style="display: none"
+                        ></a>
+                        <a
+                        class="garage-flyout__link garage-flyout__link--primary ui-link"
+                        data-js="ShopByBike.garageFlyout.primaryBikeTemplate ShopByBike.vehicleLink"
+                        href=""
+                        style="display: none"
+                        ></a>
+                    </div>
+                    <a
+                        class="garage-flyout__subheading garage-flyout__subheading--manage ui-link"
+                        href="/account/garage"
+                        >Manage Garage</a
+                    >
+                </div>
+            </div>
+
+            <div
+                class="shop-by-bike shop-by-bike--search"
+                data-js="ShopByBike.searchInterface"
+            >
+                <div class="shop-by shop-by-bike__content">
+                    <div class="shop-by-bike__header">
+                        <span class="shop-by__heading">
+                        <span class="shop-by__heading-text"
+                            >Shop Your Ride</span
+                        >
+                        </span>
+                        <span
+                        class="shop-by-bike__action shop-by-bike__action--garage"
+                        data-js="ShopByBike.garageFlyoutToggle ShopByBike.authedInterface"
+                        style="display: block"
+                        >
+                        <span
+                            class="shop-by-bike__action-label shop-by-bike__action-label--garage shop-by-bike__action-label--authed"
+                            >Garage</span
+                        >
+                        <span
+                            class="shop-by-bike__action-link ui-link"
+                            >Select a Saved Vehicle</span
+                        >
+                        </span>
+
+                        <span
+                        class="shop-by-bike__action shop-by-bike__action--garage"
+                        data-js="ShopByBike.unauthedInterface"
+                        style="display: none"
+                        >
+                        <span
+                            class="shop-by-bike__action-label shop-by-bike__action-label--garage"
+                            >Garage</span
+                        >
+                        <a
+                            class="shop-by-bike__action-link ui-link"
+                            data-js="ShopByBike.logInLink"
+                            data-open-href
+                            data-open-class="authentication-form-modal"
+                            data-open-href-reuse-modal
+                            href="/auth/identity"
+                            >Log In to Access Saved Vehicles</a
+                        >
+                        </span>
+                    </div>
+                    <div class="shop-by-bike__form">
+                        <form action="{{ url('/search') }}" method="get"
+      class="search-form product-index-vehicle-search__form js-product-index-vehicle-search__form"
+      data-form-name="Vehicle Search">
+
+    <div class="shop-by-bike__search-input-wrapper">
+        <input aria-label="Search parts for this vehicle"
+               class="shop-by-bike__search-input js-product-index-vehicle-search__input ui-text-input"
+               name="query"
+               id="searchInput"
+               placeholder="Search parts for this vehicle"
+               type="text"
+               autocomplete="off"
+        />
+        <span class="shop-by-bike__search-input-clear"
+              data-js="ShopByBike.clear"
+              style="display:none"></span>
+    </div>
+
+    <button class="shop-by-bike__search-button ui-button" type="submit">
+        <span class="shop-by-bike__search-button-text">Search</span>
+    </button>
+
+    <!-- Live Results -->
+    <div id="searchResults"
+         style="position:absolute; background:white; width:100%; z-index:999;
+                border:1px solid #ddd; display:none;"></div>
+</form>
+
+<script>
+const input = document.getElementById('searchInput');
+const resultsBox = document.getElementById('searchResults');
+let timer;
+
+input.addEventListener('keyup', function() {
+    clearTimeout(timer);
+    const q = this.value.trim();
+    if (!q) { resultsBox.style.display = 'none'; return; }
+
+    timer = setTimeout(() => {
+        fetch(`/search-ajax?q=${encodeURIComponent(q)}`)
+        .then(res => res.json())
+        .then(data => {
+            if (!data.length) { resultsBox.innerHTML = '<div style="padding:10px;">No results</div>'; }
+            else {
+                resultsBox.innerHTML = data.map(item =>
+                    `<div style="padding:8px;border-bottom:1px solid #eee;cursor:pointer"
+                         onclick="window.location='/product/${item.id}'">
+                        <strong>${item.name}</strong> - $${item.price}
+                    </div>`
+                ).join('');
+            }
+            resultsBox.style.display = 'block';
+        });
+    }, 300); // delay for smooth typing
+});
+</script>
+
+                                 <span
+                                    class="shop-by-bike__search-interface-toggle ui-link"
+                                    data-js="ShopByBike.interfaceToggle"
+                                    >Select Different Vehicle</span
+                                 >
+                            </div>
+
+                </div>
+            </div>
+            </div>
+            <script type="d9b7a4c0c5590b41998d726c-text/javascript">
+            (function(w){w.__rq.push(function(req){
+                req("web/static/js/sites/revzilla/components/shop_by_bike")
+                .then(({ShopByBike}) => ShopByBike.init('search', 37259));
+            })})(this)
+            </script>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
+
+            <div class="browse-navigation--mobile">
+            <span
+                class="browse-navigation__button browse-navigation__button--filter ui-button ui-button--blue ui-button--secondary ui-button--half-width"
+                data-open="filters"
+                data-open-class="product-index-filter-modal"
+                data-qa="filter"
+                >Filter<span
+                    class="product-faceted-browse-index__filter-count"
+                    data-js="ProductCatalog.filterCount"
+                    data-filter-count="0"
+                    >0</span
+                ></span
+            >
+            <span
+                class="browse-navigation__button browse-navigation__button--sort ui-button ui-button--blue ui-button--secondary ui-button--half-width"
+            >
+                <select
+                    class="browse-navigation__mobile-sort-select"
+                    data-js="ProductCatalog.sortSelect ProductCatalog.sortSelectMobile"
+                    data-field-name="Sort By"
+                    aria-label="Sort by"
+                >
+                    <option value="rating">Rating</option>
+
+                    <option value="brand">Brand</option>
+
+                    <option value="best_seller" selected>
+                        Best Sellers
+                    </option>
+
+                    <option value="newest">Newest Arrivals</option>
+
+                    <option value="price_asc">
+                        Price: Low to High
+                    </option>
+
+                    <option value="price_desc">
+                        Price: High to Low
+                    </option>
+                </select>
+                Sort By
+            </span>
+            </div>
+
+            <div class="browse-navigation--desktop">
+            <div class="browse-navigation__sort_filter_options">
+                <div class="browse-navigation__sort">
+                    <select
+                        aria-label="Sort by"
+                        class="browse-navigation__sort-select ui-select"
+                        data-field-name="Sort by"
+                        data-js="ProductCatalog.sortSelect ProductCatalog.sortSelectDesktop"
+                        name="[]"
+                    >
+                        <option value="rating">Sort by Rating</option>
+                        <option value="brand">Sort by Brand</option>
+                        <option selected value="best_seller">
+                        Sort by Best Sellers
+                        </option>
+                        <option value="newest">
+                        Sort by Newest Arrivals
+                        </option>
+                        <option value="price_asc">
+                        Sort by Price: Low to High
+                        </option>
+                        <option value="price_desc">
+                        Sort by Price: High to Low
+                        </option>
+                    </select>
+                </div>
+
+                <span
+                    class="browse-navigation__view_all_for_vehicle ui-link"
+                    data-js="ProductCatalog.viewAllForVehicle"
+                    >View all products for this vehicle</span
+                >
+            </div>
+
+            <div
+                class="browse-navigation__pagination browse-navigation__pagination--top"
+                data-js="ProductCatalog.paginationTop"
+            >
+                <div class="pagination" data-js="Pagination">
+                    <a
+                        href=""
+                        class="pagination__incrementer pagination__incrementer--prev"
+                        aria-label="Previous page"
+                    >
+                    </a>
+
+                    <span class="pagination__links-wrapper">
+                        <a class="pagination__page-link" href="?page=1"
+                        >1</a
+                        >
+
+                        <a class="pagination__page-link" href="?page=2"
+                        >2</a
+                        >
+
+                        <a class="pagination__page-link" href="?page=3"
+                        >3</a
+                        >
+
+                        <a class="pagination__page-link" href="?page=4"
+                        >4</a
+                        >
+
+                        <a class="pagination__page-link" href="?page=5"
+                        >5</a
+                        >
+
+                        <a class="pagination__page-link" href="?page=6"
+                        >6</a
+                        >
+
+                        <a class="pagination__page-link" href="?page=7"
+                        >7</a
+                        >
+
+                        <a class="pagination__page-link" href="?page=8"
+                        >8</a
+                        >
+
+                        <a class="pagination__page-link" href="?page=9"
+                        >9</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=10"
+                        >10</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=11"
+                        >11</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=12"
+                        >12</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=13"
+                        >13</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=14"
+                        >14</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=15"
+                        >15</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=16"
+                        >16</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=17"
+                        >17</a
+                        >
+
+                        <a
+                        class="pagination__page-link"
+                        href="?page=18"
+                        >18</a
+                        >
+                    </span>
+
+                    <span class="pagination__select-wrapper">
+                        <select
+                        class="pagination__select product-index-pagination__select ui-select"
+                        name="[]"
+                        >
+                        <option selected value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        </select>
+                        <span class="pagination__select-page-count">
+                        of 18
+                        </span>
+                    </span>
+                    <a
+                        href="?page=2"
+                        class="pagination__incrementer pagination__incrementer--next"
+                        aria-label="Next page"
+                    >
+                    </a>
+                </div>
+            </div>
+            </div>
+    </div>
+
+    <div class="product-index-main__results product-index-results">
+
+         <div data-wrapper-for="" data-wrapper-at="large xlarge xxlarge">
+            <div class="product-index-results__active-filters" data-js="ProductCatalog.activeFilters" style="display: none">
+               <span class="product-index-active-filter__clear-all ui-link" data-js="ProductCatalog.clearFilters">Clear
+               All</span>
+            </div>
+         </div>
+         <div class="product-index-results__product-tiles">
+            @foreach($products as $product)
+                <div class="product-index-results__product-tile-wrapper">
+                    <a class="product-index-results__product-tile product-tile"
+                    href="{{ route('productpage', $product->slug) }}"
+                    title="{{ $product->name }}">
+
+                        <meta content="{{ $product->name }}" itemprop="name" />
+                        <meta content="{{ $product->brand ?? 'Brand' }}" itemprop="brand" />
+                        <meta content="{{ $product->id }}" itemprop="productId" />
+                        <meta content="{{ $product->image }}" itemprop="image" />
+
+                        <div class="product-tile__content">
+                            {{-- Image --}}
+                            <div class="product-tile__image-container">
+                                <img alt="{{ $product->name }}"
+                                    class="product-tile__image"
+                                    src="{{ asset('images/products/image/'.$product->image )}}"
+                                    width="480" height="480" />
+                            </div>
+
+                            {{-- Summary --}}
+
+                            <div class="product-tile__summary">
+                                @if ($bike)
+                                <div class="product-tile__details product-tile__details--fit">
+                                    <span
+                                        class="product-tile__fit-message product-tile__fit-message--vehicle-specific-with-vehicle">Fits your {{ $bike->company->name }} {{ $bike->model }}
+                                    </span>
+                                </div>
+                                @endif
+                                {{-- Name --}}
+                                <div class="product-tile__name">{{ $product->name }}</div>
+
+                                {{-- Price --}}
+                                <div class="product-tile__pricing">
+                                    <meta content="{{ $product->price }}" itemprop="price" />
+                                    <meta content="BDT" itemprop="priceCurrency" />
+
+                                    <div class="product-tile__prices">
+                                        <span class="product-tile__price-retail">
+                                             ৳ {{ number_format($product->unit_price, 2) }}
+                                        </span>
+                                    </div>
+                                </div>
+
+                                {{-- Rating --}}
+                                @if($product->reviews_count)
+                                    <div class="product-tile__rating">
+                                        <meta content="1" itemprop="worstRating" />
+                                        <meta content="5" itemprop="bestRating" />
+                                        <meta content="{{ $product->rating }}" itemprop="ratingValue" />
+                                        <meta content="{{ $product->reviews_count }}" itemprop="reviewCount" />
+
+                                        <span class="product-tile__rating-stars"
+                                            data-rating="{{ $product->rating }}"></span>
+                                        <span class="product-tile__rating-count">{{ $product->reviews_count }}</span>
+                                    </div>
+                                @endif
+                                <!--<span class="product-tile__rating-stars product-rating__stars" data-js="ReviewInterface.ratingStars" data-rating="4.5"></span>-->
+                                <span class="stars">
+                                  ★★★★☆
+                                </span>
+
+                                <style>
+                                .stars {
+                                  color: gold;
+                                  font-size: 18px;
+                                }
+                                </style>
+                           <span class="product-tile__rating-count product-rating__count">182</span><img alt="Video Available" class="product-tile__video-icon" src="{{asset('Youtube_logo.png')}}"
+                              height="16" width="20" />
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
+
+            {{-- Example Product Tile --}}
+            {{-- Remove this block when dynamic rendering is implemented --}}
+            {{-- <div class="product-index-results__product-tile-wrapper" data-js="ProductTile.wrapper" data-qa="product-tile">
+               <a class="product-index-results__product-tile product-tile" data-index="0" data-js="ProductTile.link" data-product-id="1100726" data-skus="10413823,10413824,10413825,10413826,10413827,10413828,10413847,10413848,10413849,10413850,10413851,10413852,10413841,10413842,10413843,10413844,10413845,10413846,10413829,10413830,10413831,10413832,10413833,10413834,10413865,10413866,10413867,10413868,10413869,10413870,10413859,10413860,10413861,10413862,10413863,10413864,10413853,10413854,10413855,10413856,10413857,10413858,10413835,10413836,10413837,10413838,10413839,10413840"
+                  href="/motorcycle/arai-regent-x-helmet" itemprop="url" title="Arai Regent-X Helmet">
+                  <div class="badge badge--vertical">
+                     <div class="badge__message badge__message--top-rated">
+                        Top Rated
+                     </div>
+                  </div>
+                  <meta content="Arai Regent-X Helmet" itemprop="name" />
+                  <meta content="Arai Helmets" itemprop="brand" />
+                  <meta content="1100726" itemprop="productId" />
+                  <meta content="https://www.revzilla.com/product_images/2337/4594/arai_regent_x_helmet_480x480.jpg" itemprop="image" />
+                  <div class="product-tile__content">
+                     <div class="product-tile__image-container">
+                        <img alt="Arai Regent-X Helmet" class="product-tile__image" height="480" id="js-ProductImageCrossfader-image-1100726" src="https://www.revzilla.com/product_images/2337/4594/arai_regent_x_helmet_480x480.jpg" width="480" />
+                     </div>
+                     <div class="product-tile__summary">
+                        <div class="product-tile__details product-tile__details--swatches">
+                           <ul class="product-tile__swatches">
+                              <li class="product-tile__swatch-wrapper">
+                                 <span class="product-tile__swatch js-ProductImageCrossfader-swatch-1100726" data-js-option-id="6147" style="background-color: #383838" title="Frost Black"></span>
+                              </li>
+                              <li class="product-tile__swatch-wrapper">
+                                 <span class="product-tile__swatch js-ProductImageCrossfader-swatch-1100726" data-js-option-id="30" style="background-color: White" title="White"></span>
+                              </li>
+                              <li class="product-tile__swatch-wrapper">
+                                 <span class="product-tile__swatch js-ProductImageCrossfader-swatch-1100726" data-js-option-id="38580" style="background-color: #808080" title="Modern Grey"></span>
+                              </li>
+                              <li class="product-tile__swatch-wrapper">
+                                 <span class="product-tile__swatch js-ProductImageCrossfader-swatch-1100726" data-js-option-id="3440" style="background-color: silver" title="Aluminum Silver"></span><span class="product-tile__swatch-more-count">+4</span>
+                              </li>
+                              <li class="product-tile__swatch-wrapper">
+                                 <span class="product-tile__swatch js-ProductImageCrossfader-swatch-1100726" data-js-option-id="40894" style="background-color: #ff0000" title="Code Red"></span><span class="product-tile__swatch-more-count">+3</span>
+                              </li>
+                              <li class="product-tile__swatch-wrapper">
+                                 <span class="product-tile__swatch js-ProductImageCrossfader-swatch-1100726" data-js-option-id="40895" style="background-color: #ffff00" title="Code Yellow"></span><span class="product-tile__swatch-more-count">+2</span>
+                              </li>
+                              <li class="product-tile__swatch-wrapper">
+                                 <span class="product-tile__swatch js-ProductImageCrossfader-swatch-1100726" data-js-option-id="37016" style="background-color: #808080" title="Frost Gunmetal"></span><span class="product-tile__swatch-more-count">+1</span>
+                              </li>
+                              <li class="product-tile__swatch-wrapper">
+                                 <span class="product-tile__swatch js-ProductImageCrossfader-swatch-1100726" data-js-option-id="42230" style="background-color: #f0e68c" title="Modern Ivory"></span><span class="product-tile__swatch-more-count">+0</span>
+                              </li>
+                           </ul>
+                           <script type="580fb9525f9398b69b5b4a70-text/javascript">
+                              (function (w) {
+                                  w.__rq.push(function (req) {
+                                    req("web/static/js/redline/components/product_image_crossfader").then(({
+                                      ProductImageCrossfader
+                                    }) => {
+                                      new ProductImageCrossfader(
+                                        1100726,
+                                        [{
+                                          "alt_text": "Arai Regent-X Helmet",
+                                          "dimensions": null,
+                                          "option_id": 6147,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2337/4594/arai_regent_x_helmet_480x480.jpg",
+                                          "filename": "",
+                                          "id": 23374594
+                                        }, {
+                                          "alt_text": "Arai Regent-X Helmet",
+                                          "dimensions": null,
+                                          "option_id": 30,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2337/4628/arai_regent_x_helmet_480x480.jpg",
+                                          "filename": "",
+                                          "id": 23374628
+                                        }, {
+                                          "alt_text": "Arai Regent-X Helmet",
+                                          "dimensions": null,
+                                          "option_id": 3440,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2337/4696/arai_regent_x_helmet_aluminum_silver_480x480.jpg",
+                                          "filename": "",
+                                          "id": 23374696
+                                        }, {
+                                          "alt_text": "Arai Regent-X Helmet",
+                                          "dimensions": null,
+                                          "option_id": 6147,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2337/4594/arai_regent_x_helmet_480x480.jpg",
+                                          "filename": "",
+                                          "id": 23374594
+                                        }, {
+                                          "alt_text": "Arai Regent-X Helmet",
+                                          "dimensions": null,
+                                          "option_id": 37016,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2337/4764/arai_regent_x_helmet_frost_gunmetal_480x480.jpg",
+                                          "filename": "",
+                                          "id": 23374764
+                                        }, {
+                                          "alt_text": "Arai Regent-X Helmet",
+                                          "dimensions": null,
+                                          "option_id": 38580,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2337/4662/arai_regent_x_helmet_480x480.jpg",
+                                          "filename": "",
+                                          "id": 23374662
+                                        }, {
+                                          "alt_text": "Arai Regent-X Helmet",
+                                          "dimensions": null,
+                                          "option_id": 40894,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2337/4730/arai_regent_x_helmet_480x480.jpg",
+                                          "filename": "",
+                                          "id": 23374730
+                                        }, {
+                                          "alt_text": "Arai Regent-X Helmet",
+                                          "dimensions": null,
+                                          "option_id": 40895,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2337/4747/arai_regent_x_helmet_480x480.jpg",
+                                          "filename": "",
+                                          "id": 23374747
+                                        }, {
+                                          "alt_text": "Arai Regent-X Helmet",
+                                          "dimensions": null,
+                                          "option_id": 42230,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2337/4781/arai_regent_x_helmet_modern_ivory_480x480.jpg",
+                                          "filename": "",
+                                          "id": 23374781
+                                        }]
+                                      );
+                                    });
+                                  })
+                                })(this)
+                           </script>
+                        </div>
+                        <div class="product-tile__name" data-qa="product-tile-name">
+                           Arai Regent-X Helmet
+                        </div>
+                        <div class="product-tile__pricing">
+                           <meta content="579.95" itemprop="price" />
+                           <meta content="USD" itemprop="priceCurrency" />
+                           <meta content="https://schema.org/InStock" itemprop="availability" />
+                           <meta content="https://schema.org/NewCondition" itemprop="itemCondition" />
+                           <div class="product-tile__prices">
+                              <span class="product-tile__price-retail product-details__price-retail"><span
+                                 data-js="Money.stylizedMoney"><span class="mny"><span class="mny__c">$</span>579<sup class="mny__s">.</sup><sup>95</sup><span class="mny__c"></span></span>
+                              </span>
+                              </span>
+                           </div>
+                           <div class="product-tile__savings"></div>
+                        </div>
+                        <div class="product-tile__rating">
+                           <meta content="1" itemprop="worstRating" />
+                           <meta content="5" itemprop="bestRating" />
+                           <meta content="4.6" itemprop="ratingValue" />
+                           <meta content="182" itemprop="reviewCount" />
+                           <span class="product-tile__rating-stars product-rating__stars" data-js="ReviewInterface.ratingStars" data-rating="4.5"></span>
+                           <span class="product-tile__rating-count product-rating__count">182</span><img alt="Video Available" class="product-tile__video-icon" data-lazy-src="/images/sites/revzilla/support/product_browse/youtube_icon-f757f3f104f09ead42c34d3873684f83.svg?vsn=d"
+                              height="16" width="16" />
+                        </div>
+                     </div>
+                  </div>
+               </a>
+            </div> --}}
+            {{-- <div class="product-index-results__product-tile-wrapper" data-js="ProductTile.wrapper" data-qa="product-tile">
+               <a class="product-index-results__product-tile product-tile" data-index="1" data-js="ProductTile.link" data-product-id="1064485" data-skus="10338936,10338937,10338938,10338939,10338940,10338941,10338942,10338943,10338944,10338945,10338946,10338947" href="/motorcycle/alpinestars-supertech-r10-carbon-helmet"
+                  itemprop="url" title="Alpinestars Supertech R10 Carbon Helmet">
+                  <div class="badge badge--vertical">
+                     <div class="badge__message badge__message--staff-picks-2019">
+                        Staff Pick
+                     </div>
+                  </div>
+                  <meta content="Alpinestars Supertech R10 Carbon Helmet" itemprop="name" />
+                  <meta content="Alpinestars" itemprop="brand" />
+                  <meta content="1064485" itemprop="productId" />
+                  <meta content="https://www.revzilla.com/product_images/2225/7292/alpinestars_supertech_r10_carbon_helmet_white_480x480.jpg" itemprop="image" />
+                  <div class="product-tile__content">
+                     <div class="product-tile__image-container">
+                        <img alt="Alpinestars Supertech R10 Carbon Helmet" class="product-tile__image" height="480" id="js-ProductImageCrossfader-image-1064485" src="https://www.revzilla.com/product_images/2225/7292/alpinestars_supertech_r10_carbon_helmet_white_480x480.jpg"
+                           width="480" />
+                     </div>
+                     <div class="product-tile__summary">
+                        <div class="product-tile__details product-tile__details--swatches">
+                           <ul class="product-tile__swatches">
+                              <li class="product-tile__swatch-wrapper">
+                                 <span class="product-tile__swatch js-ProductImageCrossfader-swatch-1064485" data-js-option-id="30" style="background-color: White" title="White"></span>
+                              </li>
+                              <li class="product-tile__swatch-wrapper">
+                                 <span class="product-tile__swatch js-ProductImageCrossfader-swatch-1064485" data-js-option-id="7757" style="background-color: black" title="Black Carbon"></span>
+                              </li>
+                           </ul>
+                           <script type="580fb9525f9398b69b5b4a70-text/javascript">
+                              (function (w) {
+                                  w.__rq.push(function (req) {
+                                    req("web/static/js/redline/components/product_image_crossfader").then(({
+                                      ProductImageCrossfader
+                                    }) => {
+                                      new ProductImageCrossfader(
+                                        1064485,
+                                        [{
+                                          "alt_text": "Alpinestars Supertech R10 Carbon Helmet",
+                                          "dimensions": null,
+                                          "option_id": 30,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2225/7292/alpinestars_supertech_r10_carbon_helmet_white_480x480.jpg",
+                                          "filename": "",
+                                          "id": 22257292
+                                        }, {
+                                          "alt_text": "Alpinestars Supertech R10 Carbon Helmet",
+                                          "dimensions": null,
+                                          "option_id": 30,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2225/7292/alpinestars_supertech_r10_carbon_helmet_white_480x480.jpg",
+                                          "filename": "",
+                                          "id": 22257292
+                                        }, {
+                                          "alt_text": "Alpinestars Supertech R10 Carbon Helmet",
+                                          "dimensions": null,
+                                          "option_id": 7757,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2209/1032/alpinestars_supertech_r10_carbon_helmet_black_carbon_480x480.jpg",
+                                          "filename": "",
+                                          "id": 22091032
+                                        }]
+                                      );
+                                    });
+                                  })
+                                })(this)
+                           </script>
+                        </div>
+                        <div class="product-tile__name" data-qa="product-tile-name">
+                           Alpinestars Supertech R10 Carbon Helmet
+                        </div>
+                        <div class="product-tile__pricing">
+                           <meta content="1149.95" itemprop="price" />
+                           <meta content="USD" itemprop="priceCurrency" />
+                           <meta content="https://schema.org/InStock" itemprop="availability" />
+                           <meta content="https://schema.org/NewCondition" itemprop="itemCondition" />
+                           <div class="product-tile__prices">
+                              <span class="product-tile__price-retail product-details__price-retail"><span
+                                 data-js="Money.stylizedMoney"><span class="mny"><span class="mny__c">$</span>1,149<sup class="mny__s">.</sup><sup>95</sup><span class="mny__c"></span></span>
+                              </span>
+                              </span>
+                           </div>
+                           <div class="product-tile__savings"></div>
+                        </div>
+                        <div class="product-tile__rating">
+                           <meta content="1" itemprop="worstRating" />
+                           <meta content="5" itemprop="bestRating" />
+                           <meta content="4.4" itemprop="ratingValue" />
+                           <meta content="86" itemprop="reviewCount" />
+                           <span class="product-tile__rating-stars product-rating__stars" data-js="ReviewInterface.ratingStars" data-rating="4.5"></span>
+                           <span class="product-tile__rating-count product-rating__count">86</span><img alt="Video Available" class="product-tile__video-icon" data-lazy-src="/images/sites/revzilla/support/product_browse/youtube_icon-f757f3f104f09ead42c34d3873684f83.svg?vsn=d"
+                              height="16" width="16" />
+                        </div>
+                     </div>
+                  </div>
+               </a>
+            </div>
+            <div class="product-index-results__product-tile-wrapper" data-js="ProductTile.wrapper" data-qa="product-tile">
+               <a class="product-index-results__product-tile product-tile" data-index="2" data-js="ProductTile.link" data-product-id="1067319" data-skus="10343151,10343152,10343153,10343154,10343155,10343156,10343157,10343137,10343138,10343139,10343140,10343141,10343142,10343143,10343158,10343159,10343160,10343161,10343162,10343163,10343164,10343144,10343145,10343146,10343147,10343148,10343149,10343150,10343130,10343131,10343132,10343133,10343134,10343135,10343136"
+                  href="/motorcycle/sedici-strada-3-helmet" itemprop="url" title="Sedici Strada 3 Helmet">
+                  <div class="badge badge--vertical">
+                     <div class="badge__message badge__message--staff-picks-2019">
+                        Staff Pick
+                     </div>
+                  </div>
+                  <meta content="Sedici Strada 3 Helmet" itemprop="name" />
+                  <meta content="Sedici" itemprop="brand" />
+                  <meta content="1067319" itemprop="productId" />
+                  <meta content="https://www.revzilla.com/product_images/2224/7993/sedici_strada3_helmet_matte_black_480x480.jpg" itemprop="image" />
+                  <div class="product-tile__content">
+                     <div class="product-tile__image-container">
+                        <img alt="Sedici Strada 3 Helmet" class="product-tile__image" height="480" id="js-ProductImageCrossfader-image-1067319" src="https://www.revzilla.com/product_images/2224/7993/sedici_strada3_helmet_matte_black_480x480.jpg" width="480" />
+                     </div>
+                     <div class="product-tile__summary">
+                        <div class="product-tile__details product-tile__details--swatches">
+                           <ul class="product-tile__swatches">
+                              <li class="product-tile__swatch-wrapper">
+                                 <span class="product-tile__swatch js-ProductImageCrossfader-swatch-1067319" data-js-option-id="1043" style="background-color: #3a3a3a" title="Matte Black"></span>
+                              </li>
+                              <li class="product-tile__swatch-wrapper">
+                                 <span class="product-tile__swatch js-ProductImageCrossfader-swatch-1067319" data-js-option-id="17181" style="background-color: black" title="Black Gloss"></span>
+                              </li>
+                              <li class="product-tile__swatch-wrapper">
+                                 <span class="product-tile__swatch js-ProductImageCrossfader-swatch-1067319" data-js-option-id="30" style="background-color: White" title="White"></span>
+                              </li>
+                              <li class="product-tile__swatch-wrapper">
+                                 <span class="product-tile__swatch js-ProductImageCrossfader-swatch-1067319" data-js-option-id="55" style="background-color: grey" title="Grey"></span><span class="product-tile__swatch-more-count">+1</span>
+                              </li>
+                              <li class="product-tile__swatch-wrapper">
+                                 <span class="product-tile__swatch js-ProductImageCrossfader-swatch-1067319" data-js-option-id="4966" style="background-color: blue" title="Matte Blue"></span><span class="product-tile__swatch-more-count">+0</span>
+                              </li>
+                           </ul>
+                           <script type="580fb9525f9398b69b5b4a70-text/javascript">
+                              (function (w) {
+                                  w.__rq.push(function (req) {
+                                    req("web/static/js/redline/components/product_image_crossfader").then(({
+                                      ProductImageCrossfader
+                                    }) => {
+                                      new ProductImageCrossfader(
+                                        1067319,
+                                        [{
+                                          "alt_text": "Sedici Strada 3 Helmet",
+                                          "dimensions": null,
+                                          "option_id": 1043,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2224/7993/sedici_strada3_helmet_matte_black_480x480.jpg",
+                                          "filename": "",
+                                          "id": 22247993
+                                        }, {
+                                          "alt_text": "Sedici Strada 3 Helmet",
+                                          "dimensions": null,
+                                          "option_id": 30,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2224/8095/sedici_strada3_helmet_white_480x480.jpg",
+                                          "filename": "",
+                                          "id": 22248095
+                                        }, {
+                                          "alt_text": "Sedici Strada 3 Helmet",
+                                          "dimensions": null,
+                                          "option_id": 55,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2224/8112/sedici_strada3_helmet_grey_480x480.jpg",
+                                          "filename": "",
+                                          "id": 22248112
+                                        }, {
+                                          "alt_text": "Sedici Strada 3 Helmet",
+                                          "dimensions": null,
+                                          "option_id": 1043,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2224/7993/sedici_strada3_helmet_matte_black_480x480.jpg",
+                                          "filename": "",
+                                          "id": 22247993
+                                        }, {
+                                          "alt_text": "Sedici Strada 3 Helmet",
+                                          "dimensions": null,
+                                          "option_id": 4966,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2224/8129/sedici_strada3_helmet_matte_blue_480x480.jpg",
+                                          "filename": "",
+                                          "id": 22248129
+                                        }, {
+                                          "alt_text": "Sedici Strada 3 Helmet",
+                                          "dimensions": null,
+                                          "option_id": 17181,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2224/8078/sedici_strada3_helmet_black_480x480.jpg",
+                                          "filename": "",
+                                          "id": 22248078
+                                        }, {
+                                          "alt_text": "Sedici Strada 3 Helmet",
+                                          "dimensions": null,
+                                          "option_id": null,
+                                          "display_order": null,
+                                          "option": null,
+                                          "uri": "https://www.revzilla.com/product_images/2242/7686/sedici_strada3_helmet_480x480.jpg",
+                                          "filename": "",
+                                          "id": 22427686
+                                        }]
+                                      );
+                                    });
+                                  })
+                                })(this)
+                           </script>
+                        </div>
+                        <div class="product-tile__name" data-qa="product-tile-name">
+                           Sedici Strada 3 Helmet
+                        </div>
+                        <div class="product-tile__pricing">
+                           <meta content="299.99" itemprop="price" />
+                           <meta content="USD" itemprop="priceCurrency" />
+                           <meta content="https://schema.org/InStock" itemprop="availability" />
+                           <meta content="https://schema.org/NewCondition" itemprop="itemCondition" />
+                           <div class="product-tile__prices">
+                              <span class="product-tile__price-retail product-details__price-retail"><span
+                                 data-js="Money.stylizedMoney"><span class="mny"><span class="mny__c">$</span>299<sup class="mny__s">.</sup><sup>99</sup><span class="mny__c"></span></span>
+                              </span>
+                              </span>
+                           </div>
+                           <div class="product-tile__savings">
+                              <label class="product-tile__clp-savings product-tile__clp-savings--non-member js-ClpInfoPanel-plpToggle" data-savings="$30.00" for="rpm-sales-pitch-panel">
+                                 <div class="product-tile__clp-savings-tac"></div>
+                                 <div class="product-tile__clp-savings-txt">
+                                    <span class="product-tile__clp-savings-mem">Members</span>
+                                    <span class="product-tile__clp-savings-sav">save</span>
+                                    <span class="product-tile__clp-savings-per">10%</span>
+                                 </div>
+                              </label>
+                           </div>
+                        </div>
+                        <div class="product-tile__rating">
+                           <meta content="1" itemprop="worstRating" />
+                           <meta content="5" itemprop="bestRating" />
+                           <meta content="4.2" itemprop="ratingValue" />
+                           <meta content="158" itemprop="reviewCount" />
+                           <span class="product-tile__rating-stars product-rating__stars" data-js="ReviewInterface.ratingStars" data-rating="4"></span>
+                           <span class="product-tile__rating-count product-rating__count">158</span><img alt="Video Available" class="product-tile__video-icon" data-lazy-src="/images/sites/revzilla/support/product_browse/youtube_icon-f757f3f104f09ead42c34d3873684f83.svg?vsn=d"
+                              height="16" width="16" />
+                        </div>
+                     </div>
+                  </div>
+               </a>
+            </div> --}}
+
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+         </div>
+
+         {{-- Pagination --}}
+         <div class="product-index-results__pagination">
+            <div class="pagination" data-js="Pagination">
+               <a href="" class="pagination__incrementer pagination__incrementer--prev" aria-label="Previous page">
+               </a>
+               <span class="pagination__links-wrapper">
+
+               <a class="pagination__page-link" href="?page=1">1</a>
+               <a class="pagination__page-link" href="?page=2">2</a>
+               <a class="pagination__page-link" href="?page=3">3</a>
+               <a class="pagination__page-link" href="?page=4">4</a>
+               <a class="pagination__page-link" href="?page=5">5</a>
+               <a class="pagination__page-link" href="?page=6">6</a>
+               <a class="pagination__page-link" href="?page=7">7</a>
+               <a class="pagination__page-link" href="?page=8">8</a>
+               </span>
+               <span class="pagination__select-wrapper">
+                  <select class="pagination__select product-index-pagination__select ui-select" name="[]">
+                     <option selected value="1">1</option>
+                     <option value="2">2</option>
+                     <option value="3">3</option>
+                     <option value="4">4</option>
+                     <option value="5">5</option>
+                     <option value="6">6</option>
+                     <option value="7">7</option>
+                     <option value="8">8</option>
+                  </select>
+                  <span class="pagination__select-page-count"> of 8 </span>
+               </span>
+               <a href="?page=2" class="pagination__incrementer pagination__incrementer--next" aria-label="Next page">
+               </a>
+            </div>
+         </div>
+
+      </div>
+   </div>
+</div>
+<div class="component__wrapper component__wrapper--background-black">
+   <section class="component component--seo-block seo-block" data-analytics-component-id="167895" data-analytics-component-type="SeoBlock" data-asset-id="83256" data-component-type="SEO Block" data-js-component="SeoBlock" data-js-scheduled-component-id="167895">
+      <div class="component__content">
+         <h1 class="seo-block__heading stn-shd stn-shd--small" data-heading="RevZilla: The #1 Online Store for Motorcycle Gear & Parts">Bongshal: The #1 Online Store
+            for Motorcycle Gear & Parts
+         </h1>
+         <div class="seo-block__top-content ui-copy-container ui-copy-container--small" data-subheading="&lt;p&gt;RevZilla is the largest online retailer of motorcycle gear, parts, and accessories in the U.S. Founded by riders in 2007, our team of motorcycle enthusiasts and product experts is dedicated to helping you find the best gear for your ride. Unlike some competitors, our customer service is available every day—because we know riders need support when they need it, not just on weekdays.&lt;br&gt;Why Choose RevZilla? Fast &amp;amp; reliable shipping, no restock fees on returns, expert video product reviews, and exclusive &lt;a href=&quot;https://www.revzilla.com/rpm&quot;&gt;RPM loyalty rewards&lt;/a&gt;!&lt;br&gt;With our RPM loyalty program, you’ll get: cash-back rewards on purchases, discounts on 70+ top brands, free second-day shipping, free returns, and more.&lt;br&gt;Whether you need a &lt;a href=&quot;/motorcycle-helmets&quot;&gt;motorcycle helmet&lt;/a&gt;, &lt;a href=&quot;/motorcycle-jackets-vests&quot;&gt;jacket&lt;/a&gt;, &lt;a href=&quot;/motorcycle-gloves&quot;&gt;gloves&lt;/a&gt;, &lt;a href=&quot;/motorcycle-boots&quot;&gt;boots&lt;/a&gt;, or &lt;a href=&quot;/motorcycle-parts&quot;&gt;performance parts,&lt;/a&gt; we make it easy to shop with confidence.&lt;/p&gt;">
+            <p>Bongshal is the largest online retailer of motorcycle gear, parts, and accessories in the U.S. Founded by riders in 2007, our team of motorcycle enthusiasts and product experts is dedicated to helping you find the best gear
+               for your ride. Unlike some competitors, our customer service is available every day—because we know riders need support when they need it, not just on weekdays.
+               <br>Why Choose Bongshal? Fast &amp; reliable shipping, no restock fees on returns, expert video product reviews, and exclusive <a href="#">RPM loyalty rewards</a>!
+               <br>With our RPM loyalty program, you’ll get: cash-back rewards on purchases, discounts on 70+ top brands, free second-day shipping, free returns, and more.
+               <br>Whether you need a <a href="#">motorcycle
+               helmet</a>, <a href="#">jacket</a>, <a href="#">gloves</a>, <a href="#">boots</a>, or <a href="#">performance parts,</a> we make it easy to shop with confidence.
+            </p>
+            <br>
+         </div>
+      </div>
+   </section>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    let companySelect = document.getElementById('companySelectt');
+    let modelSelect = document.getElementById('modelSelectt');
+    let colorSelect = document.getElementById('colorSelectt');
+    let goBtn = document.getElementById('goBtnn');
+
+    // When company selected -> load models
+    companySelect.addEventListener('change', function() {
+        let companyId = this.value;
+        // alert(companyId);
+        modelSelect.innerHTML = '<option value="">Select Model</option>';
+        colorSelect.innerHTML = '<option value="">Select Color</option>';
+        modelSelect.disabled = true;
+        colorSelect.disabled = true;
+        goBtn.disabled = true;
+
+        if (companyId) {
+            console.log("Fetching models for company ID:", companyId); // Debugging line
+
+            fetch("{{ url('/get-models') }}/" + companyId)
+                .then(res => res.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        modelSelect.disabled = false;
+                        data.forEach(model => {
+                            modelSelect.innerHTML += `<option value="${model.id}">${model.model}</option>`;
+                        });
+                    }
+                });
+        }
+    });
+
+    // When model selected -> load colors
+    modelSelect.addEventListener('change', function() {
+        let bikeId = this.value;
+        colorSelect.innerHTML = '<option value="">Select Color</option>';
+        colorSelect.disabled = true;
+        goBtn.disabled = true;
+
+        if (bikeId) {
+            fetch("{{ url('/get-colors') }}/" + bikeId)
+           
+                .then(res => res.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        colorSelect.disabled = false;
+                        data.forEach(color => {
+                            colorSelect.innerHTML += `<option value="${color.id}" data-image="${color.image}">${color.color_name} </option>`;
+                        });
+                    } else {
+                        goBtn.disabled = false; // enable if no colors
+                    }
+                });
+        }
+    });
+
+    // When color selected -> enable Go
+    colorSelect.addEventListener('change', function() {
+        if (this.value) {
+            goBtn.disabled = false;
+        }
+    });
+});
+// $('#colorSelectt').select2({
+//     templateResult: function (data) {
+//         if (!data.id) return data.text;
+//         let img = $(data.element).data('image');
+//         return $(`<span><img src="{{ asset('images/multiimage/bike') }}/${img}" width="50" height="50" style="margin-right:5px;"> ${data.text}</span>`);
+//     },
+//     templateSelection: function (data) {
+//         if (!data.id) return data.text;
+//         let img = $(data.element).data('image');
+//         return $(`<span>
+//                 <img src="{{ asset('images/multiimage/bike') }}/${img}" width="50" height="50" style="margin-right:5px;">${data.text}</span>`);}
+//         });
+
+
+   </script>
+    {{-- <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const vehicleSpecs = document.querySelector(".vehicle-specs");
+    const shopForm = document.querySelector("[data-js='ShopByBike.selectInterfacse']");
+    const differentVehicleBtn = document.querySelector("[data-js='ShopByBike.interfaceToggle']");
+    const goBtn = document.querySelector("#goBtnn");
+
+    // Hide specs initially, show form
+    vehicleSpecs.style.display = "none";
+    shopForm.style.display = "block";
+
+    // When "Go!" clicked → show specs, hide form
+    if (goBtn) {
+        goBtn.addEventListener("click", function (e) {
+            e.preventDefault(); // stop form submit
+            vehicleSpecs.style.display = "block";
+            shopForm.style.display = "none";
+        });
+    }
+
+    // When "Select Different Vehicle" clicked → show form, hide specs
+    if (differentVehicleBtn) {
+        differentVehicleBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            vehicleSpecs.style.display = "none";
+            shopForm.style.display = "block";
+        });
+    }
+});
+
+
+    </script> --}}
+{{-- <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const selectForm = document.querySelector(".shop-by-bike--select .shop-by-bike__form");
+    const searchForm = document.querySelector(".shop-by-bike--search .shop-by-bike__form");
+    const goBtn = document.querySelector("#goBtnn");
+    const differentVehicleBtn = document.querySelector("[data-js='ShopByBike.interfaceToggle']");
+
+    if (!selectForm || !searchForm) {
+        console.error("❌ Could not find forms");
+        return;
+    }
+
+    // Initial state → show select form, hide search form
+    selectForm.style.display = "block";
+    searchForm.style.display = "none";
+
+    // When Go! clicked → hide select form, show search form
+    if (goBtn) {
+        goBtn.addEventListener("click", function (e) {
+            e.preventDefault(); // prevent form submit for now
+            selectForm.style.display = "none";
+            searchForm.style.display = "block";
+            console.log("👉 Go clicked: show search form, hide select form");
+        });
+    }
+
+    // When "Select Different Vehicle" clicked → reverse
+    if (differentVehicleBtn) {
+        differentVehicleBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            selectForm.style.display = "block";
+            searchForm.style.display = "none";
+            console.log("👉 Different Vehicle clicked: show select form, hide search form");
+        });
+    }
+});
+</script> --}}
 
     {{-- <script>
         $(function () {

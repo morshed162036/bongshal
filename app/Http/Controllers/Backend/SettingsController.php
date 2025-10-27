@@ -10,6 +10,7 @@ use App\Models\AttributeValue; // Assuming you have an AttributeValue model
 use App\Models\Slider; // Assuming you have a Slider model
 use App\Models\Company; // Assuming you have a Company model
 use Illuminate\Support\Facades\File;
+<<<<<<< HEAD
 
 class SettingsController extends Controller
 {
@@ -71,6 +72,128 @@ class SettingsController extends Controller
         return view('backend.company',compact('brands','brand'));
 
     }
+=======
+use Illuminate\Validation\Rule;
+
+class SettingsController extends Controller
+{
+    //     public function company(Request $request, string $id = null)
+    // {
+    //     $brands = Company::get()->all();
+    //     if ($id) {
+    //         $brand = Company::findorFail($id);
+    //     }
+    //     else
+    //     {
+    //         $brand = '';
+    //     }
+    //     if($request->isMethod('post'))
+    //     {
+    //         // dd($request->all());
+    //         if(empty($brand))
+    //         {
+    //             $brand = new Company();
+    //         }
+    //         $brand->name = $request->name;
+    //         $brand->details = $request->details;
+    //         // $brand->email = $request->email;
+    //         $brand->phone = $request->phone;
+    //         // $brand->mobile = $request->mobile;
+    //         $brand->order = $request->order;
+    //         // $brand->url = $request->url;
+    //         // $brand->map = $request->map;
+    //         $brand->status = $request->status;
+    //         // dd($brand);
+
+    //         if($request->hasFile('image')){
+    //             $exists = public_path('images/company/'.$brand->image);
+    //             if(File::exists($exists))
+    //             {
+    //                 File::delete($exists);
+    //             }
+    //             $image_temp = $request->file('image');
+    //             if($image_temp->isValid()){
+    //                 //Get Image Extension
+    //                 $extension = $image_temp->getClientOriginalExtension();
+    //                 //Generate New Image Name
+    //                 $imageName = time().'.'.$extension;
+    //                 $imagePath = 'images/company';
+    //                 $image_temp->move(public_path($imagePath),$imageName);
+    //                 $brand->logo = $imageName;
+    //             }
+    //         }
+    //         //dd($brand);
+    //         if (!empty($id)) {
+    //             $brand -> update();
+    //             return redirect(route('company'))->with('success','Update Success!!');
+    //         } else {
+    //             $brand -> save();
+    //             // dd($brand);
+    //             return redirect(route('company'))->with('success','Create Success!!');
+    //         }
+    //     }
+    //     return view('backend.company',compact('brands','brand'));
+
+    // }
+    public function company(Request $request, string $id = null)
+{
+    $brands = Company::all();
+
+    $brand = $id ? Company::findOrFail($id) : "";
+
+    if ($request->isMethod('post')) {
+        $brand = $id ? Company::findOrFail($id) : new Company();
+        // Validation with unique name
+        $validated = $request->validate([
+            'name'   => [
+                'required',
+                'string',
+                'max:255',
+                Rule::unique('companies', 'name')->ignore($id), // <--- important
+            ],
+            'details'=> 'nullable|string|max:225',
+            'phone'  => 'nullable|string|max:20',
+            'order'  => 'nullable|integer',
+            'status' => 'required|string|in:active,inactive',
+            'image'  => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048',
+        ]);
+
+        // Assign validated data
+        $brand->name    = $validated['name'];
+        $brand->details = $validated['details'] ?? null;
+        $brand->phone   = $validated['phone'] ?? null;
+        $brand->order   = $validated['order'] ?? 0;
+        $brand->status  = $validated['status'];
+
+        // Image handling
+        if ($request->hasFile('image')) {
+            // delete old if exists
+            if (!empty($brand->logo)) {
+                $exists = public_path('images/company/' . $brand->logo);
+                if (File::exists($exists)) {
+                    File::delete($exists);
+                }
+            }
+
+            $image      = $request->file('image');
+            $extension  = $image->getClientOriginalExtension();
+            $imageName  = time() . '.' . $extension;
+            $imagePath  = public_path('images/company');
+
+            $image->move($imagePath, $imageName);
+
+            $brand->logo = $imageName;
+        }
+
+        // Save or update
+        $brand->save();
+
+        return redirect()->route('company')->with('success', $id ? 'Update Success!!' : 'Create Success!!');
+    }
+
+    return view('backend.company', compact('brands', 'brand'));
+}
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
         public function brand(Request $request, string $id = null)
     {
         $brands = Brand::get()->all();
