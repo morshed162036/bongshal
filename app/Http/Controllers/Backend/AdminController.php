@@ -82,6 +82,9 @@ class AdminController extends Controller
             if(Auth::guard('web')->attempt(['email'=>$data['email'],'password'=>$data['password'],'role'=>'admin'])){
                 return redirect('dashboard');
                 }
+            elseif(Auth::guard('web')->attempt(['email'=>$data['email'],'password'=>$data['password'],'role'=>'vendor','is_active'=>'1'])){
+                return redirect('dashboard');
+                }
             else{
                 return redirect()->back()->with('error','Invalid Email or Password');
             }

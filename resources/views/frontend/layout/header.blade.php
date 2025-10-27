@@ -3798,7 +3798,10 @@
                     </a>
                 </div>
                 <div class="cmto-header-utility__item cmto-header-utility__item--account cmto-header-utility__item--toggle-hybrid js-CmtoNavigation-utilityItem">
-                    <a class="cmto-header-utility__link open-login-modal-btn" data-js="" data-qa="" href="#">
+                    {{-- <a class="cmto-header-utility__link open-login-modal-btnn" data-js="" data-qa="" href="{{ route('admin.login') }}">
+                        <img class="cmto-header-utility__icon" id="login-image" height="24" src="https://www.revzilla.com/images/redline/support/header/account_icon-895e762bda4d1b16a29085a786328ca5.svg?vsn=d" width="24">
+                    </a> --}}
+                    <a class="cmto-header-utility__link open-login-modal-btnn" data-js="" data-qa="" href="{{ route('vendor.registration') }}">
                         <img class="cmto-header-utility__icon" id="login-image" height="24" src="https://www.revzilla.com/images/redline/support/header/account_icon-895e762bda4d1b16a29085a786328ca5.svg?vsn=d" width="24">
                     </a>
                 </div>
@@ -3820,10 +3823,10 @@
                     </svg>
                     <span class="cmto-header__search-sbv-text">My Garage</span>
                 </a>
-                <form action="/search" class="search-form js-PreviewSearchService-searchForm" data-form-name="Site Search" data-qa="search-form" method="get">
+                <form action="{{ url('/search') }}" class="search-form js-PreviewSearchService-searchForm" data-form-name="" data-qa="search-form" method="get">
                     <div class="ui-search-input__wrapper">
                         <input aria-label="Search" autocomplete="off" class="js-PreviewSearchService-input ui-search-input ui-search-input--large ui-search-input--button-left" data-field-name="Query" name="query" placeholder="Search" required type="text">
-                        <button aria-label="Search" class="ui-search-input__button" data-qa="search-button" tabindex="-1"></button>
+                        <button aria-label="Search" class="ui-search-input__button" type="submit" data-qa="search-button" tabindex="-1"></button>
                     </div>
                     <button aria-label="Close" class="ui-search-input__button search-form__close-button js-PreviewSearchService-headerCloseButton" tabindex="-1"></button>
                 </form>
@@ -7420,7 +7423,7 @@
                         <div class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--heading">Discover</div>
                     </div>
                     <ul class="cmto-nav-drawer__menu-list">
-                        <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/zillacash-rewards-program">ZillaCash</a></li>
+                        {{-- <li class="cmto-nav-drawer__menu-item"><a class="cmto-nav-drawer__menu-text" href="/zillacash-rewards-program">ZillaCash</a></li> --}}
                         <li class="cmto-nav-drawer__menu-item pinned first-pinned"><a class="cmto-nav-drawer__menu-text" href="/new-rider">New Rider Guide</a></li>
                         <li class="cmto-nav-drawer__menu-item">
                             <label class="cmto-nav-drawer__menu-text cmto-nav-drawer__menu-text--parent" data-nav-section="Common Tread Blog" for="secondary-menu-19965">Common Tread Blog

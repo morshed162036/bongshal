@@ -114,7 +114,11 @@
                                                 <select name="company_id" id="" class="form-control" required>
                                                     <option value="" disabled selected>Select Company</option>
                                                     @foreach ($companies as $company)
+<<<<<<< HEAD
                                                         <option value="{{ $company->id }}">{{ $company->name }}</option>
+=======
+                                                        <option value="{{ $company->id }}" {{ old('company_id') == $company->id ? 'selected' : '' }}>{{ $company->name }}</option>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                                     @endforeach
                                                 </select>
                                             </div>
@@ -125,7 +129,11 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-Createon1"><i class="bx bx-spreadsheet"></i></span>
                                                 </div>
+<<<<<<< HEAD
                                                 <input type="text" name="model" class="form-control">
+=======
+                                                <input type="text" name="model" class="form-control" value="{{ old('model') }}">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                             </div>
                                         </fieldset>
                                         <fieldset class="mt-2">
@@ -136,6 +144,7 @@
                                                 </div>
                                                 <select name="type" id="" class="form-control" required>
                                                     <option value="" disabled selected>Select Type</option>
+<<<<<<< HEAD
                                                     <option value="sports">Sports</option>
                                                     <option value="street">Street / Naked</option>
                                                     <option value="scooty">Scooty</option>
@@ -170,6 +179,72 @@
                                                 <input type="text" name="rear_tire_size" class="form-control">
                                             </div>
                                         </fieldset>
+=======
+                                                    <option value="sports" {{ old('type') == "sports" ? 'selected' : '' }}>Sports</option>
+                                                    <option value="street" {{ old('type') == "street" ? 'selected' : '' }}>Street / Naked</option>
+                                                    <option value="scooty" {{ old('type') == "scooty" ? 'selected' : '' }}>Scooty</option>
+                                                </select>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="mt-2">
+                                            <h5>Battery Size</h5>
+                                            <div class="input-group">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text" id="basic-Createon1"><i class="bx bx-spreadsheet"></i></span>
+                                                </div>
+                                                <input type="text" name="battery_capacity" class="form-control" value="{{ old('battery_capacity') }}">
+                                            </div>
+                                        </fieldset>
+
+                                        {{-- ================= Tire Information Section ================= --}}
+                                    <div class="row mt-3">
+                                        <div class="col-12">
+                                            <h5 class="mb-2">Tire Specifications</h5>
+                                        </div>
+
+                                        {{-- Front Tire --}}
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <h6>Front Tire</h6>
+                                                <div class="row">
+                                                    <div class="col-md-4 mb-2">
+                                                        <label>Width</label>
+                                                        <input type="text" name="front_tire_width" class="form-control" value="{{ old('front_tire_width') }}">
+                                                    </div>
+                                                    <div class="col-md-4 mb-2">
+                                                        <label>Aspect Ratio</label>
+                                                        <input type="text" name="front_tire_aspectratio" class="form-control" value="{{ old('front_tire_aspectratio') }}">
+                                                    </div>
+                                                    <div class="col-md-4 mb-2">
+                                                        <label>Rim</label>
+                                                        <input type="text" name="front_tire_rim" class="form-control" value="{{ old('front_tire_rim') }}">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+
+                                        {{-- Rear Tire --}}
+                                        <div class="col-md-6">
+                                            <fieldset>
+                                                <h6>Rear Tire</h6>
+                                                <div class="row">
+                                                    <div class="col-md-4 mb-2">
+                                                        <label>Width</label>
+                                                        <input type="text" name="rear_tire_width" class="form-control" value="{{ old('rear_tire_width') }}">
+                                                    </div>
+                                                    <div class="col-md-4 mb-2">
+                                                        <label>Aspect Ratio</label>
+                                                        <input type="text" name="rear_tire_aspectratio" class="form-control" value="{{ old('rear_tire_aspectratio') }}">
+                                                    </div>
+                                                    <div class="col-md-4 mb-2">
+                                                        <label>Rim</label>
+                                                        <input type="text" name="rear_tire_rim" class="form-control" value="{{ old('rear_tire_rim') }}">
+                                                    </div>
+                                                </div>
+                                            </fieldset>
+                                        </div>
+                                    </div>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
 
                                         {{-- <fieldset class="mt-2">
                                             <h5>Color</h5>
@@ -248,7 +323,11 @@
                                                                                 </div>
 
                                                                                 <div class="col-md-4 col-sm-12 form-group">
+<<<<<<< HEAD
                                                                                     <label for="volume">Volume</label>
+=======
+                                                                                    <label for="volume">Capacity</label>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                                                                     <input type="text" class="form-control" id="volume"
                                                                                         name="volume" placeholder="Volume" >
                                                                                 </div>

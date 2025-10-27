@@ -61,6 +61,18 @@ return new class extends Migration
             $table->string('meta_image')->nullable();
             $table->longText('meta_description')->nullable();
             $table->longText('meta_keywords')->nullable();
+<<<<<<< HEAD
+=======
+            $table->string('grade')->nullable();
+            $table->string('engine_oil_type')->nullable();
+            // $table->string('engine_oil_capacity')->nullable();
+            $table->string('quantity')->nullable();
+            $table->string('width')->nullable();
+            $table->string('aspect_ratio')->nullable();
+            $table->string('rim')->nullable();
+            $table->longText('features')->nullable();
+
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
 
 
             $table->timestamps();

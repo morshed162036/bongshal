@@ -104,6 +104,7 @@
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
+<<<<<<< HEAD
                                         <label for="battery">Battery <span class="text-danger">*</span></label>
                                         <input type="text" id="battery" class="form-control" name="battery_capacity" value="{{ $bike->battery }}" placeholder="Enter Battery" required>
                                     </div>
@@ -120,6 +121,59 @@
                                         <input type="text" id="rear_tire_size" class="form-control" name="rear_tire_size" value="{{ $bike->rear_tire_size }}" placeholder="Enter Rear Tire Size" required>
                                     </div>
                                 </div>
+=======
+                                        <label for="battery">Battery Size <span class="text-danger">*</span></label>
+                                        <input type="text" id="battery" class="form-control" name="battery_capacity" value="{{ $bike->battery }}" placeholder="Enter Battery" required>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+    <div class="col-12">
+        <h5 class="mb-2">Tire Specifications</h5>
+    </div>
+
+    {{-- Front Tire --}}
+    <div class="col-md-12">
+        <fieldset>
+            <h6>Front Tire</h6>
+            <div class="row">
+                <div class="col-md-4 mb-2">
+                    <label>Width</label>
+                    <input type="text" name="front_tire_width" class="form-control" value="{{ old('front_tire_width',$bike->front_tire_width) }}">
+                </div>
+                <div class="col-md-4 mb-2">
+                    <label>Aspect Ratio</label>
+                    <input type="text" name="front_tire_aspectratio" class="form-control" value="{{ old('front_tire_aspectratio',$bike->front_tire_aspectratio) }}">
+                </div>
+                <div class="col-md-4 mb-2">
+                    <label>Rim</label>
+                    <input type="text" name="front_tire_rim" class="form-control" value="{{ old('front_tire_rim',$bike->front_tire_rim) }}">
+                </div>
+            </div>
+        </fieldset>
+    </div>
+
+    {{-- Rear Tire --}}
+    <div class="col-md-12">
+        <fieldset>
+            <h6>Rear Tire</h6>
+            <div class="row">
+                <div class="col-md-4 mb-2">
+                    <label>Width</label>
+                    <input type="text" name="rear_tire_width" class="form-control" value="{{ old('rear_tire_width',$bike->rear_tire_width) }}">
+                </div>
+                <div class="col-md-4 mb-2">
+                    <label>Aspect Ratio</label>
+                    <input type="text" name="rear_tire_aspectratio" class="form-control" value="{{ old('rear_tire_aspectratio',$bike->rear_tire_aspectratio) }}">
+                </div>
+                <div class="col-md-4 mb-2">
+                    <label>Rim</label>
+                    <input type="text" name="rear_tire_rim" class="form-control" value="{{ old('rear_tire_rim',$bike->rear_tire_rim) }}">
+                </div>
+            </div>
+        </fieldset>
+    </div>
+</div>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="type">Type <span class="text-danger">*</span></label>
@@ -181,7 +235,11 @@
                                         </div>
                                         <div class="col-md-4 col-12">
                                             <div class="form-group">
+<<<<<<< HEAD
                                                 <label for="volume_{{ $index }}">Volume <span class="text-danger">*</span></label>
+=======
+                                                <label for="volume_{{ $index }}">Capacity <span class="text-danger">*</span></label>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                                 <input type="text" id="volume_{{ $index }}" class="form-control" name="group-grade[{{ $index }}][volume]" value="{{ $grade->volume }}" placeholder="Enter Volume" required>
                                             </div>
                                         </div>

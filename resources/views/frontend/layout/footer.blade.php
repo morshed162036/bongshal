@@ -358,7 +358,7 @@
     </footer> --}}
 
        <footer class="footer footer--shop" data-js="App.footer" role="contentinfo">
-      <div class="footer__reviews-wrapper">
+      {{-- <div class="footer__reviews-wrapper">
          <div class="footer__title">
             Moto Dreams, Delivered
          </div>
@@ -437,13 +437,13 @@
                <div class="stjr-review-showcase"></div>
             </div>
          </div>
-      </div>
+      </div> --}}
       <div class="footer__divider-wrapper">
          <div class="footer__divider-content">
             <div class="footer__content  footer__content--overflow-show">
                <div class="footer__logo-content">
                   <div class="footer__rz-divider">
-                     <img alt="RevZilla" class="footer__rz-logo" src="{{ asset('images/setting/1754108727_logo.png') }}" />
+                     <img alt="Bongshal" class="footer__rz-logo" src="{{ asset('images/setting/'.$company->logo) }}" />
                   </div>
                </div>
             </div>
@@ -606,7 +606,7 @@
                            <ul class="footer__list footer__list--level-1">
                               <li class="footer__item footer__item--level-2" data-nav-level="3"
                                  data-nav-section="Contact Us"><a class="footer__link footer__link--level-2"
-                                    data-nid="10470" href="/contact-us">Contact Us</a></li>
+                                    data-nid="10470" href="{{ route('contact.us') }}">Contact Us</a></li>
                               <li class="footer__item footer__item--level-2" data-nav-level="3"
                                  data-nav-section="Return Policy"><a class="footer__link footer__link--level-2"
                                     data-nid="10471" href="/returns">Return Policy</a></li>
