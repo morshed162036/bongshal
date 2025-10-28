@@ -47,7 +47,10 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+<<<<<<< HEAD
+=======
         // dd($request->all());
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
         $request->validate([
             'category_id'       => 'required|exists:categories,id',
             // 'brand_id'          => 'required|exists:brands,id',
@@ -65,7 +68,11 @@ class ProductController extends Controller
         ]);
 
 
+<<<<<<< HEAD
+// dd($request->all());
+=======
         // dd($request->all());
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
         $brand_name = \App\Models\Brand::find($request->brand_id);
         $series = $request->series?$request->series.', ':'';
         $category_name = \App\Models\Category::find($request->category_id)->name;
@@ -73,7 +80,11 @@ class ProductController extends Controller
         // dd($bike_model);
         $bike_model = \App\Models\Bike::find($request->bike_id)->model;
 
+<<<<<<< HEAD
+        $name = $brand_name?$brand_name->name.', ':''.$series.$request->traditional_name.', '.$request->commercial_name.', '.$request->part_number.', '.$bike_model;
+=======
         $name = $brand_name?$brand_name->name.' ' :''.$series.$request->traditional_name.' ' . $request->commercial_name.' '.$request->part_number.' '.$bike_model;
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
 
         DB::beginTransaction();
         try {
@@ -112,6 +123,8 @@ class ProductController extends Controller
         $product->meta_keywords = $request->meta_keywords;
         $product->status = 'active';
 
+<<<<<<< HEAD
+=======
         $product->grade = $request->grade;
         $product->engine_oil_type = $request->engine_oil_type;
         // $product->engine_oil_capacity = $request->engine_oil_capacity;
@@ -121,6 +134,7 @@ class ProductController extends Controller
         $product->rim = $request->rim;
         // $product->features = $request->features;
 
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
         // $product = Product::create([
         //     'name'       => $name,
         //     'slug'              => \Str::slug($name),
@@ -178,7 +192,11 @@ class ProductController extends Controller
 
         $product->description = $dom->saveHTML();
 
+<<<<<<< HEAD
+         // Handle file upload for the image
+=======
         // Handle file upload for the image
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
         $Imagename = null;
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -254,6 +272,9 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
+<<<<<<< HEAD
+        //
+=======
         $product = Product::with('images','attributes')->find($id);
         // dd($product->toArray());
         $catalogues = \App\Models\Catalogue::with('category')->where('status','active')->get();
@@ -262,11 +283,18 @@ class ProductController extends Controller
         $attributes = \App\Models\Attribute::where('status','active')->get();
         $bikes = \App\Models\Bike::where('status','active')->get();
         return view('backend.product.edit',compact('product','catalogues','categories','brands','attributes','bikes'));
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
     }
 
     /**
      * Update the specified resource in storage.
      */
+<<<<<<< HEAD
+    public function update(Request $request, string $id)
+    {
+        //
+    }
+=======
     public function update(Request $request, $id)
 {
     $product = Product::findOrFail($id);
@@ -427,10 +455,17 @@ class ProductController extends Controller
     }
 }
 
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
 
     /**
      * Remove the specified resource from storage.
      */
+<<<<<<< HEAD
+    public function destroy(string $id)
+    {
+        //
+    }
+=======
     public function destroy($id)
 {
     DB::beginTransaction();
@@ -492,6 +527,7 @@ class ProductController extends Controller
     }
 }
 
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
 
     public function values($id)
     {
@@ -544,6 +580,8 @@ class ProductController extends Controller
         return $dom->saveHTML();
     }
 
+<<<<<<< HEAD
+=======
     public function getCategoriesWithSubcategories($catalogue_id)
     {
 
@@ -555,5 +593,6 @@ class ProductController extends Controller
         return response()->json($categories);
     }
 
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
 
 }

@@ -3,6 +3,12 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Ading;
+use App\Models\Brand;
+use App\Models\MultipleAds;
+use App\Models\ProductPromotion;
+use App\Models\Slider;
+use App\Models\Catalogue;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Vendor;
@@ -29,7 +35,23 @@ class HomeController extends Controller
                        ->where('type', 'image')
                        ->inRandomOrder() // Optional: for variety
                        ->first();
+<<<<<<< HEAD
+        $sideBannerAd = MultipleAds::where('type', 'single_side_banner')
+                          ->where('status', 'active')
+                          ->first();
+        $mainBannerAd = MultipleAds::where('type', 'single_main_banner')
+                          ->where('status', 'active')
+                          ->first();
+        $tripleBannerAd = MultipleAds::where('type', 'triple_banner')
+                          ->where('status', 'active')
+                          ->first();
+        $doubleBannerAd = MultipleAds::where('type', 'double_banner')
+                            ->where('status', 'active')
+                            ->first();
+        return view('frontend.home',compact('sliders', 'featuredCatalogues','promotions','brands','activeVideoAd','activeImageAd','sideBannerAd','mainBannerAd','tripleBannerAd','doubleBannerAd'));
+=======
         return view('frontend.home',compact('sliders', 'featuredCatalogues','promotions','brands','activeVideoAd','activeImageAd'));
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
     }
     public function shop()
     {

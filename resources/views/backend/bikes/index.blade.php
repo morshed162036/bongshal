@@ -21,7 +21,10 @@
 
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('admin_template/assets/css/style.css') }}">
+<<<<<<< HEAD
+=======
     {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> --}}
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
     <!-- END: Custom CSS-->
     <style>
         a label{
@@ -80,7 +83,11 @@
                                                 <th>Company</th>
                                                 <th>Front Tire</th>
                                                 <th>Rear Tire</th>
+<<<<<<< HEAD
+                                                <th>Battery</th>
+=======
                                                 <th>Battery Size</th>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                                 <th>Color</th>
                                                 <th>Grade</th>
                                                 <th>Status</th>
@@ -96,6 +103,16 @@
                                                         <td>@if ($bike->company)
                                                             {{ $bike->company->name }}
                                                         @endif</td>
+<<<<<<< HEAD
+                                                        <td>{{ $bike->front_tire_size }}</td>
+                                                        <td>{{ $bike->rear_tire_size }}</td>
+                                                        <td>{{ $bike->battery }}</td>
+                                                        <td>
+                                                            @foreach ($bike->color as $color)
+                                                            <img src="{{ asset('images/multiimage/bike/'.$color->image) }}" alt="" height="100px">
+                                                                {{ $color->color_name }},<br>
+                                                            @endforeach
+=======
                                                         <td>{{ $bike->front_tire_width }}/{{ $bike->front_tire_aspectratio }}-{{ $bike->front_tire_rim }}</td>
                                                         <td>{{ $bike->rear_tire_width }}/{{ $bike->front_tire_aspectratio }}-{{ $bike->front_tire_rim }}</td>
                                                         <td>{{ $bike->battery }}</td>
@@ -145,6 +162,7 @@
 </div>
 
 
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                                         </td>
                                                         <td>
                                                             @foreach ($bike->grade as $grade)
@@ -241,7 +259,10 @@
     <!-- BEGIN: Page JS-->
     <script src="{{ asset('admin_template/app-assets/js/scripts/datatables/datatable.js') }}"></script>
     <!-- END: Page JS-->
+<<<<<<< HEAD
+=======
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
     <script>
 
         $(document).ready(function (){

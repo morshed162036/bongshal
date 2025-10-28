@@ -55,6 +55,34 @@
                         <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
+<<<<<<< HEAD
+                                {{-- <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="name">Product Name <span class="text-danger">*</span></label>
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Enter Product Name" value="{{ old('name') }}" required>
+                                        @error('name')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div> --}}
+                                {{-- <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="slug">Slug <span class="text-danger">*</span></label>
+                                        <input type="text" name="slug" class="form-control" id="slug" placeholder="Enter Slug" value="{{ old('slug') }}" required>
+                                        @error('slug')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div> --}}
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="category_id">Category <span class="text-danger">*</span></label>
+                                        <select name="category_id" id="category_id" class="form-control" required>
+                                            <option value="">Select Category</option>
+                                            {{-- @foreach($categories as $category)
+                                                <option value="{{ $category->id }}" {{ old('category_id') == $category->id ? 'selected' : '' }}>{{ $category->name }}</option>
+                                            @endforeach --}}
+=======
                                 {{-- Catalogue Dropdown --}}
                                 <div class="form-group mb-3">
                                     <label for="catalogue_id">Catalogue</label>
@@ -72,6 +100,7 @@
                                         <label for="category_id">Category <span class="text-danger">*</span></label>
                                         <select name="category_id" id="category_id" class="form-control" required>
                                             <option value="">Select Category</option>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                              @foreach ($catalogues as $catalogue)
                                                 <optgroup label="{{ $catalogue['name'] }}"></optgroup>
                                                 @foreach ($catalogue['category'] as $category)
@@ -85,6 +114,11 @@
                                         @error('category_id')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
+<<<<<<< HEAD
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+=======
                                     </div> --}}
                                     <div class="form-group mb-3">
                                         <label for="category_id">Category</label>
@@ -94,6 +128,7 @@
                                     </div>
                                 </div>
                                 <div class="col-md-6" id="brand-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="brand_id">Brand</label>
                                         <select name="brand_id" id="brand_id" class="form-control">
@@ -107,12 +142,20 @@
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="bike_id">Fitment Model <span class="text-danger">*</span></label>
+                                        <select name="bike_id" id="bike_id" class="form-control" required>
+                                            <option value="">Select Model</option>
+=======
                                 <div class="col-md-6" id="fitment-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="bike_id">Fitment Model <span class="text-danger">*</span></label>
                                         <select name="bike_id" id="bike_id" class="form-control">
                                             <option value="">Select Model</option>
                                             <option value="0">Universal</option>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                             @foreach($bikes as $bike)
                                                 <option value="{{ $bike->id }}">{{ $bike->model }} ({{ $bike->company->name }})</option>
                                             @endforeach
@@ -122,7 +165,11 @@
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="series-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="series">Model / Series</label>
                                         <input type="text" name="series" class="form-control" id="series" placeholder="(e.g. G-TX Series etc)" value="{{ old('series') }}">
@@ -133,7 +180,11 @@
                                 </div>
                             </div>
                             <div class="row">
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="traditional-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="traditional_name">Traditional Name <span class="text-danger">*</span></label>
                                         <input type="text" name="traditional_name" class="form-control" id="traditional_name" placeholder="(e.g. Rear Suspension etc)" value="{{ old('traditional_name') }}" required>
@@ -142,16 +193,27 @@
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="commercial_name">Commercial Name <span class="text-danger">*</span></label>
+                                        <input type="text" name="commercial_name" class="form-control" id="commercial_name" placeholder="(e.g. CUSHION ASSY, REAR etc)" value="{{ old('commercial_name') }}" required>
+=======
                                 <div class="col-md-6" id="commercial-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="commercial_name">Commercial Name <span class="text-danger">*</span></label>
                                         <input type="text" name="commercial_name" class="form-control" id="commercial_name" placeholder="(e.g. CUSHION ASSY, REAR etc)" value="{{ old('commercial_name') }}">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                         @error('commercial_name')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="partnumber-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="part_number">Part Number <span class="text-danger">*</span></label>
                                         <input type="text" name="part_number" class="form-control" id="part_number" placeholder="(e.g. 123-322-1212)" value="{{ old('part_number') }}">
@@ -162,7 +224,11 @@
                                 </div>
 
 
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="unit-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="unit">Unit <span class="text-danger">*</span></label>
                                         <input type="text" name="unit" class="form-control" id="unit" placeholder="Enter Unit (e.g. KG, Pc etc)" value="{{ old('unit') }}" required>
@@ -171,6 +237,17 @@
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                {{-- <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="unit_price">Unit Price <span class="text-danger">*</span></label>
+                                        <input type="number" name="unit_price" class="form-control" id="unit_price" placeholder="Enter Unit Price" value="{{ old('unit_price') }}" required>
+                                        @error('unit_price')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div> --}}
+=======
                                 <div class="col-md-6" id="grade-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="grade">Grade <span class="text-danger">*</span></label>
@@ -233,6 +310,7 @@
                                         </div>
                                     </div>
                                 </div>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                             </div>
                             <div class="row">
 
@@ -245,7 +323,11 @@
                                         @enderror
                                     </div>
                                 </div> --}}
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="barcode-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="barcode">Barcode</label>
                                         <input type="text" name="barcode" class="form-control" id="barcode" placeholder="Enter barcode" value="{{ old('barcode') }}">
@@ -254,7 +336,11 @@
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="min_purchase_qty-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="min_purchase_qty">Minimum Purchase Quantity</label>
                                         <input type="number" name="min_purchase_qty" class="form-control" id="min_purchase_qty" placeholder="Enter Minimum Purchase Quantity" value="{{ old('min_purchase_qty') }}">
@@ -267,13 +353,21 @@
                     </div>
                     <!-- /.card-body -->
                 </div>
+<<<<<<< HEAD
+                <div class="card">
+=======
                 <div class="card" id="image-card" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                     <div class="card-header">
                         <h3 class="card-title">Product Gallery</h3>
                         <hr>
                     </div>
                     <!-- /.card-header -->
+<<<<<<< HEAD
+                    <div class="card-body">
+=======
                     <div class="card-body" >
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -315,7 +409,11 @@
                     </div>
                     <!-- /.card-body -->
                 </div>
+<<<<<<< HEAD
+                <div class="card">
+=======
                 <div class="card" id="attribute-card" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                     <div class="card-header">
                         <h3 class="card-title">Product Attribute</h3>
                         <hr>
@@ -410,7 +508,11 @@
                     </div>
                     <!-- /.card-body -->
                 </div>
+<<<<<<< HEAD
+                <div class="card">
+=======
                 <div class="card" id="stock-price-card" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                     <div class="card-header">
                         <h3 class="card-title">Product Stock & Price</h3>
                         <hr>
@@ -418,7 +520,11 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                             <div class="row">
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="unit_price-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="unit_price">Unit Price <span class="text-danger">*</span></label>
                                         <input type="number" name="unit_price" class="form-control" id="unit_price" placeholder="0" value="{{ old('unit_price') }}" required>
@@ -427,7 +533,11 @@
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="purchase_price-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="purchase_price">Purchase Price</label>
                                         <input type="number" name="purchase_price" class="form-control" id="purchase_price" placeholder="0" value="{{ old('purchase_price') }}">
@@ -436,7 +546,11 @@
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="discount_start-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="start_date">Discount Start Date</label>
                                         <input type="date" name="start_date" class="form-control" id="start_date" placeholder="0" value="{{ old('start_date') }}">
@@ -445,7 +559,11 @@
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="discount_end-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="end_date">Discount End Date</label>
                                         <input type="date" name="end_date" class="form-control" id="end_date" placeholder="0" value="{{ old('end_date') }}">
@@ -454,7 +572,11 @@
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="discount-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="discount">Discount</label>
                                         <input type="number" name="discount" class="form-control" id="discount" placeholder="0" value="{{ old('discount') }}">
@@ -463,7 +585,11 @@
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="discount_type-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="discount_type">Discount Type</label>
                                         <select name="discount_type" id="discount_type" class="form-control">
@@ -476,7 +602,11 @@
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="stock_quantity-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="stock_quantity">Stock Quantity </label>
                                         <input type="number" name="stock_quantity" class="form-control" id="stock_quantity" placeholder="0" value="{{ old('stock_quantity',0) }}">
@@ -485,7 +615,11 @@
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="alert_quantity-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="alert_quantity">Alert Quantity</label>
                                         <input type="number" name="alert_quantity" class="form-control" id="alert_quantity" placeholder="0" value="{{ old('alert_quantity') }}">
@@ -494,7 +628,11 @@
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="weight-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="weight">Weight</label>
                                         <input type="text" name="weight" class="form-control" id="weight" placeholder="Enter Weight" value="{{ old('weight') }}">
@@ -503,7 +641,11 @@
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="sku-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="sku">SKU</label>
                                         <input type="text" name="sku" class="form-control" id="sku" placeholder="Enter SKU" value="{{ old('sku') }}">
@@ -513,7 +655,11 @@
                                     </div>
                                 </div>
                             </div>
+<<<<<<< HEAD
+                            <div class="row">
+=======
                             <div class="row" id="description-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="content">Description</label>
@@ -527,7 +673,11 @@
                     </div>
                     <!-- /.card-body -->
                 </div>
+<<<<<<< HEAD
+                <div class="card">
+=======
                 <div class="card" id="product-view-card" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                     <div class="card-header">
                         <h3 class="card-title">Product View</h3>
                         <hr>
@@ -535,7 +685,11 @@
                     <!-- /.card-header -->
                     <div class="card-body">
                             <div class="row">
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 {{-- <div class="col-md-6">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="weight">Weight</label>
                                         <input type="text" name="weight" class="form-control" id="weight" placeholder="Enter Weight" value="{{ old('weight') }}">
@@ -543,8 +697,13 @@
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
+<<<<<<< HEAD
+                                </div>
+                                <div class="col-md-6">
+=======
                                 </div> --}}
                                 <div class="col-md-6" id="oem-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="is_oem">OEM</label>
                                         <select name="is_oem" id="is_oem" class="form-control">
@@ -559,7 +718,11 @@
                                 </div>
                             </div>
                             <div class="row">
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="preorder-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="is_preorder">Preorder</label>
                                         <select name="is_preorder" id="is_preorder" class="form-control">
@@ -572,7 +735,11 @@
                                         @enderror
                                     </div>
                                 </div>
+<<<<<<< HEAD
+                                <div class="col-md-6">
+=======
                                 <div class="col-md-6" id="shipping_time-div" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                     <div class="form-group">
                                         <label for="shipping_time">Shipping Time</label>
                                         <input type="text" name="shipping_time" class="form-control" id="shipping_time" placeholder="Enter Shipping Time" value="{{ old('shipping_time') }}">
@@ -585,7 +752,11 @@
                     </div>
                     <!-- /.card-body -->
                 </div>
+<<<<<<< HEAD
+                <div class="card">
+=======
                 <div class="card" id="seo-card" style="display:none;">
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                     <div class="card-header">
                         <h3 class="card-title">SEO Meta Tags</h3>
                         <hr>
@@ -651,6 +822,10 @@
 <!-- Summernote JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<<<<<<< HEAD
+<script src="{{ asset('admin_template/app-assets/js/scripts/forms/form-repeater.js') }}"></script>
+<script src="{{ asset('admin_template/app-assets/vendors/js/forms/repeater/jquery.repeater.min.js') }}"></script>
+=======
     <script src="{{ asset('admin_template/app-assets/vendors/js/vendors.min.js')}}"></script>
     <script src="{{ asset('admin_template/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js')}}"></script>
     <script src="{{ asset('admin_template/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js')}}"></script>
@@ -676,6 +851,7 @@
 
     <!-- BEGIN: Page JS-->
     <script src="{{ asset('admin_template/app-assets/js/scripts/pages/table-extended.js')}}"></script>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
     <script>
     $(document).ready(function () {
         $('#content').summernote({
@@ -779,6 +955,8 @@
     });
 </script>
 
+<<<<<<< HEAD
+=======
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const catalogueSelect = document.getElementById('catalogue_id');
@@ -1081,6 +1259,7 @@
 
 
 
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
 
 
 @endsection

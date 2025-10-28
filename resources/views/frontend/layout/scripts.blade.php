@@ -232,7 +232,7 @@
       const segmentCount = segments.length;
       const segmentAngle = 360 / segmentCount;
       const radius = canvas.width / 2;
-      const colors = ["#00C9A7", "#3B82F6"];
+      const colors = ["#c9000aff", "#f68f3bff"];
 
       let rotationDeg = 0;
       let hasSpun = false;

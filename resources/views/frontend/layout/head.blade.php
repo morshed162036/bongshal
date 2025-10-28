@@ -813,7 +813,7 @@
       .spin_wheel button {
          padding: 12px 12px;
          font-size: 15px;
-         background-color: #3b82f6;
+         background-color: #000000;
          color: white;
          border: none;
          border-radius: 50%;
@@ -823,7 +823,7 @@
       }
 
       .spin_wheel button:hover {
-         background-color: #2563eb;
+         background-color: #fa4c06;
       }
 
       #result {

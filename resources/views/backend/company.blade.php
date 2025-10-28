@@ -43,7 +43,11 @@
                         </li>
                         {{-- <li class="breadcrumb-item"><a href="{{ route('banner.index') }}">Sliders</a>
                         </li> --}}
+<<<<<<< HEAD
+                        <li class="breadcrumb-item active">Company Section
+=======
                         <li class="breadcrumb-item active">Bike Company Section
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                         </li>
                     </ol>
                 </div>
@@ -82,7 +86,11 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <fieldset>
+<<<<<<< HEAD
+                                            <h5>Company Name <span class="star">*</span></h5>
+=======
                                             <h5>Bike Company Name <span class="star">*</span></h5>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-Createon1"><i class="bx bx-file"></i></span>
@@ -266,7 +274,11 @@
                                         @if ($brands)
                                             @foreach ($brands as $brand)
                                                 <tr>
+<<<<<<< HEAD
+                                                    <td class="text-bold-600" ><img src="{{ asset('images/company/'.$brand->logo) }}" alt="" height="150px"></td>
+=======
                                                     <td class="text-bold-600" >@if($brand->logo) <img src="{{ asset('images/company/'.$brand->logo) }}" alt="" height="100px" width="200px">@endif</td>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                                     <td><a href="{{ route('company',$brand->id) }}">{{ $brand->name }}</a></td>
                                                     {{-- <td><span>Email: </span>{{ $brand->email }} <br> <span>Telephone: </span>{{ $brand->tnt }} <br>
                                                     <span>Mobile: </span>{{ $brand->mobile }} <br>
