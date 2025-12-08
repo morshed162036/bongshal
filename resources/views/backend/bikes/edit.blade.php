@@ -104,6 +104,24 @@
                                 </div>
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
+<<<<<<< HEAD
+                                        <label for="battery">Battery <span class="text-danger">*</span></label>
+                                        <input type="text" id="battery" class="form-control" name="battery_capacity" value="{{ $bike->battery }}" placeholder="Enter Battery" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="front_tire_size">Front Tire Size <span class="text-danger">*</span></label>
+                                        <input type="text" id="front_tire_size" class="form-control" name="front_tire_size" value="{{ $bike->front_tire_size }}" placeholder="Enter Front Tire Size" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-12">
+                                    <div class="form-group">
+                                        <label for="rear_tire_size">Rear Tire Size <span class="text-danger">*</span></label>
+                                        <input type="text" id="rear_tire_size" class="form-control" name="rear_tire_size" value="{{ $bike->rear_tire_size }}" placeholder="Enter Rear Tire Size" required>
+                                    </div>
+                                </div>
+=======
                                         <label for="battery">Battery Size <span class="text-danger">*</span></label>
                                         <input type="text" id="battery" class="form-control" name="battery_capacity" value="{{ $bike->battery }}" placeholder="Enter Battery" required>
                                     </div>
@@ -155,6 +173,7 @@
         </fieldset>
     </div>
 </div>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                 <div class="col-md-6 col-12">
                                     <div class="form-group">
                                         <label for="type">Type <span class="text-danger">*</span></label>
@@ -216,7 +235,11 @@
                                         </div>
                                         <div class="col-md-4 col-12">
                                             <div class="form-group">
+<<<<<<< HEAD
+                                                <label for="volume_{{ $index }}">Volume <span class="text-danger">*</span></label>
+=======
                                                 <label for="volume_{{ $index }}">Capacity <span class="text-danger">*</span></label>
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
                                                 <input type="text" id="volume_{{ $index }}" class="form-control" name="group-grade[{{ $index }}][volume]" value="{{ $grade->volume }}" placeholder="Enter Volume" required>
                                             </div>
                                         </div>

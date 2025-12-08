@@ -20,7 +20,11 @@ class ProductAttribute extends Model
     }
     public function attribute()
     {
+<<<<<<< HEAD
+        return $this->belongsTo(Attribute::class, 'attribute_id');
+=======
         return $this->belongsTo(Attribute::class, 'attribute_id')->with('values');
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
     }
     public function attributeValue()
     {

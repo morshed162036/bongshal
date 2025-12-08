@@ -11,12 +11,19 @@ use App\Models\Bike;
 use App\Models\BikeColor;
 use Illuminate\Pagination\Paginator;
 use App\Models\Company;
+<<<<<<< HEAD
+=======
 use Illuminate\Support\Str;
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
 
 
 class ShopController extends Controller
 {
+<<<<<<< HEAD
+public function getModels($companyId)
+=======
     public function getModels($companyId)
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
     {
         // dd($companyId);
         $models = Bike::where('company_id', $companyId)->get();
@@ -31,10 +38,13 @@ class ShopController extends Controller
 
     public function getProducts(Request $request)
     {
+<<<<<<< HEAD
+=======
 
         $bike = $request->bike_id ? Bike::find($request->bike_id) : null;
         // dd($bike->grade);
         $title = $bike ? $bike->model.' '.$bike->company->name : 'All Products';
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
         $catalogues = Catalogue::with('category')->get();
         $catalogue=$request->catalogue_id ? Catalogue::find($request->catalogue_id) : null;
         // dd($request->all());
@@ -60,7 +70,11 @@ class ShopController extends Controller
 
         $products = $query->get();
 
+<<<<<<< HEAD
+        return view('frontend.shop', compact('products','catalogues','catalogue'));
+=======
         return view('frontend.shop', compact('products','catalogues','catalogue','bike','title'));
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
     }
 
     // All products
@@ -75,8 +89,11 @@ class ShopController extends Controller
     // Products by Catalogue
     public function catalogue(Catalogue $catalogue)
     {
+<<<<<<< HEAD
+=======
         $bike = null;
         $title = $catalogue->name;
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
         $catalogues = Catalogue::with('category')->get();
 
         // Get all category IDs under this catalogue
@@ -84,7 +101,11 @@ class ShopController extends Controller
 
         $products = Product::whereIn('category_id', $categoryIds)->paginate(50);
         // dd($products);
+<<<<<<< HEAD
+        return view('frontend.shop', compact('products', 'catalogues', 'catalogue'));
+=======
         return view('frontend.shop', compact('products', 'catalogues', 'catalogue','bike','title'));
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
     }
     // Products by Category
     public function category(Category $category)
@@ -96,6 +117,8 @@ class ShopController extends Controller
         return view('frontend.shop', compact('products', 'catalogues', 'category'));
     }
 
+<<<<<<< HEAD
+=======
     // Page search (full results)
     public function search(Request $request)
     {
@@ -145,4 +168,5 @@ class ShopController extends Controller
         return response()->json($products);
     }
 
+>>>>>>> 4c182987ded501b02deec36616d630990b82571f
 }

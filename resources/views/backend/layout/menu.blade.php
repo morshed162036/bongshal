@@ -338,24 +338,332 @@
                     <li class=" nav-item"><a href="{{ route('vendor.orderList') }}"><i class="bx bx-cart-alt"></i><span
                                 class="menu-title">Order List</span></a>
                     </li>
-                    <li class=" nav-item"><a href="{{ route('vendor.profile') }}"><i class="bx bx-cart-alt"></i><span
-                                class="menu-title">Profile</span></a>
-                    </li>
-                @elseif (auth::guard('web')->user()->role == 'executive')
-                    <li class=" navigation-header"><span>Executive Dashboard</span>
-                    </li>
-                    <li class=" nav-item"><a href="{{ route('admin.dashboard') }}"><i class="bx bx-home"></i><span
-                                class="menu-title">Dashboard</span></a>
-                    </li>
-                    {{-- <li class=" nav-item"><a href="{{ route('vendor.addProduct') }}"><i class="bx bx-cart-alt"></i><span
-                                class="menu-title">Add Product</span></a>
-                    </li> --}}
-                    <li class=" nav-item"><a href="{{ route('executive.createProduct') }}"><i class="bx bx-cart-alt"></i><span
-                                class="menu-title">Create Product</span></a>
-                    </li>
-                    <li class=" nav-item"><a href=""><i class="bx bx-cart-alt"></i><span
-                                class="menu-title">Product List</span></a>
-                    </li>
+                @endif
+                {{--<li class=" nav-item"><a href="product.index"><i class="bx bx-package"></i><span
+                            class="menu-title">Shift/Roster Management</span></a>
+                </li>
+                <li class=" nav-item"><a href="product.index"><i class="bx bx-package"></i><span
+                            class="menu-title">Overtime</span></a>
+                </li> --}}
+
+                {{-- <li class=" navigation-header"><span>HR</span>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="bx bx-group"></i><span class="menu-title">Payroll</span></a>
+                    <ul class='menu-content'>
+                        <li><a href="team.index"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">Employee Salary</span></a>
+                        </li>
+                        <li><a href="team-members.index"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">Pay Slip</span></a>
+                        </li>
+                        <li><a href="team-members.index"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">Payroll Items</span></a>
+                        </li>
+                        <li><a href="team-members.index"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">Salary Summary</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </li>
+                <li class=" nav-item"><a href="#"><i class="bx bxs-buoy"></i><span
+                            class="menu-title">Bonus</span></a>
+                    <ul class='menu-content'>
+                        <li><a href="project.index"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">Festival Bonus Generate</span></a>
+                        </li>
+                        <li><a href="project-estimation.index"><i
+                                    class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">performance bonus</span></a>
+                        </li>
+                        <li><a href="project.start"><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Manage wages and incentive</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="bx bxs-buoy"></i><span
+                            class="menu-title">Provident Fund & Gratuity </span></a>
+                    <ul class='menu-content'>
+                        <li><a href="project.index"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">Provident Fund Set Up</span></a>
+                        </li>
+                        <li><a href="project-estimation.index"><i
+                                    class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Provident Fund Statement</span></a>
+                        </li>
+                        <li><a href="project.start"><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Provident Fund Schedule</span></a>
+                        </li>
+                        <li><a href="project-machine.index"><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Complete PF History</span></a>
+                        </li>
+                        <li><a href="project-otherexpense.index"><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Employee Gratuity Calculation</span></a>
+                        </li>
+                        <li><a href="project-payment.index"><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Gratuity Statement</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="bx bxs-buoy"></i><span
+                            class="menu-title">Increment</span></a>
+                    <ul class='menu-content'>
+                        <li><a href="{{ route('increment.create','new') }}"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">Salary Increment Entry</span></a>
+                        </li>
+                        <li><a href="{{ route('increment.create','previous') }}"><i
+                                    class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Add Previous Increment History</span></a>
+                        </li>
+                        <li><a href="{{ route('increment.index') }}"><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Increment Approval</span></a>
+                        </li>
+                        <li><a href="{{ route('increment.history') }}"><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Salary Increment Statement</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="bx bxs-buoy"></i><span
+                            class="menu-title">Promotion</span></a>
+                    <ul class='menu-content'>
+                        <li><a href="{{ route('promotion.create','new') }}"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">New Promotion</span></a>
+                        </li>
+                        <li><a href="{{ route('promotion.create','previous') }}"><i
+                                    class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Add Previous Promotion History</span></a>
+                        </li>
+                        <li><a href="{{ route('promotion.index') }}"><i class="bx bx-right-arrow-alt"></i><span
+                            class="menu-item" data-i18n="LivIcons">Promotion Approval</span></a>
+                        </li>
+                        <li><a href="{{ route('promotion.history') }}"><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Employee Promotion Statement</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="bx bxs-buoy"></i><span
+                            class="menu-title">Allowance</span></a>
+                    <ul class='menu-content'>
+                        <li><a href="project.index"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">Arrear</span></a>
+                        </li>
+                        <li><a href="{{ route('allowance.index') }}"><i
+                                    class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Allowance Type</span></a>
+                        </li>
+                        <li><a href="{{ route('allowance-list.index') }}"><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Allowance List</span></a>
+                        </li> --}}
+
+                        {{-- <li><a href="project-payment.index"><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">All Allowance Report</span></a>
+                        </li> --}}
+                    {{-- </ul>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="bx bxs-buoy"></i><span
+                            class="menu-title">Medical & Hospitalization </span></a>
+                    <ul class='menu-content'>
+                        <li><a href="project.index"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">Entry Medical & Hospitalization Benefit</span></a>
+                        </li>
+                        <li><a href="project-estimation.index"><i
+                                    class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Medical & Hospitalization Benefit Statement</span></a>
+                        </li>
+                        <li><a href="project.start"><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Entry Medical & Hospitalization Benefit Limit</span></a>
+                        </li>
+                        <li><a href="project-machine.index"><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Medical & Hospitalization Benefit Limit List</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="bx bxs-buoy"></i><span
+                            class="menu-title">Loan Management</span></a>
+                    <ul class='menu-content'>
+                        <li><a href="{{ route('loan.index') }}"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">Loan Type</span></a>
+                        </li>
+                        <li><a href="{{ route('loan-application.create') }}"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">Loan Apply</span></a>
+                        </li>
+                        <li><a href="{{ route('loan-application.index') }}"><i
+                                    class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Manage Loan</span></a>
+                        </li>
+                        <li><a href="project.start"><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Loan Approval</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="bx bxs-buoy"></i><span
+                            class="menu-title">Tax System & Certificate </span></a>
+                    <ul class='menu-content'>
+                        <li><a href="project.index"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">TAX Chalan Entry</span></a>
+                        </li>
+                        <li><a href="project-estimation.index"><i
+                                    class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">TAX Chalan Management</span></a>
+                        </li>
+                        <li><a href="project.start"><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="LivIcons">Tax Calculation</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class=" navigation-header"><span>Administration</span>
+                </li>
+                <li class=" nav-item"><a href="user.index"><i class="bx bx-user-circle"></i><span class="menu-title"
+                            data-i18n="Colors">Users</span></a>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="bx bx-bulb"></i><span class="menu-title"
+                            data-i18n="Icons">Assets Management</span></a>
+                    <ul class="menu-content">
+                        <li><a href="role.index"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">Assigned Employee</span></a>
+                        </li>
+                        <li><a href=""><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="boxicons">Damage Assets list</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="bx bx-bulb"></i><span class="menu-title"
+                            data-i18n="Icons">Job</span></a>
+                    <ul class="menu-content">
+                        <li><a href="role.index"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">Job Dashboard</span></a>
+                        </li>
+                        <li><a href=""><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="boxicons">Manage Jobs</span></a>
+                        </li>
+                        <li><a href=""><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="boxicons">Manage Resumes</span></a>
+                        </li>
+                        <li><a href=""><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="boxicons">Short list candidate</span></a>
+                        </li>
+                        <li><a href=""><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="boxicons">Interview Questions</span></a>
+                        </li>
+                        <li><a href=""><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="boxicons">Offer Approvals</span></a>
+                        </li>
+                        <li><a href=""><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="boxicons">Candidate List</span></a>
+                        </li>
+                        <li><a href=""><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="boxicons">Schedule Timing</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="bx bx-bulb"></i><span class="menu-title"
+                            data-i18n="Icons">Policies</span></a>
+                    <ul class="menu-content">
+                        <li><a href="role.index"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">Manage Policy</span></a>
+                        </li>
+                        <li><a href=""><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="boxicons">Approve Policy</span></a>
+                        </li>
+                        <li><a href=""><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="boxicons">Privacy Policy</span></a>
+                        </li>
+                        <li><a href=""><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="boxicons">Terms</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="bx bx-bulb"></i><span class="menu-title"
+                            data-i18n="Icons">Role & Permission</span></a>
+                    <ul class="menu-content">
+                        <li><a href="role.index"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item" data-i18n="LivIcons">User Role</span></a>
+                        </li>
+                        <li><a href=""><i class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="boxicons">Permission</span></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class=" navigation-header"><span>Basic Settings</span>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="bx bx-wallet"></i><span class="menu-title"
+                            data-i18n="Icons">Company Management</span></a>
+                    <ul class="menu-content">
+                        <li><a href="{{ route('wings.index') }}"><i class="bx bx-right-arrow-alt"></i><span
+                                    class="menu-item">Wings</span></a>
+                        </li>
+                        <li><a href="{{ route('branch.index') }}"><i
+                                    class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="boxicons">Branch</span></a>
+                        </li>
+                        <li><a href="{{ route('department.index') }}"><i
+                                    class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="boxicons">Department</span></a>
+                        </li>
+                        <li><a href="{{ route('section.index') }}"><i
+                                    class="bx bx-right-arrow-alt"></i><span class="menu-item"
+                                    data-i18n="boxicons">Section</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a href="{{ route('designation.index') }}"><i class="bx bx-grid-alt"></i><span
+                            class="menu-title" data-i18n="Colors">Designation</span></a>
+                </li>
+                <li class=" nav-item"><a href="{{ route('grade.index') }}"><i class="bx bx-grid-alt"></i><span
+                            class="menu-title" data-i18n="Colors">Grade</span></a>
+                </li>
+
+
+                <li class=" navigation-header"><span>Supplier Management</span>
+                </li>
+                <li class=" nav-item"><a href="supplier.index"><i class="bx bx-user"></i><span
+                            class="menu-title">Supplier</span></a>
+                </li>
+                <li class=" nav-item"><a href="supplier.advance"><i class="bx bx-archive-out"></i><span
+                            class="menu-title">Advance Supplier</span></a>
+                </li>
+                <li class=" nav-item"><a href="supplier.payable"><i class="bx bx-archive-out"></i><span
+                            class="menu-title">Payable Supplier</span></a>
+                </li>
+
+                <li class=" navigation-header"><span>Client Management</span>
+                </li>
+                <li class=" nav-item"><a href="client.index"><i class="bx bx-user"></i><span
+                            class="menu-title">Client</span></a>
+                </li>
+                <li class=" nav-item"><a href="client.advance"><i class="bx bx-archive-in"></i><span
+                            class="menu-title">Advance Client</span></a>
+                </li>
+                <li class=" nav-item"><a href="client.payable"><i class="bx bx-archive-in"></i><span
+                            class="menu-title">Payable Client</span></a>
+                </li>
+
+
+                <li class=" navigation-header"><span>Inventory Management</span>
+                </li>
+                <li class=" nav-item"><a href="stock.index"><i class="bx bx-store-alt">
+                    </i><span class="menu-title">Stock</span></a>
+                </li>
+                <li class=" nav-item"><a href="#"><i class="bx bxs-barcode"></i><span
+                            class="menu-title">Invoice</span></a>
+                            <ul class='menu-content'>
+                                <li><a href="invoice.index"><i class="bx bx-receipt"></i><span
+                                            class="menu-item" data-i18n="LivIcons">All Invoice</span></a>
+                                </li>
+                                <li><a href="purchase_index"><i class="bx bx-receipt"></i><span
+                                            class="menu-item" data-i18n="LivIcons">Purchase Invoice</span></a>
+                                </li>
+                            </ul>
+                </li>
+                <li class=" navigation-header"><span>Damage and Return Product</span>
+                </li>
+                <li class=" nav-item"><a href="client-return-product.index"><i class="bx bx-user">
+                    </i><span class="menu-title">Employee</span></a>
+                </li>
+                <li class=" nav-item"><a href="supplier-return-product.index"><i class="bx bx-user">
+                    </i><span class="menu-title">Supplier</span></a>
+                </li>
 
 
                     <li class=" nav-item"><a href="{{ route('executive.vendorList') }}"><i class="bx bx-cart-alt"></i><span
