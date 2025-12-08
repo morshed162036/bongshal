@@ -3,7 +3,7 @@
 @section('title', 'Edit Product')
 
 @section('css')
-       <!-- BEGIN: Vendor CSS-->
+       {{-- <!-- BEGIN: Vendor CSS-->
        <link rel="stylesheet" type="text/css" href="{{ asset('admin_template/app-assets/vendors/css/vendors.min.css') }}">
        <link rel="stylesheet" type="text/css"
            href="{{ asset('admin_template/app-assets/vendors/css/tables/datatable/datatables.min.css') }}">
@@ -26,14 +26,34 @@
        <!-- BEGIN: Custom CSS-->
        <link rel="stylesheet" type="text/css" href="{{ asset('admin_template/assets/css/style.css') }}">
        <!-- END: Custom CSS-->
-          {{-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> --}}
          <!-- include summernote css/js -->
-       <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-bs4.min.css" rel="stylesheet">
-       <style>
+       <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-bs4.min.css" rel="stylesheet"> --}}
+       {{-- <style>
            a label {
                cursor: pointer;
            }
-       </style>
+       </style> --}}
+          <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/vendors/css/forms/select/select2.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/css/themes/semi-dark-layout.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/assets/css/style.css">
+    <!-- END: Custom CSS-->
 @endsection
 
 @section('content')
@@ -134,7 +154,7 @@
                                         @enderror
                                     </div>
                                 </div>
-                                <div class="col-md-6" id="fitment-div" style="display:none;">
+                                {{-- <div class="col-md-6" id="fitment-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="bike_id">Fitment Model <span class="text-danger">*</span></label>
                                         <select name="bike_id" id="bike_id" class="form-control" required>
@@ -149,7 +169,29 @@
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
+                                </div> --}}
+                                <div class="col-md-6" id="fitment-div" style="display:none;">
+                                    <div class="form-group">
+                                        <label for="bike_id">Fitment Model <span class="text-danger">*</span></label>
+
+                                        <select name="bike_id[]" id="bike_id" class="select2 form-control" multiple>
+                                            <option value="">Select Model</option>
+                                            <option value="0" {{ in_array(0, $selectedBikes) ? 'selected' : '' }}>Universal</option>
+
+                                            @foreach($bikes as $bike)
+                                                <option value="{{ $bike->id }}"
+                                                    {{ in_array($bike->id, $selectedBikes) ? 'selected' : '' }}>
+                                                    {{ $bike->model }} ({{ $bike->company->name }})
+                                                </option>
+                                            @endforeach
+                                        </select>
+
+                                        @error('bike_id')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
                                 </div>
+
                                 <div class="col-md-6" id="series-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="series">Model / Series</label>
@@ -193,7 +235,13 @@
                                 <div class="col-md-6" id="unit-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="unit">Unit <span class="text-danger">*</span></label>
-                                        <input type="text" name="unit" class="form-control" id="unit" placeholder="Enter Unit (e.g. KG, Pc etc)" value="{{ old('unit',$product->unit) }}" required>
+                                        {{-- <input type="text" name="unit" class="form-control" id="unit" placeholder="Enter Unit (e.g. KG, Pc etc)" value="{{ old('unit',$product->unit) }}" required> --}}
+                                        <select name="unit" id="unit" required class="form-control">
+                                            <option value="">Select Unit</option>
+                                            @foreach($units as $unit)
+                                                <option value="{{ $unit->id }}" {{ old('unit',$product->unit_id) == $unit->id ? 'selected' : '' }}>{{ $unit->name }}</option>
+                                            @endforeach
+                                        </select>
                                         @error('unit')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
@@ -275,11 +323,21 @@
                                 </div> --}}
                                 <div class="col-md-6" id="barcode-div" style="display:none;">
                                     <div class="form-group">
-                                        <label for="barcode">Barcode</label>
-                                        <input type="text" name="barcode" class="form-control" id="barcode" placeholder="Enter barcode" value="{{ old('barcode',$product->barcode) }}">
+                                        <label for="barcode">Tags</label>
+                                        {{-- <input type="text" name="barcode" class="form-control" id="barcode" placeholder="Enter barcode" value="{{ old('barcode',$product->barcode) }}">
                                         @error('barcode')
                                             <span class="text-danger">{{ $message }}</span>
-                                        @enderror
+                                        @enderror --}}
+                                        <select name="tag[]" id="tags" class="select2 form-control" multiple>
+                                            <option value="">Select Tag</option>
+                                            @foreach($tags as $tag)
+                                                <option value="{{ $tag->id }}"
+                                                    {{ in_array($tag->id, $selectedTags) ? 'selected' : '' }}>
+                                                    {{ $tag->tag }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+
                                     </div>
                                 </div>
                                 <div class="col-md-6" id="min_purchase_qty-div" style="display:none;">
@@ -524,6 +582,24 @@
                                         @enderror
                                     </div>
                                 </div>
+                                @if (Auth()->user()->role == 'admin')
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="status">Status</label>
+                                        <select name="status" id="status" class="form-control">
+                                            <option value="pending" {{ old('status',$product->status) == 'pending' ? 'selected' : '' }}>Pending</option>
+                                            <option value="cancel" {{ old('status',$product->status) == 'cancel' ? 'selected' : '' }}>Cancel</option>
+                                            <option value="active" {{ old('status',$product->status) == 'active' ? 'selected' : '' }}>Active</option>
+                                            <option value="inactive" {{ old('status',$product->status) == 'inactive' ? 'selected' : '' }}>Inactive</option>
+                                        </select>
+                                        @error('status')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+
+                                    </div>
+                                </div>
+                                @endif
+
                             </div>
                             <div class="row" id="description-div" style="display:none;">
                                 <div class="col-md-12">
@@ -658,67 +734,32 @@
     @endsection
 
 @section('js')
-     <!-- jQuery 3.6.0 -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <!-- BEGIN: Vendor JS-->
+    <script src="{{ asset('admin_template') }}/app-assets/vendors/js/vendors.min.js"></script>
+    <script src="{{ asset('admin_template') }}/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
+    <script src="{{ asset('admin_template') }}/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+    <script src="{{ asset('admin_template') }}/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+    <!-- BEGIN Vendor JS-->
 
-<!-- Popper + Bootstrap 4.5.2 JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="{{ asset('admin_template') }}/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
+    <!-- END: Page Vendor JS-->
 
-<!-- Summernote JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-<script src="{{ asset('admin_template/app-assets/js/scripts/forms/form-repeater.js') }}"></script>
-<script src="{{ asset('admin_template/app-assets/vendors/js/forms/repeater/jquery.repeater.min.js') }}"></script>
-    <script>
-    $(document).ready(function () {
-        $('#content').summernote({
-            tabsize: 2,
-            height: 300,
-            toolbar: [
-                ['style', ['style']],
-                ['font', ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'clear']],
-                ['fontname', ['fontname']],
-                ['fontsize', ['fontsize']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['height', ['height']],
-                ['table', ['table']],
-                ['insert', ['link', 'picture', 'video', 'hr']],
-                ['view', ['fullscreen', 'codeview', 'help']],
-                ['edit', ['undo', 'redo']]
-            ]
-            });
-    });
-</script>
-<script>
-    $(document).ready(function () {
-            $('#title').focus();
-            $('.select2').select2();
-            // $('[data-toggle="tooltip"]').tooltip();
-            $('#name').on('keyup', function () {
-                var title = $(this).val();
+    <!-- BEGIN: Theme JS-->
+    <script src="{{ asset('admin_template') }}/app-assets/js/core/app-menu.js"></script>
+    <script src="{{ asset('admin_template') }}/app-assets/js/core/app.js"></script>
+    <script src="{{ asset('admin_template') }}/app-assets/js/scripts/components.js"></script>
+    <script src="{{ asset('admin_template') }}/app-assets/js/scripts/footer.js"></script>
+    <!-- END: Theme JS-->
 
-                // Generate current date in YYYY/MM/DD format
-                var date = new Date();
-                var formattedDate = date.getFullYear() + '-' +
-                    String(date.getMonth() + 1).padStart(2, '0') + '-' +
-                    String(date.getDate()).padStart(2, '0');
+    <!-- BEGIN: Page JS-->
+    <script src="{{ asset('admin_template') }}/app-assets/js/scripts/forms/select/form-select2.js"></script>
+    <!-- END: Page JS-->
 
-                // Clean slug from title
-                var slug = title
-                    .trim()
-                    .toLowerCase()
-                    .replace(/[^a-z0-9\s-]/g, '')
-                    .replace(/\s+/g, '-')
-                    .replace(/-+/g, '-')
-                    .replace(/^-|-$/g, '');
+    <script src="{{ asset('admin_template') }}/app-assets/vendors/js/forms/repeater/jquery.repeater.min.js"></script>
+    <script src="{{ asset('admin_template') }}/app-assets/js/scripts/forms/form-repeater.js"></script>
 
-                // $('#slug').val(formattedDate + '-' + slug);
-                $('#slug').val(slug);
-            });
 
-        });
-</script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
 

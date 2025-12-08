@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('adings', function (Blueprint $table) {
-            $table->id();
-            $table->string('image')->nullable(); 
-            $table->string('video_url')->nullable(); 
-            $table->string('link')->nullable(); 
-            $table->enum('type', ['video', 'image'])->default('image');
-            $table->enum('status', ['Active', 'Inactive'])->default('Active');
-            $table->timestamps();
-        });
+        // Schema::create('adings', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('image')->nullable();
+        //     $table->string('video_url')->nullable();
+        //     $table->string('link')->nullable();
+        //     $table->enum('type', ['video', 'image'])->default('image');
+        //     $table->enum('status', ['Active', 'Inactive'])->default('Active');
+        //     $table->timestamps();
+        // });
     }
 
     /**

@@ -38,7 +38,9 @@ class ProductController extends Controller
         $brands = \App\Models\Brand::where('status','active')->get();
         $attributes = \App\Models\Attribute::where('status','active')->get();
         $bikes = \App\Models\Bike::where('status','active')->get();
-        return view('backend.product.create',compact('catalogues','categories','brands','attributes','bikes'));
+        $units = \App\Models\Unit::where('status','active')->get();
+        $tags = \App\Models\Tag::where('status','active')->get();
+        return view('backend.product.create',compact('catalogues','categories','brands','attributes','bikes','units', 'tags'));
         // return view('backend.product.create');
     }
 
@@ -51,7 +53,7 @@ class ProductController extends Controller
         $request->validate([
             'category_id'       => 'required|exists:categories,id',
             // 'brand_id'          => 'required|exists:brands,id',
-            'bike_id'           => 'required|exists:bikes,id',
+            // 'bike_id'           => 'required|exists:bikes,id',
             // 'series'            => 'string|max:255',
             'traditional_name'  => 'string|max:255',
             'commercial_name'   => 'string|max:255',
@@ -71,9 +73,10 @@ class ProductController extends Controller
         $category_name = \App\Models\Category::find($request->category_id)->name;
         // $bike_model = \App\Models\Bike::find($request->bike_id)->get();
         // dd($bike_model);
-        $bike_model = \App\Models\Bike::find($request->bike_id)->model;
+        // $bike_model = \App\Models\Bike::find($request->bike_id)->model;
 
-        $name = $brand_name?$brand_name->name.' ' :''.$series.$request->traditional_name.' ' . $request->commercial_name.' '.$request->part_number.' '.$bike_model;
+        $name = $brand_name?$brand_name->name.' ' :''.$series.$request->traditional_name.' ' . $request->commercial_name.' '.$request->part_number;
+        // .' '.$bike_model;
 
         DB::beginTransaction();
         try {
@@ -89,7 +92,7 @@ class ProductController extends Controller
         $product->traditional_name = $request->traditional_name;
         $product->commercial_name = $request->commercial_name;
         $product->parts_number = $request->part_number;
-        $product->unit = $request->unit;
+        $product->unit_id = $request->unit;
         $product->unit_price = $request->unit_price;
         $product->purchase_price = $request->purchase_price;
         $product->barcode = $request->barcode;
@@ -119,6 +122,15 @@ class ProductController extends Controller
         $product->width = $request->width;
         $product->aspect_ratio = $request->aspect_ratio;
         $product->rim = $request->rim;
+        $product->created_by = auth()->user()->id;
+
+        if($request->has('tag')){
+            $product->tag_id = implode(',', $request->tag);
+        }
+        if($request->has('bike_id')){
+            $product->bike_id = implode(',', $request->bike_id);
+        }
+
         // $product->features = $request->features;
 
         // $product = Product::create([
@@ -261,7 +273,13 @@ class ProductController extends Controller
         $brands = \App\Models\Brand::where('status','active')->get();
         $attributes = \App\Models\Attribute::where('status','active')->get();
         $bikes = \App\Models\Bike::where('status','active')->get();
-        return view('backend.product.edit',compact('product','catalogues','categories','brands','attributes','bikes'));
+        $units = \App\Models\Unit::where('status','active')->get();
+        $tags = \App\Models\Tag::where('status','active')->get();
+        $selectedBikes = explode(',', $product->bike_id);   // "2,5,7" → ["2","5","7"]
+        $selectedTags = explode(',', $product->tag_id); // ["1","3","5"]
+
+        // return view('product.edit', compact('product','bikes','selectedBikes'));
+        return view('backend.product.edit',compact('product','catalogues','categories','brands','attributes','bikes','units', 'selectedBikes', 'selectedTags', 'tags'));
     }
 
     /**
@@ -271,10 +289,9 @@ class ProductController extends Controller
 {
     $product = Product::findOrFail($id);
 
-
     $request->validate([
         'category_id'       => 'required|exists:categories,id',
-        'bike_id'           => 'required|exists:bikes,id',
+        // 'bike_id'           => 'required|exists:bikes,id',
         'traditional_name'  => 'nullable|string|max:255',
         'commercial_name'   => 'nullable|string|max:255',
         'part_number'       => 'nullable|string|max:255',
@@ -293,24 +310,25 @@ class ProductController extends Controller
         $brand_name = \App\Models\Brand::find($request->brand_id);
         $series = $request->series ? $request->series . ', ' : '';
         $category_name = \App\Models\Category::find($request->category_id)->name;
-        $bike_model = \App\Models\Bike::find($request->bike_id)->model;
+        // $bike_model = \App\Models\Bike::find($request->bike_id)->model;
 
         $name = ($brand_name ? $brand_name->name . ' ' : '') .
                 $series . $request->traditional_name . ' ' .
                 $request->commercial_name . ' ' .
-                $request->part_number . ' ' . $bike_model;
+                $request->part_number;
+                //  . ' ' . $bike_model;
 
         // Update product fields
         $product->name = $name;
         $product->slug = \Str::slug($name);
         $product->category_id = $request->category_id;
         $product->brand_id = $request->brand_id;
-        $product->bike_id = $request->bike_id;
+        // $product->bike_id = $request->bike_id;
         $product->series = $request->series;
         $product->traditional_name = $request->traditional_name;
         $product->commercial_name = $request->commercial_name;
         $product->parts_number = $request->part_number;
-        $product->unit = $request->unit;
+        $product->unit_id = $request->unit;
         $product->unit_price = $request->unit_price;
         $product->purchase_price = $request->purchase_price;
         $product->barcode = $request->barcode;
@@ -336,6 +354,21 @@ class ProductController extends Controller
         $product->width = $request->width;
         $product->aspect_ratio = $request->aspect_ratio;
         $product->rim = $request->rim;
+        $product->status = $request->status;
+        $product->updated_by = auth()->user()->id;
+
+        if ($request->has('tag')) {
+            $product->tag_id = implode(',', $request->tag); // Convert array to "1,3,5"
+        } else {
+            $product->tag_id = null;
+        }
+
+        if ($request->has('bike_id')) {
+            $product->bike_id = implode(',', $request->bike_id);
+        } else {
+            $product->bike_id = null;
+        }
+
 
         //  Handle base64 images in description
         $dom = new \DOMDocument();

@@ -22,7 +22,7 @@ class Product extends Model
         'series',
         'parts_number',
         'type',
-        'unit',
+        'unit_id',
         'unit_price',
         'purchase_price',
         'discount',
@@ -83,6 +83,10 @@ class Product extends Model
     public function bike()
     {
         return $this->belongsTo(Bike::class);
+    }
+    public function unit()
+    {
+        return $this->belongsTo(Unit::class);
     }
 
 }

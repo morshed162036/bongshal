@@ -544,7 +544,7 @@
                         </div> --}}
 
 
-                        <form action="/cart/add-item" class="js-SkuSelector-form js-ProductForm-form" data-form-name="Add To Cart" data-remote-add-to-wish-list="" data-auth="" data-selfref="/motorcycle/arai-regent-x-helmet" method="post" data-gtm-form-interact-id="0">
+                        <form action="{{ route('cartpage') }}" class="js-SkuSelector-form js-ProductForm-form" data-form-name="Add To Cart" data-remote-add-to-wish-list="" data-auth="" data-selfref="/motorcycle/arai-regent-x-helmet" method="get" data-gtm-form-interact-id="0">
                             <input name="_csrf_token" type="hidden" hidden="" value="EV8WYT5cEQgmHHgcGSNdOiA9Ai5bPTREhnQRa0CLTT4-REoOCgExjjY1">
                             <input class="js-SkuSelector-reservationSkuId" name="reservation_sku_id" type="hidden" value="">
                             <input class="js-SkuSelector-reservationStoreId" name="reservation_store_id" type="hidden" value="">
@@ -982,143 +982,162 @@
                                                 <div class="related-products__scroll-overflow-wrapper tray__scroll-overflow-wrapper">
                                                     <div class="related-products__scroll-wrapper tray__scroll-wrapper">
 
-                                                        <div class="related-products__product-tile-wrapper" data-js="ProductTile.wrapper">
-                                                            <a class="related-products__product-tile product-tile product-tile--vertical-on-desktop product-tile--abbreviated" data-js="Reflektion.link" data-recommendation-label="core_model:813281:0:1:2" data-recommendation-provider="core_model" data-index="0" data-product-id="813281"
-                                                            data-skus="1756720,1756721,1756722,1756724,1756728,1756729,10081945,1756741,1756742,1756747,1756730,1756735,10081939" href="https://www.revzilla.com/motorcycle/arai-regent-x-helmet-snell-2020?rrec=true"
-                                                            itemprop="url" title="Arai Regent-X Helmet - Snell 2020">
-                                                                <div class="badge badge--vertical">
-                                                                    <div class="badge__message badge__message--staff-picks-2019">Staff Pick
-                                                                    </div>
-                                                                </div>
-                                                                <meta content="Arai Regent-X Helmet - Snell 2020" itemprop="name">
-                                                                <meta content="Arai Helmets" itemprop="brand">
-                                                                <meta content="813281" itemprop="productId">
-                                                                <meta content="https://www.revzilla.com/product_images/1406/6118/arai_regent_x_helmet_480x480.jpg" itemprop="image">
-                                                                <div class="product-tile__content">
-                                                                    <div class="product-tile__image-container"><img alt="Arai Regent-X Helmet - Snell 2020" class="product-tile__image" height="480" id="js-ProductImageCrossfader-image-813281" width="480" src="https://www.revzilla.com/product_images/1406/6118/arai_regent_x_helmet_480x480.jpg">
-                                                                    </div>
-                                                                    <div class="product-tile__summary">
-                                                                        <div class="product-tile__details product-tile__details--swatches">
-                                                                            <ul class="product-tile__swatches">
-                                                                                <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-813281" data-js-option-id="6147" style="background-color: #383838" title="Frost Black"></span></li>
-                                                                                <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-813281" data-js-option-id="38580" style="background-color: #808080" title="Modern Grey"></span></li>
-                                                                                <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-813281" data-js-option-id="3440" style="background-color: silver" title="Aluminum Silver"></span></li>
-                                                                                <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-813281" data-js-option-id="40894" style="background-color: #ff0000" title="Code Red"></span><span class="product-tile__swatch-more-count">+3</span></li>
-                                                                                <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-813281" data-js-option-id="40895" style="background-color: #ffff00" title="Code Yellow"></span><span class="product-tile__swatch-more-count">+2</span></li>
-                                                                                <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-813281" data-js-option-id="37016" style="background-color: #808080" title="Frost Gunmetal"></span>
-                                                                                    <span class="product-tile__swatch-more-count">+1</span>
-                                                                                </li>
-                                                                                <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-813281" data-js-option-id="42230" style="background-color: #f0e68c" title="Modern Ivory"></span><span class="product-tile__swatch-more-count">+0</span></li>
-                                                                            </ul>
-                                                                            <script>
-                                                                                (function (w) {
-                                                                                   w.__rq.push(function (req) {
-                                                                                      req(
-                                                                                            "web/static/js/redline/components/product_image_crossfader"
-                                                                                         )
-                                                                                         .then(({
-                                                                                            ProductImageCrossfader
-                                                                                         }) => {
-                                                                                            new ProductImageCrossfader(
-                                                                                               813281,
-                                                                                               [{
-                                                                                                  "alt_text": "Arai Regent-X Helmet - Snell 2020",
-                                                                                                  "dimensions": null,
-                                                                                                  "option_id": 6147,
-                                                                                                  "display_order": null,
-                                                                                                  "option": null,
-                                                                                                  "uri": "https://www.revzilla.com/product_images/1406/6118/arai_regent_x_helmet_480x480.jpg",
-                                                                                                  "filename": "",
-                                                                                                  "id": 14066118
-                                                                                               }, {
-                                                                                                  "alt_text": "Arai Regent-X Helmet - Snell 2020",
-                                                                                                  "dimensions": null,
-                                                                                                  "option_id": 3440,
-                                                                                                  "display_order": null,
-                                                                                                  "option": null,
-                                                                                                  "uri": "https://www.revzilla.com/product_images/1838/1661/arai_regent_x_helmet_aluminum_silver_480x480.jpg",
-                                                                                                  "filename": "",
-                                                                                                  "id": 18381661
-                                                                                               }, {
-                                                                                                  "alt_text": "Arai Regent-X Helmet - Snell 2020",
-                                                                                                  "dimensions": null,
-                                                                                                  "option_id": 6147,
-                                                                                                  "display_order": null,
-                                                                                                  "option": null,
-                                                                                                  "uri": "https://www.revzilla.com/product_images/1406/6118/arai_regent_x_helmet_480x480.jpg",
-                                                                                                  "filename": "",
-                                                                                                  "id": 14066118
-                                                                                               }, {
-                                                                                                  "alt_text": "Arai Regent-X Helmet - Snell 2020",
-                                                                                                  "dimensions": null,
-                                                                                                  "option_id": 37016,
-                                                                                                  "display_order": null,
-                                                                                                  "option": null,
-                                                                                                  "uri": "https://www.revzilla.com/product_images/1672/6379/arai_regent_x_helmet_frost_gunmetal_480x480.jpg",
-                                                                                                  "filename": "",
-                                                                                                  "id": 16726379
-                                                                                               }, {
-                                                                                                  "alt_text": "Arai Regent-X Helmet - Snell 2020",
-                                                                                                  "dimensions": null,
-                                                                                                  "option_id": 38580,
-                                                                                                  "display_order": null,
-                                                                                                  "option": null,
-                                                                                                  "uri": "https://www.revzilla.com/product_images/1406/6101/arai_regent_x_helmet_480x480.jpg",
-                                                                                                  "filename": "",
-                                                                                                  "id": 14066101
-                                                                                               }, {
-                                                                                                  "alt_text": "Arai Regent-X Helmet - Snell 2020",
-                                                                                                  "dimensions": null,
-                                                                                                  "option_id": 40894,
-                                                                                                  "display_order": null,
-                                                                                                  "option": null,
-                                                                                                  "uri": "https://www.revzilla.com/product_images/1406/6033/arai_regent_x_helmet_480x480.jpg",
-                                                                                                  "filename": "",
-                                                                                                  "id": 14066033
-                                                                                               }, {
-                                                                                                  "alt_text": "Arai Regent-X Helmet - Snell 2020",
-                                                                                                  "dimensions": null,
-                                                                                                  "option_id": 40895,
-                                                                                                  "display_order": null,
-                                                                                                  "option": null,
-                                                                                                  "uri": "https://www.revzilla.com/product_images/1406/6050/arai_regent_x_helmet_480x480.jpg",
-                                                                                                  "filename": "",
-                                                                                                  "id": 14066050
-                                                                                               }, {
-                                                                                                  "alt_text": "Arai Regent-X Helmet - Snell 2020",
-                                                                                                  "dimensions": null,
-                                                                                                  "option_id": 42230,
-                                                                                                  "display_order": null,
-                                                                                                  "option": null,
-                                                                                                  "uri": "https://www.revzilla.com/product_images/1838/1627/arai_regent_x_helmet_modern_ivory_480x480.jpg",
-                                                                                                  "filename": "",
-                                                                                                  "id": 18381627
-                                                                                               }]
-                                                                                            );
-                                                                                         });
-                                                                                   })
-                                                                                })(this)
-                                                                            </script>
-                                                                        </div>
-                                                                        <div class="product-tile__name" data-qa="product-tile-name">Arai Regent-X Helmet - Snell 2020</div>
-                                                                        <div class="product-tile__pricing">
-                                                                            <meta content="579.95" itemprop="price">
-                                                                            <meta content="USD" itemprop="priceCurrency">
-                                                                            <meta content="https://schema.org/InStock" itemprop="availability">
-                                                                            <meta content="https://schema.org/NewCondition" itemprop="itemCondition">
-                                                                            <div class="product-tile__prices"><span class="product-tile__price-retail product-details__price-retail"><span
-                                                                  data-js="Money.stylizedMoney"><span class="mny"><span
-                                                                        class="mny__c">$</span>579<sup class="mny__s">.</sup><sup>95</sup><span class="mny__c"></span></span>
-                                                                                </span>
-                                                                                </span>
+                                                        @if ($likeProducts)
+                                                            @foreach ($likeProducts as $products)
+                                                                <div class="related-products__product-tile-wrapper" data-js="ProductTile.wrapper">
+                                                                    <a class="related-products__product-tile product-tile product-tile--vertical-on-desktop product-tile--abbreviated" data-js="Reflektion.link" data-recommendation-label="core_model:813281:0:1:2" data-recommendation-provider="core_model" data-index="0" data-product-id="813281"
+                                                                    data-skus="1756720,1756721,1756722,1756724,1756728,1756729,10081945,1756741,1756742,1756747,1756730,1756735,10081939" href="{{ route('productpage',$products->slug) }}"
+                                                                    itemprop="url" title="{{ $products->name }}">
+                                                                        {{-- <div class="badge badge--vertical">
+                                                                            <div class="badge__message badge__message--staff-picks-2019">Staff Pick
+                                                                            </div>
+                                                                        </div> --}}
+                                                                        <meta content="{{ $products->name }}" itemprop="name">
+                                                                        <meta content="@if ($products->brand){{ $products->brand->name }}@else Unknown
+                                                                        @endif" itemprop="brand">
+                                                                        <meta content="{{ $products->id }}" itemprop="productId">
+                                                                        <meta content="{{ asset('images/products/image/'.$products->image) }}" itemprop="image">
+                                                                        <div class="product-tile__content">
+                                                                            <div class="product-tile__image-container"><img alt="{{ $products->name }}" class="product-tile__image" height="480" id="" width="480" src="{{ asset('images/products/image/'.$products->image) }}">
+                                                                            </div>
+                                                                            <div class="product-tile__summary">
+                                                                                {{-- <div class="product-tile__details product-tile__details--swatches">
+                                                                                    <ul class="product-tile__swatches">
+                                                                                        <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-813281" data-js-option-id="6147" style="background-color: #383838" title="Frost Black"></span></li>
+                                                                                        <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-813281" data-js-option-id="38580" style="background-color: #808080" title="Modern Grey"></span></li>
+                                                                                        <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-813281" data-js-option-id="3440" style="background-color: silver" title="Aluminum Silver"></span></li>
+                                                                                        <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-813281" data-js-option-id="40894" style="background-color: #ff0000" title="Code Red"></span><span class="product-tile__swatch-more-count">+3</span></li>
+                                                                                        <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-813281" data-js-option-id="40895" style="background-color: #ffff00" title="Code Yellow"></span><span class="product-tile__swatch-more-count">+2</span></li>
+                                                                                        <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-813281" data-js-option-id="37016" style="background-color: #808080" title="Frost Gunmetal"></span>
+                                                                                            <span class="product-tile__swatch-more-count">+1</span>
+                                                                                        </li>
+                                                                                        <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-813281" data-js-option-id="42230" style="background-color: #f0e68c" title="Modern Ivory"></span><span class="product-tile__swatch-more-count">+0</span></li>
+                                                                                    </ul>
+                                                                                    <script>
+                                                                                        (function (w) {
+                                                                                        w.__rq.push(function (req) {
+                                                                                            req(
+                                                                                                    "web/static/js/redline/components/product_image_crossfader"
+                                                                                                )
+                                                                                                .then(({
+                                                                                                    ProductImageCrossfader
+                                                                                                }) => {
+                                                                                                    new ProductImageCrossfader(
+                                                                                                    813281,
+                                                                                                    [{
+                                                                                                        "alt_text": "Arai Regent-X Helmet - Snell 2020",
+                                                                                                        "dimensions": null,
+                                                                                                        "option_id": 6147,
+                                                                                                        "display_order": null,
+                                                                                                        "option": null,
+                                                                                                        "uri": "https://www.revzilla.com/product_images/1406/6118/arai_regent_x_helmet_480x480.jpg",
+                                                                                                        "filename": "",
+                                                                                                        "id": 14066118
+                                                                                                    }, {
+                                                                                                        "alt_text": "Arai Regent-X Helmet - Snell 2020",
+                                                                                                        "dimensions": null,
+                                                                                                        "option_id": 3440,
+                                                                                                        "display_order": null,
+                                                                                                        "option": null,
+                                                                                                        "uri": "https://www.revzilla.com/product_images/1838/1661/arai_regent_x_helmet_aluminum_silver_480x480.jpg",
+                                                                                                        "filename": "",
+                                                                                                        "id": 18381661
+                                                                                                    }, {
+                                                                                                        "alt_text": "Arai Regent-X Helmet - Snell 2020",
+                                                                                                        "dimensions": null,
+                                                                                                        "option_id": 6147,
+                                                                                                        "display_order": null,
+                                                                                                        "option": null,
+                                                                                                        "uri": "https://www.revzilla.com/product_images/1406/6118/arai_regent_x_helmet_480x480.jpg",
+                                                                                                        "filename": "",
+                                                                                                        "id": 14066118
+                                                                                                    }, {
+                                                                                                        "alt_text": "Arai Regent-X Helmet - Snell 2020",
+                                                                                                        "dimensions": null,
+                                                                                                        "option_id": 37016,
+                                                                                                        "display_order": null,
+                                                                                                        "option": null,
+                                                                                                        "uri": "https://www.revzilla.com/product_images/1672/6379/arai_regent_x_helmet_frost_gunmetal_480x480.jpg",
+                                                                                                        "filename": "",
+                                                                                                        "id": 16726379
+                                                                                                    }, {
+                                                                                                        "alt_text": "Arai Regent-X Helmet - Snell 2020",
+                                                                                                        "dimensions": null,
+                                                                                                        "option_id": 38580,
+                                                                                                        "display_order": null,
+                                                                                                        "option": null,
+                                                                                                        "uri": "https://www.revzilla.com/product_images/1406/6101/arai_regent_x_helmet_480x480.jpg",
+                                                                                                        "filename": "",
+                                                                                                        "id": 14066101
+                                                                                                    }, {
+                                                                                                        "alt_text": "Arai Regent-X Helmet - Snell 2020",
+                                                                                                        "dimensions": null,
+                                                                                                        "option_id": 40894,
+                                                                                                        "display_order": null,
+                                                                                                        "option": null,
+                                                                                                        "uri": "https://www.revzilla.com/product_images/1406/6033/arai_regent_x_helmet_480x480.jpg",
+                                                                                                        "filename": "",
+                                                                                                        "id": 14066033
+                                                                                                    }, {
+                                                                                                        "alt_text": "Arai Regent-X Helmet - Snell 2020",
+                                                                                                        "dimensions": null,
+                                                                                                        "option_id": 40895,
+                                                                                                        "display_order": null,
+                                                                                                        "option": null,
+                                                                                                        "uri": "https://www.revzilla.com/product_images/1406/6050/arai_regent_x_helmet_480x480.jpg",
+                                                                                                        "filename": "",
+                                                                                                        "id": 14066050
+                                                                                                    }, {
+                                                                                                        "alt_text": "Arai Regent-X Helmet - Snell 2020",
+                                                                                                        "dimensions": null,
+                                                                                                        "option_id": 42230,
+                                                                                                        "display_order": null,
+                                                                                                        "option": null,
+                                                                                                        "uri": "https://www.revzilla.com/product_images/1838/1627/arai_regent_x_helmet_modern_ivory_480x480.jpg",
+                                                                                                        "filename": "",
+                                                                                                        "id": 18381627
+                                                                                                    }]
+                                                                                                    );
+                                                                                                });
+                                                                                        })
+                                                                                        })(this)
+                                                                                    </script>
+                                                                                </div> --}}
+                                                                                <div class="product-tile__name" data-qa="product-tile-name">{{ $products->name }}</div>
+                                                                                <div class="product-tile__prices">
+                                                                                    <span class="product-tile__price-retail product-tile__price-retail--sale product-details__price-retail"><span
+                                                                                        data-js="Money.stylizedMoney"><span
+                                                                                            class="mny">
+                                                                                            @if ($products->discount)
+                                                                                                @if ($products->discount_type == 'fixed')
+                                                                                                {{ $products->unit_price - $products->discount }}
+                                                                                                @else
+                                                                                                {{ $products->unit_price - ($products->unit_price * $products->discount) / 100 }}
+                                                                                                @endif
+                                                                                            @else
+                                                                                            {{ $products->unit_price }}
+
+                                                                                            @endif
+                                                                                            <span class="mny__c">Tk</span>
+                                                                                    </span>
+                                                                                    @if ($products->discount)
+
+                                                                                        <span
+                                                                                        class="product-tile__price-was product-details__price-was "><span
+                                                                                            data-js="Money.parsedMoney"><span
+                                                                                                class="mny__c">{{ $products->unit_price }}</span>Tk<span
+                                                                                                class="mny__c"></span></span></span>
+                                                                                    @endif
+                                                                                </div>
+
                                                                             </div>
                                                                         </div>
-                                                                    </div>
+                                                                    </a>
                                                                 </div>
-                                                            </a>
-                                                        </div>
+                                                            @endforeach
+                                                        @endif
 
-                                                        <div class="related-products__product-tile-wrapper" data-js="ProductTile.wrapper">
+                                                        {{-- <div class="related-products__product-tile-wrapper" data-js="ProductTile.wrapper">
                                                             <a class="related-products__product-tile product-tile product-tile--vertical-on-desktop product-tile--abbreviated" data-js="Reflektion.link" data-recommendation-label="reflektion:1100695:2:1:10" data-recommendation-provider="reflektion" data-index="1"
                                                             data-product-id="1100695" data-skus="10413501,10413502,10413503,10413504,10413505,10413506,10413477,10413478,10413479,10413480,10413481,10413482,10413507,10413508,10413509,10413510,10413511,10413512,10413483,10413484,10413485,10413486,10413487,10413488,10413489,10413490,10413491,10413492,10413493,10413494,10413495,10413496,10413497,10413498,10413499,10413500"
                                                             href="https://www.revzilla.com/motorcycle/arai-signet-x-black-frost-snell-2025?rrec=true" itemprop="url" title="Arai Signet-X Helmet">
@@ -2221,7 +2240,7 @@
                                                                     </div>
                                                                 </div>
                                                             </a>
-                                                        </div>
+                                                        </div> --}}
 
                                                     </div>
                                                 </div>
@@ -2279,14 +2298,14 @@
                                 Product Description
                             </div>
 
-                            <div role="tab" tabindex="0" class="product-show-section__tab-header tab-header" data-js="Tab.header" data-tab-id="part-numbers" data-qa="part-numbers-header">
+                            {{-- <div role="tab" tabindex="0" class="product-show-section__tab-header tab-header" data-js="Tab.header" data-tab-id="part-numbers" data-qa="part-numbers-header">
                                 Part Numbers
-                            </div>
+                            </div> --}}
 
 
-                            <div role="tab" tabindex="0" class="product-show-section__tab-header tab-header" data-js="Tab.header" data-tab-id="fitment" data-qa="fitment-header">
+                            {{-- <div role="tab" tabindex="0" class="product-show-section__tab-header tab-header" data-js="Tab.header" data-tab-id="fitment" data-qa="fitment-header">
                                 Sizing &amp; Fit
-                            </div>
+                            </div> --}}
 
 
                             <div class="product-show-section__tab-content tab-content tab-content--active" data-js="Tab.content" data-tab-id="product-description" data-qa="product-description">
@@ -3705,104 +3724,120 @@
                                         <div data-js="RecommendationProducts.tray" data-section-name="Riders Also Bought" data-section-type="Product List" class="tray">
                                             <div class="related-products__scroll-overflow-wrapper tray__scroll-overflow-wrapper">
                                                 <div class="related-products__scroll-wrapper tray__scroll-wrapper">
+                                                    @if ($relatedProducts)
+                                                        @foreach ($relatedProducts as $product)
+                                                            <div class="related-products__product-tile-wrapper" data-js="ProductTile.wrapper">
+                                                                <a class="related-products__product-tile product-tile product-tile--abbreviated" data-js="Reflektion.link" data-recommendation-label="reflektion:1020663:1:1:11" data-recommendation-provider="reflektion" data-index="0" data-product-id="1020663" data-skus="10258410,10258411,10258412,10258413,10258414,10258415,10258398,10258399,10258400,10258401,10258402,10258403,10258404,10258405,10258406,10258407,10258408,10258409"
+                                                                href="{{ route('productpage',$product->slug) }}" itemprop="url" title="{{ $product->name }}">
+                                                                    {{-- <div class="badge badge--vertical">
+                                                                        <div class="badge__message badge__message--staff-picks-2019">Staff Pick
+                                                                        </div>
+                                                                    </div> --}}
+                                                                    <meta content="{{ $product->name }}" itemprop="name">
+                                                                    <meta content="@if ($product->brand)
+                                                                        {{ $product->brand->name }}
+                                                                    @endif" itemprop="brand">
+                                                                    <meta content="{{ $product->id }}" itemprop="productId">
+                                                                    <meta content="{{ asset('images/products/image/'.$product->image) }}" itemprop="image">
+                                                                    <div class="product-tile__content">
+                                                                        <div class="product-tile__image-container"><img alt="{{ $product->name }}" class="product-tile__image" height="480" id="js-ProductImageCrossfader-image-1020663" width="480" src="{{ asset('images/products/image/'.$product->image) }}">
+                                                                        </div>
+                                                                        <div class="product-tile__summary">
+                                                                            {{-- <div class="product-tile__details product-tile__details--swatches">
+                                                                                <ul class="product-tile__swatches">
+                                                                                    <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-1020663" data-js-option-id="24" style="background-color: Black" title="Black"></span></li>
+                                                                                    <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-1020663" data-js-option-id="1043" style="background-color: #3A3A3A" title="Matte Black"></span></li>
+                                                                                    <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-1020663" data-js-option-id="30" style="background-color: White" title="White"></span></li>
+                                                                                </ul>
+                                                                                <script>
+                                                                                    (function (w) {
+                                                                                        w.__rq.push(function (req) {
+                                                                                        req(
+                                                                                                "web/static/js/redline/components/product_image_crossfader"
+                                                                                            )
+                                                                                            .then(({
+                                                                                                ProductImageCrossfader
+                                                                                            }) => {
+                                                                                                new ProductImageCrossfader(
+                                                                                                    1020663,
+                                                                                                    [{
+                                                                                                    "alt_text": "AGV K1 S Helmet",
+                                                                                                    "dimensions": null,
+                                                                                                    "option_id": 1043,
+                                                                                                    "display_order": null,
+                                                                                                    "option": null,
+                                                                                                    "uri": "https://www.revzilla.com/product_images/2103/9636/agvk1_helmet_480x480.jpg",
+                                                                                                    "filename": "",
+                                                                                                    "id": 21039636
+                                                                                                    }, {
+                                                                                                    "alt_text": "AGV K1 S Helmet",
+                                                                                                    "dimensions": null,
+                                                                                                    "option_id": 24,
+                                                                                                    "display_order": null,
+                                                                                                    "option": null,
+                                                                                                    "uri": "https://www.revzilla.com/product_images/2103/9568/agvk1_helmet_480x480.jpg",
+                                                                                                    "filename": "",
+                                                                                                    "id": 21039568
+                                                                                                    }, {
+                                                                                                    "alt_text": "AGV K1 S Helmet",
+                                                                                                    "dimensions": null,
+                                                                                                    "option_id": 30,
+                                                                                                    "display_order": null,
+                                                                                                    "option": null,
+                                                                                                    "uri": "https://www.revzilla.com/product_images/2103/9704/agvk1_helmet_480x480.jpg",
+                                                                                                    "filename": "",
+                                                                                                    "id": 21039704
+                                                                                                    }, {
+                                                                                                    "alt_text": "AGV K1 S Helmet",
+                                                                                                    "dimensions": null,
+                                                                                                    "option_id": 1043,
+                                                                                                    "display_order": null,
+                                                                                                    "option": null,
+                                                                                                    "uri": "https://www.revzilla.com/product_images/2103/9636/agvk1_helmet_480x480.jpg",
+                                                                                                    "filename": "",
+                                                                                                    "id": 21039636
+                                                                                                    }]
+                                                                                                );
+                                                                                            });
+                                                                                        })
+                                                                                    })(this)
+                                                                                </script>
+                                                                            </div> --}}
+                                                                            <div class="product-tile__name" data-qa="product-tile-name">{{ $product->name }}
+                                                                            </div>
+                                                                            <div class="product-tile__prices">
+                                                                                <span class="product-tile__price-retail product-tile__price-retail--sale product-details__price-retail"><span
+                                                                                    data-js="Money.stylizedMoney"><span
+                                                                                        class="mny">
+                                                                                        @if ($product->discount)
+                                                                                            @if ($product->discount_type == 'fixed')
+                                                                                            {{ $product->unit_price - $product->discount }}
+                                                                                            @else
+                                                                                            {{ $product->unit_price - ($product->unit_price * $product->discount) / 100 }}
+                                                                                            @endif
+                                                                                        @else
+                                                                                        {{ $product->unit_price }}
 
-                                                    <div class="related-products__product-tile-wrapper" data-js="ProductTile.wrapper">
-                                                        <a class="related-products__product-tile product-tile product-tile--abbreviated" data-js="Reflektion.link" data-recommendation-label="reflektion:1020663:1:1:11" data-recommendation-provider="reflektion" data-index="0" data-product-id="1020663" data-skus="10258410,10258411,10258412,10258413,10258414,10258415,10258398,10258399,10258400,10258401,10258402,10258403,10258404,10258405,10258406,10258407,10258408,10258409"
-                                                        href="https://www.revzilla.com/motorcycle/agv-k1-s-helmet?rrec=true" itemprop="url" title="AGV K1 S Helmet">
-                                                            <div class="badge badge--vertical">
-                                                                <div class="badge__message badge__message--staff-picks-2019">Staff Pick
-                                                                </div>
-                                                            </div>
-                                                            <meta content="AGV K1 S Helmet" itemprop="name">
-                                                            <meta content="AGV Helmets" itemprop="brand">
-                                                            <meta content="1020663" itemprop="productId">
-                                                            <meta content="https://www.revzilla.com/product_images/2103/9636/agvk1_helmet_480x480.jpg" itemprop="image">
-                                                            <div class="product-tile__content">
-                                                                <div class="product-tile__image-container"><img alt="AGV K1 S Helmet" class="product-tile__image" height="480" id="js-ProductImageCrossfader-image-1020663" width="480" src="https://www.revzilla.com/product_images/2103/9636/agvk1_helmet_480x480.jpg">
-                                                                </div>
-                                                                <div class="product-tile__summary">
-                                                                    <div class="product-tile__details product-tile__details--swatches">
-                                                                        <ul class="product-tile__swatches">
-                                                                            <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-1020663" data-js-option-id="24" style="background-color: Black" title="Black"></span></li>
-                                                                            <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-1020663" data-js-option-id="1043" style="background-color: #3A3A3A" title="Matte Black"></span></li>
-                                                                            <li class="product-tile__swatch-wrapper"><span class="product-tile__swatch js-ProductImageCrossfader-swatch-1020663" data-js-option-id="30" style="background-color: White" title="White"></span></li>
-                                                                        </ul>
-                                                                        <script>
-                                                                            (function (w) {
-                                                                                w.__rq.push(function (req) {
-                                                                                   req(
-                                                                                         "web/static/js/redline/components/product_image_crossfader"
-                                                                                      )
-                                                                                      .then(({
-                                                                                         ProductImageCrossfader
-                                                                                      }) => {
-                                                                                         new ProductImageCrossfader(
-                                                                                            1020663,
-                                                                                            [{
-                                                                                               "alt_text": "AGV K1 S Helmet",
-                                                                                               "dimensions": null,
-                                                                                               "option_id": 1043,
-                                                                                               "display_order": null,
-                                                                                               "option": null,
-                                                                                               "uri": "https://www.revzilla.com/product_images/2103/9636/agvk1_helmet_480x480.jpg",
-                                                                                               "filename": "",
-                                                                                               "id": 21039636
-                                                                                            }, {
-                                                                                               "alt_text": "AGV K1 S Helmet",
-                                                                                               "dimensions": null,
-                                                                                               "option_id": 24,
-                                                                                               "display_order": null,
-                                                                                               "option": null,
-                                                                                               "uri": "https://www.revzilla.com/product_images/2103/9568/agvk1_helmet_480x480.jpg",
-                                                                                               "filename": "",
-                                                                                               "id": 21039568
-                                                                                            }, {
-                                                                                               "alt_text": "AGV K1 S Helmet",
-                                                                                               "dimensions": null,
-                                                                                               "option_id": 30,
-                                                                                               "display_order": null,
-                                                                                               "option": null,
-                                                                                               "uri": "https://www.revzilla.com/product_images/2103/9704/agvk1_helmet_480x480.jpg",
-                                                                                               "filename": "",
-                                                                                               "id": 21039704
-                                                                                            }, {
-                                                                                               "alt_text": "AGV K1 S Helmet",
-                                                                                               "dimensions": null,
-                                                                                               "option_id": 1043,
-                                                                                               "display_order": null,
-                                                                                               "option": null,
-                                                                                               "uri": "https://www.revzilla.com/product_images/2103/9636/agvk1_helmet_480x480.jpg",
-                                                                                               "filename": "",
-                                                                                               "id": 21039636
-                                                                                            }]
-                                                                                         );
-                                                                                      });
-                                                                                })
-                                                                             })(this)
-                                                                        </script>
-                                                                    </div>
-                                                                    <div class="product-tile__name" data-qa="product-tile-name">AGV K1 S Helmet
-                                                                    </div>
-                                                                    <div class="product-tile__pricing">
-                                                                        <meta content="229.00" itemprop="price">
-                                                                        <meta content="USD" itemprop="priceCurrency">
-                                                                        <meta content="https://schema.org/InStock" itemprop="availability">
-                                                                        <meta content="https://schema.org/NewCondition" itemprop="itemCondition">
-                                                                        <div class="product-tile__prices"><span class="product-tile__price-retail product-details__price-retail mny__rng"><span
-                                                               data-js="Money.stylizedMoney"><span class="mny"><span
-                                                                     class="mny__c">$</span>229<sup class="mny__s">.</sup><sup>00</sup><span class="mny__c"></span></span>
-                                                                            </span><span data-js="Money.stylizedMoney"><span class="mny"><span
-                                                                     class="mny__c">$</span>239<sup class="mny__s">.</sup><sup>00</sup><span class="mny__c"></span></span>
-                                                                            </span>
-                                                                            </span>
+                                                                                        @endif
+                                                                                        <span class="mny__c">Tk</span>
+                                                                                </span>
+                                                                                @if ($product->discount)
+
+                                                                                    <span
+                                                                                    class="product-tile__price-was product-details__price-was "><span
+                                                                                        data-js="Money.parsedMoney"><span
+                                                                                            class="mny__c">{{ $product->unit_price }}</span>Tk<span
+                                                                                            class="mny__c"></span></span></span>
+                                                                                @endif
+                                                                            </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
+                                                                </a>
                                                             </div>
-                                                        </a>
-                                                    </div>
+                                                        @endforeach
+                                                    @endif
 
-                                                    <div class="related-products__product-tile-wrapper" data-js="ProductTile.wrapper">
+                                                    {{-- <div class="related-products__product-tile-wrapper" data-js="ProductTile.wrapper">
                                                         <a class="related-products__product-tile product-tile product-tile--abbreviated" data-js="Reflektion.link" data-recommendation-label="reflektion:867544:1:2:11" data-recommendation-provider="reflektion" data-index="1" data-product-id="867544" data-skus="1845574,1845575,1845576,1845577,1845578,1845579,1845580,1845581"
                                                         href="https://www.revzilla.com/motorcycle/bilt-nomad-air-jacket?rrec=true" itemprop="url" title="BILT Nomad Air Jacket">
                                                             <meta content="BILT Nomad Air Jacket" itemprop="name">
@@ -4430,7 +4465,7 @@
                                                                 </div>
                                                             </div>
                                                         </a>
-                                                    </div>
+                                                    </div> --}}
 
                                                 </div>
                                             </div>

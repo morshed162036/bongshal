@@ -1143,6 +1143,7 @@
     <link rel="stylesheet" href="{{ asset('frontend') }}/css/app-39314be15c1f30a59259a417b8053afd.css">
     <link rel="stylesheet" href="{{ asset('frontend') }}/css/show-505e834ef3c46c4ffc03893c23d4be25.css">
     <link rel="stylesheet" href="{{ asset('frontend/css/shop.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/css/blog.css') }}">
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 

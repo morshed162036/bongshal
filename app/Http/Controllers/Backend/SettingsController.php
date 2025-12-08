@@ -9,6 +9,8 @@ use App\Models\Attribute; // Assuming you have an Attribute model
 use App\Models\AttributeValue; // Assuming you have an AttributeValue model
 use App\Models\Slider; // Assuming you have a Slider model
 use App\Models\Company; // Assuming you have a Company model
+use App\Models\Unit; // Assuming you have a Unit model
+use App\Models\Tag; // Assuming you have a Tag model
 use Illuminate\Support\Facades\File;
 use Illuminate\Validation\Rule;
 
@@ -316,6 +318,81 @@ class SettingsController extends Controller
             }
         }
         return view('backend.slider',compact('sliders','slider'));
+
+    }
+    public function unit(Request $request, string $id = null)
+    {
+        $units = Unit::get()->all();
+        if ($id) {
+            $unit = Unit::findorFail($id);
+        }
+        else
+        {
+            $unit = '';
+        }
+        if($request->isMethod('post'))
+        {
+            // dd($request->all());
+            if(empty($unit))
+            {
+                $unit = new Unit();
+            }
+            $unit->name = $request->name;
+            // $unit->details = $request->details;
+            $unit->code = $request->code;
+            $unit->status = $request->status;
+            // dd($attribute);
+
+            if (!empty($id)) {
+                $unit->updated_by = auth()->user()->id;
+                $unit -> update();
+                return redirect(route('unit'))->with('success','Update Success!!');
+            } else {
+                $unit->created_by = auth()->user()->id;
+                $unit -> save();
+                // dd($brand);
+                return redirect(route('unit'))->with('success','Create Success!!');
+            }
+        }
+        return view('backend.unit',compact('units','unit'));
+
+    }
+    public function tags(Request $request, string $id = null)
+    {
+        $tags = Tag::get()->all();
+        if ($id) {
+            $tag = Tag::findorFail($id);
+        }
+        else
+        {
+            $tag = '';
+        }
+        if($request->isMethod('post'))
+        {
+            // dd($request->all());
+            if(empty($tag))
+            {
+                $tag = new Tag();
+            }
+            $tag->tag = $request->tag;
+            $tag->slug = $request->slug? $request->slug : strtolower(str_replace(' ', '-', $request->tag));
+            // $unit->details = $request->details;
+            // $unit->code = $request->code;
+            $tag->status = $request->status;
+            // dd($attribute);
+
+            if (!empty($id)) {
+                $tag->updated_by = auth()->user()->id;
+                $tag -> update();
+                return redirect(route('tag'))->with('success','Update Success!!');
+            } else {
+                $tag->created_by = auth()->user()->id;
+                $tag -> save();
+                // dd($brand);
+                return redirect(route('tag'))->with('success','Create Success!!');
+            }
+        }
+        return view('backend.tag',compact('tags','tag'));
 
     }
 

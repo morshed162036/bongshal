@@ -3,37 +3,26 @@
 @section('title', 'Create Product')
 
 @section('css')
-       <!-- BEGIN: Vendor CSS-->
-       <link rel="stylesheet" type="text/css" href="{{ asset('admin_template/app-assets/vendors/css/vendors.min.css') }}">
-       <link rel="stylesheet" type="text/css"
-           href="{{ asset('admin_template/app-assets/vendors/css/tables/datatable/datatables.min.css') }}">
-       <!-- END: Vendor CSS-->
+       <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/vendors/css/forms/select/select2.min.css">
+    <!-- END: Vendor CSS-->
 
-       <!-- BEGIN: Theme CSS-->
-       <link rel="stylesheet" type="text/css" href="{{ asset('admin_template/app-assets/css/bootstrap.css') }}">
-       <link rel="stylesheet" type="text/css" href="{{ asset('admin_template/app-assets/css/bootstrap-extended.css') }}">
-       <link rel="stylesheet" type="text/css" href="{{ asset('admin_template/app-assets/css/colors.css') }}">
-       <link rel="stylesheet" type="text/css" href="{{ asset('admin_template/app-assets/css/components.css') }}">
-       <link rel="stylesheet" type="text/css" href="{{ asset('admin_template/app-assets/css/themes/dark-layout.css') }}">
-       <link rel="stylesheet" type="text/css" href="{{ asset('admin_template/app-assets/css/themes/semi-dark-layout.css') }}">
-       <!-- END: Theme CSS-->
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/css/themes/semi-dark-layout.css">
+    <!-- END: Theme CSS-->
 
-       <!-- BEGIN: Page CSS-->
-       <link rel="stylesheet" type="text/css"
-           href="{{ asset('admin_template/app-assets/css/core/menu/menu-types/vertical-menu.css') }}">
-       <!-- END: Page CSS-->
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <!-- END: Page CSS-->
 
-       <!-- BEGIN: Custom CSS-->
-       <link rel="stylesheet" type="text/css" href="{{ asset('admin_template/assets/css/style.css') }}">
-       <!-- END: Custom CSS-->
-          {{-- <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" /> --}}
-         <!-- include summernote css/js -->
-       <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-bs4.min.css" rel="stylesheet">
-       <style>
-           a label {
-               cursor: pointer;
-           }
-       </style>
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('admin_template') }}/assets/css/style.css">
+    <!-- END: Custom CSS-->
 @endsection
 
 @section('content')
@@ -110,7 +99,7 @@
                                 <div class="col-md-6" id="fitment-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="bike_id">Fitment Model <span class="text-danger">*</span></label>
-                                        <select name="bike_id" id="bike_id" class="form-control">
+                                        <select name="bike_id[]" id="bike_id" class="select2  form-control" multiple="multiple">
                                             <option value="">Select Model</option>
                                             <option value="0">Universal</option>
                                             @foreach($bikes as $bike)
@@ -165,7 +154,13 @@
                                 <div class="col-md-6" id="unit-div" style="display:none;">
                                     <div class="form-group">
                                         <label for="unit">Unit <span class="text-danger">*</span></label>
-                                        <input type="text" name="unit" class="form-control" id="unit" placeholder="Enter Unit (e.g. KG, Pc etc)" value="{{ old('unit') }}" required>
+                                        {{-- <input type="text" name="unit" class="form-control" id="unit" placeholder="Enter Unit (e.g. KG, Pc etc)" value="{{ old('unit') }}" required> --}}
+                                        <select name="unit" id="unit" class="form-control" required>
+                                            <option value="">Select Unit</option>
+                                            @foreach($units as $unit)
+                                                <option value="{{ $unit->id }}" {{ old('unit') == $unit->id ? 'selected' : '' }}>{{ $unit->name }}</option>
+                                            @endforeach
+                                        </select>
                                         @error('unit')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
@@ -247,9 +242,22 @@
                                 </div> --}}
                                 <div class="col-md-6" id="barcode-div" style="display:none;">
                                     <div class="form-group">
-                                        <label for="barcode">Barcode</label>
+                                        {{-- <label for="barcode">Barcode</label>
                                         <input type="text" name="barcode" class="form-control" id="barcode" placeholder="Enter barcode" value="{{ old('barcode') }}">
                                         @error('barcode')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror --}}
+                                        <label for="tags">Tags</label>
+                                        <select name="tag[]" id="tags" class="select2 form-control" multiple="multiple">
+                                            <option value="">Select Tag</option>
+                                            @if ($tags)
+                                                @foreach ($tags as $tag)
+                                                    <option value="{{ $tag->id }}">{{ $tag->tag }}</option>
+                                                @endforeach
+                                            @endif
+                                        </select>
+                                        {{-- <input type="text" name="tags" class="form-control" id="tags" placeholder="Enter barcode" value="{{ old('tags') }}"> --}}
+                                        @error('tag')
                                             <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
@@ -643,92 +651,37 @@
 
 @section('js')
      <!-- jQuery 3.6.0 -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-<!-- Popper + Bootstrap 4.5.2 JS -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-
-<!-- Summernote JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.18/summernote-bs4.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="{{ asset('admin_template/app-assets/vendors/js/vendors.min.js')}}"></script>
-    <script src="{{ asset('admin_template/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js')}}"></script>
-    <script src="{{ asset('admin_template/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js')}}"></script>
-    <script src="{{ asset('admin_template/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js')}}"></script>
+ <!-- BEGIN: Vendor JS-->
+    <script src="{{ asset('admin_template') }}/app-assets/vendors/js/vendors.min.js"></script>
+    <script src="{{ asset('admin_template') }}/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
+    <script src="{{ asset('admin_template') }}/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+    <script src="{{ asset('admin_template') }}/app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
     <!-- BEGIN Vendor JS-->
 
     <!-- BEGIN: Page Vendor JS-->
-    <script src="{{ asset('admin_template/app-assets/vendors/js/tables/datatable/datatables.min.js')}}"></script>
-    <script src="{{ asset('admin_template/app-assets/vendors/js/tables/datatable/datatables.checkboxes.min.js')}}"></script>
-    <script src="{{ asset('admin_template/app-assets/vendors/js/charts/apexcharts.min.js')}}"></script>
-    <script src="{{ asset('admin_template/app-assets/vendors/js/pickers/daterange/moment.min.js')}}"></script>
-    <script src="{{ asset('admin_template/app-assets/vendors/js/pickers/daterange/daterangepicker.js')}}"></script>
+    <script src="{{ asset('admin_template') }}/app-assets/vendors/js/forms/select/select2.full.min.js"></script>
     <!-- END: Page Vendor JS-->
 
     <!-- BEGIN: Theme JS-->
-    <script src="{{ asset('admin_template/app-assets/js/core/app-menu.js')}}"></script>
-    <script src="{{ asset('admin_template/app-assets/js/core/app.js')}}"></script>
-    <script src="{{ asset('admin_template/app-assets/js/scripts/components.js')}}"></script>
-    <script src="{{ asset('admin_template/app-assets/js/scripts/footer.js')}}"></script>
-    <script src="{{ asset('admin_template/app-assets/js/scripts/forms/form-repeater.js') }}"></script>
-    <script src="{{ asset('admin_template/app-assets/vendors/js/forms/repeater/jquery.repeater.min.js') }}"></script>
+    <script src="{{ asset('admin_template') }}/app-assets/js/core/app-menu.js"></script>
+    <script src="{{ asset('admin_template') }}/app-assets/js/core/app.js"></script>
+    <script src="{{ asset('admin_template') }}/app-assets/js/scripts/components.js"></script>
+    <script src="{{ asset('admin_template') }}/app-assets/js/scripts/footer.js"></script>
     <!-- END: Theme JS-->
 
     <!-- BEGIN: Page JS-->
-    <script src="{{ asset('admin_template/app-assets/js/scripts/pages/table-extended.js')}}"></script>
-    <script>
-    $(document).ready(function () {
-        $('#content').summernote({
-            tabsize: 2,
-            height: 300,
-            toolbar: [
-                ['style', ['style']],
-                ['font', ['bold', 'italic', 'underline', 'strikethrough', 'superscript', 'subscript', 'clear']],
-                ['fontname', ['fontname']],
-                ['fontsize', ['fontsize']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['height', ['height']],
-                ['table', ['table']],
-                ['insert', ['link', 'picture', 'video', 'hr']],
-                ['view', ['fullscreen', 'codeview', 'help']],
-                ['edit', ['undo', 'redo']]
-            ]
-            });
-    });
-</script>
-<script>
-    $(document).ready(function () {
-            $('#title').focus();
-            $('.select2').select2();
-            // $('[data-toggle="tooltip"]').tooltip();
-            $('#name').on('keyup', function () {
-                var title = $(this).val();
+    <script src="{{ asset('admin_template') }}/app-assets/js/scripts/forms/select/form-select2.js"></script>
+    <!-- END: Page JS-->
 
-                // Generate current date in YYYY/MM/DD format
-                var date = new Date();
-                var formattedDate = date.getFullYear() + '-' +
-                    String(date.getMonth() + 1).padStart(2, '0') + '-' +
-                    String(date.getDate()).padStart(2, '0');
-
-                // Clean slug from title
-                var slug = title
-                    .trim()
-                    .toLowerCase()
-                    .replace(/[^a-z0-9\s-]/g, '')
-                    .replace(/\s+/g, '-')
-                    .replace(/-+/g, '-')
-                    .replace(/^-|-$/g, '');
-
-                // $('#slug').val(formattedDate + '-' + slug);
-                $('#slug').val(slug);
-            });
-
-        });
-</script>
+    <script src="{{ asset('admin_template') }}/app-assets/vendors/js/forms/repeater/jquery.repeater.min.js"></script>
+    <script src="{{ asset('admin_template') }}/app-assets/js/scripts/forms/form-repeater.js"></script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
 
+        // $('#bike_id').select2({
+        //     placeholder: "Select Fitment Bikes",
+        //     allowClear: true
+        //     });
         // Event delegation: works for current and future repeater rows
         $(document).on('change', "select[name$='[attribute_id]'], .attribute-select", function () {
             const $row = $(this).closest('[data-repeater-item]');

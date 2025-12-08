@@ -1,4 +1,4 @@
-@extends('backend.layout.layout')
+@extends('backend.layout.main')
 
 @section('css')
     <!-- BEGIN: Vendor CSS-->
@@ -30,11 +30,15 @@
 
 
     <!-- END: Custom CSS-->
-    <style>
+    <!-- include summernote css/js -->
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.9.0/dist/summernote-bs4.min.css" rel="stylesheet">
+
+
+    {{-- <style>
         .ck-editor__editable_inline{
             height: 450px;
         }
-    </style>
+    </style> --}}
 @endsection
 
 @section('content')
@@ -42,14 +46,14 @@
     <div class="content-header-left col-12 mb-2 mt-1">
         <div class="row breadcrumbs-top">
             <div class="col-12">
-                <h5 class="content-header-title float-left pr-1 mb-0">News Secton</h5>
+                <h5 class="content-header-title float-left pr-1 mb-0">Blogs Secton</h5>
                 <div class="breadcrumb-wrapper col-12">
                     <ol class="breadcrumb p-0 mb-0">
                         <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}"><i class="bx bx-home-alt"></i></a>
                         </li>
-                        <li class="breadcrumb-item"><a href="{{ route('post.index') }}">News List</a>
+                        <li class="breadcrumb-item"><a href="{{ route('blog.index') }}">Blog List</a>
                         </li>
-                        <li class="breadcrumb-item active">Edit News
+                        <li class="breadcrumb-item active">Edit Blog
                         </li>
                     </ol>
                 </div>
@@ -91,7 +95,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-content">
-                        <form action="{{ route('post.update',$post->id) }}" method="post" enctype="multipart/form-data"> @csrf @method('PUT')
+                        <form action="{{ route('blog.update',$post->id) }}" method="post" enctype="multipart/form-data"> @csrf @method('PUT')
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-6">
@@ -131,91 +135,21 @@
                                         <fieldset>
                                             <h5>Category <span class="star">*</span></h5>
                                             <div class="input-group">
-                                                <select name="category_id[]" class="form-control select2" multiple id="category_id" required>
+                                                <select name="category_id" class="form-control select2" id="category_id" required>
                                                     @foreach ($categories as $category)
-                                                        <option value="{{ $category->id }}"
-                                                            {{ in_array($category->id, $post->multicategory->pluck('category_id')->toArray()) ? 'selected' : '' }}>
-                                                            {{ $category->title }}
-                                                        </option>
+                                                        <option value="{{ $category->id }}" @if ($category->id == old('category_id',$post->category_id))
+                                                            selected
+                                                        @endif>{{ $category->title }}</option>
                                                     @endforeach
                                                 </select>
                                             </div>
                                         </fieldset>
                                     </div>
                                 </div>
-
-                                <div class="row mt-2" id="location_section" style="display: none;">
-                                    <!-- Division -->
-                                    <div class="col-md-4">
-                                        <fieldset>
-                                            <h5>Division</h5>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-Createon1"><i class="bx bx-file"></i></span>
-                                                </div>
-                                                {{-- <select name="division_id" class="form-control select2" id="division_id" data-url="{{ route('getDistricts') }}">
-                                                    <option value="">Select Division</option>
-                                                    @foreach ($divisions as $division)
-                                                        <option value="{{ $division->id }}">{{ $division->name }}</option>
-                                                    @endforeach
-                                                </select> --}}
-                                                <select name="division_id" class="form-control select2" id="division_id" data-url="{{ route('getDistricts') }}">
-                                                    <option value="0">Select Division</option>
-                                                    @foreach ($divisions as $division)
-                                                        <option value="{{ $division->id }}" {{ $post->division_id == $division->id ? 'selected' : '' }}>
-                                                            {{ $division->name }}
-                                                        </option>
-                                                    @endforeach
-                                                </select>
-                                            </div>
-                                        </fieldset>
-                                    </div>
-
-                                    <!-- District -->
-                                    <div class="col-md-4">
-                                        <fieldset>
-                                            <h5>District</h5>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-Createon1"><i class="bx bx-file"></i></span>
-                                                </div>
-                                                <select name="district_id" class="form-control select2" id="district_id" data-url="{{ route('getUpazilas') }}">
-                                                    {{-- <option value="0">Select District</option> --}}
-                                                    {{-- @foreach ($districts as $district)
-                                                        <option value="{{ $district->id }}" {{ $post->district_id == $district->id ? 'selected' : '' }}>
-                                                            {{ $district->name }}
-                                                        </option>
-                                                    @endforeach --}}
-                                                </select>
-                                            </div>
-                                        </fieldset>
-                                    </div>
-
-                                    <!-- Upazila -->
-                                    <div class="col-md-4">
-                                        <fieldset>
-                                            <h5>Upazila</h5>
-                                            <div class="input-group">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text" id="basic-Createon1"><i class="bx bx-file"></i></span>
-                                                </div>
-                                                <select name="upazila_id" class="form-control select2" id="upazila_id" >
-                                                    {{-- <option value="0">Select Upazila</option> --}}
-                                                    {{-- @foreach ($upazilas as $upazila)
-                                                        <option value="{{ $upazila->id }}" {{ $post->upazila_id == $upazila->id ? 'selected' : '' }}>
-                                                            {{ $upazila->name }}
-                                                        </option>
-                                                    @endforeach --}}
-                                                </select>
-                                            </div>
-                                        </fieldset>
-                                    </div>
-                                </div>
-
                                 <div class="row mt-2">
                                     <div class="col-md-6">
                                         <fieldset>
-                                            <h5>News Views Counter Start</h5>
+                                            <h5>Blog Views Counter Start</h5>
                                             <div class="input-group">
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-Createon1"><i class="bx bx-file"></i></span>
@@ -242,7 +176,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-Createon1"><i class="bx bx-file"></i></span>
                                                 </div>
-                                                <input type="text" class="form-control" aria-describedby="basic-Createon1" name="meta_keyword" value="{{ old('meta_keyword',$post->meta_keywords) }}">
+                                                <input type="text" class="form-control" aria-describedby="basic-Createon1" name="meta_keywords" value="{{ old('meta_keywords',$post->meta_keywords) }}">
                                             </div>
                                         </fieldset>
                                     </div>
@@ -270,7 +204,7 @@
                                             </div>
                                         </fieldset>
                                         @if ($post->image != null)
-                                            <img src="{{ asset('images/post/'.$post->image) }}" id="bg" alt="bg" width="300px" height="150px" class="mt-2 mx-1">
+                                                <img src="{{ asset('images/blog/'.$post->image) }}" id="bg" alt="bg" width="200px" height="200px" class="mt-2 mx-1">
                                         @endif
                                     </div>
                                     <div class="col-md-6">
@@ -280,7 +214,7 @@
                                                 <div class="input-group-prepend">
                                                     <span class="input-group-text" id="basic-Createon1"><i class="bx bx-file"></i></span>
                                                 </div>
-                                                <input type="text" class="form-control" aria-describedby="basic-Createon1" name="caption" value="{{ old('caption',$post->caption) }}">
+                                                <input type="text" class="form-control" aria-describedby="basic-Createon1" name="photo_caption" value="{{ old('photo_caption',$post->photo_caption) }}">
                                             </div>
                                         </fieldset>
                                     </div>
@@ -310,111 +244,6 @@
                                         </fieldset>
                                     </div>
                                 </div>
-                                <div class="row mt-2">
-                                    <div class="col-12">
-                                        <h4>News View Section</h4>
-                                        <div class="form-group d-flex flex-wrap gap-3">
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="main_menu" value="1" id="main_menu" {{ $post->main_menu == 1 ? 'checked' : '' }}>
-                                                <label class="form-check-label" for="main_menu">Main Menu</label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="editors_choice" value="1" id="editors_choice" {{ $post->editors_choice == 1 ? 'checked' : '' }}>
-                                                <label class="form-check-label" for="editors_choice">Editor's Pick</label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="selected_news" value="1" id="selected_news" {{ $post->selected_news == 1 ? 'checked' : '' }}>
-                                                <label class="form-check-label" for="selected_news">Selected News</label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="homepage_menu" id="homepage_menu" value="1" {{ $post->homepage_menu == 1 ? 'checked' : '' }}>
-                                                <label class="form-check-label" for="homepage_menu">Homepage Menu Section</label>
-                                            </div>
-
-                                            <div>
-                                                <label class="form-check-label" for="homepage_menu_position">News Position In Homepage Menu Section</label>
-                                                <select name="homepage_menu_position" id="homepage_menu_position" class="form-control">
-                                                    <option value="">Select HomePage Menu News Position</option>
-                                                    <option value="lead_menu" {{ $post->homepage_menu_position == "lead_menu" ? 'selected': '' }}>Lead in Menu Section</option>
-                                                    <option value="image_headline_short" {{ $post->homepage_menu_position == "image_headline_short" ? 'selected': '' }}>Image with headline & Short Details</option>
-                                                    <option value="headline_short_details" {{ $post->homepage_menu_position == "headline_short_details" ? 'selected': '' }}>Headline with Short Details</option>
-                                                    <option value="only_headline" {{ $post->homepage_menu_position == "only_headline" ? 'selected': '' }}>Only Headline</option>
-                                                </select>
-                                            </div>
-                                            <div>
-                                                <label class="form-check-label" for="lead">Homepage Lead</label>
-                                                <select name="lead" id="lead" class="form-control">
-                                                    <option value="">Select HomePage Lead</option>
-                                                    <option value="lead_1" {{ $post->lead == 'lead_1' ? 'selected' : ''}}>Lead 1</option>
-                                                    <option value="lead_2" {{ $post->lead == 'lead_2' ? 'selected' : ''}}>Lead 2</option>
-                                                    <option value="lead_3" {{ $post->lead == 'lead_3' ? 'selected' : ''}}>Lead 3</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-check">
-                                                <label class="form-check-label" for="menu_lead">Menupage Lead</label>
-                                                <select name="menu_lead" id="menu_lead" class="form-control">
-                                                    <option value="">Select MenuPage Lead</option>
-                                                    <option value="lead_1" {{ $post->menu_lead == 'lead_1' ? 'selected' : ''}}>Lead 1</option>
-                                                    <option value="lead_2" {{ $post->menu_lead == 'lead_2' ? 'selected' : ''}}>Lead 2</option>
-                                                    <option value="lead_3" {{ $post->menu_lead == 'lead_3' ? 'selected' : ''}}>Lead 3</option>
-                                                </select>
-                                            </div>
-                                            {{-- <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="lead_menu" value="1" id="lead_menu">
-                                                <label class="form-check-label" for="lead_menu">Lead in Menu Section</label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="1" name="image_headline_short" id="image_with_healine">
-                                                <label class="form-check-label" for="image_with_healine">Image with headline & Short Details</label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" value="1" name="headline_short_details" id="headline_with_short">
-                                                <label class="form-check-label" for="headline_with_short">Headline with Short Details</label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="headline" id="only_headline">
-                                                <label class="form-check-label" for="only_headline">Only Headline</label>
-                                            </div> --}}
-
-                                            {{-- <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="lead_1" value="1" id="lead_1">
-                                                <label class="form-check-label" for="lead_1">Lead 1</label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="lead_2" value="1" id="lead_2">
-                                                <label class="form-check-label" for="lead_2">Lead 2</label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="lead_3" value="1" id="lead_3">
-                                                <label class="form-check-label" for="lead_3">Lead 3</label>
-                                            </div> --}}
-
-                                            {{-- <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="menu_lead_1" value="1" id="menu_lead_1">
-                                                <label class="form-check-label" for="menu_lead_1">Menu Lead 1</label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="menu_lead_2" value="1" id="menu_lead_2">
-                                                <label class="form-check-label" for="menu_lead_2">Menu Lead 2</label>
-                                            </div>
-
-                                            <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="menu_lead_3" value="1" id="menu_lead_3">
-                                                <label class="form-check-label" for="menu_lead_3">Menu Lead 3</label>
-                                            </div> --}}
-                                        </div>
-                                    </div>
-                                </div>
-
                                 <div class="col-md-2 mt-2">
                                     <button type="submit" class="btn btn-primary mt-2 btn-lg">Update</button>
                                 </div>
@@ -470,8 +299,7 @@
         var loadBg = function(event) {
             var output = document.getElementById('bg');
             output.src = URL.createObjectURL(event.target.files[0]);
-            output.height =  '150';
-            output.width =  '300';
+            output.height =  '400';
         }
     </script>
     {{-- <script>
@@ -485,6 +313,29 @@
             .catch( error => {
                 console.error( error );
             } );
+    </script> --}}
+   {{-- <script>
+    $(document).ready(function () {
+        $('#title').focus();
+
+        $('#title').on('keyup', function () {
+            var title = $(this).val();
+
+            // Generate current date in YYYY-MM-DD format
+            var date = new Date().toISOString().slice(0, 10);
+
+            // Create slug: remove non-alphanumerics, convert spaces to hyphens, lowercase
+            var slug = title
+                .trim()
+                .toLowerCase()
+                .replace(/[^a-z0-9\s-]/g, '')     // Remove special characters
+                .replace(/\s+/g, '-')             // Replace spaces with -
+                .replace(/-+/g, '-')              // Replace multiple dashes with one
+                .replace(/^-|-$/g, '');           // Remove leading/trailing -
+
+            $('#slug').val(date + '-' + slug);
+        });
+    });
     </script> --}}
 
     <script>
@@ -509,182 +360,10 @@
                     .replace(/-+/g, '-')
                     .replace(/^-|-$/g, '');
 
-                $('#slug').val(formattedDate + '-' + slug);
+                $('#slug').val(slug + '-' + formattedDate);
+                // $('#slug').val( slug);
             });
 
-            // Initialize select2
-            $('.select2').select2();
-
-            // Initialize select2 with placeholder
-            $('#category_id').select2({
-            placeholder: "Select Category",
-            allowClear: true
-            });
-
-            $('#district_id').select2({
-            placeholder: "Select District",
-            allowClear: true
-            });
-
-            $('#division_id').select2({
-            placeholder: "Select Division",
-            allowClear: true
-            });
-
-            $('#upazila_id').select2({
-            placeholder: "Select Upazila",
-            allowClear: true
-            });
-
-            // Function to toggle location section
-            function toggleLocationSection() {
-                var selectedCategory = $('#category_id').val();
-                if (selectedCategory && selectedCategory.includes('1')) {
-                    $('#location_section').show();
-                } else {
-                    $('#location_section').hide();
-                    $('#division_id').val(null).trigger('change');
-                    $('#district_id').val(null).trigger('change');
-                    $('#upazila_id').val(null).trigger('change');
-                }
-            }
-
-            // Initial check
-            toggleLocationSection();
-
-            // Event listener for category selection
-            $('#category_id').on('change', function() {
-                toggleLocationSection();
-            });
-
-            let oldDivision = '{{ $post->division_id }}';
-            let oldDistrict = '{{ $post->district_id }}';
-            let oldUpazila = '{{ $post->upazila_id }}';
-
-            // Load districts when division is selected
-            function loadDistricts(divisionId, url, selectedDistrict = null) {
-                $.ajax({
-                    url: url +'/' + divisionId,
-                    type: 'GET',
-                    success: function (data) {
-                        $('#district_id').empty().append('<option value="0">Select District</option>');
-                        $.each(data, function (key, value) {
-                            $('#district_id').append('<option value="' + value.id + '">' + value.name + '</option>');
-                        });
-
-                        if (selectedDistrict) {
-                            $('#district_id').val(selectedDistrict).trigger('change');
-                        }
-                    }
-                });
-            }
-
-            // Load upazilas when district is selected
-            function loadUpazilas(districtId, url, selectedUpazila = null) {
-                $.ajax({
-                    url: url +'/' + districtId,
-                    type: 'GET',
-                    success: function (data) {
-                        $('#upazila_id').empty().append('<option value="0">Select Upazila</option>');
-                        $.each(data, function (key, value) {
-                            $('#upazila_id').append('<option value="' + value.id + '">' + value.name + '</option>');
-                        });
-
-                        if (selectedUpazila) {
-                            $('#upazila_id').val(selectedUpazila);
-                        }
-                    }
-                });
-            }
-            // On change: load dependent values
-            $('#division_id').on('change', function () {
-                let divisionId = $(this).val();
-                let url = $(this).data('url');
-                loadDistricts(divisionId, url); // no selected district
-                $('#upazila_id').empty().append('<option value="0">Select Upazila</option>');
-            });
-
-            $('#district_id').on('change', function () {
-                let districtId = $(this).val();
-                let url = $(this).data('url');
-                loadUpazilas(districtId, url);
-            });
-
-            // On page load: load districts/upazilas if division exists
-            if (oldDivision && oldDivision !== "0") {
-                $('#division_id').val(oldDivision);
-                var url = $('#division_id').data('url');
-                loadDistricts(oldDivision, url, oldDistrict);
-            }
-
-            if (oldDistrict && oldDistrict !== "0") {
-                // wait until districts are loaded, then fetch upazilas
-                setTimeout(() => {
-                    var url = $('#district_id').data('url');
-                    loadUpazilas(oldDistrict, url, oldUpazila);
-                }, 1000);
-            }
-
-            // $('#division_id').on('change', function() {
-            //     var divisionId = $(this).val();
-            //     // console.log(divisionId);
-            //     var url = $(this).data('url');
-            //     // console.log(url);
-            //     // console.log(divisionId);
-            //     if (divisionId) {
-            //         $.ajax({
-            //             url: url +'/' + divisionId,
-            //             type: 'GET',
-            //             dataType: 'json',
-            //             success: function(data) {
-            //                 $('#district_id').empty();
-            //                 $('#district_id').append('<option value="">Select District</option>');
-            //                 $.each(data, function(key, value) {
-            //                     $('#district_id').append('<option value="' + value.id + '">' + value.name + '</option>');
-            //                 });
-            //             }
-            //         });
-            //     } else {
-            //         $('#district_id').empty();
-            //         $('#district_id').append('<option value="">Select District</option>');
-            //     }
-            // });
-            // $('#district_id').on('change', function() {
-            //     var districtId = $(this).val();
-            //     var url = $(this).data('url');
-            //     if (districtId) {
-            //         $.ajax({
-            //             url: url +'/' + districtId,
-            //             type: 'GET',
-            //             dataType: 'json',
-            //             success: function(data) {
-            //                 $('#upazila_id').empty();
-            //                 $('#upazila_id').append('<option value="">Select Upazila</option>');
-            //                 $.each(data, function(key, value) {
-            //                     $('#upazila_id').append('<option value="' + value.id + '">' + value.name + '</option>');
-            //                 });
-            //             }
-            //         });
-            //     } else {
-            //         $('#upazila_id').empty();
-            //         $('#upazila_id').append('<option value="">Select Upazila</option>');
-            //     }
-            // });
-
-            // // On load, prefill if editing
-            // let oldDivision = '{{ $post->division_id }}';
-            // let oldDistrict = '{{ $post->district_id }}';
-            // let oldUpazila = '{{ $post->upazila_id }}';
-
-            // if (oldDivision) {
-            //     $('#division_id').val(oldDivision).trigger('change');
-            //     setTimeout(function () {
-            //         $('#district_id').val(oldDistrict).trigger('change');
-            //         setTimeout(function () {
-            //             $('#upazila_id').val(oldUpazila);
-            //         }, 500);
-            //     }, 500);
-            // }
         });
 </script>
 
