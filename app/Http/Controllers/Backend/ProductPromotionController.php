@@ -47,16 +47,16 @@ class ProductPromotionController extends Controller
                 if ($image_temp->isValid()) {
                     $extension = $image_temp->getClientOriginalExtension();
                     $imageName = time() . '-' . uniqid() . '.' . $extension;
-                    $imagePath = 'images/promotions'; 
+                    $imagePath = 'images/promotions';
                     // Matches the Blade file path
                     $image_temp->move(public_path($imagePath), $imageName);
                     $promotion->image = $imageName;
                 }
             }
-            
+
             $promotion->save();
             Session::flash('success', 'Product Promotion created successfully!');
-            
+
         } catch (\Exception $e) {
             \Log::error("Product Promotion Store Error: " . $e->getMessage());
             Session::flash('error', 'Failed to create Product Promotion: ' . $e->getMessage());
@@ -69,9 +69,9 @@ class ProductPromotionController extends Controller
     {
         try {
             $promotion = ProductPromotion::findOrFail($id);
-            $promotions = ProductPromotion::all(); 
+            $promotions = ProductPromotion::all();
             return view('backend.productpromotion', compact('promotion', 'promotions'));
-            
+
         } catch (\Exception $e) {
             Session::flash('error', 'Promotion not found.');
             return redirect()->route('promotions.index');
@@ -111,7 +111,7 @@ class ProductPromotionController extends Controller
                     $promotion->image = $imageName;
                 }
             }
-            
+
             $promotion->save();
             Session::flash('success', 'Product Promotion updated successfully!');
 
@@ -133,7 +133,7 @@ class ProductPromotionController extends Controller
             }
             $promotion->delete();
             Session::flash('success', 'Product Promotion deleted successfully!');
-            
+
         } catch (\Exception $e) {
             \Log::error("Product Promotion Delete Error: " . $e->getMessage());
             Session::flash('error', 'Failed to delete Product Promotion: ' . $e->getMessage());

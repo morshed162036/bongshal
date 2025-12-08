@@ -83,6 +83,7 @@
                                                 <th>Brand</th>
                                                 <th>Name</th>
                                                 <th>Part Number</th>
+                                                <th>Unit</th>
                                                 <th>Price</th>
                                                 <th>Stock</th>
                                                 <th>Status</th>
@@ -105,6 +106,9 @@
                                                         <td>{{ $product->brand->name ?? '' }}</td>
                                                         <td>{{ $product->name }}</td>
                                                         <td>{{ $product->parts_number }}</td>
+                                                        <td>@if ($product->unit)
+                                                            {{ $product->unit->name }}
+                                                        @endif</td>
                                                         <td>{{ $product->unit_price }}</td>
                                                         <td>{{ $product->stock }}</td>
                                                         <td>
@@ -136,6 +140,7 @@
                                                 <th>Brand</th>
                                                 <th>Name</th>
                                                 <th>Part Number</th>
+                                                <th>Unit</th>
                                                 <th>Price</th>
                                                 <th>Stock</th>
                                                 <th>Status</th>

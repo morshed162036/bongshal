@@ -5684,7 +5684,7 @@
                 <label class="cmto-subheader__secondary-link" for="cmto-nav-drawer-toggle"><span>Menu</span></label>
             </div>
             <div class="cmto-header-layout__right">
-                <a class="cmto-subheader__blog-link" href="/common-tread"><img class="cmto-subheader__blog-logo" src="https://www.revzilla.com/images/redline/support/header/common_tread_blog_logo-dba3a5d0e4e1b422de07af5829bbd89c.svg?vsn=d"></a>
+                <a class="cmto-subheader__blog-link" href="{{ route('blogpage') }}"><img class="cmto-subheader__blog-logo" src="https://www.revzilla.com/images/redline/support/header/common_tread_blog_logo-dba3a5d0e4e1b422de07af5829bbd89c.svg?vsn=d"></a>
             </div>
         </div>
     </div>

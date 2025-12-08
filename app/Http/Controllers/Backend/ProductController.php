@@ -38,7 +38,9 @@ class ProductController extends Controller
         $brands = \App\Models\Brand::where('status','active')->get();
         $attributes = \App\Models\Attribute::where('status','active')->get();
         $bikes = \App\Models\Bike::where('status','active')->get();
-        return view('backend.product.create',compact('catalogues','categories','brands','attributes','bikes'));
+        $units = \App\Models\Unit::where('status','active')->get();
+        $tags = \App\Models\Tag::where('status','active')->get();
+        return view('backend.product.create',compact('catalogues','categories','brands','attributes','bikes','units', 'tags'));
         // return view('backend.product.create');
     }
 
@@ -47,14 +49,11 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-<<<<<<< HEAD
-=======
         // dd($request->all());
->>>>>>> 4c182987ded501b02deec36616d630990b82571f
         $request->validate([
             'category_id'       => 'required|exists:categories,id',
             // 'brand_id'          => 'required|exists:brands,id',
-            'bike_id'           => 'required|exists:bikes,id',
+            // 'bike_id'           => 'required|exists:bikes,id',
             // 'series'            => 'string|max:255',
             'traditional_name'  => 'string|max:255',
             'commercial_name'   => 'string|max:255',
@@ -68,23 +67,17 @@ class ProductController extends Controller
         ]);
 
 
-<<<<<<< HEAD
-// dd($request->all());
-=======
         // dd($request->all());
->>>>>>> 4c182987ded501b02deec36616d630990b82571f
         $brand_name = \App\Models\Brand::find($request->brand_id);
         $series = $request->series?$request->series.', ':'';
         $category_name = \App\Models\Category::find($request->category_id)->name;
         // $bike_model = \App\Models\Bike::find($request->bike_id)->get();
         // dd($bike_model);
-        $bike_model = \App\Models\Bike::find($request->bike_id)->model;
+        // $bike_model = \App\Models\Bike::find($request->bike_id)->model;
 
-<<<<<<< HEAD
+        $name = $brand_name?$brand_name->name.' ' :''.$series.$request->traditional_name.' ' . $request->commercial_name.' '.$request->part_number;
+        // .' '.$bike_model;
         $name = $brand_name?$brand_name->name.', ':''.$series.$request->traditional_name.', '.$request->commercial_name.', '.$request->part_number.', '.$bike_model;
-=======
-        $name = $brand_name?$brand_name->name.' ' :''.$series.$request->traditional_name.' ' . $request->commercial_name.' '.$request->part_number.' '.$bike_model;
->>>>>>> 4c182987ded501b02deec36616d630990b82571f
 
         DB::beginTransaction();
         try {
@@ -100,7 +93,7 @@ class ProductController extends Controller
         $product->traditional_name = $request->traditional_name;
         $product->commercial_name = $request->commercial_name;
         $product->parts_number = $request->part_number;
-        $product->unit = $request->unit;
+        $product->unit_id = $request->unit;
         $product->unit_price = $request->unit_price;
         $product->purchase_price = $request->purchase_price;
         $product->barcode = $request->barcode;
@@ -123,8 +116,6 @@ class ProductController extends Controller
         $product->meta_keywords = $request->meta_keywords;
         $product->status = 'active';
 
-<<<<<<< HEAD
-=======
         $product->grade = $request->grade;
         $product->engine_oil_type = $request->engine_oil_type;
         // $product->engine_oil_capacity = $request->engine_oil_capacity;
@@ -132,9 +123,17 @@ class ProductController extends Controller
         $product->width = $request->width;
         $product->aspect_ratio = $request->aspect_ratio;
         $product->rim = $request->rim;
+        $product->created_by = auth()->user()->id;
+
+        if($request->has('tag')){
+            $product->tag_id = implode(',', $request->tag);
+        }
+        if($request->has('bike_id')){
+            $product->bike_id = implode(',', $request->bike_id);
+        }
+
         // $product->features = $request->features;
 
->>>>>>> 4c182987ded501b02deec36616d630990b82571f
         // $product = Product::create([
         //     'name'       => $name,
         //     'slug'              => \Str::slug($name),
@@ -192,11 +191,8 @@ class ProductController extends Controller
 
         $product->description = $dom->saveHTML();
 
-<<<<<<< HEAD
          // Handle file upload for the image
-=======
         // Handle file upload for the image
->>>>>>> 4c182987ded501b02deec36616d630990b82571f
         $Imagename = null;
         if ($request->hasFile('image')) {
             $file = $request->file('image');
@@ -272,9 +268,7 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
-<<<<<<< HEAD
         //
-=======
         $product = Product::with('images','attributes')->find($id);
         // dd($product->toArray());
         $catalogues = \App\Models\Catalogue::with('category')->where('status','active')->get();
@@ -282,27 +276,25 @@ class ProductController extends Controller
         $brands = \App\Models\Brand::where('status','active')->get();
         $attributes = \App\Models\Attribute::where('status','active')->get();
         $bikes = \App\Models\Bike::where('status','active')->get();
-        return view('backend.product.edit',compact('product','catalogues','categories','brands','attributes','bikes'));
->>>>>>> 4c182987ded501b02deec36616d630990b82571f
+        $units = \App\Models\Unit::where('status','active')->get();
+        $tags = \App\Models\Tag::where('status','active')->get();
+        $selectedBikes = explode(',', $product->bike_id);   // "2,5,7" → ["2","5","7"]
+        $selectedTags = explode(',', $product->tag_id); // ["1","3","5"]
+
+        // return view('product.edit', compact('product','bikes','selectedBikes'));
+        return view('backend.product.edit',compact('product','catalogues','categories','brands','attributes','bikes','units', 'selectedBikes', 'selectedTags', 'tags'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-<<<<<<< HEAD
-    public function update(Request $request, string $id)
-    {
-        //
-    }
-=======
     public function update(Request $request, $id)
 {
     $product = Product::findOrFail($id);
 
-
     $request->validate([
         'category_id'       => 'required|exists:categories,id',
-        'bike_id'           => 'required|exists:bikes,id',
+        // 'bike_id'           => 'required|exists:bikes,id',
         'traditional_name'  => 'nullable|string|max:255',
         'commercial_name'   => 'nullable|string|max:255',
         'part_number'       => 'nullable|string|max:255',
@@ -321,24 +313,25 @@ class ProductController extends Controller
         $brand_name = \App\Models\Brand::find($request->brand_id);
         $series = $request->series ? $request->series . ', ' : '';
         $category_name = \App\Models\Category::find($request->category_id)->name;
-        $bike_model = \App\Models\Bike::find($request->bike_id)->model;
+        // $bike_model = \App\Models\Bike::find($request->bike_id)->model;
 
         $name = ($brand_name ? $brand_name->name . ' ' : '') .
                 $series . $request->traditional_name . ' ' .
                 $request->commercial_name . ' ' .
-                $request->part_number . ' ' . $bike_model;
+                $request->part_number;
+                //  . ' ' . $bike_model;
 
         // Update product fields
         $product->name = $name;
         $product->slug = \Str::slug($name);
         $product->category_id = $request->category_id;
         $product->brand_id = $request->brand_id;
-        $product->bike_id = $request->bike_id;
+        // $product->bike_id = $request->bike_id;
         $product->series = $request->series;
         $product->traditional_name = $request->traditional_name;
         $product->commercial_name = $request->commercial_name;
         $product->parts_number = $request->part_number;
-        $product->unit = $request->unit;
+        $product->unit_id = $request->unit;
         $product->unit_price = $request->unit_price;
         $product->purchase_price = $request->purchase_price;
         $product->barcode = $request->barcode;
@@ -364,6 +357,21 @@ class ProductController extends Controller
         $product->width = $request->width;
         $product->aspect_ratio = $request->aspect_ratio;
         $product->rim = $request->rim;
+        $product->status = $request->status;
+        $product->updated_by = auth()->user()->id;
+
+        if ($request->has('tag')) {
+            $product->tag_id = implode(',', $request->tag); // Convert array to "1,3,5"
+        } else {
+            $product->tag_id = null;
+        }
+
+        if ($request->has('bike_id')) {
+            $product->bike_id = implode(',', $request->bike_id);
+        } else {
+            $product->bike_id = null;
+        }
+
 
         //  Handle base64 images in description
         $dom = new \DOMDocument();
@@ -455,17 +463,10 @@ class ProductController extends Controller
     }
 }
 
->>>>>>> 4c182987ded501b02deec36616d630990b82571f
 
     /**
      * Remove the specified resource from storage.
      */
-<<<<<<< HEAD
-    public function destroy(string $id)
-    {
-        //
-    }
-=======
     public function destroy($id)
 {
     DB::beginTransaction();
@@ -527,7 +528,6 @@ class ProductController extends Controller
     }
 }
 
->>>>>>> 4c182987ded501b02deec36616d630990b82571f
 
     public function values($id)
     {
@@ -580,8 +580,6 @@ class ProductController extends Controller
         return $dom->saveHTML();
     }
 
-<<<<<<< HEAD
-=======
     public function getCategoriesWithSubcategories($catalogue_id)
     {
 
@@ -593,6 +591,5 @@ class ProductController extends Controller
         return response()->json($categories);
     }
 
->>>>>>> 4c182987ded501b02deec36616d630990b82571f
 
 }

@@ -18,6 +18,8 @@ use App\Models\Brand;
 use App\Models\ProductPromotion;
 use App\Models\Slider;
 use App\Models\Catalogue;
+use App\Models\Blog;
+use App\Models\BlogCategory;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 
@@ -35,7 +37,9 @@ class HomeController extends Controller
                        ->where('type', 'image')
                        ->inRandomOrder() // Optional: for variety
                        ->first();
-<<<<<<< HEAD
+        $products = Product::where('status', 'active')->latest()->take(15)->get();
+        $Sideproducts = Product::where('status', 'active')->latest()->skip(1)->take(6)->get();
+       // return view('frontend.home',compact('sliders', 'featuredCatalogues','promotions','brands','activeVideoAd','activeImageAd','products','Sideproducts'));
         $sideBannerAd = MultipleAds::where('type', 'single_side_banner')
                           ->where('status', 'active')
                           ->first();
@@ -48,10 +52,8 @@ class HomeController extends Controller
         $doubleBannerAd = MultipleAds::where('type', 'double_banner')
                             ->where('status', 'active')
                             ->first();
-        return view('frontend.home',compact('sliders', 'featuredCatalogues','promotions','brands','activeVideoAd','activeImageAd','sideBannerAd','mainBannerAd','tripleBannerAd','doubleBannerAd'));
-=======
-        return view('frontend.home',compact('sliders', 'featuredCatalogues','promotions','brands','activeVideoAd','activeImageAd'));
->>>>>>> 4c182987ded501b02deec36616d630990b82571f
+        return view('frontend.home',compact('sliders', 'featuredCatalogues','promotions','brands','activeVideoAd','activeImageAd','sideBannerAd','mainBannerAd','tripleBannerAd','doubleBannerAd','products','Sideproducts'));
+       
     }
     public function shop()
     {
@@ -61,12 +63,65 @@ class HomeController extends Controller
     public function blog()
     {
         // This method can be used to return the homepage view
-        return view('frontend.blog');
+        $blogCategories = BlogCategory::where('status','active')->get();
+        $firstBlog = Blog::latest()->first();
+        // dd( $latestBlog->id);
+        $blogs = Blog::where('status', 'Published')->orderBy('created_at', 'desc')->get()->skip(1);
+        return view('frontend.blog', compact('blogs','blogCategories','firstBlog'));
     }
-     public function blogdetails()
+
+    public function blogSearch(Request $request)
+{
+    $searchTerm = $request->input('query');
+    $blogCategories = BlogCategory::where('status','active')->get();
+    $firstBlog = null;
+
+    $blogs = Blog::where('status', 'Published')
+        ->where(function($query) use ($searchTerm) {
+            $query->where('title', 'LIKE', '%' . $searchTerm . '%')
+                  ->orWhere('description', 'LIKE', '%' . $searchTerm . '%');
+        })
+        ->orderBy('created_at', 'desc')
+        ->get();
+
+    if ($blogs->isNotEmpty()) {
+        $firstBlog = $blogs->shift();
+    }
+
+    return view('frontend.blog', compact('blogs','blogCategories','firstBlog'));
+}
+
+
+    public function blogcategory($slug)
+    {
+        $category = BlogCategory::where('slug', $slug)->first();
+        if (!$category) {
+            // Handle the case where the category is not found
+            abort(404, 'Blog category not found');
+        }
+        $blogCategories = BlogCategory::where('status','active')->get();
+        // This method can be used to return the homepage view
+        $firstBlog = Blog::where('category_id', $category->id)->where('status', 'Published')->orderBy('created_at', 'desc')->first();
+        $blogs = Blog::where('category_id', $category->id)->where('status', 'Published')->orderBy('created_at', 'desc')->get()->skip(1);
+        return view('frontend.blog', compact('blogs','blogCategories','firstBlog'));
+    }
+     public function blogdetails($slug)
     {
         // This method can be used to return the homepage view
-        return view('frontend.blogdetails');
+        $blog = Blog::where('slug', $slug)->where('status', 'Published')->first();
+        $blogCategories = BlogCategory::where('status','active')->get();
+        if (!$blog) {
+            // Handle the case where the blog post is not found
+            abort(404, 'Blog post not found');
+        }
+        // Increment the views count
+        $blog->increment('views');
+        $relatedBlogs = Blog::where('category_id', $blog->category_id)
+        ->where('id', '!=', $blog->id)
+        ->latest()
+        ->limit(4)
+        ->get();
+        return view('frontend.blogdetails', compact('blog', 'relatedBlogs','blogCategories'));
     }
     public function product($slug)
     {
@@ -84,7 +139,23 @@ class HomeController extends Controller
         // print_r($product->attributes->toArray());
         // dd($product->attributes[0]->attribute->values[0]->value);
         // This method can be used to return the homepage view
-        return view('frontend.product')->with('product', $product);
+        $catalogue = optional($product->category)->catalogue;
+        $relatedProducts = Product::whereHas('category', function ($q) use ($catalogue) {
+            $q->where('catalogue_id', $catalogue->id);
+        })
+        ->where('id', '!=', $product->id)
+        ->latest()
+        ->take(10)
+        ->get();
+        $likeProducts = Product::where('category_id', $product->category_id)
+        ->where('id', '!=', $product->id)
+        ->latest()
+        ->limit(10)
+        ->get();
+
+        return view('frontend.product')->with('product', $product)
+                                      ->with('relatedProducts', $relatedProducts)
+                                      ->with('likeProducts', $likeProducts);
     }
     public function cart()
     {
@@ -109,9 +180,19 @@ class HomeController extends Controller
             'website' => 'nullable|url|max:255',
             'image' => 'nullable|image|mimes:webp,jpeg,png,jpg,gif,svg|max:2048',
         ]);
+
         // dd($request->all());
         // Create a new vendor record
         // Create a user for the vendor
+        if (
+        User::where('email', $request->email)->exists() ||
+        Vendor::where('email', $request->email)->exists()
+    ) {
+        return redirect()
+            ->back()
+            ->withInput()
+            ->with('error', 'Email already exists. Please use another email.');
+    }
         DB::beginTransaction();
         try {
         $user = new User();
@@ -143,11 +224,12 @@ class HomeController extends Controller
             $vendor->image = 'images/vendors/' . $imageName;
         }
         $vendor->save();
+
         DB::commit();
         return redirect()->back()->with('success', 'Vendor registration successful. Your account is pending approval.');
         } catch (\Exception $e) {
             DB::rollBack();
-            return redirect()->back()->with('error', 'An error occurred while processing your request. Please try again.');
+            return redirect()->back()->withInput()->with('error','An error occurred while processing your request. Please try again.');
         }
     }
 

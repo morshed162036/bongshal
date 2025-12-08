@@ -17,9 +17,13 @@ return new class extends Migration
             $table->string('traditional_name')->nullable();
             $table->string('commercial_name')->nullable();
             $table->string('sku')->unique()->nullable();
+            $table->Biginteger('vendor_id')->nullable();
+            $table->Biginteger('approved_by')->nullable();
+            $table->Biginteger('applied_by')->nullable();
             $table->Biginteger('catalogue_id')->nullable();
             $table->Biginteger('category_id')->nullable();
             $table->Biginteger('brand_id')->nullable();
+            $table->Biginteger('unit_id')->nullable();
             $table->string('image')->nullable();
             $table->string('size_chart')->nullable();
             $table->string('slug')->unique()->nullable();
@@ -27,8 +31,8 @@ return new class extends Migration
             $table->string('parts_number')->nullable();
             $table->string('type')->nullable();
             $table->string('unit')->nullable();
-            $table->string('unit_price')->nullable();
-            $table->string('purchase_price')->nullable();
+            $table->double('unit_price')->nullable();
+            $table->double('purchase_price')->nullable();
             $table->string('discount')->nullable();
             $table->string('discount_type')->nullable();
             $table->date('discount_start_date')->nullable();
@@ -61,8 +65,6 @@ return new class extends Migration
             $table->string('meta_image')->nullable();
             $table->longText('meta_description')->nullable();
             $table->longText('meta_keywords')->nullable();
-<<<<<<< HEAD
-=======
             $table->string('grade')->nullable();
             $table->string('engine_oil_type')->nullable();
             // $table->string('engine_oil_capacity')->nullable();
@@ -71,9 +73,9 @@ return new class extends Migration
             $table->string('aspect_ratio')->nullable();
             $table->string('rim')->nullable();
             $table->longText('features')->nullable();
-
->>>>>>> 4c182987ded501b02deec36616d630990b82571f
-
+            $table->bigInteger('created_by')->nullable();
+            $table->bigInteger('updated_by')->nullable();
+            $table->softDeletes();
 
             $table->timestamps();
         });
