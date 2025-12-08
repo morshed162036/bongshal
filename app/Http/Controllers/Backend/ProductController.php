@@ -77,6 +77,7 @@ class ProductController extends Controller
 
         $name = $brand_name?$brand_name->name.' ' :''.$series.$request->traditional_name.' ' . $request->commercial_name.' '.$request->part_number;
         // .' '.$bike_model;
+        $name = $brand_name?$brand_name->name.', ':''.$series.$request->traditional_name.', '.$request->commercial_name.', '.$request->part_number.', '.$bike_model;
 
         DB::beginTransaction();
         try {
@@ -190,6 +191,7 @@ class ProductController extends Controller
 
         $product->description = $dom->saveHTML();
 
+         // Handle file upload for the image
         // Handle file upload for the image
         $Imagename = null;
         if ($request->hasFile('image')) {
@@ -266,6 +268,7 @@ class ProductController extends Controller
      */
     public function edit(string $id)
     {
+        //
         $product = Product::with('images','attributes')->find($id);
         // dd($product->toArray());
         $catalogues = \App\Models\Catalogue::with('category')->where('status','active')->get();
