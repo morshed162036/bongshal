@@ -122,25 +122,25 @@
                                                         </td>
                                                         <td>
                                                             @if($vendor->status == 'active')
-                                                                <a class="updateCatalogueStatus" id="product_type-{{ $vendor->id }}"
+                                                                <a class="updateCatalogueStatus product_type-{{ $vendor->id }}"
                                                                     product_type = "{{ $vendor->id }}"
                                                                     href="javascript:void(0)">
                                                                         <label class="badge badge-success" status="active">Active</label>
                                                                 </a>
                                                             @elseif ($vendor->status == 'pending')
-                                                                <a class="updateCatalogueStatus" id="product_type-{{ $vendor->id }}"
+                                                                <a class="updateCatalogueStatus product_type-{{ $vendor->id }}"
                                                                     product_type = "{{ $vendor->id }}"
                                                                     href="javascript:void(0)">
                                                                         <label class="badge badge-warning" status="pending">Pending</label>
                                                                 </a>
                                                             @elseif ($vendor->status == 'rejected')
-                                                                <a class="updateCatalogueStatus" id="product_type-{{ $vendor->id }}"
+                                                                <a class="updateCatalogueStatus product_type-{{ $vendor->id }}"
                                                                     product_type = "{{ $vendor->id }}"
                                                                     href="javascript:void(0)">
                                                                         <label class="badge badge-warning" status="rejected">Rejected</label>
                                                                 </a>
                                                             @else
-                                                                <a class="updateCatalogueStatus" id="product_type-{{ $vendor->id }}"
+                                                                <a class="updateCatalogueStatus product_type-{{ $vendor->id }}"
                                                                     product_type = "{{ $vendor->id }}"
                                                                     href="javascript:void(0)">
                                                                         <label class="badge badge-danger" status="inactive">Inactive</label>
@@ -152,9 +152,28 @@
                                                                 <span class="bx bx-dots-vertical-rounded font-medium-3 dropdown-toggle nav-hide-arrow cursor-pointer" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="menu"></span>
                                                                 <div class="dropdown-menu dropdown-menu-right">
                                                                     <a class="dropdown-item" href="{{ route('vendor.edit',$vendor->id) }}"><i class="bx bx-edit-alt mr-1"></i> edit</a>
-                                                                    <form action="{{ route('vendor.destroy',$vendor->id) }}" method="post"> @csrf @method('Delete')
+                                                                    {{-- <form action="{{ route('vendor.destroy',$vendor->id) }}" method="post"> @csrf @method('Delete')
                                                                         <button type="submit" class="dropdown-item"><i class="bx bx-trash mr-1"></i> delete</button>
-                                                                    </form>
+                                                                    </form> --}}
+                                                                    @if($vendor->status == 'active')
+                                                                        <a class="dropdown-item updateVendorStatus"  id="product_type-{{ $vendor->id }}"
+                                                                            product_type = "{{ $vendor->id }}"
+                                                                            href="javascript:void(0)">
+                                                                                <label class="badge badge-success" status="active">Active</label>
+                                                                        </a>
+
+                                                                    @elseif ($vendor->status == 'inactive')
+                                                                        <a class="dropdown-item updateVendorStatus" id="product_type-{{ $vendor->id }}"
+                                                                            product_type = "{{ $vendor->id }}"
+                                                                            href="javascript:void(0)">
+                                                                                <label class="badge badge-danger" status="inactive">Inactive</label>
+                                                                        </a>
+                                                                    @endif
+                                                                    {{-- <a href="#" onclick="confirmDelete('{{ route('updateVendorStatus') }}')" class="btn btn-danger">
+                                                                        Delete
+                                                                    </a> --}}
+
+
 
                                                                 </div>
                                                             </div>
@@ -220,37 +239,63 @@
     <!-- BEGIN: Page JS-->
     <script src="{{ asset('admin_template/app-assets/js/scripts/datatables/datatable.js') }}"></script>
     <!-- END: Page JS-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    {{-- <script>
+        function confirmDelete(url) {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You cannot undo this action!",
+            icon: "warning",
+            showCloseButton: true,
+            showCancelButton: true,
+            confirmButtonColor: "#d33",
+            cancelButtonColor: "#3085d6",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = url;
+            }
+        });
+    }
+    </script> --}}
     <script>
 
-        // $(document).ready(function (){
-        //     $(document).on("click", ".updateCatalogueStatus", function () {
-        //         var status = $(this).children("label").attr("status");
-        //         var product_type = $(this).attr("product_type");
+        $(document).ready(function (){
+            $(document).on("click", ".updateVendorStatus", function () {
+                var status = $(this).children("label").attr("status");
+                var product_type = $(this).attr("product_type");
+                alert("Are You sure to change the status?");
 
-        //         $.ajax({
-        //             headers: {
-        //                 "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
-        //             },
-        //             type: "post",
-        //             url: "{{ route('updateCatalogueStatus') }}",
-        //             data: { status: status, product_type: product_type },
-        //             success: function (resp) {
-        //                 if (resp["status"] == 'inactive') {
-        //                     $("#product_type-" + product_type).html(
-        //                         "<label class='badge badge-danger' status='Inactive'>Inactive</label>"
-        //                     );
-        //                 } else if (resp["status"] == 'active') {
-        //                     $("#product_type-" + product_type).html(
-        //                         "<label class='badge badge-success' status='Active'>Active</label>"
-        //                     );
-        //                 }
-        //             },
-        //             error: function () {
-        //                 alert("Error");
-        //             },
-        //         });
-        //     });
-        // })
+                $.ajax({
+                    headers: {
+                        "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+                    },
+                    type: "post",
+                    url: "{{ route('updateVendorStatus') }}",
+                    data: { status: status, product_type: product_type },
+                    success: function (resp) {
+                        if (resp["status"] == 'inactive') {
+                            $("#product_type-" + product_type).html(
+                                "<label class='badge badge-danger' status='Inactive'>Inactive</label>"
+                            );
+                            $(".product_type-" + product_type).html(
+                                "<label class='badge badge-danger' status='Inactive'>Inactive</label>"
+                            );
+                        } else if (resp["status"] == 'active') {
+                            $("#product_type-" + product_type).html(
+                                "<label class='badge badge-success' status='Active'>Active</label>"
+                            );
+                            $(".product_type-" + product_type).html(
+                                "<label class='badge badge-success' status='Active'>Active</label>"
+                            );
+                        }
+                    },
+                    error: function () {
+                        alert("Error");
+                    },
+                });
+            });
+        })
 
     </script>
 @endsection

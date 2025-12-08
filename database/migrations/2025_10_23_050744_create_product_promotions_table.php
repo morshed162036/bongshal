@@ -11,16 +11,16 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('product_promotions', function (Blueprint $table) {
-            $table->id();
-            $table->string('title')->nullable();
-            $table->string('description_short')->nullable();
-            $table->string('url')->nullable();
-            $table->string('label')->nullable();
-            $table->string('image');
-            $table->enum('status', ['active', 'inactive'])->default('active');
-            $table->timestamps();
-        });
+        // Schema::create('product_promotions', function (Blueprint $table) {
+        //     $table->id();
+        //     $table->string('title')->nullable();
+        //     $table->string('description_short')->nullable();
+        //     $table->string('url')->nullable();
+        //     $table->string('label')->nullable();
+        //     $table->string('image');
+        //     $table->enum('status', ['active', 'inactive'])->default('active');
+        //     $table->timestamps();
+        // });
     }
 
     /**

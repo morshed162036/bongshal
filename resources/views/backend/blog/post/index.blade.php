@@ -101,31 +101,32 @@
                                                         <td>{{ $key+1 }}</td>
                                                         <td>
                                                             @if ($post->category)
-                                                                @foreach ($post->category as $category)
+                                                                {{-- @foreach ($post->category as $category)
                                                                     {{ $category->title }}
-                                                                @endforeach
+                                                                @endforeach --}}
+                                                                {{ $post->category->title }}
                                                             @else
                                                                 N/A
                                                             @endif
                                                         </td>
                                                         <td>{{ $post->title }}</td>
                                                         <td>@if ($post->image)
-                                                            <img src="{{ asset('images/Blog/'.$post->image) }}" alt="Thumbnail" style="width: 100px; height: 50px;">
+                                                            <img src="{{ asset('images/blog/'.$post->image) }}" alt="Thumbnail" style="width: 100px; height: 50px;">
                                                         @endif</td>
                                                         <td>{{ $post->created_at->format('d-m-y') }}</td>
                                                         <td>{{ $post->views }}</td>
                                                         <td>
-                                                            @if($post->status == 'Active')
+                                                            @if($post->status == 'Published')
                                                                 <a class="updateBlogStatus" id="blog-{{ $post->id }}"
-                                                                    post_id = "{{ $post->id }}"
+                                                                    blog_id = "{{ $post->id }}"
                                                                     href="javascript:void(0)">
-                                                                        <label class="badge badge-success" status="Active">Active</label>
+                                                                        <label class="badge badge-success" status="Published">Published</label>
                                                                 </a>
                                                             @else
                                                                 <a class="updateBlogStatus" id="blog-{{ $post->id }}"
                                                                     blog_id = "{{ $post->id }}"
                                                                     href="javascript:void(0)">
-                                                                        <label class="badge badge-danger" status="Inactive">Inactive</label>
+                                                                        <label class="badge badge-danger" status="Unpublished">Unpublished</label>
                                                                 </a>
                                                             @endif
                                                         </td>
@@ -209,7 +210,7 @@
         $(document).ready(function (){
             $(document).on("click", ".updateBlogStatus", function () {
                 var status = $(this).children("label").attr("status");
-                var post_id = $(this).attr("blog_id");
+                var blog_id = $(this).attr("blog_id");
 
                 $.ajax({
                     headers: {
@@ -217,15 +218,15 @@
                     },
                     type: "post",
                     url: "{{ route('updateBlogStatus') }}",
-                    data: { status: status, blog_id: post_id },
+                    data: { status: status, blog_id: blog_id },
                     success: function (resp) {
-                        if (resp["status"] == 'Inactive') {
-                            $("#blog-" + post_id).html(
-                                "<label class='badge badge-danger' status='Inactive'>Inactive</label>"
+                        if (resp["status"] == 'Unpublished') {
+                            $("#blog-" + blog_id).html(
+                                "<label class='badge badge-danger' status='Unpublished'>Unpublished</label>"
                             );
-                        } else if (resp["status"] == 'Active') {
-                            $("#blog-" + post_id).html(
-                                "<label class='badge badge-success' status='Active'>Active</label>"
+                        } else if (resp["status"] == 'Published') {
+                            $("#blog-" + blog_id).html(
+                                "<label class='badge badge-success' status='Published'>Published</label>"
                             );
                         }
                     },

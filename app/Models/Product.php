@@ -22,7 +22,7 @@ class Product extends Model
         'series',
         'parts_number',
         'type',
-        'unit',
+        'unit_id',
         'unit_price',
         'purchase_price',
         'discount',
@@ -53,9 +53,6 @@ class Product extends Model
         'status',
         'meta_title',
         'meta_image',
-<<<<<<< HEAD
-        'meta_description'
-=======
         'meta_description',
         'grade',
         'engine_oil_type',
@@ -65,7 +62,6 @@ class Product extends Model
         'aspect_ratio',
         'rim',
         'features',
->>>>>>> 4c182987ded501b02deec36616d630990b82571f
     ];
 
     public function images()
@@ -74,11 +70,7 @@ class Product extends Model
     }
     public function attributes()
     {
-<<<<<<< HEAD
-        return $this->hasMany(ProductAttribute::class);
-=======
         return $this->hasMany(ProductAttribute::class)->with('attribute', 'attributeValue');
->>>>>>> 4c182987ded501b02deec36616d630990b82571f
     }
     public function brand()
     {
@@ -92,9 +84,9 @@ class Product extends Model
     {
         return $this->belongsTo(Bike::class);
     }
-<<<<<<< HEAD
+    public function unit()
+    {
+        return $this->belongsTo(Unit::class);
+    }
     
-=======
-
->>>>>>> 4c182987ded501b02deec36616d630990b82571f
 }

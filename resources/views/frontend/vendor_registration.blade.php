@@ -143,12 +143,12 @@
 
         <form class="register-form" action="{{ route('vendor.registration.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <input type="text" name="name" placeholder="Company Name*" required>
-            <input type="email" name="email" placeholder="Email Address*" required>
-            <input type="text" name="phone" placeholder="Mobile Number*" required>
-            <input type="text" name="wechat" placeholder="Whatsapp Number">
+            <input type="text" name="name" value="{{ old('name') }}" placeholder="Company Name*" required>
+            <input type="email" name="email" value="{{ old('email') }}" placeholder="Email Address*" required>
+            <input type="text" name="phone" value="{{ old('phone') }}" placeholder="Mobile Number*" required>
+            <input type="text" name="wechat" value="{{ old('wechat') }}" placeholder="Whatsapp Number">
             {{-- <input type="text" name="company_name" placeholder="Company Name*" required> --}}
-            <input type="text" name="address" placeholder="Company Address*" required>
+            <input type="text" name="address" value="{{ old('address') }}" placeholder="Company Address*" required>
             <input type="password" name="password" placeholder="Password*" required>
             <input type="file" name="image" placeholder="Profile Image">
 

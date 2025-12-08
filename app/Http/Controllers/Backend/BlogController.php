@@ -8,7 +8,7 @@ use App\Models\BlogCategory; // Assuming you have a BlogCategory model
 use App\Models\Blog; // Assuming you have a Blog model
 class BlogController extends Controller
 {
-        public function blogCategory(Request $request, string $id = null)
+    public function blogCategory(Request $request, string $id = null)
     {
         $categories = BlogCategory::get()->all();
         if ($id) {
@@ -51,6 +51,7 @@ class BlogController extends Controller
     {
         // Logic to display the list of blog posts
         $posts = Blog::all(); // Fetch all blog posts
+        // dd($posts);
         return view('backend.blog.post.index', compact('posts'));
     }
     public function create()
@@ -77,7 +78,7 @@ class BlogController extends Controller
         $post->photo_caption = $request->photo_caption;
         $post->user_id = auth()->user()->id; // Assuming you have user authentication
         $post->category_id = $request->category_id;
-        $post->status = 'Active';
+        $post->status = 'Published';
 
         // Handle file upload for the image
         if ($request->hasFile('image')) {
@@ -98,14 +99,77 @@ class BlogController extends Controller
         if($request->ajax()){
             $data = $request->all();
             // echo "<pre>"; print_r($data);die;
-            if ($data['status']== 'Active') {
-                $status = 'Inactive';
+            if ($data['status']== 'Published') {
+                $status = 'Unpublished';
             }
             else{
-                $status = 'Active';
+                $status = 'Published';
             }
             Blog::where('id',$data['blog_id'])->update(['status'=>$status]);
             return response()->json(['status'=>$status,'blog_id'=> $data['blog_id']]);
         }
+    }
+    public function deleteBlog($id){
+        $blog = Blog::findOrFail($id);
+        // Delete the blog post
+        $blog->delete();
+        return redirect()->back()->with('success', 'Blog post deleted successfully.');
+    }
+
+    public function deleteCategory($id){
+        $category = BlogCategory::findOrFail($id);
+        // Delete the blog category
+        $category->delete();
+        return redirect()->back()->with('success', 'Blog category deleted successfully.');
+    }
+
+    public function edit($id)
+    {
+        // Logic to show the form for editing an existing blog post
+        $post = Blog::findOrFail($id);
+        $categories = BlogCategory::where('status','Active')->get()->all(); // Fetch all blog categories
+        return view('backend.blog.post.edit', compact('post', 'categories'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        // Logic to update an existing blog post
+        $post = Blog::findOrFail($id);
+        $post->title = $request->title;
+        $post->sub_title = $request->sub_title;
+        $post->slug = $request->slug;
+        $post->Short_description = $request->Short_description;
+        $post->description = $request->description;
+        $post->order = $request->order;
+        // $post->status = $request->status;
+        $post->meta_title = $request->meta_title;
+        $post->meta_keywords = $request->meta_keywords;
+        $post->meta_description = $request->meta_description;
+        $post->views = $request->views;
+        $post->photo_caption = $request->photo_caption;
+        $post->category_id = $request->category_id;
+
+        // Handle file upload for the image
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('images/blog'), $filename);
+            $post->image = $filename; // Save the image path in the database
+        }
+        // Save other fields as necessary
+
+        if ($post->update()) {
+            return redirect()->route('blog.index')->with('success', 'Blog post updated successfully.');
+        } else {
+            return redirect()->back()->with('error', 'Failed to update blog post.');
+        }
+    }
+
+    public function destroy($id)
+    {
+        // Logic to delete a blog post
+        $post = Blog::findOrFail($id);
+        $post->delete();
+        return redirect()->route('blog.index')->with('success', 'Blog post deleted successfully.');
     }
 }

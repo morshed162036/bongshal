@@ -360,7 +360,7 @@
                     .replace(/-+/g, '-')
                     .replace(/^-|-$/g, '');
 
-                $('#slug').val(formattedDate + '-' + slug);
+                $('#slug').val(slug + '-' + formattedDate);
                 // $('#slug').val( slug);
             });
 
